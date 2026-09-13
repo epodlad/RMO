@@ -1,0 +1,18 @@
+{
+  "E02_R137_RESULT": "UNRESOLVED",
+  "observer_facing_result": "Distinct leading and trailing image patterns have different evolution. Their physical independence and MHD family assignment are not established by the retained constraints.",
+  "distinct_leading_trailing_image_tracks": "SUPPORTED_AT_SOURCE_LEVEL",
+  "two_independent_propagating_fronts": "NOT_ESTABLISHED",
+  "not_two_independent_fronts": "NOT_PROVED",
+  "leading_admissible_families": null,
+  "trailing_admissible_families": null,
+  "family_null_meaning": "No event-specific checked state; no family assigned or excluded.",
+  "reversal_control": "Logical audit completed; every proposed assignment lacks a supported full state. None rejected by speed ordering.",
+  "single_remaining_bottleneck": "A locally associated plasma-state transition for each image ridge, including the geometry needed to distinguish plasma motion from pattern motion.",
+  "best_regular_shock_discriminator": "Bounded sign of the local tangential magnetic-field jump, after compressive-shock association is established.",
+  "new_measurements": 0,
+  "new_MHD_roots": 0,
+  "prior_scientific_calculations_repeated": false,
+  "source_interpretation_is_classifier_input": false,
+  "next_event_started": false
+}

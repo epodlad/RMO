@@ -1,0 +1,80 @@
+{
+  "checkpoint": "R136",
+  "event": "E11, 2010-06-13",
+  "target": "Selected local outer EUV/radio front only",
+  "E11_R136_RESULT": "UPSTREAM FLOW NOT SUFFICIENTLY CONSTRAINED — FAMILY SELECTION UNRESOLVED",
+  "supported_upstream_normal_flow_interval_km_s": null,
+  "null_meaning": "No independently supported bounded interval; not zero flow, a probability distribution or a numerical solver failure.",
+  "relation_to_277_5_km_s": "NOT_TESTABLE_FROM_RETAINED_OBSERVATIONS",
+  "flow_gate": "NOT_ESTABLISHED",
+  "radio_local_association_gate": "NOT_ESTABLISHED",
+  "observer_facing_result": "A checked conditional FAST interpretation and its quantitative observational test are preserved. The required independent flow bound and local radio association remain to be established.",
+  "association": {
+    "same_eruption": "SUPPORTED",
+    "same_front_surface": "SOURCE_INTERPRETATION_WITH_MODEL_DEPENDENT_HEIGHT_SUPPORT",
+    "same_local_patch": "NOT_ESTABLISHED"
+  },
+  "frozen_requirement": {
+    "planning_upper_u1n_km_s": 277.5,
+    "exact_R135_boundary_km_s": 277.51356046971364,
+    "central_conditional_boundary_km_s": 396.92057484562775,
+    "Vn_km_s": 705.5353411601552,
+    "units": "km/s",
+    "meaning": "Strict sufficient regular-family exclusion under fixed G0 Vn, retained linked radio/T domain and local state assignment; not an observed flow bound."
+  },
+  "local_geometry": {
+    "id": "G0",
+    "status": "ASSUMED: reference geometry, not yet used in RMO",
+    "patch_PA_deg": 116.0,
+    "patch_X_arcsec": 1137.699972069093,
+    "patch_Y_arcsec": -554.8933523885671,
+    "projected_normal_PA_deg": 120.27653603075406,
+    "projected_normal_origin": "MEASURED diagnostic estimate from an excess-emission ridge; identification with a physical front is an assumption",
+    "LOS_tilt_lambda_deg": 0.0,
+    "LOS_tilt_origin": "ASSUMED; visible ridge treated as the tangency outline of a thin smooth front",
+    "normal_xyz": [
+      0.8636020941290752,
+      -0.5041740007337506,
+      0.0
+    ],
+    "axis_convention": "X solar west; Y solar north; Z toward observer, locally Cartesian",
+    "general_family": "n(lambda) = cos(lambda) (sin(psi), cos(psi), 0) + sin(lambda) (0,0,1)",
+    "lambda_observational_interval": null,
+    "theta_Bn": null,
+    "normal_error": "113–126 degrees is rounded estimator spread, not hard bounds or sigma; no certified full uncertainty",
+    "scope": "One local patch, not the whole dome; no front speed deprojection, density inversion or MHD classification."
+  },
+  "conditional_projection": {
+    "axes": "X solar west; Y solar north; Z toward observer, locally Cartesian",
+    "normal_xyz": [
+      0.8636020941290752,
+      -0.5041740007337506,
+      0.0
+    ],
+    "u1n": "0.8636020941290752*uX - 0.5041740007337506*uY under frozen G0",
+    "LOS_velocity_alone_sufficient": false,
+    "new_velocity_or_uncertainty_propagation": false
+  },
+  "admissible_families": {
+    "conditional_R135": [
+      "FAST",
+      "SLOW"
+    ],
+    "observational_family_selected": false
+  },
+  "why_SLOW_not_excluded": "Neither an independent normal-flow bound nor a local radio/EUV state association is established. The saved SLOW counterexamples are not ruled out by this audit.",
+  "minimum_closure": [
+    "Bound the pre-front plasma motion projected on this same local normal, with timing, tracer identity, calibration and geometric uncertainty.",
+    "Independently localize the compression-bearing radio source to the same local outer-front patch and justify the lane/state pair."
+  ],
+  "joint_success_rule": "Under frozen assumptions: supported upper(u1n)<277.5 km/s AND independently supported local radio/EUV association. If Vn or source quantities vary, preserve dependencies and require inf_supported[(Vn-u1n)-wcrit]>0.",
+  "no_implied_necessity": "Failure of the sufficient inequality does not by itself prove SLOW or reject FAST.",
+  "new_data_downloads": 0,
+  "new_literature_acquisitions": 0,
+  "new_MHD_roots": 0,
+  "new_image_or_spectral_fits": 0,
+  "R135_survey_recomputed": false,
+  "inner_front_reopened": false,
+  "E05_reopened": false,
+  "next_event_started": false
+}

@@ -1,0 +1,85 @@
+manifest_id: RMO-BENCH-1.0.1
+specification_id: RMO-R6A-SPEC-1.0.0
+units: normalized_mu0_1
+default_gamma: 1.6666666666666667
+seed: 24090501
+tolerances:
+  conservation_scaled_inf: 1.0e-10
+  coupled_matching_scaled_inf: 1.0e-10
+  exact_value_relative: 5.0e-9
+  wave_speed_order_scale: 1.0e-9
+  bn_consistency_scale: 1.0e-12
+  entropy_allowance: -1.0e-10
+  ode_rtol: 1.0e-10
+  ode_atol: 1.0e-12
+  root_cluster_scaled_distance: 1.0e-8
+  positive_numeric_domain: 1.0e-12
+  cross_code_state_relative: 1.0e-7
+benchmarks:
+  - id: B00_constant
+    gamma: 1.6666666666666667
+    left:  {rho: 1.0, p: 1.0, u: [0.3, 0.1, -0.2], B: [0.7, 0.4, -0.1]}
+    right: {rho: 1.0, p: 1.0, u: [0.3, 0.1, -0.2], B: [0.7, 0.4, -0.1]}
+    expected: {structure: constant, nonzero_waves: 0, domain_code: OK}
+  - id: B01_contact
+    gamma: 1.6666666666666667
+    left:  {rho: 1.0, p: 1.0, u: [0.2, 0.1, -0.2], B: [0.75, 0.5, 0.25]}
+    right: {rho: 0.5, p: 1.0, u: [0.2, 0.1, -0.2], B: [0.75, 0.5, 0.25]}
+    expected: {structure: contact, speed: 0.2, changed_fields: [rho, entropy]}
+  - id: B02_rotation_right
+    gamma: 1.6666666666666667
+    left:  {rho: 1.0, p: 1.0, u: [0.0, 0.0, 0.0], B: [1.0, 1.0, 0.0]}
+    right: {rho: 1.0, p: 1.0, u: [0.0, 1.0, -1.0], B: [1.0, 0.0, 1.0]}
+    expected: {structure: rotation, family: alfven_plus, speed: 1.0, delta_entropy: 0.0}
+  - id: B03_hydro_M3_stationary
+    gamma: 1.6666666666666667
+    upstream: {rho: 1.0, p: 1.0, u: [3.872983346207417, 0.0, 0.0], B: [0.0, 0.0, 0.0]}
+    downstream: {rho: 3.0, p: 11.0, u: [1.290994448735806, 0.0, 0.0], B: [0.0, 0.0, 0.0]}
+    expected: {shock_speed: 0.0, compression: 3.0, pressure_ratio: 11.0}
+  - id: B04_oblique_fast_RH
+    gamma: 1.6666666666666667
+    upstream: {rho: 1.0, p: 0.6, u: [3.2, 0.15, 0.0], B: [0.7, 0.9, 0.0]}
+    expected: {family: fast, evolutionary: true, compression: 2.4239556300}
+    provenance: {source_sha256: 51ca79b5d116f7e0dfab9126d9fc89bd600f35fe3de562fa72446169efe5f310}
+  - id: B05_oblique_slow_RH
+    gamma: 1.6666666666666667
+    upstream: {rho: 1.0, p: 0.20178923072168733, u: [0.9737732594347736, 0.10848507445170874, 0.0], B: [1.695593720559897, 0.6300451470688198, 0.0]}
+    expected: {family: slow, evolutionary: true, compression: 2.0675716282, pressure_ratio: 3.78456, abs_bt_ratio: 0.79738, entropy_over_cv: 0.12031}
+    provenance: {source_sha256: 51ca79b5d116f7e0dfab9126d9fc89bd600f35fe3de562fa72446169efe5f310}
+  - id: B06_Sod
+    gamma: 1.4
+    left:  {rho: 1.0, p: 1.0, u: [0.0, 0.0, 0.0], B: [0.0, 0.0, 0.0]}
+    right: {rho: 0.125, p: 0.1, u: [0.0, 0.0, 0.0], B: [0.0, 0.0, 0.0]}
+    expected: {p_star: 0.3031301780506468, u_star: 0.9274526200489499, rho_star_left: 0.4263194281784952, rho_star_right: 0.2655737117053071, wave_order: [rarefaction_left, contact, shock_right]}
+  - id: B07_tangential_Bn0
+    gamma: 1.6666666666666667
+    left:  {rho: 1.0, p: 1.0, u: [0.0, 0.0, 0.0], B: [0.0, 1.0, 0.0]}
+    right: {rho: 0.5, p: 1.0, u: [0.0, 0.4, -0.3], B: [0.0, 0.0, 1.0]}
+    expected: {structure: tangential, speed: 0.0, total_pressure: 1.5}
+  - id: B08_Bn_mismatch
+    gamma: 1.6666666666666667
+    left:  {rho: 1.0, p: 1.0, u: [0.0, 0.0, 0.0], B: [0.75, 0.2, 0.0]}
+    right: {rho: 1.0, p: 1.0, u: [0.0, 0.0, 0.0], B: [0.76, 0.2, 0.0]}
+    expected: {domain_code: DIVERGENCE_CONSTRAINT_FAIL, solve_attempted: false}
+  - id: B09_negative_pressure
+    gamma: 1.6666666666666667
+    left:  {rho: 1.0, p: -0.1, u: [0.0, 0.0, 0.0], B: [0.5, 0.0, 0.0]}
+    right: {rho: 1.0, p: 1.0, u: [0.0, 0.0, 0.0], B: [0.5, 0.0, 0.0]}
+    expected: {domain_code: INVALID_STATE, solve_attempted: false}
+  - id: B10_vacuum_expansion
+    gamma: 1.4
+    left:  {rho: 1.0, p: 1.0, u: [-6.0, 0.0, 0.0], B: [0.0, 0.0, 0.0]}
+    right: {rho: 1.0, p: 1.0, u: [6.0, 0.0, 0.0], B: [0.0, 0.0, 0.0]}
+    expected: {domain_code: VACUUM_FORMED, negative_state: false}
+  - id: B11_Brio_Wu_policy
+    gamma: 2.0
+    left:  {rho: 1.0, p: 1.0, u: [0.0, 0.0, 0.0], B: [0.75, 1.0, 0.0]}
+    right: {rho: 0.125, p: 0.1, u: [0.0, 0.0, 0.0], B: [0.75, -1.0, 0.0]}
+    expected: {domain_code: POLICY_DEPENDENT, uniqueness_required: false, policies_required: [REGULAR_EVOLUTIONARY_1.0, ENUMERATE_NONREGULAR_1.0]}
+  - id: B12_uniform_slab_forward
+    plasma: {electron_density: 3.0, los_depth: 2.0, response_G: 1.0, los_velocity_km_s: -25.0, line_rest_A: 1402.77, line_sigma_A: 0.02}
+    expected: {optically_thin_intensity: 18.0, centroid_formula: "lambda0*(1+v_los/299792.458)", centroid_A: 1402.653021574}
+  - id: B13_uncertainty_calibration
+    replicates_min: 2000
+    expected: {coverage_95_min: 0.93, coverage_95_max: 0.97, false_unique_upper95_max: 0.01, compatible_recall_min: 0.90}
+suite_rule: "all applicable conditions pass; skipped/truncated/unresolved is not pass"

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "checkpoint": "RMO96",
+  "sector_degrees": [
+    -4,
+    4
+  ],
+  "compression_exact": "39/25",
+  "certified_sector_root_count": 2,
+  "admissible_roots": 2,
+  "classifications": [
+    "fast_shock",
+    "fast_shock"
+  ],
+  "independent_original_inverse_solves": 2,
+  "descartes_upper_bound": 2,
+  "max_scaled_RH_residual": "2.08286558833092971163823824618088206552427209344411444158969268467751687256241564144001523E-68",
+  "max_reference_state_and_z_difference": 2.6275164736999785e-66,
+  "root_interval_admissibility": "exact rational positive enclosures at every isolated root",
+  "R95_sweep_rerun": false,
+  "external_solver_checked": false,
+  "full_uncertainty_propagated": false,
+  "new_solar_classification": false,
+  "native_browser_tested": false,
+  "source_sha256": {
+    "results/shock_polar/RMO_shock_polar.json": "e6022879d71a77bc6e340c733235443123fd329f4e13e0237479ae04511a0354",
+    "polar_inverse/PROTOCOL.md": "c69beff089966fdac69af571c768315efbfa7f24aac05496dec9de97144afc9e",
+    "polar_inverse/audit.py": "32bf797b620f156928fff987bd9dec851fcb84b8255df5c6c92b6581d86d1346"
+  }
+}

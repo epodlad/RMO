@@ -1,0 +1,738 @@
+{
+  "totals": {
+    "nodes": 76842,
+    "newly_solved_nodes": 76139,
+    "reused_frozen_nodes": 703,
+    "algebraic_roots": 112644,
+    "accepted_roots": 36937,
+    "accepted_fast": 33933,
+    "accepted_slow": 3004,
+    "unresolved_nodes": 0,
+    "unresolved_roots": 0,
+    "magnetic_sign_violations": 0
+  },
+  "scenario_counts": [
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 0,
+      "nodes": 703,
+      "fast_nodes": 209,
+      "slow_nodes": 10,
+      "unresolved_nodes": 0,
+      "accepted_fast": 209,
+      "accepted_slow": 11
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 1,
+      "nodes": 703,
+      "fast_nodes": 228,
+      "slow_nodes": 9,
+      "unresolved_nodes": 0,
+      "accepted_fast": 228,
+      "accepted_slow": 10
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 2,
+      "nodes": 703,
+      "fast_nodes": 171,
+      "slow_nodes": 17,
+      "unresolved_nodes": 0,
+      "accepted_fast": 171,
+      "accepted_slow": 18
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 3,
+      "nodes": 703,
+      "fast_nodes": 190,
+      "slow_nodes": 14,
+      "unresolved_nodes": 0,
+      "accepted_fast": 190,
+      "accepted_slow": 15
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 4,
+      "nodes": 703,
+      "fast_nodes": 114,
+      "slow_nodes": 24,
+      "unresolved_nodes": 0,
+      "accepted_fast": 114,
+      "accepted_slow": 25
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 5,
+      "nodes": 703,
+      "fast_nodes": 152,
+      "slow_nodes": 23,
+      "unresolved_nodes": 0,
+      "accepted_fast": 152,
+      "accepted_slow": 23
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 6,
+      "nodes": 703,
+      "fast_nodes": 209,
+      "slow_nodes": 12,
+      "unresolved_nodes": 0,
+      "accepted_fast": 209,
+      "accepted_slow": 12
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 7,
+      "nodes": 703,
+      "fast_nodes": 228,
+      "slow_nodes": 9,
+      "unresolved_nodes": 0,
+      "accepted_fast": 228,
+      "accepted_slow": 9
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 8,
+      "nodes": 703,
+      "fast_nodes": 171,
+      "slow_nodes": 15,
+      "unresolved_nodes": 0,
+      "accepted_fast": 171,
+      "accepted_slow": 15
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 9,
+      "nodes": 703,
+      "fast_nodes": 190,
+      "slow_nodes": 13,
+      "unresolved_nodes": 0,
+      "accepted_fast": 190,
+      "accepted_slow": 13
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 10,
+      "nodes": 703,
+      "fast_nodes": 133,
+      "slow_nodes": 25,
+      "unresolved_nodes": 0,
+      "accepted_fast": 133,
+      "accepted_slow": 25
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 11,
+      "nodes": 703,
+      "fast_nodes": 152,
+      "slow_nodes": 25,
+      "unresolved_nodes": 0,
+      "accepted_fast": 152,
+      "accepted_slow": 25
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 12,
+      "nodes": 703,
+      "fast_nodes": 209,
+      "slow_nodes": 11,
+      "unresolved_nodes": 0,
+      "accepted_fast": 209,
+      "accepted_slow": 12
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 13,
+      "nodes": 703,
+      "fast_nodes": 228,
+      "slow_nodes": 7,
+      "unresolved_nodes": 0,
+      "accepted_fast": 228,
+      "accepted_slow": 7
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 14,
+      "nodes": 703,
+      "fast_nodes": 171,
+      "slow_nodes": 15,
+      "unresolved_nodes": 0,
+      "accepted_fast": 171,
+      "accepted_slow": 15
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 15,
+      "nodes": 703,
+      "fast_nodes": 190,
+      "slow_nodes": 12,
+      "unresolved_nodes": 0,
+      "accepted_fast": 190,
+      "accepted_slow": 12
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 16,
+      "nodes": 703,
+      "fast_nodes": 114,
+      "slow_nodes": 22,
+      "unresolved_nodes": 0,
+      "accepted_fast": 114,
+      "accepted_slow": 23
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 17,
+      "nodes": 703,
+      "fast_nodes": 152,
+      "slow_nodes": 21,
+      "unresolved_nodes": 0,
+      "accepted_fast": 152,
+      "accepted_slow": 23
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 18,
+      "nodes": 703,
+      "fast_nodes": 209,
+      "slow_nodes": 10,
+      "unresolved_nodes": 0,
+      "accepted_fast": 209,
+      "accepted_slow": 12
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 19,
+      "nodes": 703,
+      "fast_nodes": 228,
+      "slow_nodes": 7,
+      "unresolved_nodes": 0,
+      "accepted_fast": 228,
+      "accepted_slow": 7
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 20,
+      "nodes": 703,
+      "fast_nodes": 171,
+      "slow_nodes": 13,
+      "unresolved_nodes": 0,
+      "accepted_fast": 171,
+      "accepted_slow": 14
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 21,
+      "nodes": 703,
+      "fast_nodes": 190,
+      "slow_nodes": 13,
+      "unresolved_nodes": 0,
+      "accepted_fast": 190,
+      "accepted_slow": 14
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 22,
+      "nodes": 703,
+      "fast_nodes": 95,
+      "slow_nodes": 21,
+      "unresolved_nodes": 0,
+      "accepted_fast": 95,
+      "accepted_slow": 21
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 23,
+      "nodes": 703,
+      "fast_nodes": 152,
+      "slow_nodes": 17,
+      "unresolved_nodes": 0,
+      "accepted_fast": 152,
+      "accepted_slow": 17
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 24,
+      "nodes": 703,
+      "fast_nodes": 209,
+      "slow_nodes": 11,
+      "unresolved_nodes": 0,
+      "accepted_fast": 209,
+      "accepted_slow": 12
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 25,
+      "nodes": 703,
+      "fast_nodes": 228,
+      "slow_nodes": 7,
+      "unresolved_nodes": 0,
+      "accepted_fast": 228,
+      "accepted_slow": 7
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 26,
+      "nodes": 703,
+      "fast_nodes": 171,
+      "slow_nodes": 15,
+      "unresolved_nodes": 0,
+      "accepted_fast": 171,
+      "accepted_slow": 15
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 27,
+      "nodes": 703,
+      "fast_nodes": 190,
+      "slow_nodes": 12,
+      "unresolved_nodes": 0,
+      "accepted_fast": 190,
+      "accepted_slow": 12
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 28,
+      "nodes": 703,
+      "fast_nodes": 114,
+      "slow_nodes": 22,
+      "unresolved_nodes": 0,
+      "accepted_fast": 114,
+      "accepted_slow": 23
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 29,
+      "nodes": 703,
+      "fast_nodes": 152,
+      "slow_nodes": 21,
+      "unresolved_nodes": 0,
+      "accepted_fast": 152,
+      "accepted_slow": 23
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 30,
+      "nodes": 703,
+      "fast_nodes": 209,
+      "slow_nodes": 6,
+      "unresolved_nodes": 0,
+      "accepted_fast": 209,
+      "accepted_slow": 6
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 31,
+      "nodes": 703,
+      "fast_nodes": 228,
+      "slow_nodes": 7,
+      "unresolved_nodes": 0,
+      "accepted_fast": 228,
+      "accepted_slow": 8
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 32,
+      "nodes": 703,
+      "fast_nodes": 171,
+      "slow_nodes": 12,
+      "unresolved_nodes": 0,
+      "accepted_fast": 171,
+      "accepted_slow": 13
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 33,
+      "nodes": 703,
+      "fast_nodes": 190,
+      "slow_nodes": 12,
+      "unresolved_nodes": 0,
+      "accepted_fast": 190,
+      "accepted_slow": 12
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 34,
+      "nodes": 703,
+      "fast_nodes": 95,
+      "slow_nodes": 21,
+      "unresolved_nodes": 0,
+      "accepted_fast": 95,
+      "accepted_slow": 21
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 35,
+      "nodes": 703,
+      "fast_nodes": 152,
+      "slow_nodes": 18,
+      "unresolved_nodes": 0,
+      "accepted_fast": 152,
+      "accepted_slow": 19
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 36,
+      "nodes": 703,
+      "fast_nodes": 209,
+      "slow_nodes": 12,
+      "unresolved_nodes": 0,
+      "accepted_fast": 209,
+      "accepted_slow": 12
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 37,
+      "nodes": 703,
+      "fast_nodes": 228,
+      "slow_nodes": 9,
+      "unresolved_nodes": 0,
+      "accepted_fast": 228,
+      "accepted_slow": 9
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 38,
+      "nodes": 703,
+      "fast_nodes": 171,
+      "slow_nodes": 15,
+      "unresolved_nodes": 0,
+      "accepted_fast": 171,
+      "accepted_slow": 15
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 39,
+      "nodes": 703,
+      "fast_nodes": 190,
+      "slow_nodes": 14,
+      "unresolved_nodes": 0,
+      "accepted_fast": 190,
+      "accepted_slow": 15
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 40,
+      "nodes": 703,
+      "fast_nodes": 133,
+      "slow_nodes": 25,
+      "unresolved_nodes": 0,
+      "accepted_fast": 133,
+      "accepted_slow": 25
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 41,
+      "nodes": 703,
+      "fast_nodes": 152,
+      "slow_nodes": 24,
+      "unresolved_nodes": 0,
+      "accepted_fast": 152,
+      "accepted_slow": 24
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 42,
+      "nodes": 703,
+      "fast_nodes": 209,
+      "slow_nodes": 11,
+      "unresolved_nodes": 0,
+      "accepted_fast": 209,
+      "accepted_slow": 11
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 43,
+      "nodes": 703,
+      "fast_nodes": 228,
+      "slow_nodes": 9,
+      "unresolved_nodes": 0,
+      "accepted_fast": 228,
+      "accepted_slow": 9
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 44,
+      "nodes": 703,
+      "fast_nodes": 190,
+      "slow_nodes": 16,
+      "unresolved_nodes": 0,
+      "accepted_fast": 190,
+      "accepted_slow": 16
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 45,
+      "nodes": 703,
+      "fast_nodes": 190,
+      "slow_nodes": 15,
+      "unresolved_nodes": 0,
+      "accepted_fast": 190,
+      "accepted_slow": 15
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 46,
+      "nodes": 703,
+      "fast_nodes": 133,
+      "slow_nodes": 28,
+      "unresolved_nodes": 0,
+      "accepted_fast": 133,
+      "accepted_slow": 28
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 47,
+      "nodes": 703,
+      "fast_nodes": 152,
+      "slow_nodes": 24,
+      "unresolved_nodes": 0,
+      "accepted_fast": 152,
+      "accepted_slow": 24
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 48,
+      "nodes": 703,
+      "fast_nodes": 209,
+      "slow_nodes": 10,
+      "unresolved_nodes": 0,
+      "accepted_fast": 209,
+      "accepted_slow": 10
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 49,
+      "nodes": 703,
+      "fast_nodes": 228,
+      "slow_nodes": 10,
+      "unresolved_nodes": 0,
+      "accepted_fast": 228,
+      "accepted_slow": 11
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 50,
+      "nodes": 703,
+      "fast_nodes": 171,
+      "slow_nodes": 17,
+      "unresolved_nodes": 0,
+      "accepted_fast": 171,
+      "accepted_slow": 17
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 51,
+      "nodes": 703,
+      "fast_nodes": 190,
+      "slow_nodes": 14,
+      "unresolved_nodes": 0,
+      "accepted_fast": 190,
+      "accepted_slow": 14
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 52,
+      "nodes": 703,
+      "fast_nodes": 133,
+      "slow_nodes": 25,
+      "unresolved_nodes": 0,
+      "accepted_fast": 133,
+      "accepted_slow": 25
+    },
+    {
+      "phase": "retained_joint_scenarios",
+      "scenario_id": 53,
+      "nodes": 703,
+      "fast_nodes": 152,
+      "slow_nodes": 23,
+      "unresolved_nodes": 0,
+      "accepted_fast": 152,
+      "accepted_slow": 23
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 0,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 97,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 102
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 1,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 97,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 102
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 2,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 117,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 119
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 3,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 117,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 119
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 4,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 137,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 139
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 5,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 137,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 139
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 6,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 107,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 110
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 7,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 107,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 110
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 8,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 127,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 128
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 9,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 127,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 128
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 10,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 146,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 146
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 11,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 146,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 146
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 12,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 86,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 91
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 13,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 86,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 91
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 14,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 106,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 111
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 15,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 106,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 111
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 16,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 127,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 130
+    },
+    {
+      "phase": "normal_flow_stress",
+      "scenario_id": 17,
+      "nodes": 2160,
+      "fast_nodes": 1350,
+      "slow_nodes": 127,
+      "unresolved_nodes": 0,
+      "accepted_fast": 1350,
+      "accepted_slow": 130
+    }
+  ],
+  "coverage": "Finite scenario/grid counts, not probabilities or a continuous exclusion proof",
+  "wall_seconds": 44.157944418000625
+}

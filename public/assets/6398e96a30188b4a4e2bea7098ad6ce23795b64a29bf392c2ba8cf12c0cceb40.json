@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "meaning": "Consistency of the evidence-limited scientific conclusion; not successful observational family selection.",
+  "principal_outcome": "UPSTREAM FLOW NOT SUFFICIENTLY CONSTRAINED — FAMILY SELECTION UNRESOLVED",
+  "source_anchors_verified": 7,
+  "supported_u1n_interval_is_null": true,
+  "absent_flow_not_set_to_zero": true,
+  "radio_sky_position_not_invented": true,
+  "both_independent_closure_requirements_not_established": true,
+  "frozen_R135_conditional_families_retained": true,
+  "threshold_not_recalculated": true,
+  "new_MHD_or_observational_calculations": false
+}

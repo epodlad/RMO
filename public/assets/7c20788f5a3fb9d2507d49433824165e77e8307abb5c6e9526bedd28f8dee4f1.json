@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "checkpoint": "RMO95",
+  "coverage": "321 computed points; no continuum or all-family completeness certificate",
+  "root_selection": "one unique root in [1.3,1.9] at each sampled normal; anchored to R94",
+  "number_of_points": 321,
+  "classification_counts": {
+    "SUPPORTED_LOCAL_CLASS:fast_shock": 321
+  },
+  "max_scaled_flux_residual": "9.42528391286795761039980288682224398056393935349885254226809363729516273827931634347384527E-67",
+  "R94_anchor_scaled_error": "9.51058685342338207641135368681252882795850838312511106666053114752387844294871794871794872E-17",
+  "full_flux_reference_controls": 3,
+  "max_reference_state_error": 1.7913266788665354e-66,
+  "max_jacobian_eigenvalue_error": 6.217248937900877e-15,
+  "coarse_0p1_midpoint_error_km_s": "0.000192415602929358267506494349143128135830118938831008764890407030721462634315343875541356121",
+  "fine_0p05_midpoint_error_km_s": "0.0000481090320861795233087567493873549505467935928735088631311364717556076693253321260403052928",
+  "refinement_improvement_factor": "3.99957335630192979609296081676082077638723284108941963595694556802894735630073584574529188",
+  "sampled_ranges": {
+    "compression": [
+      1.554878051330473,
+      1.560202952778077
+    ],
+    "u2x_km_s": [
+      -387.0931165171392,
+      -384.2882560500542
+    ],
+    "u2y_km_s": [
+      -17.31473486570809,
+      -6.899012551770272
+    ],
+    "speed2_km_s": [
+      384.40109204164565,
+      387.48016839371445
+    ],
+    "signed_deflection_degrees": [
+      1.0277403949255857,
+      2.5611418744505925
+    ],
+    "entropy_over_cv": [
+      0.17769606542840166,
+      0.1823162633083594
+    ],
+    "upstream_fast_Mach": [
+      1.4350783949137533,
+      1.4393044892030291
+    ],
+    "downstream_fast_Mach": [
+      0.7369096211914559,
+      0.7385718435248592
+    ],
+    "downstream_alfven_margin": [
+      0.5594049819360838,
+      0.632547495895375
+    ]
+  },
+  "negative_normal_only_control": {
+    "flux_residuals": [
+      "-0.002209935531797517538973262196036187106420139751628641956996380362657208950239414650943462",
+      "-8.06670761709675925406242372819093418577199577122005619325104892679824916361790467239322993E-90",
+      "-0.0164109950074238774119309359904309224665323450604274538430010359722025039870861166126166022",
+      "0E-181",
+      "-1E-90",
+      "0E-181",
+      "-0.000808243025729269067732516819452703028209261572161824356521851374439030499479274889791231330",
+      "0.025212156706796391910001519178016133496403267844255119985177980527586715931501868214938188"
+    ],
+    "diagnosis": {
+      "case_id": "wrong_normal_only",
+      "status": "INCONSISTENT_BN",
+      "family": null,
+      "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+      "candidates": {
+        "fast_shock": {
+          "status": "NOT_ASSESSED",
+          "reason": "Required checks not completed."
+        },
+        "slow_shock": {
+          "status": "NOT_ASSESSED",
+          "reason": "Required checks not completed."
+        },
+        "rotational_discontinuity": {
+          "status": "NOT_ASSESSED",
+          "reason": "Required checks not completed."
+        },
+        "contact": {
+          "status": "NOT_ASSESSED",
+          "reason": "Required checks not completed."
+        }
+      },
+      "coverage": {
+        "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+        "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+        "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+      },
+      "global_uniqueness": false,
+      "uncertainty_propagated": false,
+      "checks": {},
+      "result_sentence": "The two normal magnetic fields disagree beyond the declared tolerance.",
+      "next_action": "The two normal magnetic fields disagree beyond the declared tolerance."
+    }
+  },
+  "external_solver_checked": false,
+  "new_solar_identification": false,
+  "native_browser_checked": false,
+  "source_sha256": {
+    "results/upstream_flow/RMO_upstream_flow.json": "fe91637db391258e748b6806100c40fd58a289f7313125bf6e9fa4727f477f83",
+    "shock_polar/PROTOCOL.md": "dca875461f34f178aa79d09064ad678ea999a65d3a85f216f67570ed1c95c334",
+    "shock_polar/audit.py": "c33e3b44ba90a88c7c9ffc36a324bf26daef1b8183c84235c07af2d36e110b1a",
+    "local_diagnosis/diagnose.py": "d89a9402476765d9e923b000eeb69c9a431704d86e64abb52d8c819db4e90f3f"
+  },
+  "runtime": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "decimal_precision": 90
+  }
+}

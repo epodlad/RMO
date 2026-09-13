@@ -1,0 +1,246 @@
+{
+  "version": "1.0.0-rc3",
+  "scientific_state": "R139",
+  "scope": "Release-candidate packaging and bounded reproduction checks",
+  "local_http": {
+    "checks": [
+      {
+        "name": "application HTTP",
+        "pass": true
+      },
+      {
+        "name": "separate browser-session tokens",
+        "pass": true
+      },
+      {
+        "name": "cookie protections",
+        "pass": true
+      },
+      {
+        "name": "foreign Host rejected",
+        "pass": true
+      },
+      {
+        "name": "no undeclared resource /private-record.txt",
+        "pass": true
+      },
+      {
+        "name": "no undeclared resource /results/local_runs",
+        "pass": true
+      },
+      {
+        "name": "no undeclared resource /local_app/server.py",
+        "pass": true
+      },
+      {
+        "name": "no undeclared resource /assets/../index.html",
+        "pass": true
+      },
+      {
+        "name": "no undeclared resource /assets/0000000000000000000000000000000000000000000000000000000000000000.png",
+        "pass": true
+      },
+      {
+        "name": "public asset delivery",
+        "pass": true
+      },
+      {
+        "name": "another session token rejected",
+        "pass": true
+      },
+      {
+        "name": "foreign Origin rejected",
+        "pass": true
+      },
+      {
+        "name": "A63 HTTP and input association",
+        "pass": true
+      },
+      {
+        "name": "A63 conditional result",
+        "pass": true
+      },
+      {
+        "name": "A63 exact saved assessment",
+        "pass": true
+      },
+      {
+        "name": "A63 PDF contains result and limits",
+        "pass": true
+      },
+      {
+        "name": "repeat execution ID rejected",
+        "pass": true
+      },
+      {
+        "name": "invalid input checksum rejected",
+        "pass": true
+      },
+      {
+        "name": "B01 HTTP and identity",
+        "pass": true
+      },
+      {
+        "name": "B01 checked contact",
+        "pass": true
+      },
+      {
+        "name": "no private runtime paths or worker commands",
+        "pass": true
+      }
+    ],
+    "metrics": {
+      "A63_seconds": 0.35903354000038235,
+      "B01_seconds": 3.1200782460000482,
+      "peak_process_tree_rss_bytes": 105304064
+    },
+    "all_recorded_checks_pass": true
+  },
+  "public_http": {
+    "checks": [
+      {
+        "name": "public Secure/HttpOnly cookie",
+        "pass": true
+      },
+      {
+        "name": "HTTPS origin and HSTS",
+        "pass": true
+      },
+      {
+        "name": "public Secure/HttpOnly cookie",
+        "pass": true
+      },
+      {
+        "name": "HTTPS origin and HSTS",
+        "pass": true
+      },
+      {
+        "name": "forwarded Host cannot grant origin",
+        "pass": true
+      },
+      {
+        "name": "public A63 association",
+        "pass": true
+      },
+      {
+        "name": "public result omits execution paths",
+        "pass": true
+      },
+      {
+        "name": "calculation becomes active",
+        "pass": true
+      },
+      {
+        "name": "single calculation capacity",
+        "pass": true
+      },
+      {
+        "name": "other session cancellation remains local",
+        "pass": true
+      },
+      {
+        "name": "other session cannot cancel active result",
+        "pass": true
+      },
+      {
+        "name": "public calculation files disabled",
+        "pass": true
+      }
+    ],
+    "all_recorded_checks_pass": true
+  },
+  "ui_structure": {
+    "source_controls_with_ids": 160,
+    "public_controls_with_ids": 160,
+    "missing_controls": [],
+    "changed_control_attributes": [],
+    "scripts_source": 51,
+    "scripts_public": 51,
+    "javascript_syntax_errors": [],
+    "broken_fragment_links": [],
+    "missing_assets": [],
+    "referenced_assets": 338,
+    "browser_acceptance": "not performed; structural checks only"
+  },
+  "scientific_core": {
+    "files_compared": 25,
+    "byte_identical_to_source": true
+  },
+  "r139_source_profiles": {
+    "source": "Ye et al. (2026), doi:10.1038/s41467-026-75039-z, Source Data workbook, Figure 7",
+    "profiles_checked": 12,
+    "rows_checked": 1620,
+    "all_saved_profile_values_match_source_exactly": true,
+    "new_model_fit_performed": false
+  },
+  "svd_cache": {
+    "scope": "Reproduction of saved R133 SVD cache only; no new estimator, rank or physical interpretation",
+    "input_sha256": "d31da982dbb513259c1194f714e5fa5b0ec1fbf36c2750391f6393ee48cfe556",
+    "reference_sha256": "751e1f6eda45fdc11f8c860c9d5618cd6d17b3a0202ed287766bcb7994bae0b2",
+    "output_sha256": "185c1a0213b56cbd5557c14e5a2f73eea29d945f27b58f463077bddb02c6ada9",
+    "saved_singular_values_match": true,
+    "singular_value_rtol": 1e-12,
+    "singular_value_atol": 1e-09,
+    "all_rank_max_abs_error": 3.126388037344441e-12,
+    "weighted_all_rank_max_abs_error": 7.389644451905042e-13,
+    "shape": [
+      30,
+      200,
+      200
+    ],
+    "numpy_version": "2.3.5"
+  },
+  "binary_audit": {
+    "counts": {
+      ".json": 619,
+      ".svg": 73,
+      ".png": 343,
+      ".pdf": 46,
+      ".npz": 44,
+      ".fits": 100,
+      ".jpg": 13,
+      ".gz": 4,
+      ".cdf": 2,
+      ".fts": 3,
+      "retained_C2PA_credentials": 4,
+      ".gif": 1,
+      ".h5": 4,
+      ".npy": 3,
+      ".html": 1
+    },
+    "issues": [],
+    "additional_checks": [
+      "Recovered SVD NPZ CRC and numerical comparison passed",
+      "Embedded parameter-map NPZ CRC and arrays passed",
+      "A temporary partial table was omitted after confirming it is an exact prefix of the retained complete R134 table"
+    ]
+  },
+  "environment": {
+    "python": "3.12.14",
+    "dependencies": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "PyYAML": "6.0.3",
+      "reportlab": "4.4.9",
+      "pypdf": "6.10.0",
+      "Pillow": "12.3.0",
+      "charset-normalizer": "3.4.4",
+      "aiohttp": "3.14.3",
+      "aiohappyeyeballs": "2.7.1",
+      "aiosignal": "1.4.0",
+      "attrs": "26.1.0",
+      "frozenlist": "1.8.0",
+      "multidict": "6.7.1",
+      "propcache": "0.5.2",
+      "typing_extensions": "4.16.0",
+      "yarl": "1.24.5",
+      "idna": "3.19"
+    },
+    "render_yaml_parsed": true
+  },
+  "remaining_acceptance": [
+    "Interactive browser acceptance of this derivative",
+    "Initial Render deployment and hosted acceptance"
+  ],
+  "full_scientific_campaign_rerun": false
+}

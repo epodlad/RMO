@@ -1,0 +1,354 @@
+{
+  "outer_nodes": 10440,
+  "outer_algebraic_roots": 20880,
+  "outer_root_statuses": {
+    "REJECTED_NON_EVOLUTIONARY": 7586,
+    "fast_shock": 5580,
+    "UNRESOLVED": 3310,
+    "REJECTED_COMPLEX_ROOT": 2056,
+    "slow_shock": 305,
+    "REJECTED_NEGATIVE_FIELD_SQUARED": 2025,
+    "REJECTED_NONREAL_FIELD": 18
+  },
+  "outer_scenarios": {
+    "R93_corner_0": {
+      "REJECTED_NON_EVOLUTIONARY": 178,
+      "fast_shock": 180,
+      "UNRESOLVED": 2
+    },
+    "R93_corner_1": {
+      "REJECTED_NON_EVOLUTIONARY": 178,
+      "fast_shock": 180,
+      "UNRESOLVED": 2
+    },
+    "R93_corner_2": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R93_corner_3": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R110_C0": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_0": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_1": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_2": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_3": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_4": {
+      "REJECTED_NON_EVOLUTIONARY": 178,
+      "fast_shock": 180,
+      "UNRESOLVED": 2
+    },
+    "R109_corner_5": {
+      "REJECTED_NON_EVOLUTIONARY": 178,
+      "fast_shock": 180,
+      "UNRESOLVED": 2
+    },
+    "R109_corner_6": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_7": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R110_C0_flow_0.75": {
+      "REJECTED_COMPLEX_ROOT": 150,
+      "slow_shock": 12,
+      "REJECTED_NON_EVOLUTIONARY": 99,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 97,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R110_C0_flow_0.9": {
+      "REJECTED_COMPLEX_ROOT": 90,
+      "slow_shock": 11,
+      "REJECTED_NON_EVOLUTIONARY": 129,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 128,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R110_C0_flow_1": {
+      "UNRESOLVED": 360
+    },
+    "R110_C0_flow_1.1": {
+      "REJECTED_NON_EVOLUTIONARY": 178,
+      "fast_shock": 180,
+      "UNRESOLVED": 2
+    },
+    "R110_C0_flow_1.5": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_0_flow_0.75": {
+      "REJECTED_COMPLEX_ROOT": 136,
+      "slow_shock": 17,
+      "REJECTED_NON_EVOLUTIONARY": 108,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 97,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_0_flow_0.9": {
+      "REJECTED_COMPLEX_ROOT": 82,
+      "slow_shock": 12,
+      "REJECTED_NON_EVOLUTIONARY": 135,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 128,
+      "UNRESOLVED": 2,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_0_flow_1": {
+      "UNRESOLVED": 360
+    },
+    "R109_corner_0_flow_1.1": {
+      "REJECTED_NON_EVOLUTIONARY": 178,
+      "fast_shock": 180,
+      "UNRESOLVED": 2
+    },
+    "R109_corner_0_flow_1.5": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_1_flow_0.75": {
+      "REJECTED_COMPLEX_ROOT": 136,
+      "slow_shock": 17,
+      "REJECTED_NON_EVOLUTIONARY": 108,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 97,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_1_flow_0.9": {
+      "REJECTED_COMPLEX_ROOT": 82,
+      "slow_shock": 12,
+      "REJECTED_NON_EVOLUTIONARY": 135,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 128,
+      "UNRESOLVED": 2,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_1_flow_1": {
+      "UNRESOLVED": 360
+    },
+    "R109_corner_1_flow_1.1": {
+      "REJECTED_NON_EVOLUTIONARY": 178,
+      "fast_shock": 180,
+      "UNRESOLVED": 2
+    },
+    "R109_corner_1_flow_1.5": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_2_flow_0.75": {
+      "REJECTED_COMPLEX_ROOT": 164,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 97,
+      "slow_shock": 21,
+      "REJECTED_NON_EVOLUTIONARY": 76,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_2_flow_0.9": {
+      "REJECTED_COMPLEX_ROOT": 102,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 128,
+      "slow_shock": 18,
+      "REJECTED_NON_EVOLUTIONARY": 110,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_2_flow_1": {
+      "UNRESOLVED": 360
+    },
+    "R109_corner_2_flow_1.1": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_2_flow_1.5": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_3_flow_0.75": {
+      "REJECTED_COMPLEX_ROOT": 164,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 97,
+      "slow_shock": 21,
+      "REJECTED_NON_EVOLUTIONARY": 76,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_3_flow_0.9": {
+      "REJECTED_COMPLEX_ROOT": 102,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 128,
+      "slow_shock": 18,
+      "REJECTED_NON_EVOLUTIONARY": 110,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_3_flow_1": {
+      "UNRESOLVED": 360
+    },
+    "R109_corner_3_flow_1.1": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_3_flow_1.5": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_4_flow_0.75": {
+      "REJECTED_COMPLEX_ROOT": 108,
+      "slow_shock": 29,
+      "REJECTED_NON_EVOLUTIONARY": 123,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 97,
+      "UNRESOLVED": 2,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_4_flow_0.9": {
+      "REJECTED_COMPLEX_ROOT": 62,
+      "slow_shock": 21,
+      "REJECTED_NON_EVOLUTIONARY": 145,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 128,
+      "UNRESOLVED": 3,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_4_flow_1": {
+      "UNRESOLVED": 360
+    },
+    "R109_corner_4_flow_1.1": {
+      "REJECTED_NON_EVOLUTIONARY": 177,
+      "fast_shock": 180,
+      "UNRESOLVED": 3
+    },
+    "R109_corner_4_flow_1.5": {
+      "REJECTED_NON_EVOLUTIONARY": 178,
+      "fast_shock": 180,
+      "UNRESOLVED": 2
+    },
+    "R109_corner_5_flow_0.75": {
+      "REJECTED_COMPLEX_ROOT": 108,
+      "slow_shock": 29,
+      "REJECTED_NON_EVOLUTIONARY": 123,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 97,
+      "UNRESOLVED": 2,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_5_flow_0.9": {
+      "REJECTED_COMPLEX_ROOT": 62,
+      "slow_shock": 21,
+      "REJECTED_NON_EVOLUTIONARY": 145,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 128,
+      "UNRESOLVED": 3,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_5_flow_1": {
+      "UNRESOLVED": 360
+    },
+    "R109_corner_5_flow_1.1": {
+      "REJECTED_NON_EVOLUTIONARY": 177,
+      "fast_shock": 180,
+      "UNRESOLVED": 3
+    },
+    "R109_corner_5_flow_1.5": {
+      "REJECTED_NON_EVOLUTIONARY": 178,
+      "fast_shock": 180,
+      "UNRESOLVED": 2
+    },
+    "R109_corner_6_flow_0.75": {
+      "REJECTED_COMPLEX_ROOT": 158,
+      "slow_shock": 12,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 97,
+      "REJECTED_NON_EVOLUTIONARY": 91,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_6_flow_0.9": {
+      "REJECTED_COMPLEX_ROOT": 96,
+      "slow_shock": 11,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 128,
+      "REJECTED_NON_EVOLUTIONARY": 123,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_6_flow_1": {
+      "UNRESOLVED": 360
+    },
+    "R109_corner_6_flow_1.1": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_6_flow_1.5": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_7_flow_0.75": {
+      "REJECTED_COMPLEX_ROOT": 158,
+      "slow_shock": 12,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 97,
+      "REJECTED_NON_EVOLUTIONARY": 91,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_7_flow_0.9": {
+      "REJECTED_COMPLEX_ROOT": 96,
+      "slow_shock": 11,
+      "REJECTED_NEGATIVE_FIELD_SQUARED": 128,
+      "REJECTED_NON_EVOLUTIONARY": 123,
+      "UNRESOLVED": 1,
+      "REJECTED_NONREAL_FIELD": 1
+    },
+    "R109_corner_7_flow_1": {
+      "UNRESOLVED": 360
+    },
+    "R109_corner_7_flow_1.1": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    },
+    "R109_corner_7_flow_1.5": {
+      "REJECTED_NON_EVOLUTIONARY": 179,
+      "fast_shock": 180,
+      "UNRESOLVED": 1
+    }
+  },
+  "inner_nodes": 6660,
+  "inner_algebraic_roots": 19980,
+  "inner_root_statuses": {
+    "REJECTED_COMPLEX_ROOT": 8226,
+    "REJECTED_EXPANSIVE_ROOT": 2374,
+    "slow_shock": 2470,
+    "REJECTED_NONPOSITIVE_STATE": 6227,
+    "UNRESOLVED": 4,
+    "REJECTED_NON_EVOLUTIONARY": 230,
+    "REJECTED_NONPOSITIVE_DENSITY": 449
+  },
+  "maximum_accepted_scaled_flux_residual": 3.478185979665451e-15,
+  "counts_meaning": "Finite model/root records, not observations, probabilities or continuous-region area fractions."
+}

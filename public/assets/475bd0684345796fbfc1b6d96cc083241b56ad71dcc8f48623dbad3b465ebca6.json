@@ -1,0 +1,71 @@
+{
+  "stage": "R134",
+  "constraints": [
+    {
+      "quantity": "Relative Fe XIII centroid",
+      "category": "MEASURED",
+      "central_km_s": 16.559600881163973,
+      "dependencies": "Target line and chosen reference; formal noise error excludes absolute calibration and morphology.",
+      "independent_state_jump": false
+    },
+    {
+      "quantity": "Effective density",
+      "category": "SOURCE_DERIVED",
+      "dependencies": "Same aperture, 202/203 joint spectral likelihood, atomic self-blend, temperature scenario, calibration and line-of-sight mixture.",
+      "measured_compression": false
+    },
+    {
+      "quantity": "Temperature",
+      "category": "ASSUMED",
+      "values_K": [
+        1000000.0,
+        1584893.1924611141,
+        2500000.0
+      ],
+      "measured_confidence_bounds": false
+    },
+    {
+      "quantity": "Published speed proxies",
+      "category": "SOURCE_DERIVED",
+      "values_km_s": [
+        336,
+        371
+      ],
+      "independent_local_normal_speed": false
+    },
+    {
+      "quantity": "Upstream motion",
+      "category": "ASSUMED if assigned; otherwise UNKNOWN",
+      "absolute_normal_velocity_interval": null,
+      "dependencies": "No absolute Doppler zero point; no independent normal or plasma/front association."
+    },
+    {
+      "quantity": "Doppler-to-jump, reference-to-upstream, emitting-to-downstream assignments",
+      "category": "ASSUMED",
+      "shared_by_both_families": true
+    },
+    {
+      "quantity": "Local AIA brightening",
+      "category": "SOURCE_DERIVED reduction of MEASURED image samples",
+      "percent_range": [
+        2.4,
+        8.5
+      ],
+      "registration_alternatives": 16,
+      "confidence_interval": false,
+      "independent_density_jump": false
+    },
+    {
+      "quantity": "Unique ridge and AIA–STEREO correspondence",
+      "category": "NOT_ESTABLISHED",
+      "alpha_interval_deg": null
+    },
+    {
+      "quantity": "Absolute fields and state-to-state magnetic change",
+      "category": "MODEL_DERIVED in existing solutions",
+      "measured_in_retained_E05_set": false
+    }
+  ],
+  "new_association": "None adopted",
+  "working_hypothesis_label": "WORKING HYPOTHESIS — NOT AN OBSERVATIONAL RESULT"
+}

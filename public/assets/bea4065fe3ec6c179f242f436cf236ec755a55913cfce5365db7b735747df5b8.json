@@ -1,0 +1,36 @@
+{
+  "event": "2009-02-13",
+  "source": "T. Podladchikova et al. (2019), ApJ 877, 68",
+  "doi": "10.3847/1538-4357/ab1b3a",
+  "same_selected_patch_confirmed_by_author": true,
+  "rows": [
+    {
+      "point": 1,
+      "apparent_speed_km_s": 260.8333333333333,
+      "surface_pattern_speed_km_s": 207.51,
+      "reduction_relative_to_apparent_percent": 20.443450479233228
+    },
+    {
+      "point": 2,
+      "apparent_speed_km_s": 258.62333333333333,
+      "surface_pattern_speed_km_s": 208.38166666666666,
+      "reduction_relative_to_apparent_percent": 19.42657919496823
+    },
+    {
+      "point": 3,
+      "apparent_speed_km_s": 259.045,
+      "surface_pattern_speed_km_s": 205.12,
+      "reduction_relative_to_apparent_percent": 20.816846493852424
+    }
+  ],
+  "result_sentence": "Geometry changes the inferred surface pattern speed; these tables alone do not determine an MHD shock type.",
+  "family": null,
+  "missing": [
+    "local front normal and its uncertainty",
+    "normal front speed in the selected local frame",
+    "co-spatial density and thermal pressure on both sides",
+    "plasma velocities and vector magnetic fields on both sides",
+    "joint observational uncertainty"
+  ],
+  "limits": "Pattern motion is not plasma normal velocity; height change is not an independently recovered shock-normal speed. No new raw observations or assumed plasma state."
+}

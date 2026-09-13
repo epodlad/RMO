@@ -1,0 +1,45 @@
+{
+  "checkpoint": "R103",
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "A",
+      "angle_halfwidth_deg": "5",
+      "status": "FAST_EXCLUDED_OVER_SET",
+      "minimum_G_decimal": [
+        "0.002627200127738012094961677830310870004387377572562458114",
+        "0.002627200127738012094961678126379764315766429422965044361"
+      ]
+    },
+    {
+      "case": "B",
+      "angle_halfwidth_deg": "10",
+      "status": "NOT_EXCLUDED_BY_THIS_BOUND",
+      "minimum_G_decimal": [
+        "-0.1495109226211490385952784347140769495940717398948998454",
+        "-0.1495109226211490385952784344372029152205487618388827699"
+      ]
+    }
+  ],
+  "critical_angle_deg_enclosure": [
+    "35.08859068431775085628032684326171875",
+    "35.088590684972587041556835174560546875"
+  ],
+  "critical_symmetric_angle_halfwidth_deg_enclosure": [
+    "5.08859068431775085628032684326171875",
+    "5.088590684972587041556835174560546875"
+  ],
+  "central_total_speed_in_saved_units": 1,
+  "central_angle_deg": 30,
+  "total_speed_hard_error_percent": 20,
+  "compression_absolute_hard_error": "0.05",
+  "Mach_relative_hard_error_percent": 10,
+  "saved_slow_inside_both": true,
+  "new_fast_state_constructed": false,
+  "uncertainty_semantics": "hard model bounds, not sigma",
+  "historical_numerical_tests_rerun": false,
+  "production_API_changed": false,
+  "solar_identification": false,
+  "unique_slow_identification": false,
+  "native_browser_tested": false
+}

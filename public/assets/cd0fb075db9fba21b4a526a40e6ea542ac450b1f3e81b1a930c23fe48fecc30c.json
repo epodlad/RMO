@@ -1,0 +1,352 @@
+{
+  "checkpoint": "RMO88",
+  "event_date": "2010-06-13",
+  "status": "CONDITIONAL_SCALAR_COMPARISON",
+  "provenance": {
+    "checkpoint": "RMO88",
+    "date": "2026-09-06",
+    "event_date": "2010-06-13",
+    "source_file": "solar_diagnosis_audit/sources.json",
+    "source_sha256": "aa1b4b4ea859a1bc48392feb107335566177b296823b973ca966221ef2ce7ce2",
+    "sources": [
+      {
+        "authors": "Kozarev et al. (2011)",
+        "doi": "10.1088/2041-8205/733/2/L25",
+        "read_url": "https://arxiv.org/html/1406.2372v1",
+        "locator": "Table 1, 06/13 rows and note; Sections II.1 and III.1",
+        "used": "Published coefficients and quoted errors; 05:37 UT origin; spherical/radial deprojection"
+      },
+      {
+        "authors": "Ma et al. (2011)",
+        "doi": "10.1088/0004-637X/738/2/160",
+        "read_url": "https://arxiv.org/html/1106.6056v1",
+        "locator": "Sections III.2-III.3, Eq.3, 05:40 UT and gas-dynamic comparison",
+        "used": "Two harmonic frequencies, supplied sound speed, gamma=5/3 and published gas/magnetic contrast"
+      }
+    ],
+    "rechecked_primary_HTML": true,
+    "new_observation_downloads": false,
+    "not_a_new_discovery": "Ma already made the gas-versus-magnetic comparison; RMO adds this conditional bounds and frame-sensitivity check."
+  },
+  "time": {
+    "from_UT": "05:37:00",
+    "to_UT": "05:40:00",
+    "elapsed_s": 180
+  },
+  "gamma": {
+    "exact_fraction": "5/3",
+    "value": 1.6666666666666667
+  },
+  "rows": [
+    {
+      "profile": "193/I",
+      "central_speed_km_s": {
+        "exact_fraction": "59969/100",
+        "value": 599.69
+      },
+      "conditional_speed_bounds_km_s": [
+        {
+          "exact_fraction": "54839/100",
+          "value": 548.39
+        },
+        {
+          "exact_fraction": "65099/100",
+          "value": 650.99
+        }
+      ],
+      "half_width_sum_km_s": {
+        "exact_fraction": "513/10",
+        "value": 51.3
+      },
+      "if_errors_are_SD_possible_speed_SD_km_s": [
+        {
+          "exact_fraction": "27/2",
+          "value": 13.5
+        },
+        {
+          "exact_fraction": "513/10",
+          "value": 51.3
+        }
+      ],
+      "published_coefficients": {
+        "profile": "193/I",
+        "v0_km_s": "774.29",
+        "v0_plus_minus": "18.90",
+        "a_km_s2": "-0.97",
+        "a_plus_minus": "0.18"
+      }
+    },
+    {
+      "profile": "193/II",
+      "central_speed_km_s": {
+        "exact_fraction": "30393/50",
+        "value": 607.86
+      },
+      "conditional_speed_bounds_km_s": [
+        {
+          "exact_fraction": "57613/100",
+          "value": 576.13
+        },
+        {
+          "exact_fraction": "63959/100",
+          "value": 639.59
+        }
+      ],
+      "half_width_sum_km_s": {
+        "exact_fraction": "3173/100",
+        "value": 31.73
+      },
+      "if_errors_are_SD_possible_speed_SD_km_s": [
+        {
+          "exact_fraction": "787/100",
+          "value": 7.87
+        },
+        {
+          "exact_fraction": "3173/100",
+          "value": 31.73
+        }
+      ],
+      "published_coefficients": {
+        "profile": "193/II",
+        "v0_km_s": "688.86",
+        "v0_plus_minus": "11.93",
+        "a_km_s2": "-0.45",
+        "a_plus_minus": "0.11"
+      }
+    },
+    {
+      "profile": "211/I",
+      "central_speed_km_s": {
+        "exact_fraction": "58489/100",
+        "value": 584.89
+      },
+      "conditional_speed_bounds_km_s": [
+        {
+          "exact_fraction": "51639/100",
+          "value": 516.39
+        },
+        {
+          "exact_fraction": "65339/100",
+          "value": 653.39
+        }
+      ],
+      "half_width_sum_km_s": {
+        "exact_fraction": "137/2",
+        "value": 68.5
+      },
+      "if_errors_are_SD_possible_speed_SD_km_s": [
+        {
+          "exact_fraction": "179/10",
+          "value": 17.9
+        },
+        {
+          "exact_fraction": "137/2",
+          "value": 68.5
+        }
+      ],
+      "published_coefficients": {
+        "profile": "211/I",
+        "v0_km_s": "791.89",
+        "v0_plus_minus": "25.30",
+        "a_km_s2": "-1.15",
+        "a_plus_minus": "0.24"
+      }
+    },
+    {
+      "profile": "211/II",
+      "central_speed_km_s": {
+        "exact_fraction": "57971/100",
+        "value": 579.71
+      },
+      "conditional_speed_bounds_km_s": [
+        {
+          "exact_fraction": "52833/100",
+          "value": 528.33
+        },
+        {
+          "exact_fraction": "63109/100",
+          "value": 631.09
+        }
+      ],
+      "half_width_sum_km_s": {
+        "exact_fraction": "2569/50",
+        "value": 51.38
+      },
+      "if_errors_are_SD_possible_speed_SD_km_s": [
+        {
+          "exact_fraction": "671/50",
+          "value": 13.42
+        },
+        {
+          "exact_fraction": "2569/50",
+          "value": 51.38
+        }
+      ],
+      "published_coefficients": {
+        "profile": "211/II",
+        "v0_km_s": "691.31",
+        "v0_plus_minus": "18.98",
+        "a_km_s2": "-0.62",
+        "a_plus_minus": "0.18"
+      }
+    },
+    {
+      "profile": "193/AVG",
+      "central_speed_km_s": {
+        "exact_fraction": "60377/100",
+        "value": 603.77
+      },
+      "conditional_speed_bounds_km_s": [
+        {
+          "exact_fraction": "27181/50",
+          "value": 543.62
+        },
+        {
+          "exact_fraction": "16598/25",
+          "value": 663.92
+        }
+      ],
+      "half_width_sum_km_s": {
+        "exact_fraction": "1203/20",
+        "value": 60.15
+      },
+      "if_errors_are_SD_possible_speed_SD_km_s": [
+        {
+          "exact_fraction": "309/20",
+          "value": 15.45
+        },
+        {
+          "exact_fraction": "1203/20",
+          "value": 60.15
+        }
+      ],
+      "published_coefficients": {
+        "profile": "193/AVG",
+        "v0_km_s": "731.57",
+        "v0_plus_minus": "22.35",
+        "a_km_s2": "-0.71",
+        "a_plus_minus": "0.21"
+      }
+    },
+    {
+      "profile": "211/AVG",
+      "central_speed_km_s": {
+        "exact_fraction": "2907/5",
+        "value": 581.4
+      },
+      "conditional_speed_bounds_km_s": [
+        {
+          "exact_fraction": "49577/100",
+          "value": 495.77
+        },
+        {
+          "exact_fraction": "66703/100",
+          "value": 667.03
+        }
+      ],
+      "half_width_sum_km_s": {
+        "exact_fraction": "8563/100",
+        "value": 85.63
+      },
+      "if_errors_are_SD_possible_speed_SD_km_s": [
+        {
+          "exact_fraction": "2237/100",
+          "value": 22.37
+        },
+        {
+          "exact_fraction": "8563/100",
+          "value": 85.63
+        }
+      ],
+      "published_coefficients": {
+        "profile": "211/AVG",
+        "v0_km_s": "741.60",
+        "v0_plus_minus": "31.63",
+        "a_km_s2": "-0.89",
+        "a_plus_minus": "0.30"
+      }
+    }
+  ],
+  "front_speed_outer_envelope_km_s": [
+    {
+      "exact_fraction": "49577/100",
+      "value": 495.77
+    },
+    {
+      "exact_fraction": "66703/100",
+      "value": 667.03
+    }
+  ],
+  "sound_speed_assumed_bounds_km_s": [
+    {
+      "exact_fraction": "126",
+      "value": 126.0
+    },
+    {
+      "exact_fraction": "186",
+      "value": 186.0
+    }
+  ],
+  "radio_compression_assumed_bounds": [
+    {
+      "exact_fraction": "22500/18769",
+      "value": 1.1987852309659546
+    },
+    {
+      "exact_fraction": "32400/16129",
+      "value": 2.008804017608035
+    }
+  ],
+  "gas_compression_stationary_upstream": [
+    {
+      "exact_fraction": "9831515716/3495758929",
+      "value": 2.812412387604889
+    },
+    {
+      "exact_fraction": "363207364/100521841",
+      "value": 3.6132183850472854
+    }
+  ],
+  "stationary_gap_in_compression": {
+    "exact_fraction": "45309927683764/56383095765841",
+    "value": 0.8036083699968539
+  },
+  "upstream_relative_speed_cap_km_s": 323.5827429047963,
+  "upstream_relative_speed_cap_squared": {
+    "exact_fraction": "27118800/259",
+    "value": 104705.79150579151
+  },
+  "first_possible_overlap_outward_plasma_speed_km_s": 172.1872570952037,
+  "free_flow_counterexample": {
+    "kind": "conditional_outer_envelope_endpoint_not_an_observation",
+    "normal_front_speed_km_s": "495.77",
+    "upstream_outward_plasma_speed_km_s": "172.187257095203691405690864286107047963176188035827719694455253312791127045",
+    "downstream_outward_plasma_speed_km_s": "334.687714187917911687728023150327795574014467186106953424440394465494076793",
+    "front_relative_upstream_speed_km_s": "323.582742904796308594309135713892952036823811964172280305544746687208872955",
+    "density_units": "arbitrary common scale, rho1=1",
+    "pressure_units": "rho_scale*(km/s)^2",
+    "rho1": "1",
+    "rho2": "2.00880401760803521607043214086428172856345712691425382850765701531403062806",
+    "p1": "20757.6000000000000000000000000000000000000000000000000000000000000000000000",
+    "p2": "73339.9436293436293436293436293436293436293436293436293436293436293436293439",
+    "field": "zero for the tested gas-only hypothesis",
+    "max_scaled_inertial_RH_residual": "0",
+    "entropy_change_over_cv": "0.09962706790498539786748124974842977653912175428679367890271805725507429641",
+    "not_a_complete_fit_to_the_solar_event": true
+  },
+  "observer_sentence": "With the adopted normal speed, temperature bounds and stationary upstream plasma, a gas-only shock compresses too much; magnetic effects remain a viable explanation.",
+  "scope": [
+    "Quoted coefficient, frequency and sound-speed errors are simultaneous hard bounds only for this conditional test; no confidence level is assigned.",
+    "The union envelope covers separate profiles and reported averages; these are not six independent observations and are not averaged again.",
+    "Unknown coefficient covariance is not set to zero: the rectangle encloses any joint set within the stated marginal bounds.",
+    "Derived speed, Mach number and compression remain linked through the same primary inputs.",
+    "Published spherical/radial kinematics are identified with the normal front speed only as a model assumption.",
+    "The radio lanes are assigned to the same upstream/downstream plasma; electron and mass-density ratios are equated at fixed composition.",
+    "Plasma velocity is distinct from front speed; no solar upstream flow is measured here.",
+    "The source temperature region, selected front and radio source still need spatial matching.",
+    "The free-flow endpoint demonstrates loss of unconditional exclusion in the assumed outer set, not feasibility under an unrecovered joint observational covariance.",
+    "No fast/slow identification, field angle, magnetic strength, full Riemann fan, non-wave exclusion or new observation is inferred."
+  ],
+  "next_measurement": "Constrain the upstream plasma velocity along the local front normal and verify front/radio/temperature association.",
+  "new_solar_family": null
+}

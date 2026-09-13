@@ -1,0 +1,58 @@
+{
+  "schema_version": "rmo-local-discontinuity-0.1",
+  "case_id": "A63",
+  "model": "ideal_mhd_single_planar_discontinuity",
+  "units": "normalized_mu0_1",
+  "gamma": 1.6666666666666667,
+  "basis": {
+    "normal": [
+      1,
+      0,
+      0
+    ],
+    "t1": [
+      0,
+      1,
+      0
+    ],
+    "t2": [
+      0,
+      0,
+      1
+    ]
+  },
+  "frame": "common_inertial_local_basis",
+  "front_speed": 0.0,
+  "left": {
+    "rho": 1.0,
+    "p": 0.6,
+    "u": [
+      3.2,
+      0.15,
+      0.0
+    ],
+    "B": [
+      0.7,
+      0.9,
+      0.0
+    ]
+  },
+  "right": {
+    "rho": 2.4239556300003606,
+    "p": 4.259926310964406,
+    "u": [
+      1.320156177941064,
+      0.4671245631336021,
+      0.0
+    ],
+    "B": [
+      0.7,
+      2.349712288610753,
+      0.0
+    ]
+  },
+  "uncertainty": {
+    "mode": "exact_synthetic",
+    "note": "Floating-point saved states; no observational errors supplied."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": "RMO — Riemann Map Operator",
+  "upload_type": "software",
+  "description": "R139 scientific release candidate: local ideal-MHD interpretation of declared solar constraints, with the established QuickLook interface, runtime source and a separate scientific-data companion. Scientific statements remain conditional on documented inputs, models and search limits. Original RMO code is Apache-2.0; third-party material retains its specified terms and source acknowledgements.",
+  "creators": [
+    {
+      "name": "Podladchikova, Elena"
+    }
+  ],
+  "version": "1.0.0-rc3",
+  "license": "apache-2.0",
+  "keywords": [
+    "MHD",
+    "solar physics",
+    "Riemann problem",
+    "inverse problems",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/epodlad/RMO",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

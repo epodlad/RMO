@@ -1,0 +1,31 @@
+{
+  "MEASURED": {
+    "new_R138_measurements": [],
+    "note": "The original teams measured imaging and spectra; R138 reads their records and does not relabel their measurements as ours."
+  },
+  "SOURCE_DERIVED": {
+    "records": "R138_EVIDENCE_LEDGER.json and R138_TIMING.json",
+    "operations": "Transcription, identity comparison and subtraction of published frame labels."
+  },
+  "ASSUMED": {
+    "used_for_conditional_explanation_only": [
+      "Optically thin additive line emission",
+      "Nonrelativistic line-centroid velocity",
+      "A two-component illustration with a stationary background"
+    ],
+    "not_assigned": [
+      "Front height or dome",
+      "Local normal",
+      "Upstream rest for E08",
+      "Front emissivity fraction",
+      "Front dwell time",
+      "Shock identity",
+      "FAST/SLOW label"
+    ]
+  },
+  "MODEL_DERIVED": {
+    "new_E08_states": null,
+    "illustrative_relation": "v_centroid = f_line * v_front_LOS for the stated two-component model; f_line is not measured for E08.",
+    "logical_result": "An upper limit on a diluted centroid cannot bound the intrinsic front flow without a positive lower bound on its line-emission weight."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "Scientific consistency and evidence gate; not numerical shock validation.",
+  "correct_event_and_source": true,
+  "source_figures_1_to_4_inspected": true,
+  "Liu_April8_not_imported": true,
+  "source_track_labels_neutralized": true,
+  "slower_image_speed_not_used_as_SLOW_evidence": true,
+  "physical_independence_not_assumed": true,
+  "opposite_assignments_considered_without_claiming_roots": true,
+  "no_false_NOT_TWO_INDEPENDENT_FRONTS_conclusion": true,
+  "no_false_MULTIPLE_ADMISSIBLE_FAMILIES_claim": true,
+  "all_missing_bounds_remain_null": true,
+  "algebra_certificate": "PASS",
+  "no_E02_accepted_roots_claimed": true,
+  "raw_data_and_movie_not_claimed_reprocessed": true,
+  "observational_UNRESOLVED_separate_from_numerical_failure": true,
+  "R136_and_prior_scientific_results_unchanged": true
+}

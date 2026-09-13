@@ -1,0 +1,70 @@
+{
+  "tests": [
+    {
+      "leading": "FAST",
+      "trailing": "SLOW",
+      "evidence_selection": "NOT_ESTABLISHED",
+      "full_state_check": "NOT_RUN_INPUT_GATE",
+      "physical_admissibility": "NOT_DEMONSTRATED_FOR_E02",
+      "numerically_excluded": false,
+      "reason": "Image ordering is not characteristic ordering; no jointly supported local state pair is supplied."
+    },
+    {
+      "leading": "SLOW",
+      "trailing": "FAST",
+      "evidence_selection": "NOT_ESTABLISHED",
+      "full_state_check": "NOT_RUN_INPUT_GATE",
+      "physical_admissibility": "NOT_DEMONSTRATED_FOR_E02",
+      "numerically_excluded": false,
+      "reason": "Image ordering is not characteristic ordering; no jointly supported local state pair is supplied."
+    },
+    {
+      "leading": "FAST",
+      "trailing": "FAST",
+      "evidence_selection": "NOT_ESTABLISHED",
+      "full_state_check": "NOT_RUN_INPUT_GATE",
+      "physical_admissibility": "NOT_DEMONSTRATED_FOR_E02",
+      "numerically_excluded": false,
+      "reason": "Image ordering is not characteristic ordering; no jointly supported local state pair is supplied."
+    },
+    {
+      "leading": "SLOW",
+      "trailing": "SLOW",
+      "evidence_selection": "NOT_ESTABLISHED",
+      "full_state_check": "NOT_RUN_INPUT_GATE",
+      "physical_admissibility": "NOT_DEMONSTRATED_FOR_E02",
+      "numerically_excluded": false,
+      "reason": "Image ordering is not characteristic ordering; no jointly supported local state pair is supplied."
+    },
+    {
+      "leading": "FAST",
+      "trailing": "OTHER",
+      "evidence_selection": "NOT_ESTABLISHED",
+      "full_state_check": "NOT_RUN_INPUT_GATE",
+      "physical_admissibility": "NOT_DEMONSTRATED_FOR_E02",
+      "numerically_excluded": false,
+      "reason": "Image ordering is not characteristic ordering; no jointly supported local state pair is supplied."
+    },
+    {
+      "leading": "OTHER",
+      "trailing": "FAST",
+      "evidence_selection": "NOT_ESTABLISHED",
+      "full_state_check": "NOT_RUN_INPUT_GATE",
+      "physical_admissibility": "NOT_DEMONSTRATED_FOR_E02",
+      "numerically_excluded": false,
+      "reason": "Image ordering is not characteristic ordering; no jointly supported local state pair is supplied."
+    },
+    {
+      "leading": "OTHER",
+      "trailing": "OTHER",
+      "evidence_selection": "NOT_ESTABLISHED",
+      "full_state_check": "NOT_RUN_INPUT_GATE",
+      "physical_admissibility": "NOT_DEMONSTRATED_FOR_E02",
+      "numerically_excluded": false,
+      "reason": "Image ordering is not characteristic ordering; no jointly supported local state pair is supplied."
+    }
+  ],
+  "interpretation": "Logical reversal audit, not a numerical proof that all listed families exist. No preferred assignment is selected.",
+  "new_E02_root_count": 0,
+  "root_count_means": "No event-specific root problem posed; not zero physical solutions."
+}

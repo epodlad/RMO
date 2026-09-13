@@ -1,0 +1,876 @@
+{
+  "summary": {
+    "status": "PASS",
+    "scientific_checkpoint": "R99",
+    "reference": "Saved R98 alpha=120 degree slow state",
+    "source_R98_json_sha256": "d2da6fef60769c1a13af2bc90ee11b007cecd545e5aeb2d447fbb2874695a23b",
+    "compression": "2.16777372674628571456846035289235997091915771158507132962527462913711634348321147559045940",
+    "normal_acoustic_Mach_squared": "3",
+    "fast_upper_compression": "2",
+    "partial_input_result": "FAST_EXCLUDED",
+    "control_families": [
+      "fast_shock",
+      "fast_shock"
+    ],
+    "max_control_flux_residual": "8.18415491307700787542425096395862311168090696206612707245428474838490411785960931164692178E-90",
+    "saved_reference_compression_difference": "3.22700935109805660564E-69",
+    "exact_reduction_identity": "PASS",
+    "fast_limits_covered_by_analytic_proof": [
+      "perpendicular",
+      "parallel/gas",
+      "switch-on"
+    ],
+    "full_state_API_with_B_missing": "INSUFFICIENT_DATA",
+    "unique_slow_identification": false,
+    "solar_identification": false,
+    "measurement_error_propagation": false,
+    "native_browser_tested": false,
+    "historical_benchmark_rerun": false
+  },
+  "partial_input_request": {
+    "rho1": "1",
+    "p1": "3/20",
+    "upstream_normal_speed_squared": "3/4",
+    "gamma": "5/3",
+    "upstream_acoustic_speed_squared": "1/4",
+    "normal_acoustic_Mach_squared": "3",
+    "compression": "2.16777372674628571456846035289235997091915771158507132962527462913711634348321147559045940",
+    "magnetic_components": "WITHHELD",
+    "downstream_pressure": "WITHHELD",
+    "tangential_velocities": "WITHHELD",
+    "front_geometry": "one fixed local normal",
+    "pressure_meaning": "total scalar thermal pressure under the declared ideal-MHD equation of state"
+  },
+  "compression_enclosure": {
+    "polynomial_coefficients_ascending": [
+      "8",
+      "-638/27",
+      "5270/243",
+      "-1400/243"
+    ],
+    "initial_bracket": [
+      "21677/10000",
+      "10839/5000"
+    ],
+    "initial_sign_values": [
+      "969581369/1215000000000",
+      "-4799587/16875000000"
+    ],
+    "derivative_max_on_initial_bracket": "-1314959909/121500000",
+    "lower": "71341630932043758904042097882781131012672981763894774086362255349593/32910091146424120843099383651147010099654717312671597266972180480000",
+    "upper": "285366523728175035616168391531124524050691927055579096345449021398373/131640364585696483372397534604588040398618869250686389067888721920000",
+    "width": "1/131640364585696483372397534604588040398618869250686389067888721920000",
+    "bisections": 213,
+    "meaning": "numerical enclosure of one exact input, not measurement uncertainty"
+  },
+  "reduction_identity": {
+    "status": "PASS",
+    "residual_coefficients": [],
+    "identity": "(1+2rh)r\u00b2(1-h)\u00b2-(5+2rh-4r)(1-rh)\u00b2=(r-1)[r+5-2rh(4-r)]",
+    "scope": "Exact coefficient identity; endpoint proof separately uses undivided energy relation"
+  },
+  "full_scalar_input_screen": {
+    "status": "FAST_EXCLUDED",
+    "normal_acoustic_Mach_squared": "3",
+    "upper_fast_compression": "2",
+    "compression_minus_bound_lower": "5521448639195517217843330580487110813363547138551579552417894389593/32910091146424120843099383651147010099654717312671597266972180480000",
+    "other_families": "NOT_EXCLUDED_BY_THIS_SCREEN",
+    "unique_slow_identification": false
+  },
+  "omission_controls": [
+    {
+      "case": "normal_flow_withheld",
+      "upstream": {
+        "rho": "1",
+        "p": "0.15",
+        "u": [
+          "0.980187202149079329599520768149991800322404376432337433978465356325027847833715831926105124",
+          "0.565911345016997076616225706172230730796150742441281093865033857338775760981473758668381700",
+          "0E-89"
+        ],
+        "B": [
+          "0.183420785544263847684735775502483356866456450562760132619499105718000429757708709808705244",
+          "0.398133401866375928304971860736833082134500735115968427486876424693681040044500644457006376",
+          "0E-90"
+        ]
+      },
+      "downstream": {
+        "rho": "2.16777372674628571456846035289235997091915771158507132962527462913711634348321147559045940",
+        "p": "0.673389965399065905467706581525696178208386579361967202244224737788532340130139982851584830",
+        "u": [
+          "0.392499814317914482602185884234621710222085644817220787677079681720493985683065201336252968",
+          "0.364396237781406773572910080668430864497077275974313266378911909733564886464763087479964812",
+          "0E-90"
+        ],
+        "B": [
+          "-0.005250964103523552340414925186866443323849519594501349234070842046128858499283996966408322",
+          "0.724922458209259134587687175825490049843355133147549204976793351918489483510503149720160130",
+          "0E-90"
+        ]
+      },
+      "normal": [
+        "0.866025403784438646763723170752936183471402626905190314027903489725966508454400018540573095",
+        "0.5",
+        "0"
+      ],
+      "tangent": [
+        "-0.5",
+        "0.866025403784438646763723170752936183471402626905190314027903489725966508454400018540573095",
+        "0"
+      ],
+      "chosen_counterexample_h": "0.1",
+      "chosen_counterexample_A": "0.05",
+      "b": "0.117093952756005630724329434391334302028111671885303162061533715339805583389775053981458717",
+      "normal_speed": "1.13182269003399415323245141234446146159230148488256218773006771467755152196294751733676340",
+      "normal_speed_squared": "1.28102260167578680791280630808200654292810178217843122978839267700402004204199399148443576",
+      "normal_acoustic_Mach_squared": "5.12409040670314723165122523232802617171240712871372491915357070801608016816797596593774304",
+      "compression": "2.16777372674628571456846035289235997091915771158507132962527462913711634348321147559045940",
+      "pressure_ratio": "4.4892664359937727031180438768379745213892438624131146816281649185902156008675998856772322",
+      "entropy_over_cv": "0.21218813020816219967376713435526167293177525955981092863961472462594569785264764839556025",
+      "tangential_field_ratio": "2.49098568657818101032610026590579387741704932119920663475551849697951954388077646424098499",
+      "original_flux_residuals": [
+        "0",
+        "7.95634853148710678605810632753008476150421470616335001238658439927796486026348630726673509E-90",
+        "-3E-90",
+        "0E-180",
+        "-1E-90",
+        "0E-180",
+        "-8.18415491307700787542425096395862311168090696206612707245428474838490411785960931164692178E-90",
+        "1E-90"
+      ],
+      "undivided_energy_balance": {
+        "gas": "0.0699609529066325096226449638481190885884905649352648096406815054740300424083551740850755469",
+        "magnetic": "0.0699609529066325096226449638481190885884905649352648096406815054740300424083551740850755470",
+        "residual": "-1E-91",
+        "difference_from_original_energy": "6.79707282404153065517071827653955764974805621904184509044891488454591062543673136237105916E-90"
+      },
+      "characteristics": {
+        "upstream": {
+          "normal_velocity": "1.13182269003399415323245141234446146159230148488256218773006771467755152196294751733676340",
+          "fast": "0.592352684693624542303280008575306285113692225861203578414891200243693318446447900655562023",
+          "alfven_normal": "0.357913760796617989982671256958896091608452352670788845135172378197602117429989725131625770",
+          "slow": "0.302112044095602792408744777557205509771820249443696692944356583255462069021985933604618585",
+          "fast_Mach": "1.91072433582265807768285813496161421728139828764956860798467137505399206260571238734893798",
+          "eigenvalues": [
+            "0.539470005340369610929171403769155176478609259021358609315176514433858203516499616681201377",
+            "0.773908929237376163249780155385565369983849132211773342594895336479949404532957792205137630",
+            "0.829710645938391360823706634787255951820481235438865494785711131422089452940961583732144815",
+            "1.13182269003399415323245141234446146159230148488256218773006771467755152196294751733676340",
+            "1.43393473412959694564119618990166697136412173432625888067442429793301359098493345094138198",
+            "1.48973645083061214321512266930335755320075383755335103286524009287515363939293724246838917",
+            "1.72417537472761869553573142091976774670599371074376576614495891492124484040939541799232542"
+          ]
+        },
+        "downstream": {
+          "normal_velocity": "0.522112929070692469900107012396480645713104953746414729228091071911614570557592329579006007",
+          "fast": "0.847066492391819367005388315521065401435397432707078068921068388083183218610640344437869263",
+          "alfven_normal": "0.243092422728952853381590332118691668144807425599294229355641038319223154513880961987064623",
+          "slow": "0.206492670164965039084864892889336025617956330982909946000339456119418182451918226207170406",
+          "fast_Mach": "0.616377738654763992841526206246024730955596722669829592507761382826217388469167873266772093",
+          "eigenvalues": [
+            "-0.324953563321126897105281303124584755722292478960663339692977316171568648053048014858863256",
+            "0.279020506341739616518516680277788977568297528147120499872450033592391416043711367591941384",
+            "0.315620258905727430815242119507144620095148622763504783227751615792196388105674103371835601",
+            "0.522112929070692469900107012396480645713104953746414729228091071911614570557592329579006007",
+            "0.728605599235657508984971905285816671331061284729324675228430528031032753009510555786176413",
+            "0.765205351799645323281697344515172313857912379345708958583732110230837725071473291566070630",
+            "1.36917942146251183690549532791754604714850238645349279814915945999479778916823267401687527"
+          ]
+        }
+      },
+      "request_without_family": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "R99_normal_flow_withheld",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "frame": "common_inertial_local_basis",
+        "gamma": 1.6666666666666667,
+        "front_speed": 0.0,
+        "basis": {
+          "normal": [
+            0.8660254037844386,
+            0.5,
+            0.0
+          ],
+          "t1": [
+            -0.5,
+            0.8660254037844386,
+            0.0
+          ],
+          "t2": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "left": {
+          "rho": 1.0,
+          "p": 0.15,
+          "u": [
+            1.131822690033994,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.35791376079661796,
+            0.25308324733926846,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.1677737267462858,
+          "p": 0.6733899653990659,
+          "u": [
+            0.5221129290706925,
+            0.11932649180321588,
+            0.0
+          ],
+          "B": [
+            0.35791376079661796,
+            0.6304267466348432,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic"
+        }
+      },
+      "diagnosis": {
+        "case_id": "R99_normal_flow_withheld",
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock",
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "SUPPORTED",
+            "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+          },
+          "slow_shock": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+          },
+          "rotational_discontinuity": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+          },
+          "contact": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0.0,
+          "evaluation_boost": [
+            0.0,
+            0.05966324590160794,
+            0.0
+          ],
+          "rh_scaled_inf": 1.961832068575708e-16,
+          "rh_components": {
+            "mass": 1.961832068575708e-16,
+            "normal_momentum": 1.5871699446861577e-16,
+            "t1_momentum": 2.7755575615628914e-17,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 1.806280189060908e-16
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.30211204409560277,
+              "alfven_n": 0.35791376079661796,
+              "fast": 0.5923526846936246
+            },
+            "right": {
+              "slow": 0.20649267016496503,
+              "alfven_n": 0.24309242272895284,
+              "fast": 0.8470664923918193
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 1.131822690033994,
+            "right": 0.5221129290706925
+          },
+          "upstream_side": "left",
+          "characteristic_transition": [
+            1,
+            2
+          ],
+          "compression": 2.1677737267462858,
+          "pressure_ratio": 4.489266435993773,
+          "entropy_over_cv": 0.2121881302081623,
+          "tangential_field_ratio": 2.4909856865781808
+        },
+        "result_sentence": "For these supplied states and front speed, a fast shock passes the local ideal-MHD checks.",
+        "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+      },
+      "partial_screen": {
+        "status": "FAST_NOT_EXCLUDED",
+        "normal_acoustic_Mach_squared": "5.12409040670314723165122523232802617171240712871372491915357070801608016816797596593774304",
+        "upper_fast_compression": "2.52291156310879323384330240137348166025111524922610830682785390793276618753255101862652721",
+        "compression_minus_bound_lower": "-0.35513783636250751927484204848112168933195753764103697720257927879564984404933954303606781",
+        "other_families": "NOT_EXCLUDED_BY_THIS_SCREEN",
+        "unique_slow_identification": false
+      }
+    },
+    {
+      "case": "thermal_constraint_withheld",
+      "upstream": {
+        "rho": "1",
+        "p": "0.0878204645670042230432470757935007265210837539139773715461502865048541875423312904860940378",
+        "u": [
+          "0.750000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+          "0.433012701892219323381861585376468091735701313452595157013951744862983254227200009270286546",
+          "0E-90"
+        ],
+        "B": [
+          "0.140346240857443027770435380837893899758143592817101491349623519806607505599518390762836424",
+          "0.304635737688775755594930470855046251146232550720360242877040905838912388703516050906295690",
+          "0E-90"
+        ]
+      },
+      "downstream": {
+        "rho": "2.16777372674628571456846035289235997091915771158507132962527462913711634348321147559045940",
+        "p": "0.394249463974032447473136830220967487087478516586087216845909217431941566515671640281018365",
+        "u": [
+          "0.300325142067773693611534094016134778798106663568370960738545523863899959045092811318179759",
+          "0.278821410580392959683190039516153248478969417426937540783882199515567249027513641545839514",
+          "0E-91"
+        ],
+        "B": [
+          "-0.004017827481330131902648497119145525940441553904679888883547898103133580873476097662761663",
+          "0.554681638838876396675807839555296265663031369170606730204874684600745194883548458757821488",
+          "0E-90"
+        ]
+      },
+      "normal": [
+        "0.866025403784438646763723170752936183471402626905190314027903489725966508454400018540573095",
+        "0.5",
+        "0"
+      ],
+      "tangent": [
+        "-0.5",
+        "0.866025403784438646763723170752936183471402626905190314027903489725966508454400018540573095",
+        "0"
+      ],
+      "chosen_counterexample_h": "0.1",
+      "chosen_counterexample_A": "0.05",
+      "b": "0.117093952756005630724329434391334302028111671885303162061533715339805583389775053981458717",
+      "normal_speed": "0.866025403784438646763723170752936183471402626905190314027903489725966508454400018540573093",
+      "normal_speed_squared": "0.75",
+      "normal_acoustic_Mach_squared": "5.12409040670314723165122523232802617171240712871372491915357070801608016816797596593774302",
+      "compression": "2.16777372674628571456846035289235997091915771158507132962527462913711634348321147559045940",
+      "pressure_ratio": "4.48926643599377270311804387683797452138924386241311468162816491859021560086759988567723221",
+      "entropy_over_cv": "0.21218813020816219967376713435526167293177525955981092863961472462594569785264764839556025",
+      "tangential_field_ratio": "2.49098568657818101032610026590579387741704932119920663475551849697951954388077646424098499",
+      "original_flux_residuals": [
+        "0E-90",
+        "0E-90",
+        "0E-90",
+        "0E-181",
+        "-1E-90",
+        "0E-181",
+        "0E-90",
+        "0E-90"
+      ],
+      "undivided_energy_balance": {
+        "gas": "0.0699609529066325096226449638481190885884905649352648096406815054740300424083551740850755469",
+        "magnetic": "0.0699609529066325096226449638481190885884905649352648096406815054740300424083551740850755466",
+        "residual": "3E-91",
+        "difference_from_original_energy": "3E-91"
+      },
+      "characteristics": {
+        "upstream": {
+          "normal_velocity": "0.866025403784438646763723170752936183471402626905190314027903489725966508454400018540573095",
+          "fast": "0.453244556291043077841531592583843051592410777748257488704928998596597868909493333035151412",
+          "alfven_normal": "0.273861278752583056728484891400401066976372347498991627113447224866246638561361366900429219",
+          "slow": "0.231164039455842960778592523331513827503564354208636689785797580987005134908071850543043966",
+          "fast_Mach": "1.91072433582265807768285813496161421728139828764956860798467137505399206260571238734893798",
+          "eigenvalues": [
+            "0.412780847493395568922191578169093131878991849156932825322974491129368639544906685505421683",
+            "0.592164125031855590035238279352535116495030279406198686914456264859719869893038651640143876",
+            "0.634861364328595685985130647421422355967838272696553624242105908738961373546328167997529129",
+            "0.866025403784438646763723170752936183471402626905190314027903489725966508454400018540573095",
+            "1.09718944324028160754231569408445001097496698111382700381370107071297164336247186908361706",
+            "1.13988668253702170349220806215333725044777497440418194114135071459221314701576138544100231",
+            "1.31926996007548172460525476333677923506381340465344780273283248832256437736389335157572451"
+          ]
+        },
+        "downstream": {
+          "normal_velocity": "0.399499907716059094197089665184516435639910235618332396986997475748721772193566405596644482",
+          "fast": "0.648141363099780653285255165907061412076535652333436535497836854074934202406536390036184074",
+          "alfven_normal": "0.186004588355138716350811772650978379523577314760831444003975874562142153543238520868215048",
+          "slow": "0.157999923161789309601609474646686126943240527651146526925381602593582543445041872426857339",
+          "fast_Mach": "0.616377738654763992841526206246024730955596722669829592507761382826217388469167873266772091",
+          "eigenvalues": [
+            "-0.248641455383721559088165500722544976436625416715104138510839378326212430212969984439539592",
+            "0.213495319360920377846277892533538056116332920857500952983021601186579618650327884728429434",
+            "0.241499984554269784595480190537830308696669707967185870061615873155139228748524533169787143",
+            "0.399499907716059094197089665184516435639910235618332396986997475748721772193566405596644482",
+            "0.557499830877848403798699139831202562583150763269478923912379078342304315638608278023501821",
+            "0.585504496071197810547901437835494815163487550379163840990973350310863925736804926464859530",
+            "1.04764127081583974748234483109157784771644588795176893248483432982365597460010279563282856"
+          ]
+        }
+      },
+      "request_without_family": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "R99_thermal_constraint_withheld",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "frame": "common_inertial_local_basis",
+        "gamma": 1.6666666666666667,
+        "front_speed": 0.0,
+        "basis": {
+          "normal": [
+            0.8660254037844386,
+            0.5,
+            0.0
+          ],
+          "t1": [
+            -0.5,
+            0.8660254037844386,
+            0.0
+          ],
+          "t2": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "left": {
+          "rho": 1.0,
+          "p": 0.08782046456700422,
+          "u": [
+            0.8660254037844386,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.27386127875258304,
+            0.19364916731037085,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.1677737267462858,
+          "p": 0.39424946397403243,
+          "u": [
+            0.3994999077160591,
+            0.09130385364774472,
+            0.0
+          ],
+          "B": [
+            0.27386127875258304,
+            0.48237730398791717,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic"
+        }
+      },
+      "diagnosis": {
+        "case_id": "R99_thermal_constraint_withheld",
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock",
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "SUPPORTED",
+            "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+          },
+          "slow_shock": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+          },
+          "rotational_discontinuity": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+          },
+          "contact": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0.0,
+          "evaluation_boost": [
+            0.0,
+            0.04565192682387236,
+            0.0
+          ],
+          "rh_scaled_inf": 1.1102230246251565e-16,
+          "rh_components": {
+            "mass": 1.1102230246251565e-16,
+            "normal_momentum": 1.1102230246251565e-16,
+            "t1_momentum": 1.3877787807814457e-17,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 0.0
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.23116403945584293,
+              "alfven_n": 0.27386127875258304,
+              "fast": 0.4532445562910431
+            },
+            "right": {
+              "slow": 0.1579999231617893,
+              "alfven_n": 0.1860045883551387,
+              "fast": 0.6481413630997805
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 0.8660254037844386,
+            "right": 0.3994999077160591
+          },
+          "upstream_side": "left",
+          "characteristic_transition": [
+            1,
+            2
+          ],
+          "compression": 2.1677737267462858,
+          "pressure_ratio": 4.489266435993772,
+          "entropy_over_cv": 0.21218813020816207,
+          "tangential_field_ratio": 2.4909856865781808
+        },
+        "result_sentence": "For these supplied states and front speed, a fast shock passes the local ideal-MHD checks.",
+        "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+      },
+      "partial_screen": {
+        "status": "FAST_NOT_EXCLUDED",
+        "normal_acoustic_Mach_squared": "5.12409040670314723165122523232802617171240712871372491915357070801608016816797596593774302",
+        "upper_fast_compression": "2.52291156310879323384330240137348166025111524922610830682785390793276618753255101862652721",
+        "compression_minus_bound_lower": "-0.35513783636250751927484204848112168933195753764103697720257927879564984404933954303606781",
+        "other_families": "NOT_EXCLUDED_BY_THIS_SCREEN",
+        "unique_slow_identification": false
+      }
+    }
+  ],
+  "saved_reference_compatibility_witness": {
+    "alpha_deg": "120",
+    "rmo": {
+      "upstream": {
+        "rho": "1",
+        "p": "0.15",
+        "u": [
+          "1",
+          "0",
+          "0"
+        ],
+        "B": [
+          "1.05409255338945977733296451481090617790651837977507227561916828426419814621307940711474937",
+          "0",
+          "0"
+        ]
+      },
+      "downstream": {
+        "rho": "2.16777372674628571456846035289235997091915771158507132962527462913711957049256257364706504",
+        "p": "0.688851017141583889481207678331841748911143681483011405158923250766618808258341266247871784",
+        "u": [
+          "0.365696676162702196954369164972660045287107245124869191749050491154950679311689754026678901",
+          "0.165594592159255649471270248690791494201526486108452671712676887214146467864401423007626828",
+          "0E-90"
+        ],
+        "B": [
+          "0.835629390938997761729401221961276446321778050800457192486566825328788021403905899389926459",
+          "0.378389296946373564239264067279956614401216653766449617204650065990860181429499168771915052",
+          "0E-91"
+        ]
+      },
+      "meta": {
+        "compression": "2.16777372674628571456846035289235997091915771158507132962527462913711957049256257364706504",
+        "regular_denominator": "-1.40863747416253968285384483654706663435461967953896814402808292126346618943618063738562782",
+        "bracket_derivative_max": "-3.6131687242798353909465020576131687242798353909465020576131687242798353909465020576131686",
+        "polynomial_residual": "-2.797437652068281533803E-68"
+      }
+    },
+    "published_equations": {
+      "downstream": {
+        "rho": "2.16777372674628571456846035289235997091915771158507132962527462913711632345158228891302344",
+        "p": "0.688851017141583889481207678331841748911143681483011405158923250766618135301371831375543708",
+        "u": [
+          "0.365696676162702196954369164972660045287107245124869191749050491154951248046154847013605684",
+          "0.165594592159255649471270248690791494201526486108452671712676887214146679584435438672122983",
+          "0"
+        ],
+        "B": [
+          "0.835629390938997761729401221961276446321778050800457192486566825328788069318249034636947793",
+          "0.378389296946373564239264067279956614401216653766449617204650065990860098439422447235019767",
+          "0E-89"
+        ]
+      },
+      "meta": {
+        "x": "5.8482751733002473566215933208449427587174090044977004072315453040745943616790547259269226",
+        "polynomial_residual": "-6.84612838780184992619E-69"
+      }
+    },
+    "original_flux_residuals": {
+      "rmo": [
+        "2E-90",
+        "-2E-90",
+        "1E-90",
+        "0E-181",
+        "-8.66025403784438646763723170752936183471402626905190314027903489725966508454400018540573096E-91",
+        "0E-181",
+        "-5.68885215720891249635E-70",
+        "1E-90"
+      ],
+      "published": [
+        "6E-90",
+        "-1.26519885631293556464E-70",
+        "-7.3046290027067999679E-71",
+        "0E-179",
+        "3.66025403784438646763723170752936183471402626905190314027903489725966508454400018540573099E-91",
+        "0E-179",
+        "2.3E-89",
+        "3E-90"
+      ]
+    },
+    "state_disagreement": "1.49786896123995915315892136602128887206828607159607788486951347045402301964507578690031792E-69",
+    "request_without_family": {
+      "schema_version": "rmo-local-discontinuity-0.1",
+      "case_id": "R98_alpha_120",
+      "model": "ideal_mhd_single_planar_discontinuity",
+      "units": "normalized_mu0_1",
+      "frame": "common_inertial_local_basis",
+      "gamma": 1.6666666666666667,
+      "front_speed": 0.0,
+      "basis": {
+        "normal": [
+          0.8660254037844386,
+          0.5,
+          0.0
+        ],
+        "t1": [
+          -0.5,
+          0.8660254037844386,
+          0.0
+        ],
+        "t2": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "left": {
+        "rho": 1.0,
+        "p": 0.15,
+        "u": [
+          0.8660254037844386,
+          -0.5,
+          0.0
+        ],
+        "B": [
+          0.9128709291752769,
+          -0.5270462766947299,
+          0.0
+        ]
+      },
+      "right": {
+        "rho": 2.1677737267462858,
+        "p": 0.6888510171415839,
+        "u": [
+          0.3994999077160591,
+          -0.039439214542112286,
+          0.0
+        ],
+        "B": [
+          0.9128709291752769,
+          -0.09011995179380586,
+          0.0
+        ]
+      },
+      "uncertainty": {
+        "mode": "exact_synthetic"
+      }
+    },
+    "diagnosis": {
+      "case_id": "R98_alpha_120",
+      "status": "SUPPORTED_LOCAL_CLASS",
+      "family": "slow_shock",
+      "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+      "candidates": {
+        "fast_shock": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+        },
+        "slow_shock": {
+          "status": "SUPPORTED",
+          "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+        },
+        "rotational_discontinuity": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+        },
+        "contact": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+        }
+      },
+      "coverage": {
+        "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+        "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+        "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+      },
+      "global_uniqueness": false,
+      "uncertainty_propagated": false,
+      "checks": {
+        "front_speed": 0.0,
+        "evaluation_boost": [
+          0.0,
+          -0.26971960727105615,
+          0.0
+        ],
+        "rh_scaled_inf": 2.220446049250313e-16,
+        "rh_components": {
+          "mass": 1.1102230246251565e-16,
+          "normal_momentum": 2.220446049250313e-16,
+          "t1_momentum": -5.551115123125783e-17,
+          "t2_momentum": 0.0,
+          "t1_induction": 0.0,
+          "t2_induction": 0.0,
+          "energy": 1.1102230246251565e-16
+        },
+        "characteristics": {
+          "left": {
+            "slow": 0.41923270369853305,
+            "alfven_n": 0.9128709291752769,
+            "fast": 1.088740121085252
+          },
+          "right": {
+            "slow": 0.6126228164873717,
+            "alfven_n": 0.6200152945171291,
+            "fast": 0.7365280442519191
+          }
+        },
+        "front_relative_normal_velocity": {
+          "left": 0.8660254037844386,
+          "right": 0.3994999077160591
+        },
+        "upstream_side": "left",
+        "characteristic_transition": [
+          3,
+          4
+        ],
+        "compression": 2.1677737267462858,
+        "pressure_ratio": 4.592340114277226,
+        "entropy_over_cv": 0.2348885420582243,
+        "tangential_field_ratio": 0.1709905861758021
+      },
+      "result_sentence": "For these supplied states and front speed, a slow shock passes the local ideal-MHD checks.",
+      "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+    }
+  },
+  "missing_B_API_control": {
+    "request": {
+      "schema_version": "rmo-local-discontinuity-0.1",
+      "case_id": "R99_full_state_API_without_B",
+      "model": "ideal_mhd_single_planar_discontinuity",
+      "units": "normalized_mu0_1",
+      "frame": "common_inertial_local_basis",
+      "gamma": 1.6666666666666667,
+      "front_speed": 0.0,
+      "basis": {
+        "normal": [
+          0.8660254037844386,
+          0.5,
+          0.0
+        ],
+        "t1": [
+          -0.5,
+          0.8660254037844386,
+          0.0
+        ],
+        "t2": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "left": {
+        "rho": 1.0,
+        "p": 0.15,
+        "u": [
+          0.8660254037844386,
+          -0.5,
+          0.0
+        ],
+        "B": null
+      },
+      "right": {
+        "rho": 2.1677737267462858,
+        "p": 0.6888510171415839,
+        "u": [
+          0.3994999077160591,
+          -0.039439214542112286,
+          0.0
+        ],
+        "B": null
+      },
+      "uncertainty": {
+        "mode": "exact_synthetic"
+      }
+    },
+    "result": {
+      "case_id": "R99_full_state_API_without_B",
+      "status": "INSUFFICIENT_DATA",
+      "family": null,
+      "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+      "candidates": {
+        "fast_shock": {
+          "status": "NOT_ASSESSED",
+          "reason": "Required checks not completed."
+        },
+        "slow_shock": {
+          "status": "NOT_ASSESSED",
+          "reason": "Required checks not completed."
+        },
+        "rotational_discontinuity": {
+          "status": "NOT_ASSESSED",
+          "reason": "Required checks not completed."
+        },
+        "contact": {
+          "status": "NOT_ASSESSED",
+          "reason": "Required checks not completed."
+        }
+      },
+      "coverage": {
+        "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+        "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+        "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+      },
+      "global_uniqueness": false,
+      "uncertainty_propagated": false,
+      "checks": {},
+      "missing": [
+        "left.B",
+        "right.B"
+      ],
+      "result_sentence": "Supply or constrain: left.B, right.B. Missing values were not replaced by zero.",
+      "next_action": "Supply or constrain: left.B, right.B. Missing values were not replaced by zero."
+    }
+  },
+  "necessary_Mach_boundary": {
+    "M2_lower": "214024892796131276712126293648343393038018945291684322259086766048779/60298733653652724468355436721806909385945887486791614981526466570407",
+    "M2_upper": "285366523728175035616168391531124524050691927055579096345449021398373/80398311538203632624473915629075879181261183315722153308701955427209",
+    "value_decimal": "3.54940941256676394733262491737897271955489180652595627643226466126265393717469734315427740",
+    "meaning": "Boundary for this necessary fast condition, not a sufficient fast criterion or instrument requirement"
+  }
+}

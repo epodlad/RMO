@@ -1,0 +1,74 @@
+{
+  "checkpoint": "R138",
+  "event": "E08",
+  "retrieved_UTC": "2026-09-11",
+  "primary_source": {
+    "id": "M2015",
+    "authors": "M. S. Madjarska, J. G. Doyle, J. Shetye",
+    "published": "A&A 575, A39 (2015)",
+    "doi": "10.1051/0004-6361/201424754",
+    "download_url": "https://arxiv.org/pdf/1412.1984",
+    "actual_version_label": "1412.1984v1, 5 December 2014",
+    "typeset_header": "27 July 2018; retained as a source header discrepancy",
+    "download_identity": {
+      "path": "Madjarska_et_al_2015_1412.1984.pdf",
+      "bytes": 902512,
+      "sha256": "54f34cc3c77ee48128d1bfa6fbc63415c43737606b19bf4bfa3c1795a27a3cfe"
+    },
+    "full_text_read": true,
+    "pages_inspected": "1-9 (event analysis); Figure 2 on p.4 visually inspected",
+    "pdf_in_project_update": false,
+    "note": "External primary reference; exact source identity and page-referenced facts retained. The original paper is not redistributed in the update."
+  },
+  "HS2003": {
+    "doi": "10.1086/368079",
+    "full_text_read_this_pass": false,
+    "support": "Three accepted project audits and the explicit account in M2015 pp.3,7-9."
+  },
+  "access_attempts": [
+    {
+      "url": "https://arxiv.org/abs/1412.1984",
+      "route": "web",
+      "result": "DisabledError"
+    },
+    {
+      "url": "https://www.aanda.org/articles/aa/abs/2015/01/aa24754-14/aa24754-14.html",
+      "route": "web",
+      "result": "Tool did not open the URL; no scientific absence inference"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1412.1984",
+      "route": "HTTP retrieval",
+      "result": "200; PDF verified"
+    },
+    {
+      "url": "https://articles.adsabs.harvard.edu/pdf/2003ApJ...587..429H",
+      "route": "HTTP retrieval",
+      "result": "403; access limitation"
+    }
+  ],
+  "retained_audits": [
+    {
+      "path": "19_1998-06-13_GEO_POS_SPEC_NEG_control.md",
+      "bytes": 3872,
+      "sha256": "ea01116a084d762a1e1846a744a4aa34d0f5dd4364f6a07a49d7f0f9f239020b",
+      "version": 0,
+      "status": "Copied byte-for-byte; inherited references to other events are historical, not newly analysed."
+    },
+    {
+      "path": "19_1998-06-13_control_archive_literature_audit.md",
+      "bytes": 11878,
+      "sha256": "a9a42d5e43450e24941c36c96016c1cae01525023f157a15c66191116e3e3ace",
+      "version": 0,
+      "status": "Copied byte-for-byte; inherited references to other events are historical, not newly analysed."
+    },
+    {
+      "path": "19A_1998-06-13_independent_control_verification.md",
+      "bytes": 9591,
+      "sha256": "b360150b1c1cb9c0cd1bb9cdb72dfc766e03ca3878c799cf68f330e701d30bfd",
+      "version": 0,
+      "status": "Copied byte-for-byte; inherited references to other events are historical, not newly analysed."
+    }
+  ],
+  "raw_solar_data_downloaded": false
+}

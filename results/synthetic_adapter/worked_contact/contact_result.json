@@ -1,0 +1,1340 @@
+{
+  "adapter_version": "RMO-SYNTHETIC-ADAPTER-0.1.0",
+  "adapter_contract": "rmo-synthetic-adapter-draft-0.1.0",
+  "identity": {
+    "adapter_contract": "rmo-synthetic-adapter-draft-0.1.0",
+    "action": "run_synthetic_special_case",
+    "execution_id": "worked_contact_B01",
+    "request_json": "{\"schema_version\":\"rmo-quicklook-synthetic-request-draft-0.1.0\",\"request_id\":\"B01_contact\",\"purpose\":\"synthetic_initial_value\",\"execution_mode\":\"preflight_only\",\"physics\":{\"model\":\"ideal_mhd_1d\",\"gamma\":1.6666666666666667,\"mu0_normalized\":1},\"normalization\":{\"rho0\":1,\"v0\":1,\"B0\":1,\"p0\":1,\"source_units\":\"synthetic_normalized\"},\"geometry\":{\"source_frame\":\"RIEMANN_COMPUTATIONAL\",\"solver_frame\":\"RIEMANN_COMPUTATIONAL\",\"normal\":[1,0,0],\"t1\":[0,1,0],\"t2\":[0,0,1],\"galilean_offset\":[0,0,0],\"handedness\":\"right\"},\"shared_Bn\":0.75,\"initial_states\":{\"left\":{\"rho\":1.0,\"p\":1.0,\"u\":[0.2,0.1,-0.2],\"B_t\":[0.5,0.25],\"id\":\"X_L0\",\"role\":\"initial_left\",\"frame\":\"RIEMANN_COMPUTATIONAL\",\"units\":\"normalized_mu0_1\"},\"right\":{\"rho\":0.5,\"p\":1.0,\"u\":[0.2,0.1,-0.2],\"B_t\":[0.5,0.25],\"id\":\"X_R0\",\"role\":\"initial_right\",\"frame\":\"RIEMANN_COMPUTATIONAL\",\"units\":\"normalized_mu0_1\"}},\"policies\":[\"REGULAR_EVOLUTIONARY_1.0\",\"ENUMERATE_NONREGULAR_1.0\"],\"uncertainty\":{\"mode\":\"exact_synthetic\"},\"missing_reasons\":{}}",
+    "request_body_sha256": "455703626727780c81ecc498aeeae437d5c9b9f1d0cf9520c414340ee337e142",
+    "input_revision": 0,
+    "capability_profile": "R6B_SPECIAL_CASES_0_1_0_DRAFT"
+  },
+  "input": {
+    "status": "VALID",
+    "errors": [],
+    "uncertainty": "EXACT_SYNTHETIC",
+    "parsed_snapshot": {
+      "schema_version": "rmo-quicklook-synthetic-request-draft-0.1.0",
+      "request_id": "B01_contact",
+      "purpose": "synthetic_initial_value",
+      "execution_mode": "preflight_only",
+      "physics": {
+        "model": "ideal_mhd_1d",
+        "gamma": 1.6666666666666667,
+        "mu0_normalized": 1
+      },
+      "normalization": {
+        "rho0": 1,
+        "v0": 1,
+        "B0": 1,
+        "p0": 1,
+        "source_units": "synthetic_normalized"
+      },
+      "geometry": {
+        "source_frame": "RIEMANN_COMPUTATIONAL",
+        "solver_frame": "RIEMANN_COMPUTATIONAL",
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "t1": [
+          0,
+          1,
+          0
+        ],
+        "t2": [
+          0,
+          0,
+          1
+        ],
+        "galilean_offset": [
+          0,
+          0,
+          0
+        ],
+        "handedness": "right"
+      },
+      "shared_Bn": 0.75,
+      "initial_states": {
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B_t": [
+            0.5,
+            0.25
+          ],
+          "id": "X_L0",
+          "role": "initial_left",
+          "frame": "RIEMANN_COMPUTATIONAL",
+          "units": "normalized_mu0_1"
+        },
+        "right": {
+          "rho": 0.5,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B_t": [
+            0.5,
+            0.25
+          ],
+          "id": "X_R0",
+          "role": "initial_right",
+          "frame": "RIEMANN_COMPUTATIONAL",
+          "units": "normalized_mu0_1"
+        }
+      },
+      "policies": [
+        "REGULAR_EVOLUTIONARY_1.0",
+        "ENUMERATE_NONREGULAR_1.0"
+      ],
+      "uncertainty": {
+        "mode": "exact_synthetic"
+      },
+      "missing_reasons": {}
+    }
+  },
+  "capability": {
+    "profile": "CONTACT",
+    "reason": "Exact contact input domain"
+  },
+  "execution": {
+    "status": "FINISHED",
+    "solver_call_count": 2,
+    "started_utc": "2026-09-05T22:10:24.573996+00:00",
+    "elapsed_seconds": 1.26265636899916,
+    "ended_utc": "2026-09-05T22:10:25.836642+00:00",
+    "total_budget_seconds": 30.0
+  },
+  "policy_runs": [
+    {
+      "policy": "REGULAR_EVOLUTIONARY_1.0",
+      "status": "FINISHED",
+      "solver_call_count": 1,
+      "raw_packet": {
+        "policy": "REGULAR_EVOLUTIONARY_1.0",
+        "gamma": 1.6666666666666667,
+        "initial_states": [
+          {
+            "rho": 1.0,
+            "p": 1.0,
+            "u": [
+              0.2,
+              0.1,
+              -0.2
+            ],
+            "id": "X_L0",
+            "role": "initial_left",
+            "frame": "RIEMANN_COMPUTATIONAL",
+            "units": "normalized_mu0_1",
+            "B": [
+              0.75,
+              0.5,
+              0.25
+            ]
+          },
+          {
+            "rho": 0.5,
+            "p": 1.0,
+            "u": [
+              0.2,
+              0.1,
+              -0.2
+            ],
+            "id": "X_R0",
+            "role": "initial_right",
+            "frame": "RIEMANN_COMPUTATIONAL",
+            "units": "normalized_mu0_1",
+            "B": [
+              0.75,
+              0.5,
+              0.25
+            ]
+          }
+        ],
+        "raw": {
+          "specification_id": "RMO-R6A-SPEC-1.0.0",
+          "policy": "REGULAR_EVOLUTIONARY_1.0",
+          "solutions": [
+            {
+              "id": "contact_0",
+              "policy": "REGULAR_EVOLUTIONARY_1.0",
+              "waves": [
+                {
+                  "order": 0,
+                  "structure": "contact",
+                  "family": "entropy",
+                  "speed": 0.2,
+                  "left_state_ref": "X_L0",
+                  "right_state_ref": "X_R0",
+                  "checks": {
+                    "rh_scaled_inf": 6.678685382510707e-17
+                  }
+                }
+              ],
+              "intermediate_states": [],
+              "domain_codes": [
+                "OK"
+              ],
+              "root_provenance": {
+                "method": "exact_contact_invariants"
+              }
+            }
+          ],
+          "rejected_candidates": [],
+          "domain_codes": [
+            "OK"
+          ],
+          "complete": true
+        },
+        "versions": {
+          "python": "3.12.13",
+          "numpy": "2.3.5",
+          "scipy": "1.17.0"
+        },
+        "limits": {
+          "address_space_bytes": 536870912,
+          "cpu_seconds": 30
+        },
+        "solver_call_count": 1
+      },
+      "allocated_seconds": 15.0,
+      "started_utc": "2026-09-05T22:10:24.577709+00:00",
+      "errors": [],
+      "returncode": 0,
+      "elapsed_seconds": 0.5511644920006802,
+      "ended_utc": "2026-09-05T22:10:25.128884+00:00",
+      "validation_execution": {
+        "policy": "REGULAR_EVOLUTIONARY_1.0",
+        "status": "FINISHED",
+        "solver_call_count": 0,
+        "allocated_seconds": 14.448580072999903,
+        "started_utc": "2026-09-05T22:10:25.129070+00:00",
+        "errors": [],
+        "returncode": 0,
+        "elapsed_seconds": 0.15974617700339877,
+        "ended_utc": "2026-09-05T22:10:25.288819+00:00"
+      },
+      "validation": {
+        "status": "PASS",
+        "checks": [
+          {
+            "check": "identity.policy",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "identity.gamma",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "identity.initial_states",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "result.shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "result.specification",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "result.policy",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "result.types",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "result.domain_codes",
+            "status": "PASS",
+            "value": [
+              "OK"
+            ],
+            "tolerance": null
+          },
+          {
+            "check": "result.nonempty",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "solution.unique_ids",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "solution.shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "solution.policy",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "solution.codes",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "solution.arrays",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.vector_shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.numeric",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.domain",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.units_frame",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.Bn",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.vector_shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.numeric",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.domain",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.units_frame",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.Bn",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "nonconstant.has_waves",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "profile.structure",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.order_index",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.connected_refs",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.speed_shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.interval_order",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.discontinuity_speed",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.RH_scaled_inf",
+            "status": "PASS",
+            "value": 6.678685382510707e-17,
+            "tolerance": 1e-10
+          },
+          {
+            "check": "contact.family",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "contact.invariants",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "fan.right_endpoint",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "fan.no_unused_states",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          }
+        ],
+        "checked_solutions": [
+          {
+            "id": "contact_0",
+            "policy": "REGULAR_EVOLUTIONARY_1.0",
+            "waves": [
+              {
+                "order": 0,
+                "structure": "contact",
+                "family": "entropy",
+                "speed": 0.2,
+                "left_state_ref": "X_L0",
+                "right_state_ref": "X_R0",
+                "checks": {
+                  "rh_scaled_inf": 6.678685382510707e-17
+                }
+              }
+            ],
+            "intermediate_states": [],
+            "checks": [
+              {
+                "check": "solution.shape",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "solution.policy",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "solution.codes",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "solution.arrays",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.vector_shape",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.numeric",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.domain",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.units_frame",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.Bn",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.vector_shape",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.numeric",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.domain",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.units_frame",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.Bn",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "nonconstant.has_waves",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "profile.structure",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.shape",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.order_index",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.connected_refs",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.speed_shape",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.interval_order",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.discontinuity_speed",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.RH_scaled_inf",
+                "status": "PASS",
+                "value": 6.678685382510707e-17,
+                "tolerance": 1e-10
+              },
+              {
+                "check": "contact.family",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "contact.invariants",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "fan.right_endpoint",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "fan.no_unused_states",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              }
+            ]
+          }
+        ],
+        "stability": "NOT_ASSESSED"
+      }
+    },
+    {
+      "policy": "ENUMERATE_NONREGULAR_1.0",
+      "status": "FINISHED",
+      "solver_call_count": 1,
+      "raw_packet": {
+        "policy": "ENUMERATE_NONREGULAR_1.0",
+        "gamma": 1.6666666666666667,
+        "initial_states": [
+          {
+            "rho": 1.0,
+            "p": 1.0,
+            "u": [
+              0.2,
+              0.1,
+              -0.2
+            ],
+            "id": "X_L0",
+            "role": "initial_left",
+            "frame": "RIEMANN_COMPUTATIONAL",
+            "units": "normalized_mu0_1",
+            "B": [
+              0.75,
+              0.5,
+              0.25
+            ]
+          },
+          {
+            "rho": 0.5,
+            "p": 1.0,
+            "u": [
+              0.2,
+              0.1,
+              -0.2
+            ],
+            "id": "X_R0",
+            "role": "initial_right",
+            "frame": "RIEMANN_COMPUTATIONAL",
+            "units": "normalized_mu0_1",
+            "B": [
+              0.75,
+              0.5,
+              0.25
+            ]
+          }
+        ],
+        "raw": {
+          "specification_id": "RMO-R6A-SPEC-1.0.0",
+          "policy": "ENUMERATE_NONREGULAR_1.0",
+          "solutions": [
+            {
+              "id": "contact_0",
+              "policy": "ENUMERATE_NONREGULAR_1.0",
+              "waves": [
+                {
+                  "order": 0,
+                  "structure": "contact",
+                  "family": "entropy",
+                  "speed": 0.2,
+                  "left_state_ref": "X_L0",
+                  "right_state_ref": "X_R0",
+                  "checks": {
+                    "rh_scaled_inf": 6.678685382510707e-17
+                  }
+                }
+              ],
+              "intermediate_states": [],
+              "domain_codes": [
+                "OK"
+              ],
+              "root_provenance": {
+                "method": "exact_contact_invariants"
+              }
+            }
+          ],
+          "rejected_candidates": [],
+          "domain_codes": [
+            "OK"
+          ],
+          "complete": true
+        },
+        "versions": {
+          "python": "3.12.13",
+          "numpy": "2.3.5",
+          "scipy": "1.17.0"
+        },
+        "limits": {
+          "address_space_bytes": 536870912,
+          "cpu_seconds": 30
+        },
+        "solver_call_count": 1
+      },
+      "allocated_seconds": 15.0,
+      "started_utc": "2026-09-05T22:10:25.288933+00:00",
+      "errors": [],
+      "returncode": 0,
+      "elapsed_seconds": 0.5053963239988661,
+      "ended_utc": "2026-09-05T22:10:25.794333+00:00",
+      "validation_execution": {
+        "policy": "ENUMERATE_NONREGULAR_1.0",
+        "status": "FINISHED",
+        "solver_call_count": 0,
+        "allocated_seconds": 14.494487259999005,
+        "started_utc": "2026-09-05T22:10:25.794448+00:00",
+        "errors": [],
+        "returncode": 0,
+        "elapsed_seconds": 0.04213343900119071,
+        "ended_utc": "2026-09-05T22:10:25.836584+00:00"
+      },
+      "validation": {
+        "status": "PASS",
+        "checks": [
+          {
+            "check": "identity.policy",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "identity.gamma",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "identity.initial_states",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "result.shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "result.specification",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "result.policy",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "result.types",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "result.domain_codes",
+            "status": "PASS",
+            "value": [
+              "OK"
+            ],
+            "tolerance": null
+          },
+          {
+            "check": "result.nonempty",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "solution.unique_ids",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "solution.shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "solution.policy",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "solution.codes",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "solution.arrays",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.vector_shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.numeric",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.domain",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.units_frame",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.Bn",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.vector_shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.numeric",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.domain",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.units_frame",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "state.Bn",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "nonconstant.has_waves",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "profile.structure",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.order_index",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.connected_refs",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.speed_shape",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.interval_order",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.discontinuity_speed",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "wave.RH_scaled_inf",
+            "status": "PASS",
+            "value": 6.678685382510707e-17,
+            "tolerance": 1e-10
+          },
+          {
+            "check": "contact.family",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "contact.invariants",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "fan.right_endpoint",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          },
+          {
+            "check": "fan.no_unused_states",
+            "status": "PASS",
+            "value": null,
+            "tolerance": null
+          }
+        ],
+        "checked_solutions": [
+          {
+            "id": "contact_0",
+            "policy": "ENUMERATE_NONREGULAR_1.0",
+            "waves": [
+              {
+                "order": 0,
+                "structure": "contact",
+                "family": "entropy",
+                "speed": 0.2,
+                "left_state_ref": "X_L0",
+                "right_state_ref": "X_R0",
+                "checks": {
+                  "rh_scaled_inf": 6.678685382510707e-17
+                }
+              }
+            ],
+            "intermediate_states": [],
+            "checks": [
+              {
+                "check": "solution.shape",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "solution.policy",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "solution.codes",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "solution.arrays",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.vector_shape",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.numeric",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.domain",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.units_frame",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.Bn",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.vector_shape",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.numeric",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.domain",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.units_frame",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "state.Bn",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "nonconstant.has_waves",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "profile.structure",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.shape",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.order_index",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.connected_refs",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.speed_shape",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.interval_order",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.discontinuity_speed",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "wave.RH_scaled_inf",
+                "status": "PASS",
+                "value": 6.678685382510707e-17,
+                "tolerance": 1e-10
+              },
+              {
+                "check": "contact.family",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "contact.invariants",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "fan.right_endpoint",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              },
+              {
+                "check": "fan.no_unused_states",
+                "status": "PASS",
+                "value": null,
+                "tolerance": null
+              }
+            ]
+          }
+        ],
+        "stability": "NOT_ASSESSED"
+      }
+    }
+  ],
+  "coverage": {
+    "full_mhd_coverage": "NOT_ESTABLISHED",
+    "capability_profile": "R6B_SPECIAL_CASES_0_1_0_DRAFT"
+  },
+  "observer_assessment": {
+    "feature_identity": "SYNTHETIC_INPUT",
+    "model_domain": "NOT_ASSESSED_FOR_SOLAR_PLASMA",
+    "mathematical_structure": "CHECKED_SYNTHETIC_SOLUTION_ONLY",
+    "mhd_family": "SEE_CHECKED_MATHEMATICAL_WAVES_NOT_OBSERVATIONAL_CLASSIFICATION",
+    "sequence_identifiability": "FULL_SET_NOT_ESTABLISHED",
+    "evidence_strength": "NO_OBSERVATIONAL_INFERENCE"
+  },
+  "source_records": [
+    {
+      "path": "synthetic_adapter/__init__.py",
+      "bytes": 128,
+      "sha256": "83bced95232e62de01acb2551f61197b6fda0a7ab16bd64da4e2325af7690fac"
+    },
+    {
+      "path": "synthetic_adapter/__main__.py",
+      "bytes": 501,
+      "sha256": "478a694f828aa3fa00ffad5c687297207152a4bd42782fff53bc97d50d01d25f"
+    },
+    {
+      "path": "synthetic_adapter/check_worker.py",
+      "bytes": 764,
+      "sha256": "2fb9f6662401eea12498c0ea5aac43b318764d8b8c4faa265a32e31206efb938"
+    },
+    {
+      "path": "synthetic_adapter/checks.py",
+      "bytes": 12316,
+      "sha256": "9476b1c514dcb951c554a7f4b7372414f713686831cd0d2b69d91fa99bcdd4d4"
+    },
+    {
+      "path": "synthetic_adapter/demo.py",
+      "bytes": 10273,
+      "sha256": "00134fe58868f15077eb0e1d4fa028739ea2acd245595a8b3c4ba8794a7241f3"
+    },
+    {
+      "path": "synthetic_adapter/input.py",
+      "bytes": 11128,
+      "sha256": "3f4917a98534ea60e96b5be39b91e1912df5f1d289238f45b9afeabe24d887d7"
+    },
+    {
+      "path": "synthetic_adapter/request.py",
+      "bytes": 629,
+      "sha256": "64c9731eddbc009b470a9fe211a526c853552b883a6b88f8eb7f61588c0fe726"
+    },
+    {
+      "path": "synthetic_adapter/runner.py",
+      "bytes": 13705,
+      "sha256": "dac7aa04b525a3ae5351a5740199916f842d305b2928deec5fbd082b7a86e569"
+    },
+    {
+      "path": "synthetic_adapter/saved_view.py",
+      "bytes": 10801,
+      "sha256": "8726c2c720cd3bf65880522666facdc0e9b0a28933e2a325e8f78233f5c6de8e"
+    },
+    {
+      "path": "synthetic_adapter/verify.py",
+      "bytes": 9299,
+      "sha256": "0782544dd45849b9823679ab3960d55950c7793a22849ba49e01a1eb9c6826ae"
+    },
+    {
+      "path": "synthetic_adapter/worker.py",
+      "bytes": 2420,
+      "sha256": "816d92d0acf61823779709ee327f369da1fe31382012408d223bbfbf968c5b62"
+    },
+    {
+      "path": "implementation/rmo/__init__.py",
+      "bytes": 257,
+      "sha256": "e3622564b3fce9b86cfbf2aff31c839e4ade3f0562424f147f57827ca2555b7d"
+    },
+    {
+      "path": "implementation/rmo/benchmark.py",
+      "bytes": 9968,
+      "sha256": "0ae44d3b73653d6bd759f929123c9db5509511f910feb9636fcc842bc144cf0b"
+    },
+    {
+      "path": "implementation/rmo/continuation.py",
+      "bytes": 12457,
+      "sha256": "732398132a02a70d6154c91a2c51ab48942060c90319a4dc91f310337c432f44"
+    },
+    {
+      "path": "implementation/rmo/discontinuities.py",
+      "bytes": 3635,
+      "sha256": "3cf3882d3cb964fea08b69949b236f91a7a671ecd8875738ad034d5a9c7057ea"
+    },
+    {
+      "path": "implementation/rmo/forward.py",
+      "bytes": 909,
+      "sha256": "416bab6a4787741b244233a3444411dbde1753ad7109f9f093b94eea24b48e93"
+    },
+    {
+      "path": "implementation/rmo/hydro.py",
+      "bytes": 4041,
+      "sha256": "1832c57c0d492eed563c93e45faca0dfa9f626957a45d9e4d42e9a514fe7b748"
+    },
+    {
+      "path": "implementation/rmo/models.py",
+      "bytes": 2978,
+      "sha256": "32c972facc8dbcad680df04536fce197474dec327ab7db80b3f35b26edf23d0c"
+    },
+    {
+      "path": "implementation/rmo/nonregular.py",
+      "bytes": 9125,
+      "sha256": "c6beb70737ecf5e60881cca43f0bad11132972d9f3815dfdde58f6ba8abcde73"
+    },
+    {
+      "path": "implementation/rmo/physics.py",
+      "bytes": 4025,
+      "sha256": "fadaf22e80576ebef41386deebcc329bf8528d268ae42c3d535caca023ab791e"
+    },
+    {
+      "path": "implementation/rmo/regular_fan.py",
+      "bytes": 14082,
+      "sha256": "cd5378be8503905b7c68b598486351cf239652690c549ba1d564158d5b38a010"
+    },
+    {
+      "path": "implementation/rmo/reporting.py",
+      "bytes": 3203,
+      "sha256": "4bb0ce5e91e101853f1c200fb1ba904a733d2376ddcbd170e0029f761a03c426"
+    },
+    {
+      "path": "implementation/rmo/rh.py",
+      "bytes": 5745,
+      "sha256": "e5bee2bad9a2ad24ef0d310fd769aeb44f619a90c705aa071a4a02015df9a02f"
+    },
+    {
+      "path": "implementation/rmo/schema.py",
+      "bytes": 5069,
+      "sha256": "23a1ab75fea82ea1a377abb3bc985dc93d1b41e340c5acb2503abd811f2d7638"
+    },
+    {
+      "path": "implementation/rmo/solver.py",
+      "bytes": 5101,
+      "sha256": "90b57e2f508350091ca50adc7f39246b45f4ad87a3eede146ed95a958657b99b"
+    },
+    {
+      "path": "implementation/rmo/topology.py",
+      "bytes": 7480,
+      "sha256": "9f7cba683b794905157ac547a6b8c5956a4578a0d6db043d49b407367638152d"
+    },
+    {
+      "path": "implementation/rmo/uncertainty.py",
+      "bytes": 1412,
+      "sha256": "0f3c29a4f2abcf204a5b49b73fe8d6e05d8c420d5a0bfb9b7eb6390a8d1c7a45"
+    },
+    {
+      "path": "implementation/rmo/wave_curves.py",
+      "bytes": 13191,
+      "sha256": "a1e9262716fb40991be91daae29b8c3e5d919a9c188b4aaabb199e5bc8f1bdf8"
+    },
+    {
+      "path": "RMO/RMO_benchmark_manifest_v1_1.yaml",
+      "bytes": 4746,
+      "sha256": "2ddbcd006ce718bc11fec93ee664d03f6034bd4cb2f97df8c6fd6d586c9921f7"
+    },
+    {
+      "path": "specification/quicklook_input/request_schema_draft_0_1_0.json",
+      "bytes": 4263,
+      "sha256": "46e5e6d0917ddfb87f1fa88aa1a765af3adc8058446f4516c3acb5b5536f24bb"
+    }
+  ],
+  "presentation": {
+    "sentence": "A contact-discontinuity solution was calculated and passed the listed independent checks for these synthetic inputs.",
+    "next_action": "Inspect the states, wave speeds and check table; then compare a deliberately edited eligible input.",
+    "units": "normalized synthetic; not observed km/s",
+    "limits": [
+      "Only the declared special-case route was tested; full MHD branch coverage is not established.",
+      "This is not a solar observation, shock detection or unique physical classification.",
+      "No uncertainty propagation or dynamical stability test was performed."
+    ]
+  }
+}

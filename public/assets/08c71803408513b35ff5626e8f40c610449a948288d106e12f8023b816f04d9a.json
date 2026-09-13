@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "method": "Exact bivariate integer-polynomial identities; no floating-point sampling.",
+  "definitions": {
+    "r": "rho2/rho1 > 1",
+    "A": "mu0*rho1*w1^2/Bn^2",
+    "q": "Bt2/Bt1 = r*(A-1)/(A-r)"
+  },
+  "identities": [
+    "q-1 = A*(r-1)/(A-r)",
+    "q-r = r*(r-1)/(A-r)",
+    "A*(q/r-1) = q-1"
+  ],
+  "identity_residual_coefficients": [
+    {},
+    {},
+    {}
+  ],
+  "ordinary_fast_necessary_domain": "A > r: q > r > 1",
+  "ordinary_slow_necessary_domain": "0 < A < 1: 0 < q < 1",
+  "scope": "Necessary discriminator for regular coplanar compressive ideal-MHD shocks. Not sufficient for full admissibility, not an E02 solution.",
+  "excluded_limits": [
+    "r=1",
+    "Bn=0 in the rational formula",
+    "Bt1=0",
+    "A=r pole",
+    "A=1 switch-off boundary",
+    "characteristic degeneracies"
+  ],
+  "perpendicular_limit": "Bn=0 must be treated separately; a regular perpendicular compressive fast jump has Bt2=r*Bt1.",
+  "numerical_root_solver_run": false
+}

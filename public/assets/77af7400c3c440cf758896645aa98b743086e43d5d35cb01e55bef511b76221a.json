@@ -1,0 +1,55 @@
+{
+  "event": "E11, 2010-06-13",
+  "outer_patch": {
+    "PA_deg": 116,
+    "x_arcsec": 1137.699972069093,
+    "y_arcsec": -554.8933523885671,
+    "normal_PA_deg": 120.27653603075406,
+    "normal_estimator_spread_deg": [
+      113,
+      126
+    ],
+    "time_interval_UTC": [
+      "05:38:32.06",
+      "05:40:08.06"
+    ],
+    "source": "R106/R107/R109; image-derived marker and G0 assumption"
+  },
+  "inner_patch": {
+    "PA_deg": 116,
+    "normal_PA_deg": 117.52071155152196,
+    "normal_method_range_deg": [
+      108.22,
+      121.67
+    ],
+    "common_time_interval_UTC": [
+      "05:38:32.06",
+      "05:40:08.06"
+    ],
+    "longer_time_interval_UTC": [
+      "05:38:08.07",
+      "05:40:44.07"
+    ],
+    "source": "R120 independent inner track; a projected image ridge"
+  },
+  "association_levels": {
+    "same_eruption": "Supported by retained Ma/Kozarev timing and morphology.",
+    "same_outer_surface": "Source interpretation; EUV/radio density-model height consistency is conditional.",
+    "same_radio_EUV_local_patch": "Not independently established. Radio positions are inferred from density models.",
+    "inner_upstream_equals_outer_downstream": "R120 ASSUMED uniform intervening-state transfer, not measured."
+  },
+  "PFSS_primary_locator": "Kozarev2011 retained text, Section 3.4 and Figure 4 caption",
+  "PFSS_quantitative_local_bound": null,
+  "theta_Bn_MEASURED_interval": null,
+  "theta_Bn_MODEL_BOUNDED_interval": null,
+  "matching_PFSS_or_magnetogram_filenames": [],
+  "geometry_reason": "A qualitative projected field overlay does not supply a local 3-D B vector, front-surface normal, common position/time and uncertainty. No numerical bound can be extracted honestly for the selected radio/EUV patch.",
+  "new_input_decision": "No new acquisition: a PFSS model alone would not settle unknown upstream inflow or establish the radio-to-EUV patch. Existing records suffice for the conditional closure and identify the missing local state association.",
+  "outer_inner_constraint_transfer": "Outer radio frequencies/compression and R119 slow exclusion are not assigned to the inner jump.",
+  "provenance": {
+    "MEASURED": "Saved AIA detector records; projected ridge positions, tangents and motion are reductions of them.",
+    "SOURCE_DERIVED": "Radio frequencies and conditional splitting interpretation; regional temperature/sound-speed inputs; calibrated pointing; standoff/emission-model quantities with their shared assumptions.",
+    "MODEL_DERIVED": "All reconstructed B fields, plasma-relative velocities, pressures, downstream states and family boundaries.",
+    "ASSUMED": "Radio state-to-patch transfer, local planar ideal MHD, gamma, pressure/composition closure, G0 normals, assigned upstream flow and inner uniform-state transfer."
+  }
+}

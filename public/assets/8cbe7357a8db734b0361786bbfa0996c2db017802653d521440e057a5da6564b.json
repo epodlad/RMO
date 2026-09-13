@@ -1,0 +1,3810 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "name": "A17 independent lab-frame Decimal conservation",
+      "status": "PASS",
+      "detail": "6.23540719339672046517511641028392477897077485344286430385913E-16"
+    },
+    {
+      "name": "A17 independent characteristic arithmetic",
+      "status": "PASS",
+      "detail": 0.0
+    },
+    {
+      "name": "A42 independent lab-frame Decimal conservation",
+      "status": "PASS",
+      "detail": "0.00"
+    },
+    {
+      "name": "A42 independent characteristic arithmetic",
+      "status": "PASS",
+      "detail": 0.0
+    },
+    {
+      "name": "A63 independent lab-frame Decimal conservation",
+      "status": "PASS",
+      "detail": "6.49808844082783978482989770029115752662800951792365980032465E-15"
+    },
+    {
+      "name": "A63 independent characteristic arithmetic",
+      "status": "PASS",
+      "detail": 5.551115123125783e-17
+    },
+    {
+      "name": "A88 independent lab-frame Decimal conservation",
+      "status": "PASS",
+      "detail": "0.00"
+    },
+    {
+      "name": "A88 independent characteristic arithmetic",
+      "status": "PASS",
+      "detail": 2.220446049250313e-16
+    },
+    {
+      "name": "A17 comparison with separate historical reference",
+      "status": "PASS",
+      "detail": "slow_shock"
+    },
+    {
+      "name": "A17 independent incoming-characteristic count",
+      "status": "PASS",
+      "detail": {
+        "case_id": "A17",
+        "decimal_precision": 60,
+        "scaled_lab_RH": "6.23540719339672046517511641028392477897077485344286430385913E-16",
+        "raw_lab_residuals": [
+          "-8.007223106239196E-17",
+          "-9.4118885833777383859607933659052E-17",
+          "2.407591943768489896858299363297652E-16",
+          "0E-33",
+          "-5.728102484238733E-17",
+          "0E-17",
+          "-7.66522678718985963508586044741365479866666290E-16"
+        ],
+        "characteristic_difference": 0.0,
+        "number_of_negative_propagating_characteristics_in_flow_direction": [
+          2,
+          3
+        ],
+        "entropy_over_cv": "0.12030565223103363842157596621927236016261475905194976955025"
+      }
+    },
+    {
+      "name": "A17 independent entropy direction",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "A17 renamed_id",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "slow_shock"
+      }
+    },
+    {
+      "name": "A17 normal_reversal",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "slow_shock"
+      }
+    },
+    {
+      "name": "A17 galilean_boost",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "slow_shock"
+      }
+    },
+    {
+      "name": "A17 tangential_basis_rotation",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "slow_shock"
+      }
+    },
+    {
+      "name": "A17 MHD_similarity_scaling",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "slow_shock"
+      }
+    },
+    {
+      "name": "A42 comparison with separate historical reference",
+      "status": "PASS",
+      "detail": "contact"
+    },
+    {
+      "name": "A42 renamed_id",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "contact"
+      }
+    },
+    {
+      "name": "A42 normal_reversal",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "contact"
+      }
+    },
+    {
+      "name": "A42 galilean_boost",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "contact"
+      }
+    },
+    {
+      "name": "A42 tangential_basis_rotation",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "contact"
+      }
+    },
+    {
+      "name": "A42 MHD_similarity_scaling",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "contact"
+      }
+    },
+    {
+      "name": "A63 comparison with separate historical reference",
+      "status": "PASS",
+      "detail": "fast_shock"
+    },
+    {
+      "name": "A63 independent incoming-characteristic count",
+      "status": "PASS",
+      "detail": {
+        "case_id": "A63",
+        "decimal_precision": 60,
+        "scaled_lab_RH": "6.49808844082783978482989770029115752662800951792365980032465E-15",
+        "raw_lab_residuals": [
+          "-6.06919144523216E-17",
+          "2.0210965677982015919873172258176E-15",
+          "-4.0835068402428267895931131563536E-16",
+          "0E-32",
+          "4.96740470661192E-16",
+          "0E-16",
+          "1.54118412595335290636053767711450173837529098200E-13"
+        ],
+        "characteristic_difference": 5.551115123125783e-17,
+        "number_of_negative_propagating_characteristics_in_flow_direction": [
+          0,
+          1
+        ],
+        "entropy_over_cv": "0.48440954669490895882083702218664453237294267623970282585665"
+      }
+    },
+    {
+      "name": "A63 independent entropy direction",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "A63 renamed_id",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock"
+      }
+    },
+    {
+      "name": "A63 normal_reversal",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock"
+      }
+    },
+    {
+      "name": "A63 galilean_boost",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock"
+      }
+    },
+    {
+      "name": "A63 tangential_basis_rotation",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock"
+      }
+    },
+    {
+      "name": "A63 MHD_similarity_scaling",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock"
+      }
+    },
+    {
+      "name": "A88 comparison with separate historical reference",
+      "status": "PASS",
+      "detail": "rotational_discontinuity"
+    },
+    {
+      "name": "A88 renamed_id",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "rotational_discontinuity"
+      }
+    },
+    {
+      "name": "A88 normal_reversal",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "rotational_discontinuity"
+      }
+    },
+    {
+      "name": "A88 galilean_boost",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "rotational_discontinuity"
+      }
+    },
+    {
+      "name": "A88 tangential_basis_rotation",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "rotational_discontinuity"
+      }
+    },
+    {
+      "name": "A88 MHD_similarity_scaling",
+      "status": "PASS",
+      "detail": {
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "rotational_discontinuity"
+      }
+    },
+    {
+      "name": "A17 missing normal field",
+      "status": "PASS",
+      "detail": "INSUFFICIENT_DATA"
+    },
+    {
+      "name": "A17 missing front speed",
+      "status": "PASS",
+      "detail": "INSUFFICIENT_DATA"
+    },
+    {
+      "name": "A17 inconsistent pressure +1 percent",
+      "status": "PASS",
+      "detail": "INCONSISTENT_SINGLE_DISCONTINUITY"
+    },
+    {
+      "name": "A17 inconsistent front speed +0.01",
+      "status": "PASS",
+      "detail": "INCONSISTENT_SINGLE_DISCONTINUITY"
+    },
+    {
+      "name": "A17 unpropagated errors",
+      "status": "PASS",
+      "detail": "UNCERTAINTY_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "A42 missing normal field",
+      "status": "PASS",
+      "detail": "INSUFFICIENT_DATA"
+    },
+    {
+      "name": "A42 missing front speed",
+      "status": "PASS",
+      "detail": "INSUFFICIENT_DATA"
+    },
+    {
+      "name": "A42 inconsistent pressure +1 percent",
+      "status": "PASS",
+      "detail": "INCONSISTENT_SINGLE_DISCONTINUITY"
+    },
+    {
+      "name": "A42 inconsistent front speed +0.01",
+      "status": "PASS",
+      "detail": "INCONSISTENT_SINGLE_DISCONTINUITY"
+    },
+    {
+      "name": "A42 unpropagated errors",
+      "status": "PASS",
+      "detail": "UNCERTAINTY_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "A63 missing normal field",
+      "status": "PASS",
+      "detail": "INSUFFICIENT_DATA"
+    },
+    {
+      "name": "A63 missing front speed",
+      "status": "PASS",
+      "detail": "INSUFFICIENT_DATA"
+    },
+    {
+      "name": "A63 inconsistent pressure +1 percent",
+      "status": "PASS",
+      "detail": "INCONSISTENT_SINGLE_DISCONTINUITY"
+    },
+    {
+      "name": "A63 inconsistent front speed +0.01",
+      "status": "PASS",
+      "detail": "INCONSISTENT_SINGLE_DISCONTINUITY"
+    },
+    {
+      "name": "A63 unpropagated errors",
+      "status": "PASS",
+      "detail": "UNCERTAINTY_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "A88 missing normal field",
+      "status": "PASS",
+      "detail": "INSUFFICIENT_DATA"
+    },
+    {
+      "name": "A88 missing front speed",
+      "status": "PASS",
+      "detail": "INSUFFICIENT_DATA"
+    },
+    {
+      "name": "A88 inconsistent pressure +1 percent",
+      "status": "PASS",
+      "detail": "INCONSISTENT_SINGLE_DISCONTINUITY"
+    },
+    {
+      "name": "A88 inconsistent front speed +0.01",
+      "status": "PASS",
+      "detail": "INCONSISTENT_SINGLE_DISCONTINUITY"
+    },
+    {
+      "name": "A88 unpropagated errors",
+      "status": "PASS",
+      "detail": "UNCERTAINTY_NOT_IMPLEMENTED"
+    },
+    {
+      "name": "A17 time-reversed entropy-decreasing jump",
+      "status": "PASS",
+      "detail": "OTHER_OR_UNRESOLVED"
+    },
+    {
+      "name": "A63 time-reversed entropy-decreasing jump",
+      "status": "PASS",
+      "detail": "OTHER_OR_UNRESOLVED"
+    },
+    {
+      "name": "vanishing normal field is not an excluded tangential branch",
+      "status": "PASS",
+      "detail": "DEGENERATE_NOT_CLASSIFIED"
+    },
+    {
+      "name": "identical states are not a contact",
+      "status": "PASS",
+      "detail": "NO_RESOLVED_JUMP"
+    },
+    {
+      "name": "expected-label injection rejected",
+      "status": "PASS",
+      "detail": "INVALID_INPUT"
+    },
+    {
+      "name": "normal field mismatch",
+      "status": "PASS",
+      "detail": "INCONSISTENT_BN"
+    },
+    {
+      "name": "negative thermal pressure",
+      "status": "PASS",
+      "detail": "INVALID_INPUT"
+    }
+  ],
+  "count": 63,
+  "nominal_outputs": {
+    "A17": {
+      "case_id": "A17",
+      "status": "SUPPORTED_LOCAL_CLASS",
+      "family": "slow_shock",
+      "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+      "candidates": {
+        "fast_shock": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+        },
+        "slow_shock": {
+          "status": "SUPPORTED",
+          "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+        },
+        "rotational_discontinuity": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+        },
+        "contact": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+        }
+      },
+      "coverage": {
+        "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+        "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+        "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+      },
+      "global_uniqueness": false,
+      "uncertainty_propagated": false,
+      "checks": {
+        "front_speed": 0.0,
+        "evaluation_boost": [
+          0.0,
+          -0.0026589477954365656,
+          0.0
+        ],
+        "rh_scaled_inf": 7.240091266520806e-16,
+        "rh_components": {
+          "mass": 0.0,
+          "normal_momentum": 4.440892098500626e-16,
+          "t1_momentum": 1.1102230246251565e-16,
+          "t2_momentum": 0.0,
+          "t1_induction": 0.0,
+          "t2_induction": 0.0,
+          "energy": -7.240091266520806e-16
+        },
+        "characteristics": {
+          "left": {
+            "slow": 0.5399286186702368,
+            "alfven_n": 1.695593720559897,
+            "fast": 1.82120493734893
+          },
+          "right": {
+            "slow": 0.733800039131694,
+            "alfven_n": 1.1792109885321123,
+            "fast": 1.2608537541902072
+          }
+        },
+        "front_relative_normal_velocity": {
+          "left": 0.9737732594347736,
+          "right": 0.4709743769737837
+        },
+        "upstream_side": "left",
+        "characteristic_transition": [
+          3,
+          4
+        ],
+        "compression": 2.0675716281885492,
+        "pressure_ratio": 3.78456255089175,
+        "entropy_over_cv": 0.12030565223103373,
+        "tangential_field_ratio": 0.7973808545780512
+      },
+      "result_sentence": "For these supplied states and front speed, a slow shock passes the local ideal-MHD checks.",
+      "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+    },
+    "A42": {
+      "case_id": "A42",
+      "status": "SUPPORTED_LOCAL_CLASS",
+      "family": "contact",
+      "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+      "candidates": {
+        "fast_shock": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+        },
+        "slow_shock": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+        },
+        "rotational_discontinuity": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+        },
+        "contact": {
+          "status": "SUPPORTED",
+          "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+        }
+      },
+      "coverage": {
+        "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+        "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+        "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+      },
+      "global_uniqueness": false,
+      "uncertainty_propagated": false,
+      "checks": {
+        "front_speed": 0.2,
+        "evaluation_boost": [
+          0.2,
+          0.1,
+          -0.2
+        ],
+        "rh_scaled_inf": 0.0,
+        "rh_components": {
+          "mass": 0.0,
+          "normal_momentum": 0.0,
+          "t1_momentum": 0.0,
+          "t2_momentum": 0.0,
+          "t1_induction": 0.0,
+          "t2_induction": 0.0,
+          "energy": 0.0
+        },
+        "characteristics": {
+          "left": {
+            "slow": 0.6691180057502808,
+            "alfven_n": 0.75,
+            "fast": 1.4470479470450983
+          },
+          "right": {
+            "slow": 0.9462757585600857,
+            "alfven_n": 1.0606601717798212,
+            "fast": 2.0464348321153225
+          }
+        },
+        "front_relative_normal_velocity": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "upstream_side": null
+      },
+      "result_sentence": "For these supplied states, a contact moves with the plasma while density changes and pressure, velocity and field remain continuous.",
+      "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+    },
+    "A63": {
+      "case_id": "A63",
+      "status": "SUPPORTED_LOCAL_CLASS",
+      "family": "fast_shock",
+      "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+      "candidates": {
+        "fast_shock": {
+          "status": "SUPPORTED",
+          "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+        },
+        "slow_shock": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+        },
+        "rotational_discontinuity": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+        },
+        "contact": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+        }
+      },
+      "coverage": {
+        "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+        "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+        "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+      },
+      "global_uniqueness": false,
+      "uncertainty_propagated": false,
+      "checks": {
+        "front_speed": 0.0,
+        "evaluation_boost": [
+          0.0,
+          0.30856228156680104,
+          0.0
+        ],
+        "rh_scaled_inf": 5.9419562470149644e-15,
+        "rh_components": {
+          "mass": -1.3877787807814457e-16,
+          "normal_momentum": 0.0,
+          "t1_momentum": 0.0,
+          "t2_momentum": 0.0,
+          "t1_induction": 1.484754799479084e-16,
+          "t2_induction": 0.0,
+          "energy": 5.9419562470149644e-15
+        },
+        "characteristics": {
+          "left": {
+            "slow": 0.4874275540583103,
+            "alfven_n": 0.7,
+            "fast": 1.4361108521088242
+          },
+          "right": {
+            "slow": 0.33433145542483717,
+            "alfven_n": 0.44960973604585724,
+            "fast": 2.3015560371020127
+          }
+        },
+        "front_relative_normal_velocity": {
+          "left": 3.2,
+          "right": 1.320156177941064
+        },
+        "upstream_side": "left",
+        "characteristic_transition": [
+          1,
+          2
+        ],
+        "compression": 2.4239556300003606,
+        "pressure_ratio": 7.099877184940677,
+        "entropy_over_cv": 0.48440954669490877,
+        "tangential_field_ratio": 2.610791431789725
+      },
+      "result_sentence": "For these supplied states and front speed, a fast shock passes the local ideal-MHD checks.",
+      "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+    },
+    "A88": {
+      "case_id": "A88",
+      "status": "SUPPORTED_LOCAL_CLASS",
+      "family": "rotational_discontinuity",
+      "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+      "candidates": {
+        "fast_shock": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+        },
+        "slow_shock": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+        },
+        "rotational_discontinuity": {
+          "status": "SUPPORTED",
+          "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+        },
+        "contact": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+        }
+      },
+      "coverage": {
+        "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+        "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+        "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+      },
+      "global_uniqueness": false,
+      "uncertainty_propagated": false,
+      "checks": {
+        "front_speed": 1.0,
+        "evaluation_boost": [
+          1.0,
+          0.5,
+          -0.5
+        ],
+        "rh_scaled_inf": 0.0,
+        "rh_components": {
+          "mass": 0.0,
+          "normal_momentum": 0.0,
+          "t1_momentum": 0.0,
+          "t2_momentum": 0.0,
+          "t1_induction": 0.0,
+          "t2_induction": 0.0,
+          "energy": 0.0
+        },
+        "characteristics": {
+          "left": {
+            "slow": 0.729126226394002,
+            "alfven_n": 1.0,
+            "fast": 1.770604871972036
+          },
+          "right": {
+            "slow": 0.729126226394002,
+            "alfven_n": 1.0,
+            "fast": 1.770604871972036
+          }
+        },
+        "front_relative_normal_velocity": {
+          "left": -1.0,
+          "right": -1.0
+        },
+        "upstream_side": "right",
+        "characteristic_transition": [
+          "boundary",
+          "boundary"
+        ],
+        "compression": 1.0,
+        "pressure_ratio": 1.0,
+        "entropy_over_cv": 0.0,
+        "tangential_field_ratio": 1.0
+      },
+      "result_sentence": "For these supplied states and front speed, an Alfvenic rotational discontinuity passes the local checks.",
+      "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+    }
+  },
+  "independent_checks": [
+    {
+      "case_id": "A17",
+      "decimal_precision": 60,
+      "scaled_lab_RH": "6.23540719339672046517511641028392477897077485344286430385913E-16",
+      "raw_lab_residuals": [
+        "-8.007223106239196E-17",
+        "-9.4118885833777383859607933659052E-17",
+        "2.407591943768489896858299363297652E-16",
+        "0E-33",
+        "-5.728102484238733E-17",
+        "0E-17",
+        "-7.66522678718985963508586044741365479866666290E-16"
+      ],
+      "characteristic_difference": 0.0,
+      "number_of_negative_propagating_characteristics_in_flow_direction": [
+        2,
+        3
+      ],
+      "entropy_over_cv": "0.12030565223103363842157596621927236016261475905194976955025"
+    },
+    {
+      "case_id": "A42",
+      "decimal_precision": 60,
+      "scaled_lab_RH": "0.00",
+      "raw_lab_residuals": [
+        "0.00",
+        "0.0000",
+        "0.000",
+        "0.0000",
+        "0.000",
+        "0.000",
+        "0E-60"
+      ],
+      "characteristic_difference": 0.0,
+      "number_of_negative_propagating_characteristics_in_flow_direction": null,
+      "entropy_over_cv": null
+    },
+    {
+      "case_id": "A63",
+      "decimal_precision": 60,
+      "scaled_lab_RH": "6.49808844082783978482989770029115752662800951792365980032465E-15",
+      "raw_lab_residuals": [
+        "-6.06919144523216E-17",
+        "2.0210965677982015919873172258176E-15",
+        "-4.0835068402428267895931131563536E-16",
+        "0E-32",
+        "4.96740470661192E-16",
+        "0E-16",
+        "1.54118412595335290636053767711450173837529098200E-13"
+      ],
+      "characteristic_difference": 5.551115123125783e-17,
+      "number_of_negative_propagating_characteristics_in_flow_direction": [
+        0,
+        1
+      ],
+      "entropy_over_cv": "0.48440954669490895882083702218664453237294267623970282585665"
+    },
+    {
+      "case_id": "A88",
+      "decimal_precision": 60,
+      "scaled_lab_RH": "0.00",
+      "raw_lab_residuals": [
+        "0.00",
+        "0.000",
+        "0.000",
+        "0.000",
+        "0.00",
+        "0.00",
+        "0E-59"
+      ],
+      "characteristic_difference": 2.220446049250313e-16,
+      "number_of_negative_propagating_characteristics_in_flow_direction": [
+        1,
+        1
+      ],
+      "entropy_over_cv": "0E-16"
+    }
+  ],
+  "controls": [
+    {
+      "name": "A17 missing normal field",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A17",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.0,
+        "left": {
+          "rho": 1.0,
+          "p": 0.20178923072168733,
+          "u": [
+            0.9737732594347736,
+            0.10848507445170874,
+            0.0
+          ],
+          "B": [
+            null,
+            0.6300451470688198,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.0675716281885492,
+          "p": 0.7636839657625529,
+          "u": [
+            0.4709743769737837,
+            -0.11380297004258187,
+            -0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.5023859377924894,
+            -0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A17",
+        "status": "INSUFFICIENT_DATA",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "missing": [
+          "left.B[0]"
+        ],
+        "result_sentence": "Supply or constrain: left.B[0]. Missing values were not replaced by zero.",
+        "next_action": "Supply or constrain: left.B[0]. Missing values were not replaced by zero."
+      }
+    },
+    {
+      "name": "A17 missing front speed",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A17",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": null,
+        "left": {
+          "rho": 1.0,
+          "p": 0.20178923072168733,
+          "u": [
+            0.9737732594347736,
+            0.10848507445170874,
+            0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.6300451470688198,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.0675716281885492,
+          "p": 0.7636839657625529,
+          "u": [
+            0.4709743769737837,
+            -0.11380297004258187,
+            -0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.5023859377924894,
+            -0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A17",
+        "status": "INSUFFICIENT_DATA",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "missing": [
+          "front_speed"
+        ],
+        "result_sentence": "Supply or constrain: front_speed. Missing values were not replaced by zero.",
+        "next_action": "Supply or constrain: front_speed. Missing values were not replaced by zero."
+      }
+    },
+    {
+      "name": "A17 inconsistent pressure +1 percent",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A17",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.0,
+        "left": {
+          "rho": 1.0,
+          "p": 0.20178923072168733,
+          "u": [
+            0.9737732594347736,
+            0.10848507445170874,
+            0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.6300451470688198,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.0675716281885492,
+          "p": 0.7713208054201784,
+          "u": [
+            0.4709743769737837,
+            -0.11380297004258187,
+            -0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.5023859377924894,
+            -0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A17",
+        "status": "INCONSISTENT_SINGLE_DISCONTINUITY",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0.0,
+          "evaluation_boost": [
+            0.0,
+            -0.0026589477954365656,
+            0.0
+          ],
+          "rh_scaled_inf": 0.007636839657625849,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 0.007636839657625849,
+            "t1_momentum": 1.1102230246251565e-16,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 0.007276509219976035
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.5399286186702368,
+              "alfven_n": 1.695593720559897,
+              "fast": 1.82120493734893
+            },
+            "right": {
+              "slow": 0.7371882051519105,
+              "alfven_n": 1.1792109885321123,
+              "fast": 1.2613184701302445
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 0.9737732594347736,
+            "right": 0.4709743769737837
+          }
+        },
+        "result_sentence": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned.",
+        "next_action": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned."
+      }
+    },
+    {
+      "name": "A17 inconsistent front speed +0.01",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A17",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.01,
+        "left": {
+          "rho": 1.0,
+          "p": 0.20178923072168733,
+          "u": [
+            0.9737732594347736,
+            0.10848507445170874,
+            0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.6300451470688198,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.0675716281885492,
+          "p": 0.7636839657625529,
+          "u": [
+            0.4709743769737837,
+            -0.11380297004258187,
+            -0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.5023859377924894,
+            -0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A17",
+        "status": "INCONSISTENT_SINGLE_DISCONTINUITY",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0.01,
+          "evaluation_boost": [
+            0.01,
+            -0.0026589477954365656,
+            0.0
+          ],
+          "rh_scaled_inf": 0.010675716281885572,
+          "rh_components": {
+            "mass": -0.010675716281885572,
+            "normal_momentum": 0.00010675716281927095,
+            "t1_momentum": 0.00340942249288112,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0012765920927633734,
+            "t2_induction": 0.0,
+            "energy": -0.004423415513232676
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.5399286186702368,
+              "alfven_n": 1.695593720559897,
+              "fast": 1.82120493734893
+            },
+            "right": {
+              "slow": 0.733800039131694,
+              "alfven_n": 1.1792109885321123,
+              "fast": 1.2608537541902072
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 0.9637732594347735,
+            "right": 0.4609743769737837
+          }
+        },
+        "result_sentence": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned.",
+        "next_action": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned."
+      }
+    },
+    {
+      "name": "A17 unpropagated errors",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A17",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.0,
+        "left": {
+          "rho": 1.0,
+          "p": 0.20178923072168733,
+          "u": [
+            0.9737732594347736,
+            0.10848507445170874,
+            0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.6300451470688198,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.0675716281885492,
+          "p": 0.7636839657625529,
+          "u": [
+            0.4709743769737837,
+            -0.11380297004258187,
+            -0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.5023859377924894,
+            -0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "joint_covariance_metadata_only"
+        }
+      },
+      "output": {
+        "case_id": "A17",
+        "status": "UNCERTAINTY_NOT_IMPLEMENTED",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "result_sentence": "This diagnostic does not yet propagate measurement errors or covariance.",
+        "next_action": "This diagnostic does not yet propagate measurement errors or covariance."
+      }
+    },
+    {
+      "name": "A42 missing normal field",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A42",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.2,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            null,
+            0.5,
+            0.25
+          ]
+        },
+        "right": {
+          "rho": 0.5,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0.75,
+            0.5,
+            0.25
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A42",
+        "status": "INSUFFICIENT_DATA",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "missing": [
+          "left.B[0]"
+        ],
+        "result_sentence": "Supply or constrain: left.B[0]. Missing values were not replaced by zero.",
+        "next_action": "Supply or constrain: left.B[0]. Missing values were not replaced by zero."
+      }
+    },
+    {
+      "name": "A42 missing front speed",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A42",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": null,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0.75,
+            0.5,
+            0.25
+          ]
+        },
+        "right": {
+          "rho": 0.5,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0.75,
+            0.5,
+            0.25
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A42",
+        "status": "INSUFFICIENT_DATA",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "missing": [
+          "front_speed"
+        ],
+        "result_sentence": "Supply or constrain: front_speed. Missing values were not replaced by zero.",
+        "next_action": "Supply or constrain: front_speed. Missing values were not replaced by zero."
+      }
+    },
+    {
+      "name": "A42 inconsistent pressure +1 percent",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A42",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.2,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0.75,
+            0.5,
+            0.25
+          ]
+        },
+        "right": {
+          "rho": 0.5,
+          "p": 1.01,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0.75,
+            0.5,
+            0.25
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A42",
+        "status": "INCONSISTENT_SINGLE_DISCONTINUITY",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0.2,
+          "evaluation_boost": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "rh_scaled_inf": 0.010000000000000009,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 0.010000000000000009,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 0.0
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.6691180057502808,
+              "alfven_n": 0.75,
+              "fast": 1.4470479470450983
+            },
+            "right": {
+              "slow": 0.9474915477879158,
+              "alfven_n": 1.0606601717798212,
+              "fast": 2.0540025398078567
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 0.0,
+            "right": 0.0
+          }
+        },
+        "result_sentence": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned.",
+        "next_action": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned."
+      }
+    },
+    {
+      "name": "A42 inconsistent front speed +0.01",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A42",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.21000000000000002,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0.75,
+            0.5,
+            0.25
+          ]
+        },
+        "right": {
+          "rho": 0.5,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0.75,
+            0.5,
+            0.25
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A42",
+        "status": "INCONSISTENT_SINGLE_DISCONTINUITY",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0.21000000000000002,
+          "evaluation_boost": [
+            0.21000000000000002,
+            0.1,
+            -0.2
+          ],
+          "rh_scaled_inf": 0.0050000000000000044,
+          "rh_components": {
+            "mass": 0.0050000000000000044,
+            "normal_momentum": -4.999999999988347e-05,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 2.5000000000025e-07
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.6691180057502808,
+              "alfven_n": 0.75,
+              "fast": 1.4470479470450983
+            },
+            "right": {
+              "slow": 0.9462757585600857,
+              "alfven_n": 1.0606601717798212,
+              "fast": 2.0464348321153225
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": -0.010000000000000009,
+            "right": -0.010000000000000009
+          }
+        },
+        "result_sentence": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned.",
+        "next_action": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned."
+      }
+    },
+    {
+      "name": "A42 unpropagated errors",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A42",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.2,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0.75,
+            0.5,
+            0.25
+          ]
+        },
+        "right": {
+          "rho": 0.5,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0.75,
+            0.5,
+            0.25
+          ]
+        },
+        "uncertainty": {
+          "mode": "joint_covariance_metadata_only"
+        }
+      },
+      "output": {
+        "case_id": "A42",
+        "status": "UNCERTAINTY_NOT_IMPLEMENTED",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "result_sentence": "This diagnostic does not yet propagate measurement errors or covariance.",
+        "next_action": "This diagnostic does not yet propagate measurement errors or covariance."
+      }
+    },
+    {
+      "name": "A63 missing normal field",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A63",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.0,
+        "left": {
+          "rho": 1.0,
+          "p": 0.6,
+          "u": [
+            3.2,
+            0.15,
+            0.0
+          ],
+          "B": [
+            null,
+            0.9,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.4239556300003606,
+          "p": 4.259926310964406,
+          "u": [
+            1.320156177941064,
+            0.4671245631336021,
+            0.0
+          ],
+          "B": [
+            0.7,
+            2.349712288610753,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A63",
+        "status": "INSUFFICIENT_DATA",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "missing": [
+          "left.B[0]"
+        ],
+        "result_sentence": "Supply or constrain: left.B[0]. Missing values were not replaced by zero.",
+        "next_action": "Supply or constrain: left.B[0]. Missing values were not replaced by zero."
+      }
+    },
+    {
+      "name": "A63 missing front speed",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A63",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": null,
+        "left": {
+          "rho": 1.0,
+          "p": 0.6,
+          "u": [
+            3.2,
+            0.15,
+            0.0
+          ],
+          "B": [
+            0.7,
+            0.9,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.4239556300003606,
+          "p": 4.259926310964406,
+          "u": [
+            1.320156177941064,
+            0.4671245631336021,
+            0.0
+          ],
+          "B": [
+            0.7,
+            2.349712288610753,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A63",
+        "status": "INSUFFICIENT_DATA",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "missing": [
+          "front_speed"
+        ],
+        "result_sentence": "Supply or constrain: front_speed. Missing values were not replaced by zero.",
+        "next_action": "Supply or constrain: front_speed. Missing values were not replaced by zero."
+      }
+    },
+    {
+      "name": "A63 inconsistent pressure +1 percent",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A63",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.0,
+        "left": {
+          "rho": 1.0,
+          "p": 0.6,
+          "u": [
+            3.2,
+            0.15,
+            0.0
+          ],
+          "B": [
+            0.7,
+            0.9,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.4239556300003606,
+          "p": 4.302525574074051,
+          "u": [
+            1.320156177941064,
+            0.4671245631336021,
+            0.0
+          ],
+          "B": [
+            0.7,
+            2.349712288610753,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A63",
+        "status": "INCONSISTENT_SINGLE_DISCONTINUITY",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0.0,
+          "evaluation_boost": [
+            0.0,
+            0.30856228156680104,
+            0.0
+          ],
+          "rh_scaled_inf": 0.005844280784857171,
+          "rh_components": {
+            "mass": -1.3877787807814457e-16,
+            "normal_momentum": 0.003857720641186006,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 1.484754799479084e-16,
+            "t2_induction": 0.0,
+            "energy": 0.005844280784857171
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.4874275540583103,
+              "alfven_n": 0.7,
+              "fast": 1.4361108521088242
+            },
+            "right": {
+              "slow": 0.3350898109079441,
+              "alfven_n": 0.44960973604585724,
+              "fast": 2.307800466062631
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 3.2,
+            "right": 1.320156177941064
+          }
+        },
+        "result_sentence": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned.",
+        "next_action": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned."
+      }
+    },
+    {
+      "name": "A63 inconsistent front speed +0.01",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A63",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.01,
+        "left": {
+          "rho": 1.0,
+          "p": 0.6,
+          "u": [
+            3.2,
+            0.15,
+            0.0
+          ],
+          "B": [
+            0.7,
+            0.9,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.4239556300003606,
+          "p": 4.259926310964406,
+          "u": [
+            1.320156177941064,
+            0.4671245631336021,
+            0.0
+          ],
+          "B": [
+            0.7,
+            2.349712288610753,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A63",
+        "status": "INCONSISTENT_SINGLE_DISCONTINUITY",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0.01,
+          "evaluation_boost": [
+            0.01,
+            0.30856228156680104,
+            0.0
+          ],
+          "rh_scaled_inf": 0.004861553995361274,
+          "rh_components": {
+            "mass": -0.0044638107523524055,
+            "normal_momentum": 1.3020520014929926e-05,
+            "t1_momentum": -0.0047571842382458885,
+            "t2_momentum": 0.0,
+            "t1_induction": -0.004861553995361274,
+            "t2_induction": 0.0,
+            "energy": -0.0020453795232493154
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.4874275540583103,
+              "alfven_n": 0.7,
+              "fast": 1.4361108521088242
+            },
+            "right": {
+              "slow": 0.33433145542483717,
+              "alfven_n": 0.44960973604585724,
+              "fast": 2.3015560371020127
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 3.1900000000000004,
+            "right": 1.310156177941064
+          }
+        },
+        "result_sentence": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned.",
+        "next_action": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned."
+      }
+    },
+    {
+      "name": "A63 unpropagated errors",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A63",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.0,
+        "left": {
+          "rho": 1.0,
+          "p": 0.6,
+          "u": [
+            3.2,
+            0.15,
+            0.0
+          ],
+          "B": [
+            0.7,
+            0.9,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.4239556300003606,
+          "p": 4.259926310964406,
+          "u": [
+            1.320156177941064,
+            0.4671245631336021,
+            0.0
+          ],
+          "B": [
+            0.7,
+            2.349712288610753,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "joint_covariance_metadata_only"
+        }
+      },
+      "output": {
+        "case_id": "A63",
+        "status": "UNCERTAINTY_NOT_IMPLEMENTED",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "result_sentence": "This diagnostic does not yet propagate measurement errors or covariance.",
+        "next_action": "This diagnostic does not yet propagate measurement errors or covariance."
+      }
+    },
+    {
+      "name": "A88 missing normal field",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A88",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 1.0,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            null,
+            1.0,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.0,
+            1.0,
+            -1.0
+          ],
+          "B": [
+            1.0,
+            0.0,
+            1.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A88",
+        "status": "INSUFFICIENT_DATA",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "missing": [
+          "left.B[0]"
+        ],
+        "result_sentence": "Supply or constrain: left.B[0]. Missing values were not replaced by zero.",
+        "next_action": "Supply or constrain: left.B[0]. Missing values were not replaced by zero."
+      }
+    },
+    {
+      "name": "A88 missing front speed",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A88",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": null,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.0,
+            1.0,
+            -1.0
+          ],
+          "B": [
+            1.0,
+            0.0,
+            1.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A88",
+        "status": "INSUFFICIENT_DATA",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "missing": [
+          "front_speed"
+        ],
+        "result_sentence": "Supply or constrain: front_speed. Missing values were not replaced by zero.",
+        "next_action": "Supply or constrain: front_speed. Missing values were not replaced by zero."
+      }
+    },
+    {
+      "name": "A88 inconsistent pressure +1 percent",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A88",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 1.0,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 1.0,
+          "p": 1.01,
+          "u": [
+            0.0,
+            1.0,
+            -1.0
+          ],
+          "B": [
+            1.0,
+            0.0,
+            1.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A88",
+        "status": "INCONSISTENT_SINGLE_DISCONTINUITY",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 1.0,
+          "evaluation_boost": [
+            1.0,
+            0.5,
+            -0.5
+          ],
+          "rh_scaled_inf": 0.00662251655629125,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 0.004975124378109347,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": -0.00662251655629125
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.729126226394002,
+              "alfven_n": 1.0,
+              "fast": 1.770604871972036
+            },
+            "right": {
+              "slow": 0.7311688173468672,
+              "alfven_n": 1.0,
+              "fast": 1.7744648471786972
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": -1.0,
+            "right": -1.0
+          }
+        },
+        "result_sentence": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned.",
+        "next_action": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned."
+      }
+    },
+    {
+      "name": "A88 inconsistent front speed +0.01",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A88",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 1.01,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.0,
+            1.0,
+            -1.0
+          ],
+          "B": [
+            1.0,
+            0.0,
+            1.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A88",
+        "status": "INCONSISTENT_SINGLE_DISCONTINUITY",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 1.01,
+          "evaluation_boost": [
+            1.01,
+            0.5,
+            -0.5
+          ],
+          "rh_scaled_inf": 0.010000000000000009,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 0.0,
+            "t1_momentum": -0.010000000000000009,
+            "t2_momentum": 0.010000000000000009,
+            "t1_induction": 0.010000000000000009,
+            "t2_induction": -0.010000000000000009,
+            "energy": 0.0
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.729126226394002,
+              "alfven_n": 1.0,
+              "fast": 1.770604871972036
+            },
+            "right": {
+              "slow": 0.729126226394002,
+              "alfven_n": 1.0,
+              "fast": 1.770604871972036
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": -1.01,
+            "right": -1.01
+          }
+        },
+        "result_sentence": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned.",
+        "next_action": "The supplied states and speed fail conservation for one stationary planar discontinuity; no wave family is assigned."
+      }
+    },
+    {
+      "name": "A88 unpropagated errors",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A88",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 1.0,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.0,
+            1.0,
+            -1.0
+          ],
+          "B": [
+            1.0,
+            0.0,
+            1.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "joint_covariance_metadata_only"
+        }
+      },
+      "output": {
+        "case_id": "A88",
+        "status": "UNCERTAINTY_NOT_IMPLEMENTED",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "result_sentence": "This diagnostic does not yet propagate measurement errors or covariance.",
+        "next_action": "This diagnostic does not yet propagate measurement errors or covariance."
+      }
+    },
+    {
+      "name": "A17 time-reversed entropy-decreasing jump",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A17",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": -0.0,
+        "left": {
+          "rho": 1.0,
+          "p": 0.20178923072168733,
+          "u": [
+            -0.9737732594347736,
+            -0.10848507445170874,
+            -0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.6300451470688198,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.0675716281885492,
+          "p": 0.7636839657625529,
+          "u": [
+            -0.4709743769737837,
+            0.11380297004258187,
+            0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.5023859377924894,
+            -0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A17",
+        "status": "OTHER_OR_UNRESOLVED",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+          },
+          "slow_shock": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+          },
+          "rotational_discontinuity": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+          },
+          "contact": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": -0.0,
+          "evaluation_boost": [
+            -0.0,
+            0.0026589477954365656,
+            0.0
+          ],
+          "rh_scaled_inf": 7.240091266520806e-16,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 4.440892098500626e-16,
+            "t1_momentum": 1.1102230246251565e-16,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 7.240091266520806e-16
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.5399286186702368,
+              "alfven_n": 1.695593720559897,
+              "fast": 1.82120493734893
+            },
+            "right": {
+              "slow": 0.733800039131694,
+              "alfven_n": 1.1792109885321123,
+              "fast": 1.2608537541902072
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": -0.9737732594347736,
+            "right": -0.4709743769737837
+          },
+          "upstream_side": "right",
+          "characteristic_transition": [
+            4,
+            3
+          ],
+          "compression": 0.4836591808314398,
+          "pressure_ratio": 0.26423133098021373,
+          "entropy_over_cv": -0.12030565223103373,
+          "tangential_field_ratio": 1.2541058570175585
+        },
+        "result_sentence": "No single supported family among the four implemented local classes; other structures are not excluded.",
+        "next_action": "No single supported family among the four implemented local classes; other structures are not excluded."
+      }
+    },
+    {
+      "name": "A63 time-reversed entropy-decreasing jump",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A63",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": -0.0,
+        "left": {
+          "rho": 1.0,
+          "p": 0.6,
+          "u": [
+            -3.2,
+            -0.15,
+            -0.0
+          ],
+          "B": [
+            0.7,
+            0.9,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.4239556300003606,
+          "p": 4.259926310964406,
+          "u": [
+            -1.320156177941064,
+            -0.4671245631336021,
+            -0.0
+          ],
+          "B": [
+            0.7,
+            2.349712288610753,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A63",
+        "status": "OTHER_OR_UNRESOLVED",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+          },
+          "slow_shock": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+          },
+          "rotational_discontinuity": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+          },
+          "contact": {
+            "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+            "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": -0.0,
+          "evaluation_boost": [
+            -0.0,
+            -0.30856228156680104,
+            -0.0
+          ],
+          "rh_scaled_inf": 5.9419562470149644e-15,
+          "rh_components": {
+            "mass": 1.3877787807814457e-16,
+            "normal_momentum": 0.0,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": -1.484754799479084e-16,
+            "t2_induction": 0.0,
+            "energy": -5.9419562470149644e-15
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.4874275540583103,
+              "alfven_n": 0.7,
+              "fast": 1.4361108521088242
+            },
+            "right": {
+              "slow": 0.33433145542483717,
+              "alfven_n": 0.44960973604585724,
+              "fast": 2.3015560371020127
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": -3.2,
+            "right": -1.320156177941064
+          },
+          "upstream_side": "right",
+          "characteristic_transition": [
+            2,
+            1
+          ],
+          "compression": 0.4125488056065825,
+          "pressure_ratio": 0.1408475067880143,
+          "entropy_over_cv": -0.4844095466949092,
+          "tangential_field_ratio": 0.38302561737552865
+        },
+        "result_sentence": "No single supported family among the four implemented local classes; other structures are not excluded.",
+        "next_action": "No single supported family among the four implemented local classes; other structures are not excluded."
+      }
+    },
+    {
+      "name": "vanishing normal field is not an excluded tangential branch",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A42",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.2,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0,
+            0.5,
+            0.25
+          ]
+        },
+        "right": {
+          "rho": 0.5,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0,
+            0.5,
+            0.25
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A42",
+        "status": "DEGENERATE_NOT_CLASSIFIED",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0.2,
+          "evaluation_boost": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "rh_scaled_inf": 0.0,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 0.0,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 0.0
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 1.4068285846778443
+            },
+            "right": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 1.9895560643855537
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 0.0,
+            "right": 0.0
+          }
+        },
+        "result_sentence": "The normal field vanishes or is too small for this diagnostic; tangential and degenerate limits need separate treatment.",
+        "next_action": "The normal field vanishes or is too small for this diagnostic; tangential and degenerate limits need separate treatment."
+      }
+    },
+    {
+      "name": "identical states are not a contact",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A42",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.2,
+        "left": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0.75,
+            0.5,
+            0.25
+          ]
+        },
+        "right": {
+          "rho": 1.0,
+          "p": 1.0,
+          "u": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "B": [
+            0.75,
+            0.5,
+            0.25
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A42",
+        "status": "NO_RESOLVED_JUMP",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0.2,
+          "evaluation_boost": [
+            0.2,
+            0.1,
+            -0.2
+          ],
+          "rh_scaled_inf": 0.0,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 0.0,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 0.0
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.6691180057502808,
+              "alfven_n": 0.75,
+              "fast": 1.4470479470450983
+            },
+            "right": {
+              "slow": 0.6691180057502808,
+              "alfven_n": 0.75,
+              "fast": 1.4470479470450983
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 0.0,
+            "right": 0.0
+          }
+        },
+        "result_sentence": "The supplied states are equal within tolerance; no finite discontinuity is resolved.",
+        "next_action": "The supplied states are equal within tolerance; no finite discontinuity is resolved."
+      }
+    },
+    {
+      "name": "expected-label injection rejected",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A63",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.0,
+        "left": {
+          "rho": 1.0,
+          "p": 0.6,
+          "u": [
+            3.2,
+            0.15,
+            0.0
+          ],
+          "B": [
+            0.7,
+            0.9,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.4239556300003606,
+          "p": 4.259926310964406,
+          "u": [
+            1.320156177941064,
+            0.4671245631336021,
+            0.0
+          ],
+          "B": [
+            0.7,
+            2.349712288610753,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        },
+        "expected_family": "fast"
+      },
+      "output": {
+        "case_id": "A63",
+        "status": "INVALID_INPUT",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "result_sentence": "Unexpected input fields; family labels and reference metadata are not diagnostic inputs.",
+        "next_action": "Unexpected input fields; family labels and reference metadata are not diagnostic inputs."
+      }
+    },
+    {
+      "name": "normal field mismatch",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A17",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.0,
+        "left": {
+          "rho": 1.0,
+          "p": 0.20178923072168733,
+          "u": [
+            0.9737732594347736,
+            0.10848507445170874,
+            0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.6300451470688198,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.0675716281885492,
+          "p": 0.7636839657625529,
+          "u": [
+            0.4709743769737837,
+            -0.11380297004258187,
+            -0.0
+          ],
+          "B": [
+            1.795593720559897,
+            0.5023859377924894,
+            -0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A17",
+        "status": "INCONSISTENT_BN",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "result_sentence": "The two normal magnetic fields disagree beyond the declared tolerance.",
+        "next_action": "The two normal magnetic fields disagree beyond the declared tolerance."
+      }
+    },
+    {
+      "name": "negative thermal pressure",
+      "input": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "A17",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "gamma": 1.6666666666666667,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "frame": "common_inertial_local_basis",
+        "front_speed": 0.0,
+        "left": {
+          "rho": 1.0,
+          "p": -1,
+          "u": [
+            0.9737732594347736,
+            0.10848507445170874,
+            0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.6300451470688198,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.0675716281885492,
+          "p": 0.7636839657625529,
+          "u": [
+            0.4709743769737837,
+            -0.11380297004258187,
+            -0.0
+          ],
+          "B": [
+            1.695593720559897,
+            0.5023859377924894,
+            -0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic",
+          "note": "Floating-point saved states; no observational errors supplied."
+        }
+      },
+      "output": {
+        "case_id": "A17",
+        "status": "INVALID_INPUT",
+        "family": null,
+        "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+        "candidates": {
+          "fast_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {},
+        "result_sentence": "Finite states with positive density and pressure and gamma > 1 are required.",
+        "next_action": "Finite states with positive density and pressure and gamma > 1 are required."
+      }
+    }
+  ],
+  "reference_limit": "Independent arithmetic on frozen known test fixtures; B04/B05 were originally label-selected production roots. Not an unseen or externally blinded trial.",
+  "uncertainty_limit": "Deterministic failure controls only; no covariance propagation, noise study, calibrated accuracy or observational inversion.",
+  "source_sha256": {
+    "local_diagnosis/diagnose.py": "d89a9402476765d9e923b000eeb69c9a431704d86e64abb52d8c819db4e90f3f",
+    "local_diagnosis/verify_diagnosis.py": "22d9350dfe8994af246b05f5feaebb7f68eb5348964a033e89cc3e7da20996d4",
+    "verification/decimal_checks.py": "44a115627c9f2274e724331b869e6d137210af2e8ac09a171333d9b17c53f895",
+    "local_diagnosis/scoring_reference.json": "b81331187ea548b995c6b3592fd30af226f97fb1b1a11090827d42b89453229a",
+    "local_diagnosis/inputs/A17.json": "2e58d79922b2a8bf75791250ee5ff5fdf04bc13ab01c735ab8efc03f4d5616cd",
+    "local_diagnosis/inputs/A42.json": "31860a151d47ba89de2e9661407edbc6d02ca10f69bf87094ce8b6d551626a37",
+    "local_diagnosis/inputs/A63.json": "5ab19f62898af44514ec36ffc988732e175a7718a4af04d43f2ff2eb2bdb7405",
+    "local_diagnosis/inputs/A88.json": "e223a9a452cc09f16ca68f6254e457b1e6f0d966400a9e120f215608decbef8c"
+  }
+}

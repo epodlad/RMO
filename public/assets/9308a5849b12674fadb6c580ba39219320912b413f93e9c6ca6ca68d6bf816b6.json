@@ -1,0 +1,532 @@
+{
+  "summary": {
+    "status": "PASS",
+    "checkpoint": "R101",
+    "candidate_count": 1,
+    "outcome": "FAST_WITNESS_EXISTS_IN_B",
+    "compression": "2.15",
+    "relative_Mach": "1.09",
+    "normal_acoustic_Mach_squared": "3.5643",
+    "diagnostic_family": "fast_shock",
+    "saved_reference_family": "slow_shock",
+    "exact_RH_fluxes": "all zero",
+    "exact_entropy_sign": "positive",
+    "exact_characteristic_checks": "PASS",
+    "max_scaled_vector_flux_residual": "3E-90",
+    "inside_B": true,
+    "inside_A": false,
+    "inside_C": false,
+    "historical_tests_rerun": false,
+    "solar_identification": false,
+    "full_fan_solution": false,
+    "all_B_points_feasible": false,
+    "native_browser_tested": false
+  },
+  "protocol_sha256": "a7e912f22c2b82a053fd9b00fd701ed0286592cf80fdac7f8a306c2e0b707ad6",
+  "source_R99_sha256": "34aa2f1d11bf10c6a5a5d9028486cdcf64737a1bed5129069241c84ae89f30c4",
+  "exact_parameters": {
+    "r": "43/20",
+    "x": "109/100",
+    "h": "1/10",
+    "a": "236556453/64928120470",
+    "b": "2000/11881",
+    "q": "387/157",
+    "w1_squared": "35643/40000",
+    "p1": "3/20",
+    "p2": "2703500781/4371896000",
+    "rho1": "1",
+    "rho2": "43/20",
+    "gamma": "5/3",
+    "mu0": "1"
+  },
+  "exact_flux_residual_coefficients": {
+    "mass": "0",
+    "normal_momentum": "0",
+    "tangential_momentum": "0",
+    "induction": "0",
+    "energy": "0",
+    "normal_field": "0",
+    "out_of_plane_momentum": "0",
+    "out_of_plane_induction": "0"
+  },
+  "entropy_ratio_cubed_over_r_fifth": "731839310839309216265439983/479856939078472981052944580",
+  "entropy_over_cv": "0.14069098442006067229520827219179343355393877349092316152038850002090272375561475739787336",
+  "exact_characteristics": {
+    "upstream": {
+      "sound_squared": "1/4",
+      "alfven_normal_squared": "35643/400000",
+      "alfven_total_squared": "40376211/437189600",
+      "normal_flow_squared": "35643/40000",
+      "discriminant": "26853252097803269/955673731740800000",
+      "P_flow_squared": "447007509671013/874379200000000",
+      "P_alfven_squared": "-25294744962837/87437920000000000",
+      "flow_squared_minus_vertex": "7868297933/10929740000",
+      "flow_squared_minus_alfven_squared": "320787/400000",
+      "status": "PASS"
+    },
+    "downstream": {
+      "sound_squared": "901166927/1879915280",
+      "alfven_normal_squared": "35643/860000",
+      "alfven_total_squared": "27663297/546487000",
+      "normal_flow_squared": "35643/184900",
+      "discriminant": "444886035621531171019/2208800912485924000000",
+      "P_flow_squared": "-627585219983613/13903853410880000",
+      "P_alfven_squared": "-83122006653/218594800000000",
+      "flow_squared_minus_vertex": "-6788741237/93995764000",
+      "flow_squared_minus_alfven_squared": "5595951/36980000",
+      "status": "PASS"
+    }
+  },
+  "membership": {
+    "compression_lower_clearance": [
+      "1060569590089306950776546149742291206567396323982739900976541706407/32910091146424120843099383651147010099654717312671597266972180480000",
+      "4242278360357227803106184598969164826269585295930959603906166825627/131640364585696483372397534604588040398618869250686389067888721920000"
+    ],
+    "compression_upper_clearance": [
+      "2230439524553105133533392215372409803398075407284419825720676341593/32910091146424120843099383651147010099654717312671597266972180480000",
+      "8921758098212420534133568861489639213592301629137679302882705366373/131640364585696483372397534604588040398618869250686389067888721920000"
+    ],
+    "Mach_lower_clearance": "19/100",
+    "Mach_upper_clearance": "1/100",
+    "strip_t": "9/10",
+    "strip_delta_enclosure": [
+      "-7078792994012669766920003377025406648011637459628069855932263259493/131640364585696483372397534604588040398618869250686389067888721920000",
+      "-1769698248503167441730000844256351662002909364907017463983065814873/32910091146424120843099383651147010099654717312671597266972180480000"
+    ],
+    "reference_r_enclosure": [
+      "71341630932043758904042097882781131012672981763894774086362255349593/32910091146424120843099383651147010099654717312671597266972180480000",
+      "285366523728175035616168391531124524050691927055579096345449021398373/131640364585696483372397534604588040398618869250686389067888721920000"
+    ]
+  },
+  "upstream": {
+    "rho": "1",
+    "p": "0.15",
+    "u": [
+      "0.817500000000000000000000000000000000000000000000000000000000000000000000000000000000000002",
+      "0.471983845062519062486229128060350219991914431663328721145207401900651747107648010104612336",
+      "0E-90"
+    ],
+    "B": [
+      "0.230027138828505304026847626991507739143183337495033785703424656901447035320945853747699603",
+      "0.198598896109960201049993019843104764624082284638951907970020553095690121168862907624413030",
+      "0E-91"
+    ]
+  },
+  "downstream": {
+    "rho": "2.15",
+    "p": "0.618381768688001727396992060195393486029859813682667657236128215309787790011473282987518459",
+    "u": [
+      "0.367034613515625025963878522518213260146661268973199523573892166237908914713516371539714722",
+      "0.242386880440612885820773029791300085917066093578050601275676653845545841721813321224802969",
+      "0E-91"
+    ],
+    "B": [
+      "0.188291573384175797888412966729409584828980994289271883313612147937753157558546297729519242",
+      "0.270887015942154851244788009823192803592557773224686547297626397522599113048938203246363313",
+      "0E-90"
+    ]
+  },
+  "normal": [
+    "0.866025403784438646763723170752936183471402626905190314027903489725966508454400018540573095",
+    "0.5",
+    "0"
+  ],
+  "tangent": [
+    "-0.5",
+    "0.866025403784438646763723170752936183471402626905190314027903489725966508454400018540573095",
+    "0"
+  ],
+  "front_speed": "0",
+  "characteristics": {
+    "upstream": {
+      "normal_velocity": "0.943967690125038124972458256120700439983828863326657442290414803801303494215296020209224675",
+      "fast": "0.504965776106682632051119184861781611594246456725240885694889858724733177066337238550759846",
+      "alfven_normal": "0.298508793840315531834048531626437163004245858773900873553657475104208836031883889921467849",
+      "slow": "0.295573292255404709120728628254631278651407888919269046148102763465055353821220226533971384",
+      "fast_Mach": "1.86936963808337151883591432729742434670791723781871208429311021718188659019310536065702328",
+      "eigenvalues": [
+        "0.439001914018355492921339071258918828389582406601416556595524945076570317148958781658464829",
+        "0.645458896284722593138409724494263276979583004552756568736757328697094658183412130287756826",
+        "0.648394397869633415851729627866069161332420974407388396142312040336248140394075793675253291",
+        "0.943967690125038124972458256120700439983828863326657442290414803801303494215296020209224675",
+        "1.23954098238044283409318688437533171863523675224592648843851756726635884803651624674319606",
+        "1.24247648396535365680650678774713760298807472210055831584407227890551233024717991013069252",
+        "1.44893346623172075702357744098248205157807532005189832798530466252603667128163325875998452"
+      ]
+    },
+    "downstream": {
+      "normal_velocity": "0.439054739593040988359282909823581599992478541082166252228099908744792322890835358236848686",
+      "fast": "0.699563781199270725736279739226201763404350199272887588383448108452770636389452744150560938",
+      "alfven_normal": "0.203581307681253738245905699669214254164162576874279021081293605310857895680676886515660955",
+      "slow": "0.201485624893997282667056736012352822559784966721251726687745404165065299903546930218286780",
+      "fast_Mach": "0.627612165455970420898553647327059042222128187105182712740409400332001842158160971121508592",
+      "eigenvalues": [
+        "-0.260509041606229737376996829402620163411871658190721336155348199707978313498617385913712252",
+        "0.235473431911787250113377210154367345828315964207887231146806303433934427210158471721187731",
+        "0.237569114699043705692226173811228777432693574360914525540354504579727022987288428018561906",
+        "0.439054739593040988359282909823581599992478541082166252228099908744792322890835358236848686",
+        "0.640540364487038271026339645835934422552263507803417978915845312909857622794382288455135466",
+        "0.642636047274294726605188609492795854156641117956445273309393514055650218571512244752509641",
+        "1.13861852079231171409556264904978336339682874035505384061154801719756295928028810238740962"
+      ]
+    }
+  },
+  "original_vector_flux_residuals": [
+    "0E-90",
+    "-1E-90",
+    "0E-90",
+    "0E-181",
+    "3E-91",
+    "0E-181",
+    "-3E-90",
+    "-1E-90"
+  ],
+  "request_without_family": {
+    "schema_version": "rmo-local-discontinuity-0.1",
+    "case_id": "R101_complete_candidate",
+    "model": "ideal_mhd_single_planar_discontinuity",
+    "units": "normalized_mu0_1",
+    "frame": "common_inertial_local_basis",
+    "gamma": 1.6666666666666667,
+    "front_speed": 0.0,
+    "basis": {
+      "normal": [
+        0.8660254037844386,
+        0.5,
+        0.0
+      ],
+      "t1": [
+        -0.5,
+        0.8660254037844386,
+        0.0
+      ],
+      "t2": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "left": {
+      "rho": 1.0,
+      "p": 0.15,
+      "u": [
+        0.9439676901250381,
+        0.0,
+        0.0
+      ],
+      "B": [
+        0.29850879384031553,
+        0.056978119780519414,
+        0.0
+      ]
+    },
+    "right": {
+      "rho": 2.15,
+      "p": 0.6183817686880018,
+      "u": [
+        0.439054739593041,
+        0.026395889247819715,
+        0.0
+      ],
+      "B": [
+        0.29850879384031553,
+        0.14044925066917843,
+        0.0
+      ]
+    },
+    "uncertainty": {
+      "mode": "exact_synthetic"
+    }
+  },
+  "diagnosis": {
+    "case_id": "R101_complete_candidate",
+    "status": "SUPPORTED_LOCAL_CLASS",
+    "family": "fast_shock",
+    "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+    "candidates": {
+      "fast_shock": {
+        "status": "SUPPORTED",
+        "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+      },
+      "slow_shock": {
+        "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+        "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+      },
+      "rotational_discontinuity": {
+        "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+        "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+      },
+      "contact": {
+        "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+        "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+      }
+    },
+    "coverage": {
+      "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+      "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+      "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+    },
+    "global_uniqueness": false,
+    "uncertainty_propagated": false,
+    "checks": {
+      "front_speed": 0.0,
+      "evaluation_boost": [
+        0.0,
+        0.013197944623909857,
+        0.0
+      ],
+      "rh_scaled_inf": 1.1102230246251565e-16,
+      "rh_components": {
+        "mass": -1.1102230246251565e-16,
+        "normal_momentum": 0.0,
+        "t1_momentum": 0.0,
+        "t2_momentum": 0.0,
+        "t1_induction": 6.938893903907228e-18,
+        "t2_induction": 0.0,
+        "energy": 1.1102230246251565e-16
+      },
+      "characteristics": {
+        "left": {
+          "slow": 0.29557329225540474,
+          "alfven_n": 0.29850879384031553,
+          "fast": 0.5049657761066827
+        },
+        "right": {
+          "slow": 0.2014856248939973,
+          "alfven_n": 0.20358130768125376,
+          "fast": 0.6995637811992708
+        }
+      },
+      "front_relative_normal_velocity": {
+        "left": 0.9439676901250381,
+        "right": 0.439054739593041
+      },
+      "upstream_side": "left",
+      "characteristic_transition": [
+        1,
+        2
+      ],
+      "compression": 2.15,
+      "pressure_ratio": 4.122545124586678,
+      "entropy_over_cv": 0.14069098442006056,
+      "tangential_field_ratio": 2.464968152866242
+    },
+    "result_sentence": "For these supplied states and front speed, a fast shock passes the local ideal-MHD checks.",
+    "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+  },
+  "saved_slow_witness_reused_not_recomputed": {
+    "alpha_deg": "120",
+    "rmo": {
+      "upstream": {
+        "rho": "1",
+        "p": "0.15",
+        "u": [
+          "1",
+          "0",
+          "0"
+        ],
+        "B": [
+          "1.05409255338945977733296451481090617790651837977507227561916828426419814621307940711474937",
+          "0",
+          "0"
+        ]
+      },
+      "downstream": {
+        "rho": "2.16777372674628571456846035289235997091915771158507132962527462913711957049256257364706504",
+        "p": "0.688851017141583889481207678331841748911143681483011405158923250766618808258341266247871784",
+        "u": [
+          "0.365696676162702196954369164972660045287107245124869191749050491154950679311689754026678901",
+          "0.165594592159255649471270248690791494201526486108452671712676887214146467864401423007626828",
+          "0E-90"
+        ],
+        "B": [
+          "0.835629390938997761729401221961276446321778050800457192486566825328788021403905899389926459",
+          "0.378389296946373564239264067279956614401216653766449617204650065990860181429499168771915052",
+          "0E-91"
+        ]
+      },
+      "meta": {
+        "compression": "2.16777372674628571456846035289235997091915771158507132962527462913711957049256257364706504",
+        "regular_denominator": "-1.40863747416253968285384483654706663435461967953896814402808292126346618943618063738562782",
+        "bracket_derivative_max": "-3.6131687242798353909465020576131687242798353909465020576131687242798353909465020576131686",
+        "polynomial_residual": "-2.797437652068281533803E-68"
+      }
+    },
+    "published_equations": {
+      "downstream": {
+        "rho": "2.16777372674628571456846035289235997091915771158507132962527462913711632345158228891302344",
+        "p": "0.688851017141583889481207678331841748911143681483011405158923250766618135301371831375543708",
+        "u": [
+          "0.365696676162702196954369164972660045287107245124869191749050491154951248046154847013605684",
+          "0.165594592159255649471270248690791494201526486108452671712676887214146679584435438672122983",
+          "0"
+        ],
+        "B": [
+          "0.835629390938997761729401221961276446321778050800457192486566825328788069318249034636947793",
+          "0.378389296946373564239264067279956614401216653766449617204650065990860098439422447235019767",
+          "0E-89"
+        ]
+      },
+      "meta": {
+        "x": "5.8482751733002473566215933208449427587174090044977004072315453040745943616790547259269226",
+        "polynomial_residual": "-6.84612838780184992619E-69"
+      }
+    },
+    "original_flux_residuals": {
+      "rmo": [
+        "2E-90",
+        "-2E-90",
+        "1E-90",
+        "0E-181",
+        "-8.66025403784438646763723170752936183471402626905190314027903489725966508454400018540573096E-91",
+        "0E-181",
+        "-5.68885215720891249635E-70",
+        "1E-90"
+      ],
+      "published": [
+        "6E-90",
+        "-1.26519885631293556464E-70",
+        "-7.3046290027067999679E-71",
+        "0E-179",
+        "3.66025403784438646763723170752936183471402626905190314027903489725966508454400018540573099E-91",
+        "0E-179",
+        "2.3E-89",
+        "3E-90"
+      ]
+    },
+    "state_disagreement": "1.49786896123995915315892136602128887206828607159607788486951347045402301964507578690031792E-69",
+    "request_without_family": {
+      "schema_version": "rmo-local-discontinuity-0.1",
+      "case_id": "R98_alpha_120",
+      "model": "ideal_mhd_single_planar_discontinuity",
+      "units": "normalized_mu0_1",
+      "frame": "common_inertial_local_basis",
+      "gamma": 1.6666666666666667,
+      "front_speed": 0.0,
+      "basis": {
+        "normal": [
+          0.8660254037844386,
+          0.5,
+          0.0
+        ],
+        "t1": [
+          -0.5,
+          0.8660254037844386,
+          0.0
+        ],
+        "t2": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "left": {
+        "rho": 1.0,
+        "p": 0.15,
+        "u": [
+          0.8660254037844386,
+          -0.5,
+          0.0
+        ],
+        "B": [
+          0.9128709291752769,
+          -0.5270462766947299,
+          0.0
+        ]
+      },
+      "right": {
+        "rho": 2.1677737267462858,
+        "p": 0.6888510171415839,
+        "u": [
+          0.3994999077160591,
+          -0.039439214542112286,
+          0.0
+        ],
+        "B": [
+          0.9128709291752769,
+          -0.09011995179380586,
+          0.0
+        ]
+      },
+      "uncertainty": {
+        "mode": "exact_synthetic"
+      }
+    },
+    "diagnosis": {
+      "case_id": "R98_alpha_120",
+      "status": "SUPPORTED_LOCAL_CLASS",
+      "family": "slow_shock",
+      "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+      "candidates": {
+        "fast_shock": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+        },
+        "slow_shock": {
+          "status": "SUPPORTED",
+          "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+        },
+        "rotational_discontinuity": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+        },
+        "contact": {
+          "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+          "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+        }
+      },
+      "coverage": {
+        "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+        "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+        "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+      },
+      "global_uniqueness": false,
+      "uncertainty_propagated": false,
+      "checks": {
+        "front_speed": 0.0,
+        "evaluation_boost": [
+          0.0,
+          -0.26971960727105615,
+          0.0
+        ],
+        "rh_scaled_inf": 2.220446049250313e-16,
+        "rh_components": {
+          "mass": 1.1102230246251565e-16,
+          "normal_momentum": 2.220446049250313e-16,
+          "t1_momentum": -5.551115123125783e-17,
+          "t2_momentum": 0.0,
+          "t1_induction": 0.0,
+          "t2_induction": 0.0,
+          "energy": 1.1102230246251565e-16
+        },
+        "characteristics": {
+          "left": {
+            "slow": 0.41923270369853305,
+            "alfven_n": 0.9128709291752769,
+            "fast": 1.088740121085252
+          },
+          "right": {
+            "slow": 0.6126228164873717,
+            "alfven_n": 0.6200152945171291,
+            "fast": 0.7365280442519191
+          }
+        },
+        "front_relative_normal_velocity": {
+          "left": 0.8660254037844386,
+          "right": 0.3994999077160591
+        },
+        "upstream_side": "left",
+        "characteristic_transition": [
+          3,
+          4
+        ],
+        "compression": 2.1677737267462858,
+        "pressure_ratio": 4.592340114277226,
+        "entropy_over_cv": 0.2348885420582243,
+        "tangential_field_ratio": 0.1709905861758021
+      },
+      "result_sentence": "For these supplied states and front speed, a slow shock passes the local ideal-MHD checks.",
+      "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+    }
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "status": "PASS",
+  "count": 134,
+  "checks": [
+    {
+      "name": "positive bounded fixed-angle cotangent",
+      "status": "PASS"
+    },
+    {
+      "name": "unique small root lies below declared h enclosure",
+      "status": "PASS"
+    },
+    {
+      "name": "exact pressure difference from gas Hugoniot",
+      "status": "PASS"
+    },
+    {
+      "name": "exact energy and momentum on extended thermal domain",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous entropy lower bound is positive",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 0: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 0: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 1: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 1: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 2: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 2: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 3: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 3: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 4: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 4: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 5: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 5: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 6: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 6: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 7: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 7: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 8: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 8: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 9: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 9: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 10: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 10: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 11: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 11: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 12: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 12: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 13: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 13: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 14: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 14: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 15: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 15: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 16: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 16: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 17: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 17: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 18: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 18: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 19: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 19: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 20: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 20: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 21: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 21: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 22: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 22: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 23: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 23: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 24: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 24: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 25: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 25: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 26: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 26: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 27: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 27: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 28: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 28: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 29: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 29: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 30: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 30: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 31: positive states and fast characteristic crossing",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous cell 31: finite Mach margins",
+      "status": "PASS"
+    },
+    {
+      "name": "continuous M cover is complete",
+      "status": "PASS"
+    },
+    {
+      "name": "W positive throughout regular sign domain",
+      "status": "PASS"
+    },
+    {
+      "name": "independent scalar angle falls inside rigorous enclosure",
+      "status": "PASS"
+    },
+    {
+      "name": "independent central endpoint falls inside enclosure",
+      "status": "PASS"
+    },
+    {
+      "name": "v_0: original front-frame and moving-surface solar-frame fluxes",
+      "status": "PASS"
+    },
+    {
+      "name": "v_0: correct upstream normal flow and fixed dimensional pressure",
+      "status": "PASS"
+    },
+    {
+      "name": "v_0: field angle really remains fixed",
+      "status": "PASS"
+    },
+    {
+      "name": "v_0: independent fixed-angle full-flux reconstruction",
+      "status": "PASS"
+    },
+    {
+      "name": "v_0: independently evaluated entropy and characteristic transition",
+      "status": "PASS"
+    },
+    {
+      "name": "v_0: unchanged label-free classifier supports fast",
+      "status": "PASS"
+    },
+    {
+      "name": "v_0: dimensional solar-frame classifier agrees",
+      "status": "PASS"
+    },
+    {
+      "name": "v_0: matrix Mach values inside continuous enclosures",
+      "status": "PASS"
+    },
+    {
+      "name": "v_100: original front-frame and moving-surface solar-frame fluxes",
+      "status": "PASS"
+    },
+    {
+      "name": "v_100: correct upstream normal flow and fixed dimensional pressure",
+      "status": "PASS"
+    },
+    {
+      "name": "v_100: field angle really remains fixed",
+      "status": "PASS"
+    },
+    {
+      "name": "v_100: independent fixed-angle full-flux reconstruction",
+      "status": "PASS"
+    },
+    {
+      "name": "v_100: independently evaluated entropy and characteristic transition",
+      "status": "PASS"
+    },
+    {
+      "name": "v_100: unchanged label-free classifier supports fast",
+      "status": "PASS"
+    },
+    {
+      "name": "v_100: dimensional solar-frame classifier agrees",
+      "status": "PASS"
+    },
+    {
+      "name": "v_100: matrix Mach values inside continuous enclosures",
+      "status": "PASS"
+    },
+    {
+      "name": "v_200: original front-frame and moving-surface solar-frame fluxes",
+      "status": "PASS"
+    },
+    {
+      "name": "v_200: correct upstream normal flow and fixed dimensional pressure",
+      "status": "PASS"
+    },
+    {
+      "name": "v_200: field angle really remains fixed",
+      "status": "PASS"
+    },
+    {
+      "name": "v_200: independent fixed-angle full-flux reconstruction",
+      "status": "PASS"
+    },
+    {
+      "name": "v_200: independently evaluated entropy and characteristic transition",
+      "status": "PASS"
+    },
+    {
+      "name": "v_200: unchanged label-free classifier supports fast",
+      "status": "PASS"
+    },
+    {
+      "name": "v_200: dimensional solar-frame classifier agrees",
+      "status": "PASS"
+    },
+    {
+      "name": "v_200: matrix Mach values inside continuous enclosures",
+      "status": "PASS"
+    },
+    {
+      "name": "v_300: original front-frame and moving-surface solar-frame fluxes",
+      "status": "PASS"
+    },
+    {
+      "name": "v_300: correct upstream normal flow and fixed dimensional pressure",
+      "status": "PASS"
+    },
+    {
+      "name": "v_300: field angle really remains fixed",
+      "status": "PASS"
+    },
+    {
+      "name": "v_300: independent fixed-angle full-flux reconstruction",
+      "status": "PASS"
+    },
+    {
+      "name": "v_300: independently evaluated entropy and characteristic transition",
+      "status": "PASS"
+    },
+    {
+      "name": "v_300: unchanged label-free classifier supports fast",
+      "status": "PASS"
+    },
+    {
+      "name": "v_300: dimensional solar-frame classifier agrees",
+      "status": "PASS"
+    },
+    {
+      "name": "v_300: matrix Mach values inside continuous enclosures",
+      "status": "PASS"
+    },
+    {
+      "name": "v_380: original front-frame and moving-surface solar-frame fluxes",
+      "status": "PASS"
+    },
+    {
+      "name": "v_380: correct upstream normal flow and fixed dimensional pressure",
+      "status": "PASS"
+    },
+    {
+      "name": "v_380: field angle really remains fixed",
+      "status": "PASS"
+    },
+    {
+      "name": "v_380: independent fixed-angle full-flux reconstruction",
+      "status": "PASS"
+    },
+    {
+      "name": "v_380: independently evaluated entropy and characteristic transition",
+      "status": "PASS"
+    },
+    {
+      "name": "v_380: unchanged label-free classifier supports fast",
+      "status": "PASS"
+    },
+    {
+      "name": "v_380: dimensional solar-frame classifier agrees",
+      "status": "PASS"
+    },
+    {
+      "name": "v_380: matrix Mach values inside continuous enclosures",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-6: original front-frame and moving-surface solar-frame fluxes",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-6: correct upstream normal flow and fixed dimensional pressure",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-6: field angle really remains fixed",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-6: independent fixed-angle full-flux reconstruction",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-6: independently evaluated entropy and characteristic transition",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-6: near-zero field gives honest numerical limitation",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-6: matrix Mach values inside continuous enclosures",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-20: original front-frame and moving-surface solar-frame fluxes",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-20: correct upstream normal flow and fixed dimensional pressure",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-20: field angle really remains fixed",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-20: independent fixed-angle full-flux reconstruction",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-20: independently evaluated entropy and characteristic transition",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-20: near-zero field gives honest numerical limitation",
+      "status": "PASS"
+    },
+    {
+      "name": "M_1e-20: matrix Mach values inside continuous enclosures",
+      "status": "PASS"
+    },
+    {
+      "name": "negative control: inconsistent downstream pressure rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "negative control: changing upstream flow alone breaks conservation",
+      "status": "PASS"
+    },
+    {
+      "name": "gas endpoint satisfies full moving-surface fluxes",
+      "status": "PASS"
+    },
+    {
+      "name": "gas endpoint has positive entropy and finite compression",
+      "status": "PASS"
+    },
+    {
+      "name": "unchanged magnetic classifier does not invent gas/angle classification",
+      "status": "PASS"
+    },
+    {
+      "name": "second closure root is outside continued regular sign domain",
+      "status": "PASS"
+    },
+    {
+      "name": "v=0 anchored inside R93 geometry domain",
+      "status": "PASS"
+    }
+  ],
+  "whole_declared_branch_proved": true,
+  "proof": "Unique small-root/sign argument; exact conservation identities; 32-cell outward-rounded enclosure for positive states and characteristic crossing; exact entropy lower bound.",
+  "independent_newton_controls": 7,
+  "external_solver_checked": false,
+  "native_browser_checked": false,
+  "unchanged_classifier_status_counts": {
+    "SUPPORTED_LOCAL_CLASS": 5,
+    "DEGENERATE_NOT_CLASSIFIED": 2
+  },
+  "script_sha256": "3910861add8c9fa76cb15a11ccf4787fd79b397bb67c1b23cf861f4492ef923c"
+}

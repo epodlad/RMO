@@ -1,0 +1,80 @@
+{
+  "checkpoint": "R134",
+  "E05_R134_RESULT": "FAST AND SLOW BOTH REMAIN ADMISSIBLE",
+  "observational_selection": "UNRESOLVED",
+  "display_result": "Two conditional MHD families are physically resolved, but observational family selection remains unresolved.",
+  "directly_observed": "Relative EIS Fe XIII response and local AIA brightness evolution; no uniquely associated propagating ridge or independently bounded 3-D alpha.",
+  "source_derived": "Spectral line fitting and effective density conditional on atomic response and temperature; alternative published speed means; image calibration, timing and registration.",
+  "assumed": "Spectroscopic/reference plasma assignments to the two MHD states, front association, thermal/ideal-MHD closure, field azimuth and any selected upstream motion or geometry.",
+  "central_source_scenarios_retaining_both": 18,
+  "central_normal_flow_scenarios_retaining_both": 18,
+  "all_retained_source_scenarios_retaining_both": 54,
+  "total_checked_nodes": 76842,
+  "all_root_records": 112644,
+  "accepted_root_records": 36937,
+  "why_both_survive": "No retained independent jointly incompatible state-pair measurement excludes either checked family. Every retained source tuple supports examples of both; interval widening cannot exclude included witnesses. State association, reference interpretation and temperature remain shared assumptions.",
+  "alpha_role": "A strong discriminator under the frozen R132 closure. Once unmeasured upstream normal motion is relaxed, alpha alone is not a sufficient discriminator; neither the frozen map nor its conditional precision result is changed.",
+  "alternative_discriminator": {
+    "quantity": "Signed total magnetic-field-strength change across the same identified upstream/downstream front states",
+    "fast": "B_down > B_up",
+    "slow": "B_down < B_up",
+    "relation": "For compression X>1, q=Bt_down/Bt_up=X(1-bn^2)/(1-X*bn^2). Ordinary fast: bn^2<1/X gives q>1. Ordinary slow: bn^2>1 gives 0<q<1. Continuity of Bn makes the sign of B_down^2-B_up^2 equal the sign of Bt_down^2-Bt_up^2.",
+    "measured_in_retained_E05_data": false,
+    "required_bounded_precision": "epsilon_Bup + epsilon_Bdown < abs(B_down-B_up), with association and calibration errors included; require the entire interval to have one sign.",
+    "uniform_precision": "No uniform finite magnetic precision is certified over the full continuous uncertain families, including unresolved/degenerate limits. Sampled minima are not lower bounds on all surviving physical states.",
+    "credit": "Standard ideal-MHD tangential momentum/induction and ordinary characteristic ordering; RMO tests their observational diagnostic use, not a new MHD law."
+  },
+  "minimum_additional_observation": "An independently associated same-front upstream/downstream plasma pair, with either a bounded 3-D normal and upstream-flow/thermal constraints consistent with the intended R132 closure, or an independently bounded signed magnetic-strength jump under the same ideal-MHD state-pair interpretation.",
+  "R133_brightness": {
+    "percent_range": [
+      2.4,
+      8.5
+    ],
+    "registrations": 16,
+    "confidence_interval": false,
+    "used_as_density_compression_or_front_speed": false
+  },
+  "R133_alpha_interval_deg": null,
+  "new_observed_shock_type_claimed": false,
+  "working_hypothesis_promoted": false,
+  "new_observational_data_downloaded": false,
+  "new_event_started": false,
+  "unresolved_regions": "Zero new guarded roots happened to be hit by this finite stress grid; this does not certify guard-free interiors. All frozen R132 numerical unresolved nodes/cells and R133 observational insufficiency remain explicitly preserved.",
+  "conditional_reference_spectra_check": {
+    "initial_saved_examples": [
+      {
+        "family": "fast_shock",
+        "predicted_reference_energy_ratio": 0.2431610571807001,
+        "delta_chi_square": 3.923756032969891,
+        "fixed_reduced_chi_square": 1.3194470506224338
+      },
+      {
+        "family": "slow_shock",
+        "predicted_reference_energy_ratio": 0.24017176579235552,
+        "delta_chi_square": 2.521630708472344,
+        "fixed_reduced_chi_square": 1.3107861417879718
+      }
+    ],
+    "family_existence_witnesses": [
+      {
+        "family": "fast_shock",
+        "alpha_deg": 14.0,
+        "theta_deg": 15.0,
+        "predicted_reference_ratio": 0.22777200852786553,
+        "delta_chi_square": 0.017200712264497042,
+        "fixed_reduced_chi_square": 1.2957979423964543,
+        "physical_recheck": "PASS"
+      },
+      {
+        "family": "slow_shock",
+        "alpha_deg": 73.875,
+        "theta_deg": 51.0,
+        "predicted_reference_ratio": 0.22781227986528466,
+        "delta_chi_square": 0.01574467373197308,
+        "fixed_reduced_chi_square": 1.2957499511672834,
+        "physical_recheck": "PASS"
+      }
+    ],
+    "meaning": "Both frozen families contain physically checked states near the free-ratio optimum of the conditional reference-spectrum comparison. These are not measured angles, family probabilities or proof that the reference plasma is upstream."
+  }
+}

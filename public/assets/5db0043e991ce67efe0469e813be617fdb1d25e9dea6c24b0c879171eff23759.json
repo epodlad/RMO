@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "principal_outcome": "FAST AND ANOTHER FAMILY BOTH REMAIN ADMISSIBLE",
+  "outer_and_inner_constraints_separate": true,
+  "no_unmeasured_geometry_or_flow_promoted_to_observation": true,
+  "continuous_fast_certificate": "PASS",
+  "all_algebraic_roots_and_guards_retained": true,
+  "outer_slow_counterexample_fully_checked": true,
+  "inner_slow_remains_conditional": true,
+  "no_observed_type_or_two_wave_identification": true,
+  "accepted_state_guard_correction_check": "PASS",
+  "no_new_observation_or_literature_acquisition": true,
+  "frozen_baselines_preserved": true,
+  "conditional_flow_exclusion_certificate": "PASS",
+  "regular_slow_onset_certificate": "PASS",
+  "no_flow_threshold_promoted_to_measurement": true,
+  "onset_guard_limited_controls_preserved": 18
+}

@@ -1,0 +1,399 @@
+{
+  "checkpoint": "R104",
+  "type": "saved_evidence_synthesis_and_interface_reconstruction",
+  "numerical_audits_rerun": false,
+  "new_observation_analysis": false,
+  "source_records": [
+    {
+      "checkpoint": "R98",
+      "path": "results/external_polar/RMO_external_polar.json",
+      "sha256": "d2da6fef60769c1a13af2bc90ee11b007cecd545e5aeb2d447fbb2874695a23b",
+      "anchor": "r98-external-polar",
+      "saved_summary": {
+        "status": "PASS",
+        "scientific_checkpoint": "R98",
+        "source": "Urashima & Morioka 1966, Fig.3(a), A1^2=0.9",
+        "source_pdf_sha256": "31dae9cfeb93340e472153598b3de5f36280d82273b412b298299a9b771a0d56",
+        "fixed_source_inputs": {
+          "M1_squared": 4,
+          "A1_squared": 0.9,
+          "gamma": "5/3"
+        },
+        "sampled_angles": {
+          "min_deg": 91,
+          "max_deg": 179,
+          "step_deg": 0.5,
+          "count": 177
+        },
+        "family_counts": {
+          "slow_shock": 177
+        },
+        "max_original_flux_residual": "1.015735911771731954304E-69",
+        "max_state_disagreement": "2.81957868729344138242671716279306264362451873973545156556798085836245703745524780823480602E-69",
+        "max_abs_printed_curve_theta_error_deg": 0.555111431040249,
+        "printed_curve_tolerance_deg": 1.5,
+        "graphical_points": 7,
+        "negative_geometry_control": "INCONSISTENT_BN",
+        "scope": "One known regular slow-shock source case; sampled interior domain; not a solar classification",
+        "independence": "Published algebraic formulation and digitized published graph; no external executable or blinded experiment",
+        "native_browser_tested": false
+      }
+    },
+    {
+      "checkpoint": "R99",
+      "path": "results/partial_inputs/RMO_partial_inputs.json",
+      "sha256": "34aa2f1d11bf10c6a5a5d9028486cdcf64737a1bed5129069241c84ae89f30c4",
+      "anchor": "r99-partial-inputs",
+      "saved_summary": {
+        "status": "PASS",
+        "scientific_checkpoint": "R99",
+        "reference": "Saved R98 alpha=120 degree slow state",
+        "source_R98_json_sha256": "d2da6fef60769c1a13af2bc90ee11b007cecd545e5aeb2d447fbb2874695a23b",
+        "compression": "2.16777372674628571456846035289235997091915771158507132962527462913711634348321147559045940",
+        "normal_acoustic_Mach_squared": "3",
+        "fast_upper_compression": "2",
+        "partial_input_result": "FAST_EXCLUDED",
+        "control_families": [
+          "fast_shock",
+          "fast_shock"
+        ],
+        "max_control_flux_residual": "8.18415491307700787542425096395862311168090696206612707245428474838490411785960931164692178E-90",
+        "saved_reference_compression_difference": "3.22700935109805660564E-69",
+        "exact_reduction_identity": "PASS",
+        "fast_limits_covered_by_analytic_proof": [
+          "perpendicular",
+          "parallel/gas",
+          "switch-on"
+        ],
+        "full_state_API_with_B_missing": "INSUFFICIENT_DATA",
+        "unique_slow_identification": false,
+        "solar_identification": false,
+        "measurement_error_propagation": false,
+        "native_browser_tested": false,
+        "historical_benchmark_rerun": false
+      }
+    },
+    {
+      "checkpoint": "R100",
+      "path": "results/partial_bounds/RMO_partial_bounds.json",
+      "sha256": "014dd1c45c2768aeed909f0029916a7430949fea3dba98289f69d4852f89db07",
+      "anchor": "r100-partial-bounds",
+      "saved_summary": {
+        "status": "PASS",
+        "checkpoint": "R100",
+        "source_R99_sha256": "34aa2f1d11bf10c6a5a5d9028486cdcf64737a1bed5129069241c84ae89f30c4",
+        "protocol_sha256": "9cc889f066a9604bbee2126aac68f2b4a82fd9fe79e43095953f062282efa93f",
+        "case_results": [
+          {
+            "name": "A_narrow_box",
+            "status": "FAST_EXCLUDED_OVER_SET",
+            "minimum_margin": {
+              "lower": {
+                "exact": "561041498849517789619762476264873591176575460884966762615550193103713/27677386654142685629046581650614635493809617259956813301523603783680000",
+                "decimal": "0.020270754094680482701635144806747604688479947019078463989127185617493044661582851"
+              },
+              "upper": {
+                "exact": "2244165995398071158479049905059494364706301843539867050462200772415693/110709546616570742516186326602458541975238469039827253206094415134720000",
+                "decimal": "0.020270754094680482701635144806747604688479947019078463989127185617500641115779458"
+              }
+            }
+          },
+          {
+            "name": "B_wider_box",
+            "status": "BOUND_OVERLAP",
+            "minimum_margin": {
+              "lower": {
+                "exact": "-525640186055590305583046244405697396033338835817329153928519514363947/7273130143359730706324963786903489232023692526100422996000851886080000",
+                "decimal": "-0.072271522122492565974526072447006544917946360813118715623594149143430441169226195"
+              },
+              "upper": {
+                "exact": "-2102560744222361222332184977622789584133355343269316615714078057455567/29092520573438922825299855147613956928094770104401691984003407544320000",
+                "decimal": "-0.072271522122492565974526072447006544917946360813118715623594149143422844715029587"
+              }
+            }
+          },
+          {
+            "name": "C_dependent_strip",
+            "status": "FAST_EXCLUDED_OVER_SET",
+            "minimum_margin": {
+              "lower": {
+                "exact": "56210225413188150922950858546581742528556566270704685751548636522453/7273130143359730706324963786903489232023692526100422996000851886080000",
+                "decimal": "0.0077284778775074340254739275529934550820536391868812843764058508565695588307738052"
+              },
+              "upper": {
+                "exact": "224840901652752603691803434186326970114226265082818743006194546090033/29092520573438922825299855147613956928094770104401691984003407544320000",
+                "decimal": "0.0077284778775074340254739275529934550820536391868812843764058508565771552849704130"
+              }
+            }
+          }
+        ],
+        "same_marginal_bounds_B_C": true,
+        "strip_Bernstein_certificate": "STRICTLY_POSITIVE",
+        "wrong_Mach_squared_convention_rejected": true,
+        "equality_not_excluded": true,
+        "arithmetic": "exact rational endpoint, monotonicity and polynomial certificates; no sampling certificate",
+        "error_semantics": "declared model hard bounds, not observational confidence intervals",
+        "historical_audits_rerun": false,
+        "fast_state_constructed_in_overlap": false,
+        "unique_slow_identification": false,
+        "solar_identification": false,
+        "native_browser_tested": false
+      }
+    },
+    {
+      "checkpoint": "R101",
+      "path": "results/fast_witness/RMO_fast_witness.json",
+      "sha256": "9308a5849b12674fadb6c580ba39219320912b413f93e9c6ca6ca68d6bf816b6",
+      "anchor": "r101-fast-witness",
+      "saved_summary": {
+        "status": "PASS",
+        "checkpoint": "R101",
+        "candidate_count": 1,
+        "outcome": "FAST_WITNESS_EXISTS_IN_B",
+        "compression": "2.15",
+        "relative_Mach": "1.09",
+        "normal_acoustic_Mach_squared": "3.5643",
+        "diagnostic_family": "fast_shock",
+        "saved_reference_family": "slow_shock",
+        "exact_RH_fluxes": "all zero",
+        "exact_entropy_sign": "positive",
+        "exact_characteristic_checks": "PASS",
+        "max_scaled_vector_flux_residual": "3E-90",
+        "inside_B": true,
+        "inside_A": false,
+        "inside_C": false,
+        "historical_tests_rerun": false,
+        "solar_identification": false,
+        "full_fan_solution": false,
+        "all_B_points_feasible": false,
+        "native_browser_tested": false
+      }
+    },
+    {
+      "checkpoint": "R102",
+      "path": "results/normal_alfven/RMO_normal_alfven.json",
+      "sha256": "0d0c3038b095faea7074f17352a68501d28c037c9e212ba020029887b5e7050b",
+      "anchor": "r102-normal-alfven",
+      "saved_summary": {
+        "checkpoint": "R102",
+        "status": "PASS",
+        "cases": [
+          {
+            "case": "L",
+            "status": "NOT_EXCLUDED_BY_THIS_BOUND",
+            "minimum_G_decimal": [
+              "-0.17229087389431999986145442708274361424961272132331504848361543172281485282450455",
+              "-0.17229087389431999986145442708274361424961272132331504848361543172281113056194821"
+            ]
+          },
+          {
+            "case": "H",
+            "status": "FAST_EXCLUDED_OVER_SET",
+            "minimum_G_decimal": [
+              "0.14537518511762285732381462585111038138826093541444565096017576264775202896391243",
+              "0.14537518511762285732381462585111038138826093541444565096017576264775689069459826"
+            ]
+          }
+        ],
+        "threshold_eta_lower_decimal": [
+          "0.75588009172991968993679370293665378",
+          "0.75588009172991968993679370293665379"
+        ],
+        "saved_slow_inside_both": true,
+        "saved_R101_fast_removed_by_both": true,
+        "equality_fast_boundary_retained": true,
+        "component_semantics_controls": "PASS",
+        "historical_numerical_tests_rerun": false,
+        "solar_measurement_claim": false,
+        "unique_slow_identification": false,
+        "production_API_changed": false,
+        "native_browser_tested": false
+      }
+    },
+    {
+      "checkpoint": "R103",
+      "path": "results/field_angle/RMO_field_angle.json",
+      "sha256": "fd94fb0d88a171056a5d253746205d5e92b2c647b50fd800a44479a8ef770cd9",
+      "anchor": "r103-field-angle",
+      "saved_summary": {
+        "checkpoint": "R103",
+        "status": "PASS",
+        "cases": [
+          {
+            "case": "A",
+            "angle_halfwidth_deg": "5",
+            "status": "FAST_EXCLUDED_OVER_SET",
+            "minimum_G_decimal": [
+              "0.002627200127738012094961677830310870004387377572562458114",
+              "0.002627200127738012094961678126379764315766429422965044361"
+            ]
+          },
+          {
+            "case": "B",
+            "angle_halfwidth_deg": "10",
+            "status": "NOT_EXCLUDED_BY_THIS_BOUND",
+            "minimum_G_decimal": [
+              "-0.1495109226211490385952784347140769495940717398948998454",
+              "-0.1495109226211490385952784344372029152205487618388827699"
+            ]
+          }
+        ],
+        "critical_angle_deg_enclosure": [
+          "35.08859068431775085628032684326171875",
+          "35.088590684972587041556835174560546875"
+        ],
+        "critical_symmetric_angle_halfwidth_deg_enclosure": [
+          "5.08859068431775085628032684326171875",
+          "5.088590684972587041556835174560546875"
+        ],
+        "central_total_speed_in_saved_units": 1,
+        "central_angle_deg": 30,
+        "total_speed_hard_error_percent": 20,
+        "compression_absolute_hard_error": "0.05",
+        "Mach_relative_hard_error_percent": 10,
+        "saved_slow_inside_both": true,
+        "new_fast_state_constructed": false,
+        "uncertainty_semantics": "hard model bounds, not sigma",
+        "historical_numerical_tests_rerun": false,
+        "production_API_changed": false,
+        "solar_identification": false,
+        "unique_slow_identification": false,
+        "native_browser_tested": false
+      }
+    }
+  ],
+  "observer_rows": [
+    [
+      "R98",
+      "One published slow-shock polar reproduced.",
+      "177 sampled slow states; seven printed-curve points differ by at most 0.556°, within the declared ±1.5° reading tolerance.",
+      "This checks one published model case. Graph-reading tolerance is not an observational error.",
+      "For a solar application: matched local plasma states and geometry."
+    ],
+    [
+      "R99",
+      "Partial inputs can exclude fast.",
+      "Exact compression r₀ ≈ 2.167774 exceeds the necessary fast upper bound 2 at normal acoustic Mach M₀ = √3, γ = 5/3.",
+      "Removing the normal-flow or thermal constraint admits checked fast alternatives. Excluding fast does not identify slow.",
+      "Normal plasma flow and a justified thermal constraint; image speed alone is insufficient."
+    ],
+    [
+      "R100",
+      "Error size and allowed combinations matter.",
+      "Compression r₀ ±0.05 and Mach M₀ ±5% exclude fast. Mach ±10% loses that scalar certificate; an imposed joint strip with the same wider marginal ranges retains it.",
+      "The strip is a declared model assumption. Individual ± bounds do not specify dependence.",
+      "The actual joint measurement constraints, including shared calibration or geometry."
+    ],
+    [
+      "R101",
+      "The wider partial inputs really admit both families.",
+      "A complete fast state at r = 2.15 and M/M₀ = 1.09 lies inside the wider box, alongside the saved slow reference.",
+      "Different full states fit the same partial bounds. Identical full states have not received two diagnoses.",
+      "An additional independent constraint capable of separating the remaining states."
+    ],
+    [
+      "R102",
+      "Normal Alfvén-speed bounds restore fast exclusion.",
+      "About cAn,₀ = w₀, ±20% passes; the strict symmetric half-width limit for this criterion is about 24.4%.",
+      "Compression ±0.05 and Mach ±10% are included. This concerns the normal component, with hard model bounds.",
+      "An independent bound on the normal Alfvén speed, or field strength, density and direction."
+    ],
+    [
+      "R103",
+      "Field direction controls the usable speed error.",
+      "About total cA,₀ = w₀/cos30°, total speed ±20% with angle 30° ±5° excludes fast; angle ±10° does not certify it.",
+      "The strict angular half-width limit is about 5.08859°. With angle ±10°, this criterion requires total-speed error below about ±14.55%. Same compression/Mach bounds; fixed front normal.",
+      "A field-to-normal angle constraint and, for an uncertain normal, its linked effect on normal flow."
+    ]
+  ],
+  "event_readiness": [
+    [
+      "E01 · 19 May 2007",
+      "Long · imaging/cadence comparison",
+      "Saved literature control.",
+      "Match one front, sector, interval and cadence before comparing physical interpretations."
+    ],
+    [
+      "E02 · 27 July 2010",
+      "Chen & Wu · leading and trailing structures",
+      "Saved literature comparison.",
+      "Track the two structures separately; slower image motion does not establish a slow shock."
+    ],
+    [
+      "E03 · Liu 2012 paper",
+      "Wave trains",
+      "Saved card; event date not yet extracted.",
+      "Identify the event and one crest with its time series and uncertainty."
+    ],
+    [
+      "E04 · 15 February 2011",
+      "Vanninathan · DEM compression and heating",
+      "Published thermal constraints; no new RMO observation diagnosis.",
+      "Pair density and temperature estimates in the same region/time, preserving background and line-of-sight assumptions."
+    ],
+    [
+      "E05 · 16 February 2011",
+      "Veronig/Vršnak · EIS and AIA",
+      "Image speed and plasma Doppler speed distinguished.",
+      "Confirm slit crossing, exposure, control interval and density significance."
+    ],
+    [
+      "E06 · 7 June 2011",
+      "CASHeW/Kozarev",
+      "Published geometry and PFSS provenance saved.",
+      "Match front edge and local state estimates at the same place/time."
+    ],
+    [
+      "E07 · 12 December 2013",
+      "CASHeW/Kozarev · C4.6",
+      "Published imaging case saved.",
+      "Constrain local plasma states; flare class does not label the wave family."
+    ],
+    [
+      "E08 · 13 June 1998",
+      "Harra · outer front / filament control",
+      "CONTROL_ONLY; completed audit retained.",
+      "Keep the outer front and filament spectra separate. Do not reopen the completed audit."
+    ],
+    [
+      "E09 · 22 June 2015",
+      "Ye · flare-loop comparison",
+      "Date corrected in the saved project; author slow-shock interpretation distinguished.",
+      "Test conductive/isothermal versus adiabatic assumptions before transferring the interpretation."
+    ],
+    [
+      "E10 · 27 January 2011, 08:45 UT",
+      "Muhr/Veronig/Kienreich/Vršnak · B6.6",
+      "Exact catalogue row and speed convention saved.",
+      "Add normal, compression and local states; do not mix other events that day."
+    ],
+    [
+      "E11 · 13 June 2010",
+      "Ma · EUV/radio/thermal comparison",
+      "R76 input audit and later R84–R94 conditional fast-branch checks already saved.",
+      "Match diagnostics in place/time, errors, plasma flow and geometry. The old catalogue status is superseded by those later results."
+    ],
+    [
+      "Additional · 13 February 2009",
+      "T. Podladchikova et al. 2019 · stereo geometry",
+      "Saved same-patch speed comparison: about 260 → 207 km/s.",
+      "3D normal, flow and field require more than a tabulated crest height."
+    ],
+    [
+      "Additional · 9 May 2014",
+      "Kumar · mode conversion",
+      "HOLD on the earlier IRIS crossing task.",
+      "Keep mode conversion distinct from identification of a local shock."
+    ],
+    [
+      "Additional · 10 September 2017",
+      "GOES-16/SUVI · separate new example",
+      "51-frame supplied viewer; public primary event sources located.",
+      "Exact archive matching, timestamps and calibration are still needed for quantitative tracking. Optional if acquisition delays progress."
+    ]
+  ],
+  "next_proposed": "One proposed next observational test: use E04 (15 February 2011) to compare paired published DEM density and temperature changes with reversible adiabatic compression, T₂/T₁ = (ρ₂/ρ₁)^(2/3), for γ = 5/3. First identify the same region and interval and the meaning of its errors. Finish with compatibility, incompatibility, or an explicit limit from missing paired values. This is a thermal-consistency test, not a fast/slow identification. It uses a new observational constraint rather than repeating the Ma reconstruction. It has not been run. SUVI tracking can follow separately and is not required to finish this step.",
+  "original_R103_display_cause": "unresolved",
+  "baseline": "user-confirmed R102a",
+  "native_browser_tested": false
+}

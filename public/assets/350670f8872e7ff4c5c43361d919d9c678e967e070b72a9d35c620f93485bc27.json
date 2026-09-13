@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scientific_checkpoint": "R99",
+  "reference": "Saved R98 alpha=120 degree slow state",
+  "source_R98_json_sha256": "d2da6fef60769c1a13af2bc90ee11b007cecd545e5aeb2d447fbb2874695a23b",
+  "compression": "2.16777372674628571456846035289235997091915771158507132962527462913711634348321147559045940",
+  "normal_acoustic_Mach_squared": "3",
+  "fast_upper_compression": "2",
+  "partial_input_result": "FAST_EXCLUDED",
+  "control_families": [
+    "fast_shock",
+    "fast_shock"
+  ],
+  "max_control_flux_residual": "8.18415491307700787542425096395862311168090696206612707245428474838490411785960931164692178E-90",
+  "saved_reference_compression_difference": "3.22700935109805660564E-69",
+  "exact_reduction_identity": "PASS",
+  "fast_limits_covered_by_analytic_proof": [
+    "perpendicular",
+    "parallel/gas",
+    "switch-on"
+  ],
+  "full_state_API_with_B_missing": "INSUFFICIENT_DATA",
+  "unique_slow_identification": false,
+  "solar_identification": false,
+  "measurement_error_propagation": false,
+  "native_browser_tested": false,
+  "historical_benchmark_rerun": false
+}

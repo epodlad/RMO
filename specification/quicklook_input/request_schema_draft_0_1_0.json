@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rmo:quicklook:synthetic-request:draft:0.1.0",
+  "title": "RMO synthetic preflight request — specification only",
+  "description": "Draft request shape, not the frozen physical-result schema. Semantic validation and execution are not implemented by this file.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request_id", "purpose", "execution_mode", "physics", "normalization", "geometry", "shared_Bn", "initial_states", "policies", "uncertainty", "missing_reasons"],
+  "properties": {
+    "schema_version": {"const": "rmo-quicklook-synthetic-request-draft-0.1.0"},
+    "request_id": {"type": "string", "minLength": 1},
+    "purpose": {"const": "synthetic_initial_value"},
+    "execution_mode": {"const": "preflight_only"},
+    "physics": {
+      "type": "object", "additionalProperties": false,
+      "required": ["model", "gamma", "mu0_normalized"],
+      "properties": {
+        "model": {"const": "ideal_mhd_1d"},
+        "gamma": {"$ref": "#/$defs/number_or_unknown"},
+        "mu0_normalized": {"const": 1}
+      }
+    },
+    "normalization": {
+      "const": {"rho0": 1, "v0": 1, "B0": 1, "p0": 1, "source_units": "synthetic_normalized"}
+    },
+    "geometry": {
+      "const": {
+        "source_frame": "RIEMANN_COMPUTATIONAL", "solver_frame": "RIEMANN_COMPUTATIONAL",
+        "normal": [1, 0, 0], "t1": [0, 1, 0], "t2": [0, 0, 1],
+        "galilean_offset": [0, 0, 0], "handedness": "right"
+      }
+    },
+    "shared_Bn": {"$ref": "#/$defs/number_or_unknown"},
+    "initial_states": {
+      "type": "object", "additionalProperties": false, "required": ["left", "right"],
+      "properties": {
+        "left": {"allOf": [{"$ref": "#/$defs/state"}, {"properties": {"id": {"const": "X_L0"}, "role": {"const": "initial_left"}}}]},
+        "right": {"allOf": [{"$ref": "#/$defs/state"}, {"properties": {"id": {"const": "X_R0"}, "role": {"const": "initial_right"}}}]}
+      }
+    },
+    "policies": {
+      "type": "array", "minItems": 1, "maxItems": 2, "uniqueItems": true,
+      "items": {"enum": ["REGULAR_EVOLUTIONARY_1.0", "ENUMERATE_NONREGULAR_1.0"]}
+    },
+    "uncertainty": {
+      "oneOf": [
+        {
+          "type": "object", "additionalProperties": false, "required": ["mode"],
+          "properties": {"mode": {"const": "exact_synthetic"}}
+        },
+        {
+          "type": "object", "additionalProperties": false,
+          "required": ["mode", "parameters", "covariance", "propagation"],
+          "properties": {
+            "mode": {"const": "joint_covariance_metadata_only"},
+            "propagation": {"const": "not_implemented"},
+            "parameters": {
+              "type": "array", "minItems": 1, "maxItems": 16, "uniqueItems": true,
+              "items": {"enum": ["rho_L", "p_L", "u_n_L", "u_t1_L", "u_t2_L", "B_t1_L", "B_t2_L", "rho_R", "p_R", "u_n_R", "u_t1_R", "u_t2_R", "B_t1_R", "B_t2_R", "B_n", "gamma"]}
+            },
+            "covariance": {"type": "array", "minItems": 1, "maxItems": 16, "items": {"type": "array", "minItems": 1, "maxItems": 16, "items": {"type": "number"}}}
+          }
+        }
+      ]
+    },
+    "missing_reasons": {
+      "type": "object",
+      "description": "Keys are JSON Pointer paths to null physical scalars. Completeness, path resolution and reason correspondence require semantic validation.",
+      "additionalProperties": {"type": "string", "minLength": 1}
+    }
+  },
+  "$defs": {
+    "number_or_unknown": {"type": ["number", "null"]},
+    "state": {
+      "type": "object", "additionalProperties": false,
+      "required": ["rho", "p", "u", "B_t", "id", "role", "frame", "units"],
+      "properties": {
+        "rho": {"$ref": "#/$defs/number_or_unknown"},
+        "p": {"$ref": "#/$defs/number_or_unknown"},
+        "u": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/number_or_unknown"}},
+        "B_t": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "#/$defs/number_or_unknown"}},
+        "id": {"enum": ["X_L0", "X_R0"]},
+        "role": {"enum": ["initial_left", "initial_right"]},
+        "frame": {"const": "RIEMANN_COMPUTATIONAL"},
+        "units": {"const": "normalized_mu0_1"}
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "checkpoint": "R102",
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "L",
+      "status": "NOT_EXCLUDED_BY_THIS_BOUND",
+      "minimum_G_decimal": [
+        "-0.17229087389431999986145442708274361424961272132331504848361543172281485282450455",
+        "-0.17229087389431999986145442708274361424961272132331504848361543172281113056194821"
+      ]
+    },
+    {
+      "case": "H",
+      "status": "FAST_EXCLUDED_OVER_SET",
+      "minimum_G_decimal": [
+        "0.14537518511762285732381462585111038138826093541444565096017576264775202896391243",
+        "0.14537518511762285732381462585111038138826093541444565096017576264775689069459826"
+      ]
+    }
+  ],
+  "threshold_eta_lower_decimal": [
+    "0.75588009172991968993679370293665378",
+    "0.75588009172991968993679370293665379"
+  ],
+  "saved_slow_inside_both": true,
+  "saved_R101_fast_removed_by_both": true,
+  "equality_fast_boundary_retained": true,
+  "component_semantics_controls": "PASS",
+  "historical_numerical_tests_rerun": false,
+  "solar_measurement_claim": false,
+  "unique_slow_identification": false,
+  "production_API_changed": false,
+  "native_browser_tested": false
+}

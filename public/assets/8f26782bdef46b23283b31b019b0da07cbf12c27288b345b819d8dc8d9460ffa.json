@@ -1,0 +1,90 @@
+{
+  "records": [
+    {
+      "id": "MA_FLOW",
+      "source_id": "Ma2011",
+      "source_path": "observational_pilot/source/ma2011_text.txt",
+      "source_locator": "Section 2; Section 3.2 and Figure 7",
+      "anchor_line_numbers": [
+        350
+      ],
+      "short_anchor": "The density model was used to estimate the",
+      "audit_interpretation": "Radio drift is converted to front height and pattern speed through a density model. It is not a pre-front plasma velocity.",
+      "interpretation_author": "RMO R136 retained-source audit"
+    },
+    {
+      "id": "MA_ASSOC",
+      "source_id": "Ma2011",
+      "source_path": "observational_pilot/source/ma2011_text.txt",
+      "source_locator": "Section 3.2, Table 1 and Figure 7",
+      "anchor_line_numbers": [
+        312
+      ],
+      "short_anchor": "there is no other solar eruption at the same time",
+      "audit_interpretation": "Timing supports the same eruption and the published common-shock interpretation, without a radio sky position for PA116.",
+      "interpretation_author": "RMO R136 retained-source audit"
+    },
+    {
+      "id": "KOZ_ASSOC",
+      "source_id": "Kozarev2011",
+      "source_path": "observational_pilot/matching_R108/source/kozarev2011_text.txt",
+      "source_locator": "Sections 2.2 and 3.1; Figure 2",
+      "anchor_line_numbers": [
+        136
+      ],
+      "short_anchor": "The Newkirk coronal electron density model",
+      "audit_interpretation": "The radio/EUV height comparison depends on a density-to-height model and does not supply an independent radio image.",
+      "interpretation_author": "RMO R136 retained-source audit"
+    },
+    {
+      "id": "KOZ_UPSTREAM",
+      "source_id": "Kozarev2011",
+      "source_path": "observational_pilot/matching_R108/source/kozarev2011_text.txt",
+      "source_locator": "Section 3.2; Figure 3",
+      "anchor_line_numbers": [
+        216
+      ],
+      "short_anchor": "Results for regions 1 and 4 were not statistically",
+      "audit_interpretation": "The upstream comparison region R4 has no statistically significant DEM result here; a DEM is not a normal-flow measurement.",
+      "interpretation_author": "RMO R136 retained-source audit"
+    },
+    {
+      "id": "GOP_FLOW",
+      "source_id": "Gopalswamy2012",
+      "source_path": "observational_pilot/F1_evidence_R121/sources/gopalswamy2012.txt",
+      "source_locator": "Section 2.3, equations 2–3",
+      "anchor_line_numbers": [
+        396
+      ],
+      "short_anchor": "solar wind speed is negligible compared to the shock",
+      "audit_interpretation": "Negligible solar-wind speed is a premise used to derive Alfven speed and B. No same-patch velocity estimate or uncertainty accompanies it.",
+      "interpretation_author": "RMO R136 retained-source audit"
+    },
+    {
+      "id": "GOP_ASSOC",
+      "source_id": "Gopalswamy2012",
+      "source_path": "observational_pilot/F1_evidence_R121/sources/gopalswamy2012.txt",
+      "source_locator": "Discussion after the magnetic-field derivation",
+      "anchor_line_numbers": [
+        617
+      ],
+      "short_anchor": "We have no imaging observation at radio wavelengths",
+      "audit_interpretation": "The authors explicitly state the missing radio imaging. Nose emission is assumed; the approximate 4% height argument does not localize the source to the RMO patch.",
+      "interpretation_author": "RMO R136 retained-source audit"
+    },
+    {
+      "id": "LEE_SCOPE",
+      "source_id": "Lee2019",
+      "source_path": "observational_pilot/constraint_R111/source/lee2019_text.txt",
+      "source_locator": "Section 3.3 and Figure 8",
+      "anchor_line_numbers": [
+        333
+      ],
+      "short_anchor": "temperature, density, and line of sight depth (dl)",
+      "audit_interpretation": "The E11 result fits post-passage emission histories under ionization and background assumptions; it does not measure the upstream velocity vector.",
+      "interpretation_author": "RMO R136 retained-source audit"
+    }
+  ],
+  "scope_limit": "Conclusions concern the retained E11 material. They do not establish that no additional observation exists in any archive.",
+  "source_credit": "Published observations and model results remain credited to their original authors. R136 adds an independence and local-association audit."
+}

@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: rmo
+    runtime: python
+    repo: https://github.com/epodlad/RMO
+    branch: main
+    plan: 0.5c-512mb
+    numInstances: 1
+    autoDeployTrigger: "off"
+    buildCommand: python -m pip install -r requirements.txt
+    startCommand: python -B -m web_app.server
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.14
+      - key: PYTHONDONTWRITEBYTECODE
+        value: '1'
+      - key: OPENBLAS_NUM_THREADS
+        value: '1'
+      - key: OMP_NUM_THREADS
+        value: '1'

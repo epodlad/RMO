@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "checkpoint": "RMO97",
+  "wide_r_exact": [
+    "3119/2000",
+    "3121/2000"
+  ],
+  "narrow_r_exact": [
+    "15599/10000",
+    "15601/10000"
+  ],
+  "sector_phi_degrees": [
+    -4,
+    4
+  ],
+  "rectangle_cover_cells": 2,
+  "fold_r": {
+    "lower_outward": "1.56020295869730841751307358451",
+    "upper_outward": "1.56020295869730841751307358452"
+  },
+  "fold_phi_degrees_approx": 0.9697644551291263,
+  "fold_offset_above_1p56": {
+    "lower_outward": "0.000202958697308417513073584516102",
+    "upper_outward": "0.000202958697308417513073584516103"
+  },
+  "root_count_rule": "2 for exact r below r*; 1 double root at r*; 0 above, within the declared wider band and sector",
+  "narrow_band_two_disjoint_branches": true,
+  "wide_band_branches_join_at_fold": true,
+  "solution_type_certificate": "all F=0 solutions in the rectangle satisfy sufficient fast inequalities",
+  "fold_is_MHD_type_change": false,
+  "narrow_velocity_y_gap_lower_km_s": {
+    "lower_outward": "1.63169193292671349702335050390",
+    "upper_outward": "1.63169193292671349702335050391"
+  },
+  "narrow_y_gap_certified_positive": true,
+  "additional_equal_half_width_sufficient_below_km_s": {
+    "lower_outward": "0.815845966463356748511675251954",
+    "upper_outward": "0.815845966463356748511675251955"
+  },
+  "wide_band_uniform_velocity_separation": 0,
+  "new_original_forward_controls": 5,
+  "classifications": [
+    "fast_shock",
+    "fast_shock",
+    "fast_shock",
+    "fast_shock",
+    "fast_shock"
+  ],
+  "max_scaled_RH_residual": "3.27745061572412087493291321163622117216937002399484094521736902570330474166141331131980663E-38",
+  "max_forward_reference_difference": "6.40541238007279505290352565356210667281577236257046207720680002239868373413193178675809559E-38",
+  "old_scientific_audits_rerun": false,
+  "observed_error_interval": false,
+  "full_upstream_or_LOS_errors_propagated": false,
+  "external_solver_checked": false,
+  "new_solar_classification": false
+}

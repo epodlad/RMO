@@ -1,0 +1,2033 @@
+{
+  "stage": "R134",
+  "status": "PRE_RUN_FROZEN",
+  "created_UTC": "2026-09-11T00:14:11.042726+00:00",
+  "baseline_manifest_sha256": "e3dc5c181e09550d0c206da4eedd5beddbc0f46d24353a17eca69192ebc7a4ce",
+  "scientific_scope": "E05 only; joint dependency and conditional robustness checks; no new observations or observational refits; frozen R132 map and R133 records remain unchanged",
+  "thresholds": {
+    "min_abs_mu": 0.001,
+    "min_cross_norm": 1e-08,
+    "min_compression_denominator_margin": 1e-06,
+    "min_compression_excess": 5e-08,
+    "min_pole_relative_distance": 1e-06,
+    "polynomial_root_residual": 1e-12,
+    "flux_residual": 1e-10,
+    "min_relative_leading_coefficient": 1e-12,
+    "min_relative_discriminant": 1e-12,
+    "min_relative_root_separation": 1e-07,
+    "characteristic_guard": 1e-07,
+    "field_component_guard": 1e-08,
+    "entropy_guard": 1e-09,
+    "pressure_guard": 1e-10,
+    "tangential_LOS_relative": 1e-12,
+    "Doppler_absolute_km_s": 1e-09
+  },
+  "threshold_definitions": {
+    "min_pole_relative_distance": "abs(1-X*bn^2)/max(1,abs(X*bn^2)); guard if below 1e-6",
+    "polynomial_root_residual": "abs(a*z^2+b*z+c)/(abs(a)*z^2+abs(b)*z+abs(c))",
+    "flux_residual": "max component discrepancy divided by max(1,abs(flux_left),abs(flux_right)); both native and independently dimensionalized checks",
+    "characteristic_guard": "minimum distance of abs(front-relative normal speed) to any characteristic speed, divided by max(1,all speeds); the same relative guard on characteristic-speed coincidences",
+    "entropy_guard": "dimensionless log(p2/p1)-gamma*log(X); ordinary accepted shock must exceed the guard",
+    "pressure_guard": "normalized pressure p/(rho_up*D^2)",
+    "tangential_LOS_relative": "abs(v_t dot ell)/max(1 km/s, norm(v_t)); explicitly calculated for both constructed states and their difference",
+    "guard_policy": "Guarded candidates are UNRESOLVED, retained in root records and never used for a decisive ordinary-family claim. Existing R131 diagnostic thresholds are unchanged; the extra R132 conditioning guards are applied separately."
+  },
+  "joint_domain_type": "Finite retained source/reduction/closure scenarios, not a joint confidence region or physical prior; all unbounded unknowns remain explicitly unknown",
+  "dependency_rules": [
+    "Temperature and effective density remain paired by the same saved atomic-response fit.",
+    "Centroid and density always use the same retained EIS aperture; no Cartesian mixing across apertures.",
+    "Reference choices share the target spectrum and are overlapping alternatives; they are not independent samples.",
+    "The 336 and 371 km/s published means are alternative speed-proxy assignments, not simultaneous exact local-speed measurements or error endpoints.",
+    "Formal centroid sigma and conditional density profile bounds are not multiplied into an invented joint error box. Their common spectral/calibration dependencies remain explicit.",
+    "Density scale cancels from normalized ideal-MHD admissibility at fixed T, d and geometry; the saved positive density-profile limits rescale fields by sqrt(ne) and densities by ne, without serving as independent model parameters.",
+    "The 16 R133 EIS–AIA registrations relocate the same detector aperture; they do not provide 16 independent Doppler or density measurements.",
+    "Upstream normal velocity and absolute line zero point have no independent measured finite bound in the retained records. Numeric flow tests below are conditional stress scenarios, not observational bounds.",
+    "AIA brightness is not converted to density compression, normal or shock association. Its emission-response/background nuisance factors are not measured."
+  ],
+  "scenarios": [
+    {
+      "scenario_id": 0,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to10",
+      "d": 16.559600881163973,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1357412025779954,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 192926157.74414834,
+      "conditional_density_profile_bounds_cm3": [
+        177881190.35946193,
+        209106028.13509855
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 1,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to10",
+      "d": 16.559600881163973,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1357412025779954,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 192926157.74414834,
+      "conditional_density_profile_bounds_cm3": [
+        177881190.35946193,
+        209106028.13509855
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 2,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to10",
+      "d": 16.559600881163973,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1357412025779954,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 235053642.40666732,
+      "conditional_density_profile_bounds_cm3": [
+        217024819.32371172,
+        254429545.97235262
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 3,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to10",
+      "d": 16.559600881163973,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1357412025779954,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 235053642.40666732,
+      "conditional_density_profile_bounds_cm3": [
+        217024819.32371172,
+        254429545.97235262
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": true
+    },
+    {
+      "scenario_id": 4,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to10",
+      "d": 16.559600881163973,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1357412025779954,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 284208238.72868097,
+      "conditional_density_profile_bounds_cm3": [
+        262745837.55338237,
+        307272010.1019437
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 5,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to10",
+      "d": 16.559600881163973,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1357412025779954,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 284208238.72868097,
+      "conditional_density_profile_bounds_cm3": [
+        262745837.55338237,
+        307272010.1019437
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 6,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to5",
+      "d": 14.592077453664883,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1886026840008004,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 192926157.74414834,
+      "conditional_density_profile_bounds_cm3": [
+        177881190.35946193,
+        209106028.13509855
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 7,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to5",
+      "d": 14.592077453664883,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1886026840008004,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 192926157.74414834,
+      "conditional_density_profile_bounds_cm3": [
+        177881190.35946193,
+        209106028.13509855
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 8,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to5",
+      "d": 14.592077453664883,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1886026840008004,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 235053642.40666732,
+      "conditional_density_profile_bounds_cm3": [
+        217024819.32371172,
+        254429545.97235262
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 9,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to5",
+      "d": 14.592077453664883,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1886026840008004,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 235053642.40666732,
+      "conditional_density_profile_bounds_cm3": [
+        217024819.32371172,
+        254429545.97235262
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 10,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to5",
+      "d": 14.592077453664883,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1886026840008004,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 284208238.72868097,
+      "conditional_density_profile_bounds_cm3": [
+        262745837.55338237,
+        307272010.1019437
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 11,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures1_to5",
+      "d": 14.592077453664883,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1886026840008004,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 284208238.72868097,
+      "conditional_density_profile_bounds_cm3": [
+        262745837.55338237,
+        307272010.1019437
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 12,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures6_to10",
+      "d": 18.527124308663065,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.198715073693236,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 192926157.74414834,
+      "conditional_density_profile_bounds_cm3": [
+        177881190.35946193,
+        209106028.13509855
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 13,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures6_to10",
+      "d": 18.527124308663065,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.198715073693236,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 192926157.74414834,
+      "conditional_density_profile_bounds_cm3": [
+        177881190.35946193,
+        209106028.13509855
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 14,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures6_to10",
+      "d": 18.527124308663065,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.198715073693236,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 235053642.40666732,
+      "conditional_density_profile_bounds_cm3": [
+        217024819.32371172,
+        254429545.97235262
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 15,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures6_to10",
+      "d": 18.527124308663065,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.198715073693236,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 235053642.40666732,
+      "conditional_density_profile_bounds_cm3": [
+        217024819.32371172,
+        254429545.97235262
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 16,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures6_to10",
+      "d": 18.527124308663065,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.198715073693236,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 284208238.72868097,
+      "conditional_density_profile_bounds_cm3": [
+        262745837.55338237,
+        307272010.1019437
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 17,
+      "aperture": "central",
+      "scope": "PRIMARY_FIXED_EIS_APERTURE",
+      "reference": "exposures6_to10",
+      "d": 18.527124308663065,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.198715073693236,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 284208238.72868097,
+      "conditional_density_profile_bounds_cm3": [
+        262745837.55338237,
+        307272010.1019437
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.46067227023545787,
+        0.030401553302405963,
+        0.8870494941055473
+      ],
+      "t": [
+        -0.014011629230654661,
+        0.9995377659482411,
+        -0.02698015362264811
+      ],
+      "ell": [
+        -0.0021787412901037744,
+        -0.00014378360440359835,
+        0.9999976162034917
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 18,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 20.190336414347087,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1314769421005053,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 149996686.74545628,
+      "conditional_density_profile_bounds_cm3": [
+        135664893.45085502,
+        165527080.86758298
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 19,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 20.190336414347087,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1314769421005053,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 149996686.74545628,
+      "conditional_density_profile_bounds_cm3": [
+        135664893.45085502,
+        165527080.86758298
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 20,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 20.190336414347087,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1314769421005053,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 183559368.07726285,
+      "conditional_density_profile_bounds_cm3": [
+        166418401.59929883,
+        202122661.03914753
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 21,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 20.190336414347087,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1314769421005053,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 183559368.07726285,
+      "conditional_density_profile_bounds_cm3": [
+        166418401.59929883,
+        202122661.03914753
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 22,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 20.190336414347087,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1314769421005053,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 222899378.5081,
+      "conditional_density_profile_bounds_cm3": [
+        202504985.57955435,
+        244992474.32129717
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 23,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 20.190336414347087,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1314769421005053,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 222899378.5081,
+      "conditional_density_profile_bounds_cm3": [
+        202504985.57955435,
+        244992474.32129717
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 24,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 18.419797650895614,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1910617920732163,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 149996686.74545628,
+      "conditional_density_profile_bounds_cm3": [
+        135664893.45085502,
+        165527080.86758298
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 25,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 18.419797650895614,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1910617920732163,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 149996686.74545628,
+      "conditional_density_profile_bounds_cm3": [
+        135664893.45085502,
+        165527080.86758298
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 26,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 18.419797650895614,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1910617920732163,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 183559368.07726285,
+      "conditional_density_profile_bounds_cm3": [
+        166418401.59929883,
+        202122661.03914753
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 27,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 18.419797650895614,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1910617920732163,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 183559368.07726285,
+      "conditional_density_profile_bounds_cm3": [
+        166418401.59929883,
+        202122661.03914753
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 28,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 18.419797650895614,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1910617920732163,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 222899378.5081,
+      "conditional_density_profile_bounds_cm3": [
+        202504985.57955435,
+        244992474.32129717
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 29,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 18.419797650895614,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1910617920732163,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 222899378.5081,
+      "conditional_density_profile_bounds_cm3": [
+        202504985.57955435,
+        244992474.32129717
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 30,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 21.96087517775639,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.191916970279499,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 149996686.74545628,
+      "conditional_density_profile_bounds_cm3": [
+        135664893.45085502,
+        165527080.86758298
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 31,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 21.96087517775639,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.191916970279499,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 149996686.74545628,
+      "conditional_density_profile_bounds_cm3": [
+        135664893.45085502,
+        165527080.86758298
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 32,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 21.96087517775639,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.191916970279499,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 183559368.07726285,
+      "conditional_density_profile_bounds_cm3": [
+        166418401.59929883,
+        202122661.03914753
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 33,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 21.96087517775639,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.191916970279499,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 183559368.07726285,
+      "conditional_density_profile_bounds_cm3": [
+        166418401.59929883,
+        202122661.03914753
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 34,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 21.96087517775639,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.191916970279499,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 222899378.5081,
+      "conditional_density_profile_bounds_cm3": [
+        202504985.57955435,
+        244992474.32129717
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 35,
+      "aperture": "lower_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 21.96087517775639,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.191916970279499,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 222899378.5081,
+      "conditional_density_profile_bounds_cm3": [
+        202504985.57955435,
+        244992474.32129717
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4668299354516641,
+        0.030402018962192377,
+        0.8838243765642451
+      ],
+      "t": [
+        -0.01419913607502853,
+        0.9995377517848051,
+        -0.026882471830177564
+      ],
+      "ell": [
+        -0.0022078300407026336,
+        -0.00014378360440359835,
+        0.9999975524033979
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 36,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 14.552582888637106,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1359404690659662,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 194450503.65395734,
+      "conditional_density_profile_bounds_cm3": [
+        180315401.9609387,
+        209215939.9820351
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 37,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 14.552582888637106,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1359404690659662,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 194450503.65395734,
+      "conditional_density_profile_bounds_cm3": [
+        180315401.9609387,
+        209215939.9820351
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 38,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 14.552582888637106,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1359404690659662,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 236860716.44266698,
+      "conditional_density_profile_bounds_cm3": [
+        219920131.31288168,
+        254546093.41167474
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 39,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 14.552582888637106,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1359404690659662,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 236860716.44266698,
+      "conditional_density_profile_bounds_cm3": [
+        219920131.31288168,
+        254546093.41167474
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 40,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 14.552582888637106,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1359404690659662,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 286360823.49427146,
+      "conditional_density_profile_bounds_cm3": [
+        266189501.08601895,
+        307408681.3019749
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 41,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to10",
+      "d": 14.552582888637106,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1359404690659662,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 286360823.49427146,
+      "conditional_density_profile_bounds_cm3": [
+        266189501.08601895,
+        307408681.3019749
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 42,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 13.285547062876294,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1849679080231132,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 194450503.65395734,
+      "conditional_density_profile_bounds_cm3": [
+        180315401.9609387,
+        209215939.9820351
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 43,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 13.285547062876294,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1849679080231132,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 194450503.65395734,
+      "conditional_density_profile_bounds_cm3": [
+        180315401.9609387,
+        209215939.9820351
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 44,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 13.285547062876294,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1849679080231132,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 236860716.44266698,
+      "conditional_density_profile_bounds_cm3": [
+        219920131.31288168,
+        254546093.41167474
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 45,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 13.285547062876294,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1849679080231132,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 236860716.44266698,
+      "conditional_density_profile_bounds_cm3": [
+        219920131.31288168,
+        254546093.41167474
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 46,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 13.285547062876294,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1849679080231132,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 286360823.49427146,
+      "conditional_density_profile_bounds_cm3": [
+        266189501.08601895,
+        307408681.3019749
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 47,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures1_to5",
+      "d": 13.285547062876294,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1849679080231132,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 286360823.49427146,
+      "conditional_density_profile_bounds_cm3": [
+        266189501.08601895,
+        307408681.3019749
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 48,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 15.819618714313574,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1986433534171785,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 194450503.65395734,
+      "conditional_density_profile_bounds_cm3": [
+        180315401.9609387,
+        209215939.9820351
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 49,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 15.819618714313574,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1986433534171785,
+      "temperature_scenario": "cool",
+      "T2": 1000000.0,
+      "ne2": 194450503.65395734,
+      "conditional_density_profile_bounds_cm3": [
+        180315401.9609387,
+        209215939.9820351
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 50,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 15.819618714313574,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1986433534171785,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 236860716.44266698,
+      "conditional_density_profile_bounds_cm3": [
+        219920131.31288168,
+        254546093.41167474
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 51,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 15.819618714313574,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1986433534171785,
+      "temperature_scenario": "central",
+      "T2": 1584893.1924611141,
+      "ne2": 236860716.44266698,
+      "conditional_density_profile_bounds_cm3": [
+        219920131.31288168,
+        254546093.41167474
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 52,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 15.819618714313574,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1986433534171785,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 286360823.49427146,
+      "conditional_density_profile_bounds_cm3": [
+        266189501.08601895,
+        307408681.3019749
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 336.0,
+      "speed_proxy_source": "retained published AIA mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    },
+    {
+      "scenario_id": 53,
+      "aperture": "upper_y_registration",
+      "scope": "RETAINED_SPATIAL_ASSOCIATION_ALTERNATIVE_NOT_A_NEW_EIS_SELECTION",
+      "reference": "exposures6_to10",
+      "d": 15.819618714313574,
+      "formal_d_sigma_km_s_not_an_independent_scan_axis": 1.1986433534171785,
+      "temperature_scenario": "warm",
+      "T2": 2500000.0,
+      "ne2": 286360823.49427146,
+      "conditional_density_profile_bounds_cm3": [
+        266189501.08601895,
+        307408681.3019749
+      ],
+      "density_profile_is_joint_observational_confidence_region": false,
+      "V": 371.0,
+      "speed_proxy_source": "retained published EIS mean",
+      "r": [
+        0.4586197833332231,
+        0.03040139983162995,
+        0.8881124079888004
+      ],
+      "t": [
+        -0.013949131102083553,
+        0.999537770616137,
+        -0.027012346310891163
+      ],
+      "ell": [
+        -0.0021690450394932586,
+        -0.00014378360440359835,
+        0.9999976372821546
+      ],
+      "is_frozen_R132_input_tuple": false
+    }
+  ],
+  "stationary_upstream_scan": {
+    "alpha_deg": [
+      -89.0,
+      -85.0,
+      -80.0,
+      -75.0,
+      -70.0,
+      -65.0,
+      -60.0,
+      -55.0,
+      -50.0,
+      -45.0,
+      -40.0,
+      -35.0,
+      -30.0,
+      -25.0,
+      -20.0,
+      -15.0,
+      -10.0,
+      -5.0,
+      0.0,
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0,
+      65.0,
+      70.0,
+      75.0,
+      80.0,
+      85.0,
+      89.0
+    ],
+    "theta_deg": [
+      1.0,
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0,
+      65.0,
+      70.0,
+      75.0,
+      80.0,
+      85.0,
+      89.0
+    ],
+    "frozen_R132_tuple": "Reuse matching saved R132 nodes without rerunning them; new tuples use complete polynomial root enumeration.",
+    "coverage": "Every algebraic root at every declared node is retained; no exclusion claim from unsampled cell interiors."
+  },
+  "unknown_normal_flow_stress_scan": {
+    "source_scenarios": "All 18 central-aperture tuples",
+    "alpha_deg": [
+      45.0,
+      54.2269698,
+      60.0
+    ],
+    "theta_deg": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23,
+      25,
+      27,
+      29,
+      31,
+      33,
+      35,
+      37,
+      39,
+      41,
+      43,
+      45,
+      47,
+      49,
+      51,
+      53,
+      55,
+      57,
+      59,
+      61,
+      63,
+      65,
+      67,
+      69,
+      71,
+      73,
+      75,
+      77,
+      79,
+      81,
+      83,
+      85,
+      87,
+      89
+    ],
+    "S_over_downstream_sound_speed": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0,
+      1.1,
+      1.2,
+      1.3,
+      1.4,
+      1.5,
+      1.6,
+      1.7,
+      1.8,
+      1.9,
+      2.0
+    ],
+    "definition": "S is front speed relative to upstream plasma; S=factor*sqrt(gamma*2*kB*T2/mp). D_lab=V*cos(alpha); v1n=D_lab-S; X=S/(S-d/mu).",
+    "category": "ASSUMED symmetric-family stress domain around sonic scale, not an observed flow range; unknown velocities outside it are not excluded."
+  },
+  "normal_flow_separator": "A changes sign at Scrit=(delta_vn+sqrt(4*delta_vn^2+9*cs2^2))/3. This is a necessary ordinary-family condition, not a sufficient root or observation.",
+  "alternative_discriminator_tests": [
+    "Joint measured tuple compatibility and inherited root preservation",
+    "Full inherited and new accepted-family projections of compression, upstream temperature/density, field strengths and flow",
+    "Signed total magnetic-field change under standard tangential ideal-MHD jump relations",
+    "No global finite precision inferred from selected witness separation; numerical guards remain unresolved"
+  ],
+  "exclusion_policy": "Widening a set that contains an accepted witness cannot exclude that witness. Exclusion needs an independent jointly incompatible observational requirement. No such requirement is assumed in advance.",
+  "numerical_guard_policy": "UNRESOLVED stays explicit. New checks never relabel the saved R132 result. Finite grid counts are not probabilities or volume fractions."
+}

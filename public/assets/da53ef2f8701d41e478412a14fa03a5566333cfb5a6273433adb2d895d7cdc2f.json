@@ -1,0 +1,104 @@
+{
+  "date": "1998-06-13",
+  "provenance": "SOURCE_DERIVED",
+  "source": "M2015",
+  "TRACE_195_Fig2_UT": [
+    "15:28:54",
+    "15:29:56",
+    "15:31:26",
+    "15:33:20",
+    "15:34:32",
+    "15:36:01",
+    "15:37:55",
+    "15:39:07",
+    "15:40:35",
+    "15:42:30",
+    "15:43:43",
+    "15:45:11"
+  ],
+  "TRACE_intervals_s": [
+    62,
+    90,
+    114,
+    72,
+    89,
+    114,
+    72,
+    88,
+    115,
+    73,
+    88
+  ],
+  "TRACE_full_figure_interval_range_s": [
+    62,
+    115
+  ],
+  "earlier_audit_subset_interval_s": [
+    90,
+    114,
+    72,
+    89
+  ],
+  "SUMER_exposures": [
+    {
+      "instrument": "SUMER",
+      "start_UT": "15:31",
+      "end_UT": "15:39",
+      "window_A": 770,
+      "object": "Outer-front passage during integration; no detected wave spectrum",
+      "locator": "M2015 p.8, section 3.2; Fig.2 panels 4-7",
+      "provenance": "SOURCE_DERIVED",
+      "time_precision": "Published minute labels; not archive-exact timestamps",
+      "nominal_exposure_s": 480
+    },
+    {
+      "instrument": "SUMER",
+      "start_UT": "15:39",
+      "end_UT": "15:47",
+      "window_A": 770,
+      "object": "Filament; blue-shifted transition-region emission",
+      "locator": "M2015 Figs.5,8",
+      "provenance": "SOURCE_DERIVED",
+      "time_precision": "Published minute labels; not archive-exact timestamps",
+      "nominal_exposure_s": 480
+    },
+    {
+      "instrument": "SUMER",
+      "start_UT": "15:48",
+      "end_UT": "15:56",
+      "window_A": 1238,
+      "object": "Filament",
+      "locator": "M2015 Figs.6,8",
+      "provenance": "SOURCE_DERIVED",
+      "time_precision": "Published minute labels; not archive-exact timestamps",
+      "nominal_exposure_s": 480
+    },
+    {
+      "instrument": "SUMER",
+      "start_UT": "15:56",
+      "end_UT": "16:03",
+      "window_A": 1238,
+      "object": "Filament; published rounded endpoint retained",
+      "locator": "M2015 Figs.7,8",
+      "provenance": "SOURCE_DERIVED",
+      "time_precision": "Published minute labels; not archive-exact timestamps",
+      "nominal_exposure_s": 480
+    }
+  ],
+  "CDS_filament_raster_starts_UT": [
+    "15:37",
+    "15:42",
+    "15:47",
+    "15:53",
+    "15:58"
+  ],
+  "CDS_filament_FOV_entry": "After 15:34 UT; raster starts are not pixel exposure times.",
+  "CDS_front_crossing_pixel_times": null,
+  "EIT_event_cadence_s": null,
+  "source_cautions": [
+    "Section 2 mentions 15:39 UT, but section 3.2 explicitly identifies the first exposure as 15:31-15:39. Preserve both source statements; use the explicit passage account for this audit.",
+    "The last Fig.8 rounded interval spans seven minutes although the observing mode states 480 s. Do not invent exact endpoints or repair the source.",
+    "Fig.2 semicircles trace the compression/dimming boundary, not the separated outer wave ridge.",
+    "The expanded Fig.2 frame list gives 62-115 s. The inherited 72-114 s statement referred to the smaller retained subset and is not edited."
+  ]
+}

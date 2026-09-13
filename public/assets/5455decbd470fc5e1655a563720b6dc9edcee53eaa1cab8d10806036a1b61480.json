@@ -1,0 +1,121 @@
+{
+  "stage": "R132",
+  "status": "REVIEW_RESULT_NOT_FINAL_CHECKPOINT",
+  "analytic_separator": {
+    "A_definition": "2*(5*P2*X-4*X+1)/X^2",
+    "necessary_fast": "A<0, because bn^2<1/X and H=0",
+    "necessary_slow": "A>0, because bn^2>1 and H=0",
+    "both_ordinary_families_at_one_geometry": "excluded within this fixed construction; their necessary A signs are incompatible",
+    "positive_tilt_A_zeros_deg": [
+      2.121853950493519,
+      54.226969831784366
+    ],
+    "quartic_coefficients_ascending": [
+      800.0951269031407,
+      -5314.076232097541,
+      -440978.65353287995,
+      34335.9634873438,
+      205958.39516998656
+    ],
+    "all_quartic_roots": [
+      {
+        "tan_alpha": -1.5427045419824184,
+        "alpha_deg": -57.048198214980125,
+        "geometry_valid": false,
+        "reason": "kinematically_incompatible",
+        "polynomial_scaled_residual": 2.0182971003379453e-16
+      },
+      {
+        "tan_alpha": -0.04896957924773138,
+        "alpha_deg": -2.803510688713054,
+        "geometry_valid": false,
+        "reason": "kinematically_incompatible",
+        "polynomial_scaled_residual": 2.6239356264917153e-15
+      },
+      {
+        "tan_alpha": 0.03705027698906369,
+        "alpha_deg": 2.121853950493518,
+        "geometry_valid": true,
+        "reason": null,
+        "polynomial_scaled_residual": 1.417136006357629e-16
+      },
+      {
+        "tan_alpha": 1.387910739591941,
+        "alpha_deg": 54.22696983178432,
+        "geometry_valid": true,
+        "reason": null,
+        "polynomial_scaled_residual": 4.935141283221318e-16
+      }
+    ],
+    "no_slow_interval_deg": [
+      2.121853950493519,
+      54.226969831784366
+    ],
+    "no_fast_above_deg": 54.226969831784366,
+    "lower_positive_A_region": "A>0 below the lower separator is not by itself evidence of a slow solution. Thin unsampled branches there are not excluded by the .125deg map.",
+    "uncertainty": "The separator is computed with frozen inputs and closure; numerical digits are not observational angular accuracy."
+  },
+  "precision": {
+    "region": "ASSUMED axis-aligned planning box; no covariance/confidence level supplied",
+    "conservative_tilt_halfwidth_upper_limits_deg": {
+      "centre45_fast": 9.226969831784366,
+      "centre60_slow": 5.773030168215634
+    },
+    "interpretation": "Strict halfwidth inequalities are sufficient ordinary-family exclusions, not universally optimal measurement requirements.",
+    "example_boxes": [
+      {
+        "centre": "saved_fast",
+        "alpha0_deg": 45.0,
+        "theta0_deg": 80.0,
+        "delta_alpha_deg": 5,
+        "delta_theta_deg": 5,
+        "planning_shape": "axis_aligned_box_no_measured_covariance",
+        "inside_mapped_domain": true,
+        "opposite_ordinary_family_excluded_by_analytic_sign": true,
+        "saved_accepted_central_witness_retained": true,
+        "sampled_unresolved_nodes_inside": 0,
+        "sampled_neither_nodes_inside": 0,
+        "result": "conditional_family_discrimination_supported"
+      },
+      {
+        "centre": "saved_slow",
+        "alpha0_deg": 60.0,
+        "theta0_deg": 30.0,
+        "delta_alpha_deg": 5,
+        "delta_theta_deg": 5,
+        "planning_shape": "axis_aligned_box_no_measured_covariance",
+        "inside_mapped_domain": true,
+        "opposite_ordinary_family_excluded_by_analytic_sign": true,
+        "saved_accepted_central_witness_retained": true,
+        "sampled_unresolved_nodes_inside": 0,
+        "sampled_neither_nodes_inside": 300,
+        "result": "conditional_family_discrimination_supported"
+      }
+    ],
+    "tilt_only_examples": "45+/-5deg excludes checked slow; 60+/-5deg excludes checked fast, with the other angle left free within the tested ordinary-family construction and central feasibility retained.",
+    "field_angle_only_at30deg": "insufficient even at zero error: checked fast(45,30) and slow(60,30)",
+    "field_angle_only_at80deg": "insufficient even at zero error: checked fast(45,80) and new checked slow(83.25,80)",
+    "existence_vs_whole_box": "A discriminating box retains an admissible witness and excludes the competing ordinary family. Not every geometry in that box must be feasible; neither/guard regions remain unclassified."
+  },
+  "verification": {
+    "all_accepted_roots_obey_analytic_necessary_sign": true,
+    "accepted_root_count": 15151,
+    "accepted_family_root_counts": {
+      "fast_shock": 10769,
+      "slow_shock": 4382
+    },
+    "locations_with_two_accepted_slow_roots": 555,
+    "all_accepted_tangential_LOS_and_flux_checks_pass": true,
+    "analytic_boundary_function_evaluations": 16,
+    "map_locations_plus_boundary_evaluations": 41044,
+    "no_additional_angular_state_sweep": true
+  },
+  "limits": [
+    "R131 assumptions and observational reductions remain fixed.",
+    "A box is a planning region, not a measured confidence region.",
+    "718 guarded map locations and .125deg unresolved boundary cells retain their labels; analytic family exclusion does not relabel them.",
+    "Sampled uniform cells are not interval-certified; no claim of global completeness of the continuous sampled map.",
+    "No observed E05 fast shock, slow shock, or pair of waves is identified.",
+    "Multiple roots are alternatives, not probabilities."
+  ]
+}

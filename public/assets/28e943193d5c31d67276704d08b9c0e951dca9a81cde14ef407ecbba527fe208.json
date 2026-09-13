@@ -1,0 +1,682 @@
+{
+  "checkpoint": "RMO84",
+  "event_date": "2010-06-13",
+  "status": "CONDITIONAL_EMISSION_MODEL_TENSION",
+  "observer_sentence": "The checked MHD model remains available, but this simple emission model does not match both EUV delays and the radio density at the five tested temperatures.",
+  "is_new_solar_family_classification": false,
+  "does_not_rule_out_shock": true,
+  "source_sha256": "4fd1c0062e05ee93f0bda015b1ef13bf73ebdfd82a6dea9e85f4e8e8a235798d",
+  "observed_time_bounds_s": {
+    "211": [
+      {
+        "exact_fraction": "88",
+        "value": 88.0
+      },
+      {
+        "exact_fraction": "112",
+        "value": 112.0
+      }
+    ],
+    "335": [
+      {
+        "exact_fraction": "263",
+        "value": 263.0
+      },
+      {
+        "exact_fraction": "287",
+        "value": 287.0
+      }
+    ]
+  },
+  "time_ratio_bounds": [
+    {
+      "exact_fraction": "263/112",
+      "value": 2.3482142857142856
+    },
+    {
+      "exact_fraction": "287/88",
+      "value": 3.2613636363636362
+    }
+  ],
+  "joint_radio_density_bounds_cm3": [
+    {
+      "exact_fraction": "14062500000000/201601",
+      "value": 69754118.28314343
+    },
+    {
+      "exact_fraction": "20250000000000/201601",
+      "value": 100445930.32772654
+    }
+  ],
+  "joint_radio_density_central_cm3": {
+    "exact_fraction": "17015625000000/201601",
+    "value": 84402483.12260357
+  },
+  "radio_identity": "n2 = n1 * X = (fL/(2 K))^2 * (fU/fL)^2 = (fU/(2 K))^2",
+  "rows": [
+    {
+      "temperature_MK": "2.4",
+      "coefficients_s_per_cm3": {
+        "211": {
+          "exact_fraction": "325703915000000000000000/49503732804609",
+          "value": 6579380918.314823
+        },
+        "335": {
+          "exact_fraction": "28729956194164150140185000000000000000/1237792337818262451501357801",
+          "value": 23210643107.392056
+        }
+      },
+      "ratio": {
+        "exact_fraction": "5745991238832830028037/1628781457655554290887",
+        "value": 3.527785272742195
+      },
+      "required_density_cm3": {
+        "211": [
+          {
+            "exact_fraction": "20356494687500000000000/346526129632263",
+            "value": 58744472.484953776
+          },
+          {
+            "exact_fraction": "40712989375000000000000/544541060850699",
+            "value": 74765692.25357753
+          }
+        ],
+        "335": [
+          {
+            "exact_fraction": "28729956194164150140185000000000000000/355246400953841323580889688887",
+            "value": 80873320.93167964
+          },
+          {
+            "exact_fraction": "28729956194164150140185000000000000000/325539384846203024744857101663",
+            "value": 88253395.84559716
+          }
+        ]
+      },
+      "joint_EUV_density_cm3": null,
+      "joint_EUV_radio_density_cm3": null,
+      "predicted_times_s": {
+        "stated_density_cm3": {
+          "211": {
+            "exact_fraction": "162851957500000000/2326675441816623",
+            "value": 69.99341402462578
+          },
+          "335": {
+            "exact_fraction": "14364978097082075070092500000000/58176239877458335220563816647",
+            "value": 246.92173518502184
+          }
+        },
+        "arithmetic_product_density_cm3": {
+          "211": {
+            "exact_fraction": "407129893750000000/5791936738139253",
+            "value": 70.29253117857716
+          },
+          "335": {
+            "exact_fraction": "35912445242705187675231250000000/144821703524736706825658862717",
+            "value": 247.97695627555612
+          }
+        },
+        "upstream_reference_density_cm3": {
+          "211": {
+            "exact_fraction": "16285195750000000/148511198413827",
+            "value": 109.65634863858038
+          },
+          "335": {
+            "exact_fraction": "1436497809708207507009250000000/3713377013454787354504073403",
+            "value": 386.8440517898676
+          }
+        }
+      },
+      "printed_times_s": {
+        "211": 110,
+        "335": 386
+      },
+      "density_implied_by_printed_times_cm3": {
+        "211": {
+          "exact_fraction": "32570391500000000000000/544541060850699",
+          "value": 59812553.802862026
+        },
+        "335": {
+          "exact_fraction": "14364978097082075070092500000000000000/238893921198924653139762055593",
+          "value": 60131199.76008304
+        }
+      }
+    },
+    {
+      "temperature_MK": "2.6",
+      "coefficients_s_per_cm3": {
+        "211": {
+          "exact_fraction": "3761672050000000000000000/665074650676557",
+          "value": 5656014773.940615
+        },
+        "335": {
+          "exact_fraction": "156749128315008718694600000000000000000/8072839971906988857081747849",
+          "value": 19416850682.100292
+        }
+      },
+      "ratio": {
+        "exact_fraction": "3134982566300174373892/913202042975285359437",
+        "value": 3.4329561463596274
+      },
+      "required_density_cm3": {
+        "211": [
+          {
+            "exact_fraction": "235104503125000000000000/4655522554735899",
+            "value": 50500131.91018406
+          },
+          {
+            "exact_fraction": "470209006250000000000000/7315821157442127",
+            "value": 64272895.15841608
+          }
+        ],
+        "335": [
+          {
+            "exact_fraction": "156749128315008718694600000000000000000/2316905071937305801982461632663",
+            "value": 67654531.99338081
+          },
+          {
+            "exact_fraction": "156749128315008718694600000000000000000/2123156912611538069412499684287",
+            "value": 73828329.58973496
+          }
+        ]
+      },
+      "joint_EUV_density_cm3": null,
+      "joint_EUV_radio_density_cm3": null,
+      "predicted_times_s": {
+        "stated_density_cm3": {
+          "211": {
+            "exact_fraction": "1880836025000000000/31258508581798179",
+            "value": 60.17036993553846
+          },
+          "335": {
+            "exact_fraction": "78374564157504359347300000000000/379423478679628476282842148903",
+            "value": 206.56224129893928
+          }
+        },
+        "arithmetic_product_density_cm3": {
+          "211": {
+            "exact_fraction": "4702090062500000000/77813734129157169",
+            "value": 60.42750826859631
+          },
+          "335": {
+            "exact_fraction": "195936410393760898368250000000000/944522276713117696278564498333",
+            "value": 207.4449859198749
+          }
+        },
+        "upstream_reference_density_cm3": {
+          "211": {
+            "exact_fraction": "188083602500000000/1995223952029671",
+            "value": 94.26691289901025
+          },
+          "335": {
+            "exact_fraction": "7837456415750435934730000000000/24218519915720966571245243547",
+            "value": 323.61417803500484
+          }
+        }
+      },
+      "printed_times_s": {
+        "211": 94,
+        "335": 323
+      },
+      "density_implied_by_printed_times_cm3": {
+        "211": {
+          "exact_fraction": "1880836025000000000000000/31258508581798179",
+          "value": 60170369.935538456
+        },
+        "335": {
+          "exact_fraction": "156749128315008718694600000000000000000/2607527310925957400837404555227",
+          "value": 60114088.79907211
+        }
+      }
+    },
+    {
+      "temperature_MK": "2.8",
+      "coefficients_s_per_cm3": {
+        "211": {
+          "exact_fraction": "177582081250000000000000/35786727973431",
+          "value": 4962232964.74161
+        },
+        "335": {
+          "exact_fraction": "3336939446422471060168750000000000000/200520518181130935669652857",
+          "value": 16641386510.921547
+        }
+      },
+      "ratio": {
+        "exact_fraction": "533910311427595369627/159204724068076346051",
+        "value": 3.3536084720657784
+      },
+      "required_density_cm3": {
+        "211": [
+          {
+            "exact_fraction": "1585554296875000000000/35786727973431",
+            "value": 44305651.470907226
+          },
+          {
+            "exact_fraction": "22197760156250000000000/393654007707741",
+            "value": 56389010.962972835
+          }
+        ],
+        "335": [
+          {
+            "exact_fraction": "3336939446422471060168750000000000000/57549388717984578537190369959",
+            "value": 57983925.125162184
+          },
+          {
+            "exact_fraction": "3336939446422471060168750000000000000/52736896281637436081118701391",
+            "value": 63275233.881830975
+          }
+        ]
+      },
+      "joint_EUV_density_cm3": null,
+      "joint_EUV_radio_density_cm3": null,
+      "predicted_times_s": {
+        "stated_density_cm3": {
+          "211": {
+            "exact_fraction": "88791040625000000/1681976214751257",
+            "value": 52.78971239086819
+          },
+          "335": {
+            "exact_fraction": "1668469723211235530084375000000/9424464354513153976473684279",
+            "value": 177.03602671193136
+          }
+        },
+        "arithmetic_product_density_cm3": {
+          "211": {
+            "exact_fraction": "221977601562500000/4187047172891427",
+            "value": 53.015309452367624
+          },
+          "335": {
+            "exact_fraction": "4171174308028088825210937500000/23460900627192319473349384269",
+            "value": 177.792590928649
+          }
+        },
+        "upstream_reference_density_cm3": {
+          "211": {
+            "exact_fraction": "8879104062500000/107360183920293",
+            "value": 82.70388274569349
+          },
+          "335": {
+            "exact_fraction": "166846972321123553008437500000/601561554543392807008958571",
+            "value": 277.35644184869244
+          }
+        }
+      },
+      "printed_times_s": {
+        "211": 83,
+        "335": 277
+      },
+      "density_implied_by_printed_times_cm3": {
+        "211": {
+          "exact_fraction": "177582081250000000000000/2970298421794773",
+          "value": 59785939.33423626
+        },
+        "335": {
+          "exact_fraction": "3336939446422471060168750000000000000/55544183536173269180493841389",
+          "value": 60077207.6206554
+        }
+      }
+    },
+    {
+      "temperature_MK": "3.0",
+      "coefficients_s_per_cm3": {
+        "211": {
+          "exact_fraction": "1901714120000000000000000/429673536102213",
+          "value": 4425951240.216969
+        },
+        "335": {
+          "exact_fraction": "34911649365992673795902500000000000000/2400138512292598840512236331",
+          "value": 14545681087.649088
+        }
+      },
+      "ratio": {
+        "exact_fraction": "13964659746397069518361/4249158410069574976176",
+        "value": 3.2864530805215177
+      },
+      "required_density_cm3": {
+        "211": [
+          {
+            "exact_fraction": "118857132500000000000000/3007714752715491",
+            "value": 39517421.7876515
+          },
+          {
+            "exact_fraction": "237714265000000000000000/4726408897124343",
+            "value": 50294900.45701101
+          }
+        ],
+        "335": [
+          {
+            "exact_fraction": "121643377581856006257500000000000000/2400138512292598840512236331",
+            "value": 50681815.63640797
+          },
+          {
+            "exact_fraction": "34911649365992673795902500000000000000/631236428732953495054718155053",
+            "value": 55306772.19638436
+          }
+        ]
+      },
+      "joint_EUV_density_cm3": null,
+      "joint_EUV_radio_density_cm3": null,
+      "predicted_times_s": {
+        "stated_density_cm3": {
+          "211": {
+            "exact_fraction": "950857060000000000/20194656196804011",
+            "value": 47.084587661882644
+          },
+          "335": {
+            "exact_fraction": "17455824682996336897951250000000/112806510077752145504075107557",
+            "value": 154.74128816647965
+          }
+        },
+        "arithmetic_product_density_cm3": {
+          "211": {
+            "exact_fraction": "2377142650000000000/50271803723958921",
+            "value": 47.285803848471886
+          },
+          "335": {
+            "exact_fraction": "43639561707490842244878125000000/280816205938234064339931650727",
+            "value": 155.40257572274666
+          }
+        },
+        "upstream_reference_density_cm3": {
+          "211": {
+            "exact_fraction": "95085706000000000/1289020608306639",
+            "value": 73.76585400361614
+          },
+          "335": {
+            "exact_fraction": "1745582468299633689795125000000/7200415536877796521536708993",
+            "value": 242.42801812748482
+          }
+        }
+      },
+      "printed_times_s": {
+        "211": 74,
+        "335": 242
+      },
+      "density_implied_by_printed_times_cm3": {
+        "211": {
+          "exact_fraction": "950857060000000000000000/15897920835781881",
+          "value": 59810151.8948239
+        },
+        "335": {
+          "exact_fraction": "17455824682996336897951250000000000000/290416759987404459701980596051",
+          "value": 60106120.19689706
+        }
+      }
+    },
+    {
+      "temperature_MK": "3.2",
+      "coefficients_s_per_cm3": {
+        "211": {
+          "exact_fraction": "2094386120000000000000000/523395693254133",
+          "value": 4001534875.0358896
+        },
+        "335": {
+          "exact_fraction": "54612368207339823298141250000000000000/4226624268567543525337663239",
+          "value": 12921036916.73749
+        }
+      },
+      "ratio": {
+        "exact_fraction": "43689894565871858638513/13530387531476867500768",
+        "value": 3.229020193563002
+      },
+      "required_density_cm3": {
+        "211": [
+          {
+            "exact_fraction": "130899132500000000000000/3663769852778931",
+            "value": 35727989.955677584
+          },
+          {
+            "exact_fraction": "261798265000000000000000/5757352625795463",
+            "value": 45471987.21631693
+          }
+        ],
+        "335": [
+          {
+            "exact_fraction": "1332008980666824958491250000000000000/29586369879972804677363642673",
+            "value": 45021034.5530923
+          },
+          {
+            "exact_fraction": "54612368207339823298141250000000000000/1111602182633263947163805431857",
+            "value": 49129417.93436308
+          }
+        ]
+      },
+      "joint_EUV_density_cm3": [
+        {
+          "exact_fraction": "1332008980666824958491250000000000000/29586369879972804677363642673",
+          "value": 45021034.5530923
+        },
+        {
+          "exact_fraction": "261798265000000000000000/5757352625795463",
+          "value": 45471987.21631693
+        }
+      ],
+      "joint_EUV_radio_density_cm3": null,
+      "predicted_times_s": {
+        "stated_density_cm3": {
+          "211": {
+            "exact_fraction": "1047193060000000000/24599597582944251",
+            "value": 42.569519947190315
+          },
+          "335": {
+            "exact_fraction": "27306184103669911649070625000000/198651340622674545690870172233",
+            "value": 137.45783953976053
+          }
+        },
+        "arithmetic_product_density_cm3": {
+          "211": {
+            "exact_fraction": "2617982650000000000/61237296110733561",
+            "value": 42.75144097260566
+          },
+          "335": {
+            "exact_fraction": "68265460259174779122676562500000/494515039422402592464506598963",
+            "value": 138.04526620446038
+          }
+        },
+        "upstream_reference_density_cm3": {
+          "211": {
+            "exact_fraction": "104719306000000000/1570187079762399",
+            "value": 66.69224791726484
+          },
+          "335": {
+            "exact_fraction": "2730618410366991164907062500000/12679872805702630576012989717",
+            "value": 215.35061527895817
+          }
+        }
+      },
+      "printed_times_s": {
+        "211": 66,
+        "335": 215
+      },
+      "density_implied_by_printed_times_cm3": {
+        "211": {
+          "exact_fraction": "1047193060000000000000000/17272057877386389",
+          "value": 60629316.28842257
+        },
+        "335": {
+          "exact_fraction": "10922473641467964659628250000000000000/181744843548404371589519519277",
+          "value": 60097846.12436042
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Only five printed temperatures; no interpolation or exclusion at untested temperatures.",
+    "Printed atomic rates treated as fixed; no atomic-rate error estimates.",
+    "Common constant density/temperature and sequential ionization times assumed.",
+    "Observed band-ratio rise times need not equal ionization transit times.",
+    "Hard bounds are a conditional interpretation of quoted errors, not confidence intervals.",
+    "Same EUV/radio plasma parcel, radio harmonic and lane interpretation remain assumptions.",
+    "No full non-equilibrium emission calculation, fit, raw-data acquisition or novelty claim.",
+    "Version-specific arithmetic: arXiv v1; final publisher PDF not verified."
+  ],
+  "verification": [
+    {
+      "name": "radio joint identity 127/150",
+      "status": "PASS"
+    },
+    {
+      "name": "radio joint identity 127/165",
+      "status": "PASS"
+    },
+    {
+      "name": "radio joint identity 127/180",
+      "status": "PASS"
+    },
+    {
+      "name": "radio joint identity 132/150",
+      "status": "PASS"
+    },
+    {
+      "name": "radio joint identity 132/165",
+      "status": "PASS"
+    },
+    {
+      "name": "radio joint identity 132/180",
+      "status": "PASS"
+    },
+    {
+      "name": "radio joint identity 137/150",
+      "status": "PASS"
+    },
+    {
+      "name": "radio joint identity 137/165",
+      "status": "PASS"
+    },
+    {
+      "name": "radio joint identity 137/180",
+      "status": "PASS"
+    },
+    {
+      "name": "2.4 MK: independent decimal and exact rational coefficients",
+      "status": "PASS"
+    },
+    {
+      "name": "2.4 MK: ratio criterion equals shared-density intersection",
+      "status": "PASS"
+    },
+    {
+      "name": "2.4 MK: density cancels from time ratio",
+      "status": "PASS"
+    },
+    {
+      "name": "2.4 MK: printed integer times agree within 1 second at 6e7",
+      "status": "PASS"
+    },
+    {
+      "name": "2.4 MK: printed times are not reproduced at stated 9.4e7",
+      "status": "PASS"
+    },
+    {
+      "name": "2.4 MK: no shared density also in the radio range",
+      "status": "PASS"
+    },
+    {
+      "name": "2.6 MK: independent decimal and exact rational coefficients",
+      "status": "PASS"
+    },
+    {
+      "name": "2.6 MK: ratio criterion equals shared-density intersection",
+      "status": "PASS"
+    },
+    {
+      "name": "2.6 MK: density cancels from time ratio",
+      "status": "PASS"
+    },
+    {
+      "name": "2.6 MK: printed integer times agree within 1 second at 6e7",
+      "status": "PASS"
+    },
+    {
+      "name": "2.6 MK: printed times are not reproduced at stated 9.4e7",
+      "status": "PASS"
+    },
+    {
+      "name": "2.6 MK: no shared density also in the radio range",
+      "status": "PASS"
+    },
+    {
+      "name": "2.8 MK: independent decimal and exact rational coefficients",
+      "status": "PASS"
+    },
+    {
+      "name": "2.8 MK: ratio criterion equals shared-density intersection",
+      "status": "PASS"
+    },
+    {
+      "name": "2.8 MK: density cancels from time ratio",
+      "status": "PASS"
+    },
+    {
+      "name": "2.8 MK: printed integer times agree within 1 second at 6e7",
+      "status": "PASS"
+    },
+    {
+      "name": "2.8 MK: printed times are not reproduced at stated 9.4e7",
+      "status": "PASS"
+    },
+    {
+      "name": "2.8 MK: no shared density also in the radio range",
+      "status": "PASS"
+    },
+    {
+      "name": "3.0 MK: independent decimal and exact rational coefficients",
+      "status": "PASS"
+    },
+    {
+      "name": "3.0 MK: ratio criterion equals shared-density intersection",
+      "status": "PASS"
+    },
+    {
+      "name": "3.0 MK: density cancels from time ratio",
+      "status": "PASS"
+    },
+    {
+      "name": "3.0 MK: printed integer times agree within 1 second at 6e7",
+      "status": "PASS"
+    },
+    {
+      "name": "3.0 MK: printed times are not reproduced at stated 9.4e7",
+      "status": "PASS"
+    },
+    {
+      "name": "3.0 MK: no shared density also in the radio range",
+      "status": "PASS"
+    },
+    {
+      "name": "3.2 MK: independent decimal and exact rational coefficients",
+      "status": "PASS"
+    },
+    {
+      "name": "3.2 MK: ratio criterion equals shared-density intersection",
+      "status": "PASS"
+    },
+    {
+      "name": "3.2 MK: density cancels from time ratio",
+      "status": "PASS"
+    },
+    {
+      "name": "3.2 MK: printed integer times agree within 1 second at 6e7",
+      "status": "PASS"
+    },
+    {
+      "name": "3.2 MK: printed times are not reproduced at stated 9.4e7",
+      "status": "PASS"
+    },
+    {
+      "name": "3.2 MK: no shared density also in the radio range",
+      "status": "PASS"
+    },
+    {
+      "name": "3.2 MK: shared-density witness reproduces both bounded delays",
+      "status": "PASS"
+    },
+    {
+      "name": "exactly one of the five table rows admits a common EUV density",
+      "status": "PASS"
+    },
+    {
+      "name": "no single density meets both EUV delays and harmonic radio at any tested row",
+      "status": "PASS"
+    }
+  ]
+}

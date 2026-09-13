@@ -1,0 +1,867 @@
+{
+  "status": "COMPLETE",
+  "atomic_screen_candidates": [
+    {
+      "node_id": "9181",
+      "alpha_deg": "14.0",
+      "theta_deg": "15.0",
+      "root_index": "0",
+      "z_real": "0.7195454471499699",
+      "z_imag": "0.0",
+      "disposition": "accepted",
+      "accepted_family": "fast_shock",
+      "guards": "",
+      "B_up_G": "1.9303013539880385",
+      "B_down_G": "2.2141846167353627",
+      "T_up_K": "1350666.760302226",
+      "ne_up_cm3": "190120214.59147447",
+      "independent_SI_flux_residual": "3.3306690738754696e-16",
+      "tangential_LOS_scaled_residual": "2.074869531850056e-19",
+      "Doppler_residual_km_s": "0.0",
+      "entropy_over_cv": "0.01848053609190281",
+      "characteristic_transition": "[1, 2]",
+      "pole_relative_distance": "0.16998780102872557",
+      "polynomial_relative_residual": "3.990824451952063e-17",
+      "screen_ratio": 0.22871996420364585,
+      "screen_distance": 1.614505342853456e-05,
+      "exact_upstream_ratio": 0.22777200852786553,
+      "exact_upstream_selfblend": 0.45683459087547135,
+      "exact_ratio_distance": 0.0009318106223517864
+    },
+    {
+      "node_id": "9079",
+      "alpha_deg": "13.0",
+      "theta_deg": "2.0",
+      "root_index": "0",
+      "z_real": "0.7841728422339227",
+      "z_imag": "0.0",
+      "disposition": "accepted",
+      "accepted_family": "fast_shock",
+      "guards": "",
+      "B_up_G": "2.008784554713868",
+      "B_down_G": "2.2886180607053426",
+      "T_up_K": "1306895.1121377544",
+      "ne_up_cm3": "187349090.68222067",
+      "independent_SI_flux_residual": "2.2648549702353193e-14",
+      "tangential_LOS_scaled_residual": "2.952389715814963e-19",
+      "Doppler_residual_km_s": "7.105427357601002e-15",
+      "entropy_over_cv": "0.04163611669092515",
+      "characteristic_transition": "[1, 2]",
+      "pole_relative_distance": "0.017352143117432717",
+      "polynomial_relative_residual": "0.0",
+      "screen_ratio": 0.22868610450509644,
+      "screen_distance": 1.7714645120875394e-05,
+      "exact_upstream_ratio": 0.22768653862827729,
+      "exact_upstream_selfblend": 0.4571092244690046,
+      "exact_ratio_distance": 0.0010172805219400283
+    },
+    {
+      "node_id": "9182",
+      "alpha_deg": "14.0",
+      "theta_deg": "16.0",
+      "root_index": "0",
+      "z_real": "0.7136342763234298",
+      "z_imag": "0.0",
+      "disposition": "accepted",
+      "accepted_family": "fast_shock",
+      "guards": "",
+      "B_up_G": "1.922356148959542",
+      "B_down_G": "2.207573007241141",
+      "T_up_K": "1351709.0548226894",
+      "ne_up_cm3": "190120214.59147447",
+      "independent_SI_flux_residual": "3.3306690738754696e-16",
+      "tangential_LOS_scaled_residual": "2.35921892173822e-19",
+      "Doppler_residual_km_s": "0.0",
+      "entropy_over_cv": "0.017709144809969213",
+      "characteristic_transition": "[1, 2]",
+      "pole_relative_distance": "0.1847371271159226",
+      "polynomial_relative_residual": "0.0",
+      "screen_ratio": 0.2286474413235984,
+      "screen_distance": 5.6377826618908555e-05,
+      "exact_upstream_ratio": 0.22770164494084646,
+      "exact_upstream_selfblend": 0.45683543953384836,
+      "exact_ratio_distance": 0.0010021742093708486
+    },
+    {
+      "node_id": "16701",
+      "alpha_deg": "14.5",
+      "theta_deg": "52.0",
+      "root_index": "0",
+      "z_real": "0.5214817831084586",
+      "z_imag": "0.0",
+      "disposition": "accepted",
+      "accepted_family": "fast_shock",
+      "guards": "",
+      "B_up_G": "1.6450391774985893",
+      "B_down_G": "1.967737627660748",
+      "T_up_K": "1372174.7316109773",
+      "ne_up_cm3": "191370370.6723416",
+      "independent_SI_flux_residual": "1.1102230246251565e-16",
+      "tangential_LOS_scaled_residual": "3.495211393961007e-19",
+      "Doppler_residual_km_s": "7.105427357601002e-15",
+      "entropy_over_cv": "0.007051415472520028",
+      "characteristic_transition": "[1, 2]",
+      "pole_relative_distance": "0.7572186138837125",
+      "polynomial_relative_residual": "5.772452134919038e-17",
+      "screen_ratio": 0.2286192717851012,
+      "screen_distance": 8.454736511612215e-05,
+      "exact_upstream_ratio": 0.22771366125052928,
+      "exact_upstream_selfblend": 0.4567322284729519,
+      "exact_ratio_distance": 0.0009901578996880378
+    },
+    {
+      "node_id": "34283",
+      "alpha_deg": "74.375",
+      "theta_deg": "52.0",
+      "root_index": "0",
+      "z_real": "2.6879907081905654",
+      "z_imag": "0.0",
+      "disposition": "accepted",
+      "accepted_family": "slow_shock",
+      "guards": "",
+      "B_up_G": "1.0347367276846922",
+      "B_down_G": "0.6411838294349012",
+      "T_up_K": "1345645.4797255613",
+      "ne_up_cm3": "189790562.14786577",
+      "independent_SI_flux_residual": "3.446467224553685e-16",
+      "tangential_LOS_scaled_residual": "6.041605398013771e-20",
+      "Doppler_residual_km_s": "0.0",
+      "entropy_over_cv": "0.021048147445514476",
+      "characteristic_transition": "[3, 4]",
+      "pole_relative_distance": "0.2075061398799207",
+      "polynomial_relative_residual": "0.0",
+      "screen_ratio": 0.22870206270953275,
+      "screen_distance": 1.7564406845638203e-06,
+      "exact_upstream_ratio": 0.2277459495210676,
+      "exact_upstream_selfblend": 0.4568641726229798,
+      "exact_ratio_distance": 0.0009578696291497046
+    },
+    {
+      "node_id": "34184",
+      "alpha_deg": "73.875",
+      "theta_deg": "51.125",
+      "root_index": "1",
+      "z_real": "2.8793372681051235",
+      "z_imag": "0.0",
+      "disposition": "accepted",
+      "accepted_family": "slow_shock",
+      "guards": "",
+      "B_up_G": "1.1080006279844945",
+      "B_down_G": "0.7831712344451537",
+      "T_up_K": "1366152.1478163355",
+      "ne_up_cm3": "191062031.1429321",
+      "independent_SI_flux_residual": "4.734800172155024e-16",
+      "tangential_LOS_scaled_residual": "1.387323790807363e-19",
+      "Doppler_residual_km_s": "3.552713678800501e-15",
+      "entropy_over_cv": "0.010375143013660382",
+      "characteristic_transition": "[3, 4]",
+      "pole_relative_distance": "0.28333436996558264",
+      "polynomial_relative_residual": "0.0",
+      "screen_ratio": 0.2286932301995682,
+      "screen_distance": 1.0588950649120799e-05,
+      "exact_upstream_ratio": 0.2277744911810395,
+      "exact_upstream_selfblend": 0.45675543887801845,
+      "exact_ratio_distance": 0.0009293279691778011
+    },
+    {
+      "node_id": "14557",
+      "alpha_deg": "74.0",
+      "theta_deg": "51.0",
+      "root_index": "1",
+      "z_real": "2.7471319414466255",
+      "z_imag": "0.0",
+      "disposition": "accepted",
+      "accepted_family": "slow_shock",
+      "guards": "",
+      "B_up_G": "1.0732236307659093",
+      "B_down_G": "0.725691056317143",
+      "T_up_K": "1361328.8262968",
+      "ne_up_cm3": "190752094.93578815",
+      "independent_SI_flux_residual": "2.5859205090023826e-16",
+      "tangential_LOS_scaled_residual": "1.4463658490592994e-19",
+      "Doppler_residual_km_s": "3.552713678800501e-15",
+      "entropy_over_cv": "0.012829650437460205",
+      "characteristic_transition": "[3, 4]",
+      "pole_relative_distance": "0.2541024088947361",
+      "polynomial_relative_residual": "0.0",
+      "screen_ratio": 0.2286828763447109,
+      "screen_distance": 2.094280550640759e-05,
+      "exact_upstream_ratio": 0.2277545480919758,
+      "exact_upstream_selfblend": 0.4567810487886275,
+      "exact_ratio_distance": 0.0009492710582415242
+    },
+    {
+      "node_id": "34182",
+      "alpha_deg": "73.875",
+      "theta_deg": "51.0",
+      "root_index": "1",
+      "z_real": "2.836776731356688",
+      "z_imag": "0.0",
+      "disposition": "accepted",
+      "accepted_family": "slow_shock",
+      "guards": "",
+      "B_up_G": "1.0997812603729589",
+      "B_down_G": "0.771012399128727",
+      "T_up_K": "1365586.1451407368",
+      "ne_up_cm3": "191062031.1429321",
+      "independent_SI_flux_residual": "2.5983147000907225e-16",
+      "tangential_LOS_scaled_residual": "1.0478297484528101e-19",
+      "Doppler_residual_km_s": "0.0",
+      "entropy_over_cv": "0.01078953313672415",
+      "characteristic_transition": "[3, 4]",
+      "pole_relative_distance": "0.2764998238061774",
+      "polynomial_relative_residual": "0.0",
+      "screen_ratio": 0.22873237083324957,
+      "screen_distance": 2.8551683032257413e-05,
+      "exact_upstream_ratio": 0.22781227986528466,
+      "exact_upstream_selfblend": 0.45675475649358355,
+      "exact_ratio_distance": 0.0008915392849326575
+    }
+  ],
+  "exact_spectral_witnesses": [
+    {
+      "source_root": {
+        "node_id": "9181",
+        "alpha_deg": "14.0",
+        "theta_deg": "15.0",
+        "root_index": "0",
+        "z_real": "0.7195454471499699",
+        "z_imag": "0.0",
+        "disposition": "accepted",
+        "accepted_family": "fast_shock",
+        "guards": "",
+        "B_up_G": "1.9303013539880385",
+        "B_down_G": "2.2141846167353627",
+        "T_up_K": "1350666.760302226",
+        "ne_up_cm3": "190120214.59147447",
+        "independent_SI_flux_residual": "3.3306690738754696e-16",
+        "tangential_LOS_scaled_residual": "2.074869531850056e-19",
+        "Doppler_residual_km_s": "0.0",
+        "entropy_over_cv": "0.01848053609190281",
+        "characteristic_transition": "[1, 2]",
+        "pole_relative_distance": "0.16998780102872557",
+        "polynomial_relative_residual": "3.990824451952063e-17",
+        "screen_ratio": 0.22871996420364585,
+        "screen_distance": 1.614505342853456e-05,
+        "exact_upstream_ratio": 0.22777200852786553,
+        "exact_upstream_selfblend": 0.45683459087547135,
+        "exact_ratio_distance": 0.0009318106223517864
+      },
+      "fixed_chi_square": 206.03187284103623,
+      "free_chi_square": 206.01467212877174,
+      "delta_chi_square": 0.017200712264497042,
+      "data_residual_count": 219,
+      "fixed_nuisance_parameters": 60,
+      "fixed_reduced_chi_square": 1.2957979423964543,
+      "best_shared_free_ratio_at_same_selfblend": 0.22868282529023007,
+      "all_ten_reference_spectra_fitted_jointly": true,
+      "scope": "Conditional family-existence witness, not an observed geometry or a probability.",
+      "exact_R132_state_rechecked": {
+        "status": "PASS",
+        "saved_request": {
+          "schema_version": "rmo-local-discontinuity-0.1",
+          "case_id": "R132-E05-a14.000000-t15.000000-z0.71954544715",
+          "model": "ideal_mhd_single_planar_discontinuity",
+          "units": "normalized_mu0_1",
+          "gamma": 1.6666666666666667,
+          "basis": {
+            "normal": [
+              -0.12504213282623247,
+              0.9624924211469434,
+              -0.2407754228590657
+            ],
+            "t1": [
+              0.9915942580651697,
+              0.12936799907626695,
+              0.002179033544650625
+            ],
+            "t2": [
+              0.03324593795417058,
+              -0.23847905578833972,
+              -0.9705784087645106
+            ]
+          },
+          "frame": "common_inertial_local_basis",
+          "front_speed": 1.0,
+          "left": {
+            "rho": 1.2363421896600773,
+            "p": 0.24963077599036937,
+            "u": [
+              0.1911624400078571,
+              -0.2501046332592798,
+              0.0
+            ],
+            "B": [
+              0.8193564802817139,
+              0.5247911078935158,
+              0.0
+            ]
+          },
+          "right": {
+            "rho": 1.0,
+            "p": 0.17207098675939844,
+            "u": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "B": [
+              0.8193564802817139,
+              0.21954590720469233,
+              0.0
+            ]
+          },
+          "uncertainty": {
+            "mode": "exact_synthetic"
+          }
+        },
+        "checks": {
+          "diagnostic": {
+            "case_id": "R132-E05-a14.000000-t15.000000-z0.71954544715",
+            "status": "SUPPORTED_LOCAL_CLASS",
+            "family": "fast_shock",
+            "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+            "candidates": {
+              "fast_shock": {
+                "status": "SUPPORTED",
+                "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+              },
+              "slow_shock": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+              },
+              "rotational_discontinuity": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+              },
+              "contact": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+              }
+            },
+            "coverage": {
+              "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+              "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+              "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+            },
+            "global_uniqueness": false,
+            "uncertainty_propagated": false,
+            "checks": {
+              "front_speed": 1.0,
+              "evaluation_boost": [
+                1.0,
+                -0.1250523166296399,
+                0.0
+              ],
+              "rh_scaled_inf": 2.2013119824690938e-16,
+              "rh_components": {
+                "mass": 0.0,
+                "normal_momentum": 0.0,
+                "t1_momentum": 0.0,
+                "t2_momentum": 0.0,
+                "t1_induction": 5.551115123125783e-17,
+                "t2_induction": 0.0,
+                "energy": -2.2013119824690938e-16
+              },
+              "characteristics": {
+                "left": {
+                  "slow": 0.4508378601689227,
+                  "alfven_n": 0.7368915018548295,
+                  "fast": 0.9481722956609216
+                },
+                "right": {
+                  "slow": 0.5068590381439813,
+                  "alfven_n": 0.8193564802817139,
+                  "fast": 0.8656929828374832
+                }
+              },
+              "front_relative_normal_velocity": {
+                "left": -0.8088375599921429,
+                "right": -1.0
+              },
+              "upstream_side": "right",
+              "characteristic_transition": [
+                1,
+                2
+              ],
+              "compression": 1.2363421896600773,
+              "pressure_ratio": 1.450742979346195,
+              "entropy_over_cv": 0.01848053609190281,
+              "tangential_field_ratio": 2.390347943968866
+            },
+            "result_sentence": "For these supplied states and front speed, a fast shock passes the local ideal-MHD checks.",
+            "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+          },
+          "laboratory_request": {
+            "schema_version": "rmo-local-discontinuity-0.1",
+            "case_id": "R132-E05-a14.000000-t15.000000-z0.71954544715",
+            "model": "ideal_mhd_single_planar_discontinuity",
+            "units": "normalized_mu0_1",
+            "gamma": 1.6666666666666667,
+            "basis": {
+              "normal": [
+                -0.12504213282623247,
+                0.9624924211469434,
+                -0.2407754228590657
+              ],
+              "t1": [
+                0.9915942580651697,
+                0.12936799907626695,
+                0.002179033544650625
+              ],
+              "t2": [
+                0.03324593795417058,
+                -0.23847905578833972,
+                -0.9705784087645106
+              ]
+            },
+            "frame": "common_inertial_local_basis",
+            "front_speed": 1.0,
+            "left": {
+              "rho": 1.2363421896600773,
+              "p": 0.24963077599036937,
+              "u": [
+                0.1911624400078571,
+                -0.2501046332592798,
+                0.0
+              ],
+              "B": [
+                0.8193564802817139,
+                0.5247911078935158,
+                0.0
+              ]
+            },
+            "right": {
+              "rho": 1.0,
+              "p": 0.17207098675939844,
+              "u": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "B": [
+                0.8193564802817139,
+                0.21954590720469233,
+                0.0
+              ]
+            },
+            "uncertainty": {
+              "mode": "exact_synthetic"
+            }
+          },
+          "laboratory_diagnostic": {
+            "case_id": "R132-E05-a14.000000-t15.000000-z0.71954544715",
+            "status": "SUPPORTED_LOCAL_CLASS",
+            "family": "fast_shock",
+            "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+            "candidates": {
+              "fast_shock": {
+                "status": "SUPPORTED",
+                "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+              },
+              "slow_shock": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+              },
+              "rotational_discontinuity": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+              },
+              "contact": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+              }
+            },
+            "coverage": {
+              "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+              "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+              "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+            },
+            "global_uniqueness": false,
+            "uncertainty_propagated": false,
+            "checks": {
+              "front_speed": 1.0,
+              "evaluation_boost": [
+                1.0,
+                -0.1250523166296399,
+                0.0
+              ],
+              "rh_scaled_inf": 2.2013119824690938e-16,
+              "rh_components": {
+                "mass": 0.0,
+                "normal_momentum": 0.0,
+                "t1_momentum": 0.0,
+                "t2_momentum": 0.0,
+                "t1_induction": 5.551115123125783e-17,
+                "t2_induction": 0.0,
+                "energy": -2.2013119824690938e-16
+              },
+              "characteristics": {
+                "left": {
+                  "slow": 0.4508378601689227,
+                  "alfven_n": 0.7368915018548295,
+                  "fast": 0.9481722956609216
+                },
+                "right": {
+                  "slow": 0.5068590381439813,
+                  "alfven_n": 0.8193564802817139,
+                  "fast": 0.8656929828374832
+                }
+              },
+              "front_relative_normal_velocity": {
+                "left": -0.8088375599921429,
+                "right": -1.0
+              },
+              "upstream_side": "right",
+              "characteristic_transition": [
+                1,
+                2
+              ],
+              "compression": 1.2363421896600773,
+              "pressure_ratio": 1.450742979346195,
+              "entropy_over_cv": 0.01848053609190281,
+              "tangential_field_ratio": 2.390347943968866
+            },
+            "result_sentence": "For these supplied states and front speed, a fast shock passes the local ideal-MHD checks.",
+            "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+          },
+          "independent_SI_flux_residual": 3.3306690738754696e-16,
+          "tangential_LOS_km_s": [
+            0.0,
+            1.8680588712447498e-17
+          ],
+          "tangential_LOS_scaled_residual": 2.074869531850056e-19,
+          "delta_tangential_LOS_km_s": 1.8680588712447498e-17,
+          "reconstructed_Doppler_km_s": 16.559600881163973,
+          "Doppler_residual_km_s": 0.0,
+          "characteristic_margin": 0.07194605813731336,
+          "degeneracy_margin": 0.046336502555769266,
+          "guards": []
+        }
+      }
+    },
+    {
+      "source_root": {
+        "node_id": "34182",
+        "alpha_deg": "73.875",
+        "theta_deg": "51.0",
+        "root_index": "1",
+        "z_real": "2.836776731356688",
+        "z_imag": "0.0",
+        "disposition": "accepted",
+        "accepted_family": "slow_shock",
+        "guards": "",
+        "B_up_G": "1.0997812603729589",
+        "B_down_G": "0.771012399128727",
+        "T_up_K": "1365586.1451407368",
+        "ne_up_cm3": "191062031.1429321",
+        "independent_SI_flux_residual": "2.5983147000907225e-16",
+        "tangential_LOS_scaled_residual": "1.0478297484528101e-19",
+        "Doppler_residual_km_s": "0.0",
+        "entropy_over_cv": "0.01078953313672415",
+        "characteristic_transition": "[3, 4]",
+        "pole_relative_distance": "0.2764998238061774",
+        "polynomial_relative_residual": "0.0",
+        "screen_ratio": 0.22873237083324957,
+        "screen_distance": 2.8551683032257413e-05,
+        "exact_upstream_ratio": 0.22781227986528466,
+        "exact_upstream_selfblend": 0.45675475649358355,
+        "exact_ratio_distance": 0.0008915392849326575
+      },
+      "fixed_chi_square": 206.02424223559805,
+      "free_chi_square": 206.00849756186608,
+      "delta_chi_square": 0.01574467373197308,
+      "data_residual_count": 219,
+      "fixed_nuisance_parameters": 60,
+      "fixed_reduced_chi_square": 1.2957499511672834,
+      "best_shared_free_ratio_at_same_selfblend": 0.22868378002200698,
+      "all_ten_reference_spectra_fitted_jointly": true,
+      "scope": "Conditional family-existence witness, not an observed geometry or a probability.",
+      "exact_R132_state_rechecked": {
+        "status": "PASS",
+        "saved_request": {
+          "schema_version": "rmo-local-discontinuity-0.1",
+          "case_id": "R132-E05-a73.875000-t51.000000-z2.83677673136",
+          "model": "ideal_mhd_single_planar_discontinuity",
+          "units": "normalized_mu0_1",
+          "gamma": 1.6666666666666667,
+          "basis": {
+            "normal": [
+              -0.4464400337190469,
+              0.2483999705826411,
+              -0.8596445491640596
+            ],
+            "t1": [
+              0.4844695451361022,
+              0.8748073298273709,
+              0.0011813195688525505
+            ],
+            "t2": [
+              0.7523167924010168,
+              -0.4159442153640901,
+              -0.5108912345857941
+            ]
+          },
+          "frame": "common_inertial_local_basis",
+          "front_speed": 1.0,
+          "left": {
+            "rho": 1.230247794397336,
+            "p": 3.0318146920371425,
+            "u": [
+              0.1871556246196141,
+              0.8358701480920775,
+              0.0
+            ],
+            "B": [
+              1.0599475658417832,
+              0.5203304828262265,
+              0.0
+            ]
+          },
+          "right": {
+            "rho": 1.0,
+            "p": 2.123387028585232,
+            "u": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "B": [
+              1.0599475658417832,
+              1.3089262351342672,
+              0.0
+            ]
+          },
+          "uncertainty": {
+            "mode": "exact_synthetic"
+          }
+        },
+        "checks": {
+          "diagnostic": {
+            "case_id": "R132-E05-a73.875000-t51.000000-z2.83677673136",
+            "status": "SUPPORTED_LOCAL_CLASS",
+            "family": "slow_shock",
+            "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+            "candidates": {
+              "fast_shock": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+              },
+              "slow_shock": {
+                "status": "SUPPORTED",
+                "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+              },
+              "rotational_discontinuity": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+              },
+              "contact": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+              }
+            },
+            "coverage": {
+              "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+              "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+              "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+            },
+            "global_uniqueness": false,
+            "uncertainty_propagated": false,
+            "checks": {
+              "front_speed": 1.0,
+              "evaluation_boost": [
+                1.0,
+                0.41793507404603875,
+                0.0
+              ],
+              "rh_scaled_inf": 2.5270929699300757e-16,
+              "rh_components": {
+                "mass": 0.0,
+                "normal_momentum": 0.0,
+                "t1_momentum": 0.0,
+                "t2_momentum": 0.0,
+                "t1_induction": -1.1102230246251565e-16,
+                "t2_induction": 0.0,
+                "energy": 2.5270929699300757e-16
+              },
+              "characteristics": {
+                "left": {
+                  "slow": 0.9248448646072694,
+                  "alfven_n": 0.9556262796165398,
+                  "fast": 2.0941056992500475
+                },
+                "right": {
+                  "slow": 0.8370172037175492,
+                  "alfven_n": 1.0599475658417832,
+                  "fast": 2.3822588677582734
+                }
+              },
+              "front_relative_normal_velocity": {
+                "left": -0.8128443753803859,
+                "right": -1.0
+              },
+              "upstream_side": "right",
+              "characteristic_transition": [
+                3,
+                4
+              ],
+              "compression": 1.230247794397336,
+              "pressure_ratio": 1.4278201059074833,
+              "entropy_over_cv": 0.01078953313672415,
+              "tangential_field_ratio": 0.39752468004650543
+            },
+            "result_sentence": "For these supplied states and front speed, a slow shock passes the local ideal-MHD checks.",
+            "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+          },
+          "laboratory_request": {
+            "schema_version": "rmo-local-discontinuity-0.1",
+            "case_id": "R132-E05-a73.875000-t51.000000-z2.83677673136",
+            "model": "ideal_mhd_single_planar_discontinuity",
+            "units": "normalized_mu0_1",
+            "gamma": 1.6666666666666667,
+            "basis": {
+              "normal": [
+                -0.4464400337190469,
+                0.2483999705826411,
+                -0.8596445491640596
+              ],
+              "t1": [
+                0.4844695451361022,
+                0.8748073298273709,
+                0.0011813195688525505
+              ],
+              "t2": [
+                0.7523167924010168,
+                -0.4159442153640901,
+                -0.5108912345857941
+              ]
+            },
+            "frame": "common_inertial_local_basis",
+            "front_speed": 1.0,
+            "left": {
+              "rho": 1.230247794397336,
+              "p": 3.0318146920371425,
+              "u": [
+                0.1871556246196141,
+                0.8358701480920775,
+                0.0
+              ],
+              "B": [
+                1.0599475658417832,
+                0.5203304828262265,
+                0.0
+              ]
+            },
+            "right": {
+              "rho": 1.0,
+              "p": 2.123387028585232,
+              "u": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "B": [
+                1.0599475658417832,
+                1.3089262351342672,
+                0.0
+              ]
+            },
+            "uncertainty": {
+              "mode": "exact_synthetic"
+            }
+          },
+          "laboratory_diagnostic": {
+            "case_id": "R132-E05-a73.875000-t51.000000-z2.83677673136",
+            "status": "SUPPORTED_LOCAL_CLASS",
+            "family": "slow_shock",
+            "scope": "one planar discontinuity, ideal MHD, exact supplied states",
+            "candidates": {
+              "fast_shock": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires compression, nondecreasing entropy and the 1 to 2 characteristic transition."
+              },
+              "slow_shock": {
+                "status": "SUPPORTED",
+                "reason": "Requires compression, nondecreasing entropy and the 3 to 4 characteristic transition."
+              },
+              "rotational_discontinuity": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires unchanged density/pressure and Alfvenic field/velocity rotation."
+              },
+              "contact": {
+                "status": "INCOMPATIBLE_FOR_EXACT_PAIR",
+                "reason": "Requires zero normal mass flux, continuous pressure/velocity/field and a density jump."
+              }
+            },
+            "coverage": {
+              "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+              "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+              "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+            },
+            "global_uniqueness": false,
+            "uncertainty_propagated": false,
+            "checks": {
+              "front_speed": 1.0,
+              "evaluation_boost": [
+                1.0,
+                0.41793507404603875,
+                0.0
+              ],
+              "rh_scaled_inf": 2.5270929699300757e-16,
+              "rh_components": {
+                "mass": 0.0,
+                "normal_momentum": 0.0,
+                "t1_momentum": 0.0,
+                "t2_momentum": 0.0,
+                "t1_induction": -1.1102230246251565e-16,
+                "t2_induction": 0.0,
+                "energy": 2.5270929699300757e-16
+              },
+              "characteristics": {
+                "left": {
+                  "slow": 0.9248448646072694,
+                  "alfven_n": 0.9556262796165398,
+                  "fast": 2.0941056992500475
+                },
+                "right": {
+                  "slow": 0.8370172037175492,
+                  "alfven_n": 1.0599475658417832,
+                  "fast": 2.3822588677582734
+                }
+              },
+              "front_relative_normal_velocity": {
+                "left": -0.8128443753803859,
+                "right": -1.0
+              },
+              "upstream_side": "right",
+              "characteristic_transition": [
+                3,
+                4
+              ],
+              "compression": 1.230247794397336,
+              "pressure_ratio": 1.4278201059074833,
+              "entropy_over_cv": 0.01078953313672415,
+              "tangential_field_ratio": 0.39752468004650543
+            },
+            "result_sentence": "For these supplied states and front speed, a slow shock passes the local ideal-MHD checks.",
+            "next_action": "Next assess uncertainty and unresolved spatial structure; this exact-state result does not classify an EUV image or establish full-fan uniqueness."
+          },
+          "independent_SI_flux_residual": 2.5983147000907225e-16,
+          "tangential_LOS_km_s": [
+            0.0,
+            9.024689259458298e-18
+          ],
+          "tangential_LOS_scaled_residual": 1.0478297484528101e-19,
+          "delta_tangential_LOS_km_s": 9.024689259458298e-18,
+          "reconstructed_Doppler_km_s": 16.559600881163973,
+          "Doppler_residual_km_s": 0.0,
+          "characteristic_margin": 0.025164169458289965,
+          "degeneracy_margin": 0.012921104178000574,
+          "guards": []
+        }
+      }
+    }
+  ],
+  "all_other_R132_roots_retained": true,
+  "no_observational_family_probability_or_global_exclusion": true
+}

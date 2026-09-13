@@ -1,0 +1,1684 @@
+{
+  "checkpoint": "RMO89",
+  "event": "2010-06-13",
+  "status": "CONDITIONAL_MODEL_FAMILY_SUPPORTED",
+  "result_sentence": "The perpendicular magnetic model remains a fast shock across the tested speed, thermal and radio bounds, if the upstream plasma is at rest.",
+  "observed_solar_type_identified": false,
+  "global_riemann_uniqueness": false,
+  "geometry_inferred": false,
+  "raw_data_downloaded": false,
+  "plasma_flow_assumed_km_s": 0,
+  "source_record": "results/solar_speed_check/RMO_solar_speed_check.json",
+  "source_sha256": "cd0fb075db9fba21b4a526a40e6ea542ac450b1f3e81b1a930c23fe48fecc30c",
+  "primary_sources": [
+    {
+      "authors": "Kozarev et al. (2011)",
+      "doi": "10.1088/2041-8205/733/2/L25",
+      "read_url": "https://arxiv.org/html/1406.2372v1",
+      "locator": "Table 1, 06/13 rows and note; Sections II.1 and III.1",
+      "used": "Published coefficients and quoted errors; 05:37 UT origin; spherical/radial deprojection"
+    },
+    {
+      "authors": "Ma et al. (2011)",
+      "doi": "10.1088/0004-637X/738/2/160",
+      "read_url": "https://arxiv.org/html/1106.6056v1",
+      "locator": "Sections III.2-III.3, Eq.3, 05:40 UT and gas-dynamic comparison",
+      "used": "Two harmonic frequencies, supplied sound speed, gamma=5/3 and published gas/magnetic contrast"
+    }
+  ],
+  "reference": "https://farside.ph.utexas.edu/teaching/plasma/Plasma/node104.html",
+  "source_domain": {
+    "compression": [
+      "22500/18769",
+      "32400/16129"
+    ],
+    "front_speed_km_s": [
+      "49577/100",
+      "66703/100"
+    ],
+    "sound_speed_km_s": [
+      "126",
+      "186"
+    ],
+    "dimensionless_p1": [
+      "1944000/90801841",
+      "207576000/2457878929"
+    ]
+  },
+  "bounds": {
+    "A": {
+      "decimal_outward": [
+        "0.16235809679369761859297241954418066470446873730513",
+        "0.71938766719063611265837863997843409213237845572130"
+      ],
+      "display": [
+        0.16235809679369761,
+        0.7193876671906361
+      ]
+    },
+    "p2": {
+      "decimal_outward": [
+        "0.026168540065353323757143618688561277701191436935091",
+        "0.44041277648796889746347470088750079053427127621026"
+      ],
+      "display": [
+        0.026168540065353324,
+        0.4404127764879689
+      ]
+    },
+    "upstream_squared_fast_margin": {
+      "decimal_outward": [
+        "0.12588511898876607687954050406953546381285964141226",
+        "1.3529475785306462682912535780123590444046535091988"
+      ],
+      "display": [
+        0.1258851189887661,
+        1.3529475785306462
+      ]
+    },
+    "downstream_squared_fast_margin": {
+      "decimal_outward": [
+        "0.055895980270781508114970686918184554218672265035566",
+        "1.3260378648183779931070088967020039049218911183815"
+      ],
+      "display": [
+        0.055895980270781506,
+        1.326037864818378
+      ]
+    },
+    "upstream_fast_Mach": {
+      "decimal_outward": [
+        "1.1482582787902251201324993812451944867624836648260",
+        "1.8634223748536148157003694161532832955206689640915"
+      ],
+      "display": [
+        1.1482582787902251,
+        1.8634223748536147
+      ]
+    },
+    "downstream_fast_Mach": {
+      "decimal_outward": [
+        "0.63040934484444884887830578505667732322667842625514",
+        "0.87893415211949341157726007619658310003823089178794"
+      ],
+      "display": [
+        0.6304093448444489,
+        0.8789341521194934
+      ]
+    }
+  },
+  "entropy_lower_bound_outward": "0.0014871475049217420582322361124611737540351547578899",
+  "method": "exact RH identities; outward-rounded interval inequalities; analytic monotonic Mach endpoints; nine independent finite controls",
+  "assumptions": [
+    "ideal single planar MHD discontinuity",
+    "gamma exactly 5/3",
+    "Bn exactly zero, nonzero Bt, common zero tangential velocity",
+    "fitted image speed is normal shock speed; upstream plasma at rest",
+    "radio lanes map to common upstream and downstream densities",
+    "sound-speed range describes the relevant upstream plasma",
+    "constant composition",
+    "quoted errors treated as simultaneous hard bounds; no confidence level assigned"
+  ],
+  "not_independent_observations": [
+    "reconstructed field and downstream pressure",
+    "derived downstream temperature",
+    "derived Mach numbers"
+  ],
+  "remaining_dependencies": [
+    "same-front radio/EUV/thermal association",
+    "observed local normal and magnetic direction",
+    "upstream plasma velocity",
+    "uncertainty semantics/covariance",
+    "separate unresolved EUV emission comparison"
+  ],
+  "samples": [
+    {
+      "r": "1.19878523096595449944056689221588790026106878363258564654483456763812669828",
+      "U_km_s": "495.77",
+      "c_km_s": "126",
+      "request": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "R89_00",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "frame": "common_inertial_local_basis",
+        "gamma": 1.6666666666666667,
+        "front_speed": 0,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "left": {
+          "rho": 1.0,
+          "p": 0.03875536702646105,
+          "u": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.8315074194033762,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 1.1987852309659546,
+          "p": 0.0534759458942517,
+          "u": [
+            0.8341777777777778,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.9967988138193812,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic"
+        }
+      },
+      "result": {
+        "case_id": "R89_00",
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock",
+        "scope": "one exact planar ideal-MHD discontinuity; Bn=0, Bt nonzero, 1<gamma<2",
+        "candidates": {
+          "fast_shock": {
+            "status": "SUPPORTED",
+            "reason": "Full RH, compression, nondecreasing entropy and super-fast to sub-fast normal-flow transition pass."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0,
+          "evaluation_boost": [
+            0,
+            0.0,
+            0.0
+          ],
+          "rh_scaled_inf": 0.0,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 0.0,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 0.0
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.8694808030660006
+            },
+            "right": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.9503646767746681
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 1.0,
+            "right": 0.8341777777777778
+          },
+          "perpendicular": {
+            "upstream_side": "left",
+            "compression": 1.1987852309659546,
+            "entropy_over_cv": 0.019781465666401543,
+            "tangential_field_ratio": 1.1987852309659546,
+            "Bt_over_rho_continuous": true,
+            "tangential_velocity_continuous": true,
+            "compressed": true,
+            "entropy_accepted": true,
+            "field_amplified": true,
+            "upstream_superfast": true,
+            "downstream_subfast": true,
+            "fast_margin_upstream": 0.13051919693399938,
+            "fast_margin_downstream": 0.11618689899689028,
+            "normal_slow_and_alfven_speeds": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "speed_tolerance": 1e-09,
+            "entropy_allowance": -1e-10
+          }
+        },
+        "result_sentence": "A fast shock passes conservation, entropy and characteristic-speed checks for these exact states; the field lies along the front surface (90 degrees to its normal).",
+        "next_action": "Assess measurement errors and geometry before applying this local result to an observed front.",
+        "diagnostic_extension": "RMO-exact-perpendicular-0.1",
+        "geometry": "exactly perpendicular as supplied: field along the front surface; not inferred from observations",
+        "baseline_status": "DEGENERATE_NOT_CLASSIFIED",
+        "solar_identification": false,
+        "stability_tested": false,
+        "field_to_normal_angle_degrees": {
+          "left": 90.0,
+          "right": 90.0
+        },
+        "geometry_subtype": "perpendicular"
+      },
+      "direct_RH_residuals": [
+        "0E-74",
+        "0E-75",
+        "0E-74",
+        "1E-74"
+      ],
+      "fast_Mach_upstream": 1.1501116487836844,
+      "fast_Mach_downstream": 0.8777449311445333,
+      "entropy_over_cv": "0.019781465666401609329112434865168026745496118624160201985343266727494402337",
+      "eq5_residual": "1E-74"
+    },
+    {
+      "r": "1.19878523096595449944056689221588790026106878363258564654483456763812669828",
+      "U_km_s": "495.77",
+      "c_km_s": "186",
+      "request": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "R89_01",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "frame": "common_inertial_local_basis",
+        "gamma": 1.6666666666666667,
+        "front_speed": 0,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "left": {
+          "rho": 1.0,
+          "p": 0.0844533054703607,
+          "u": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.7859286176506498,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 1.1987852309659546,
+          "p": 0.11528504946856337,
+          "u": [
+            0.8341777777777778,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.9421596194330876,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic"
+        }
+      },
+      "result": {
+        "case_id": "R89_01",
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock",
+        "scope": "one exact planar ideal-MHD discontinuity; Bn=0, Bt nonzero, 1<gamma<2",
+        "candidates": {
+          "fast_shock": {
+            "status": "SUPPORTED",
+            "reason": "Full RH, compression, nondecreasing entropy and super-fast to sub-fast normal-flow transition pass."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0,
+          "evaluation_boost": [
+            0,
+            0.0,
+            0.0
+          ],
+          "rh_scaled_inf": 1.670994543376226e-16,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 1.593665180841343e-16,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 1.670994543376226e-16
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.8708842065163022
+            },
+            "right": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.9490788084251949
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 1.0,
+            "right": 0.8341777777777778
+          },
+          "perpendicular": {
+            "upstream_side": "left",
+            "compression": 1.1987852309659546,
+            "entropy_over_cv": 0.009027741305358106,
+            "tangential_field_ratio": 1.1987852309659546,
+            "Bt_over_rho_continuous": true,
+            "tangential_velocity_continuous": true,
+            "compressed": true,
+            "entropy_accepted": true,
+            "field_amplified": true,
+            "upstream_superfast": true,
+            "downstream_subfast": true,
+            "fast_margin_upstream": 0.12911579348369784,
+            "fast_margin_downstream": 0.11490103064741708,
+            "normal_slow_and_alfven_speeds": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "speed_tolerance": 1e-09,
+            "entropy_allowance": -1e-10
+          }
+        },
+        "result_sentence": "A fast shock passes conservation, entropy and characteristic-speed checks for these exact states; the field lies along the front surface (90 degrees to its normal).",
+        "next_action": "Assess measurement errors and geometry before applying this local result to an observed front.",
+        "diagnostic_extension": "RMO-exact-perpendicular-0.1",
+        "geometry": "exactly perpendicular as supplied: field along the front surface; not inferred from observations",
+        "baseline_status": "DEGENERATE_NOT_CLASSIFIED",
+        "solar_identification": false,
+        "stability_tested": false,
+        "field_to_normal_angle_degrees": {
+          "left": 90.0,
+          "right": 90.0
+        },
+        "geometry_subtype": "perpendicular"
+      },
+      "direct_RH_residuals": [
+        "0E-74",
+        "0E-75",
+        "0E-74",
+        "0E-74"
+      ],
+      "fast_Mach_upstream": 1.1482582787902251,
+      "fast_Mach_downstream": 0.8789341521194934,
+      "entropy_over_cv": "0.009027741305358269550608344839019400871015784744757564358971244939815367560",
+      "eq5_residual": "0E-74"
+    },
+    {
+      "r": "1.19878523096595449944056689221588790026106878363258564654483456763812669828",
+      "U_km_s": "667.03",
+      "c_km_s": "126",
+      "request": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "R89_02",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "frame": "common_inertial_local_basis",
+        "gamma": 1.6666666666666667,
+        "front_speed": 0,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "left": {
+          "rho": 1.0,
+          "p": 0.021409257550185575,
+          "u": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.8481672401069473,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 1.1987852309659546,
+          "p": 0.030014330037189244,
+          "u": [
+            0.8341777777777778,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            1.016770360829363,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic"
+        }
+      },
+      "result": {
+        "case_id": "R89_02",
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock",
+        "scope": "one exact planar ideal-MHD discontinuity; Bn=0, Bt nonzero, 1<gamma<2",
+        "candidates": {
+          "fast_shock": {
+            "status": "SUPPORTED",
+            "reason": "Full RH, compression, nondecreasing entropy and super-fast to sub-fast normal-flow transition pass."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0,
+          "evaluation_boost": [
+            0,
+            0.0,
+            0.0
+          ],
+          "rh_scaled_inf": 0.0,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 0.0,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 0.0
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.8689475030792205
+            },
+            "right": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.9508523137973135
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 1.0,
+            "right": 0.8341777777777778
+          },
+          "perpendicular": {
+            "upstream_side": "left",
+            "compression": 1.1987852309659546,
+            "entropy_over_cv": 0.03567028367274716,
+            "tangential_field_ratio": 1.1987852309659544,
+            "Bt_over_rho_continuous": true,
+            "tangential_velocity_continuous": true,
+            "compressed": true,
+            "entropy_accepted": true,
+            "field_amplified": true,
+            "upstream_superfast": true,
+            "downstream_subfast": true,
+            "fast_margin_upstream": 0.13105249692077947,
+            "fast_margin_downstream": 0.1166745360195357,
+            "normal_slow_and_alfven_speeds": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "speed_tolerance": 1e-09,
+            "entropy_allowance": -1e-10
+          }
+        },
+        "result_sentence": "A fast shock passes conservation, entropy and characteristic-speed checks for these exact states; the field lies along the front surface (90 degrees to its normal).",
+        "next_action": "Assess measurement errors and geometry before applying this local result to an observed front.",
+        "diagnostic_extension": "RMO-exact-perpendicular-0.1",
+        "geometry": "exactly perpendicular as supplied: field along the front surface; not inferred from observations",
+        "baseline_status": "DEGENERATE_NOT_CLASSIFIED",
+        "solar_identification": false,
+        "stability_tested": false,
+        "field_to_normal_angle_degrees": {
+          "left": 90.0,
+          "right": 90.0
+        },
+        "geometry_subtype": "perpendicular"
+      },
+      "direct_RH_residuals": [
+        "0E-74",
+        "2E-75",
+        "0E-74",
+        "-1E-74"
+      ],
+      "fast_Mach_upstream": 1.1508175079120189,
+      "fast_Mach_downstream": 0.8772947866597857,
+      "entropy_over_cv": "0.035670283672747287922061502616568092054363355940888324808097283671439086462",
+      "eq5_residual": "0E-74"
+    },
+    {
+      "r": "1.19878523096595449944056689221588790026106878363258564654483456763812669828",
+      "U_km_s": "667.03",
+      "c_km_s": "186",
+      "request": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "R89_03",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "frame": "common_inertial_local_basis",
+        "gamma": 1.6666666666666667,
+        "front_speed": 0,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "left": {
+          "rho": 1.0,
+          "p": 0.04665373357308013,
+          "u": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.8238099241540011,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 1.1987852309659546,
+          "p": 0.0641589432585021,
+          "u": [
+            0.8341777777777778,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.9875711701989996,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic"
+        }
+      },
+      "result": {
+        "case_id": "R89_03",
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock",
+        "scope": "one exact planar ideal-MHD discontinuity; Bn=0, Bt nonzero, 1<gamma<2",
+        "candidates": {
+          "fast_shock": {
+            "status": "SUPPORTED",
+            "reason": "Full RH, compression, nondecreasing entropy and super-fast to sub-fast normal-flow transition pass."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0,
+          "evaluation_boost": [
+            0,
+            0.0,
+            0.0
+          ],
+          "rh_scaled_inf": 1.714236839007041e-16,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 0.0,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 1.714236839007041e-16
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.8697235271949479
+            },
+            "right": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.9501425535175738
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 1.0,
+            "right": 0.8341777777777778
+          },
+          "perpendicular": {
+            "upstream_side": "left",
+            "compression": 1.1987852309659546,
+            "entropy_over_cv": 0.016429307640575763,
+            "tangential_field_ratio": 1.1987852309659544,
+            "Bt_over_rho_continuous": true,
+            "tangential_velocity_continuous": true,
+            "compressed": true,
+            "entropy_accepted": true,
+            "field_amplified": true,
+            "upstream_superfast": true,
+            "downstream_subfast": true,
+            "fast_margin_upstream": 0.13027647280505206,
+            "fast_margin_downstream": 0.11596477573979602,
+            "normal_slow_and_alfven_speeds": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "speed_tolerance": 1e-09,
+            "entropy_allowance": -1e-10
+          }
+        },
+        "result_sentence": "A fast shock passes conservation, entropy and characteristic-speed checks for these exact states; the field lies along the front surface (90 degrees to its normal).",
+        "next_action": "Assess measurement errors and geometry before applying this local result to an observed front.",
+        "diagnostic_extension": "RMO-exact-perpendicular-0.1",
+        "geometry": "exactly perpendicular as supplied: field along the front surface; not inferred from observations",
+        "baseline_status": "DEGENERATE_NOT_CLASSIFIED",
+        "solar_identification": false,
+        "stability_tested": false,
+        "field_to_normal_angle_degrees": {
+          "left": 90.0,
+          "right": 90.0
+        },
+        "geometry_subtype": "perpendicular"
+      },
+      "direct_RH_residuals": [
+        "0E-74",
+        "0E-75",
+        "0E-74",
+        "-1E-74"
+      ],
+      "fast_Mach_upstream": 1.1497906733939034,
+      "fast_Mach_downstream": 0.8779501293669285,
+      "entropy_over_cv": "0.016429307640575727617180779057019740305202295232641417216675554977712615676",
+      "eq5_residual": "0E-74"
+    },
+    {
+      "r": "2.00880401760803521607043214086428172856345712691425382850765701531403062806",
+      "U_km_s": "495.77",
+      "c_km_s": "126",
+      "request": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "R89_04",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "frame": "common_inertial_local_basis",
+        "gamma": 1.6666666666666667,
+        "front_speed": 0,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "left": {
+          "rho": 1.0,
+          "p": 0.03875536702646105,
+          "u": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.4770313007566115,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.008804017608035,
+          "p": 0.19559274861844234,
+          "u": [
+            0.49780864197530866,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.9582623934846681,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic"
+        }
+      },
+      "result": {
+        "case_id": "R89_04",
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock",
+        "scope": "one exact planar ideal-MHD discontinuity; Bn=0, Bt nonzero, 1<gamma<2",
+        "candidates": {
+          "fast_shock": {
+            "status": "SUPPORTED",
+            "reason": "Full RH, compression, nondecreasing entropy and super-fast to sub-fast normal-flow transition pass."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0,
+          "evaluation_boost": [
+            0,
+            0.0,
+            0.0
+          ],
+          "rh_scaled_inf": 1.1102230246251565e-16,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 0.0,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 1.1102230246251565e-16
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.5405100741697418
+            },
+            "right": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.7870201757134796
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 1.0,
+            "right": 0.49780864197530866
+          },
+          "perpendicular": {
+            "upstream_side": "left",
+            "compression": 2.008804017608035,
+            "entropy_over_cv": 0.45619955285468605,
+            "tangential_field_ratio": 2.008804017608035,
+            "Bt_over_rho_continuous": true,
+            "tangential_velocity_continuous": true,
+            "compressed": true,
+            "entropy_accepted": true,
+            "field_amplified": true,
+            "upstream_superfast": true,
+            "downstream_subfast": true,
+            "fast_margin_upstream": 0.45948992583025816,
+            "fast_margin_downstream": 0.28921153373817093,
+            "normal_slow_and_alfven_speeds": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "speed_tolerance": 1e-09,
+            "entropy_allowance": -1e-10
+          }
+        },
+        "result_sentence": "A fast shock passes conservation, entropy and characteristic-speed checks for these exact states; the field lies along the front surface (90 degrees to its normal).",
+        "next_action": "Assess measurement errors and geometry before applying this local result to an observed front.",
+        "diagnostic_extension": "RMO-exact-perpendicular-0.1",
+        "geometry": "exactly perpendicular as supplied: field along the front surface; not inferred from observations",
+        "baseline_status": "DEGENERATE_NOT_CLASSIFIED",
+        "solar_identification": false,
+        "stability_tested": false,
+        "field_to_normal_angle_degrees": {
+          "left": 90.0,
+          "right": 90.0
+        },
+        "geometry_subtype": "perpendicular"
+      },
+      "direct_RH_residuals": [
+        "0E-74",
+        "1E-75",
+        "0E-74",
+        "7E-75"
+      ],
+      "fast_Mach_upstream": 1.8501042770314027,
+      "fast_Mach_downstream": 0.6325233549750058,
+      "entropy_over_cv": "0.45619955285468583750869548552708502282739059831357729276537080718380209236",
+      "eq5_residual": "0E-74"
+    },
+    {
+      "r": "2.00880401760803521607043214086428172856345712691425382850765701531403062806",
+      "U_km_s": "495.77",
+      "c_km_s": "186",
+      "request": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "R89_05",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "frame": "common_inertial_local_basis",
+        "gamma": 1.6666666666666667,
+        "front_speed": 0,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "left": {
+          "rho": 1.0,
+          "p": 0.0844533054703607,
+          "u": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.4029368397077855,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.008804017608035,
+          "p": 0.3402424189715673,
+          "u": [
+            0.49780864197530866,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.8094211424472844,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic"
+        }
+      },
+      "result": {
+        "case_id": "R89_05",
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock",
+        "scope": "one exact planar ideal-MHD discontinuity; Bn=0, Bt nonzero, 1<gamma<2",
+        "candidates": {
+          "fast_shock": {
+            "status": "SUPPORTED",
+            "reason": "Full RH, compression, nondecreasing entropy and super-fast to sub-fast normal-flow transition pass."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0,
+          "evaluation_boost": [
+            0,
+            0.0,
+            0.0
+          ],
+          "rh_scaled_inf": 1.9049282922557495e-16,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": -1.9049282922557495e-16,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 0.0
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.5505575409627639
+            },
+            "right": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.7800245453497541
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 1.0,
+            "right": 0.49780864197530866
+          },
+          "perpendicular": {
+            "upstream_side": "left",
+            "compression": 2.008804017608035,
+            "entropy_over_cv": 0.23089369544439386,
+            "tangential_field_ratio": 2.008804017608035,
+            "Bt_over_rho_continuous": true,
+            "tangential_velocity_continuous": true,
+            "compressed": true,
+            "entropy_accepted": true,
+            "field_amplified": true,
+            "upstream_superfast": true,
+            "downstream_subfast": true,
+            "fast_margin_upstream": 0.4494424590372361,
+            "fast_margin_downstream": 0.2822159033744454,
+            "normal_slow_and_alfven_speeds": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "speed_tolerance": 1e-09,
+            "entropy_allowance": -1e-10
+          }
+        },
+        "result_sentence": "A fast shock passes conservation, entropy and characteristic-speed checks for these exact states; the field lies along the front surface (90 degrees to its normal).",
+        "next_action": "Assess measurement errors and geometry before applying this local result to an observed front.",
+        "diagnostic_extension": "RMO-exact-perpendicular-0.1",
+        "geometry": "exactly perpendicular as supplied: field along the front surface; not inferred from observations",
+        "baseline_status": "DEGENERATE_NOT_CLASSIFIED",
+        "solar_identification": false,
+        "stability_tested": false,
+        "field_to_normal_angle_degrees": {
+          "left": 90.0,
+          "right": 90.0
+        },
+        "geometry_subtype": "perpendicular"
+      },
+      "direct_RH_residuals": [
+        "0E-74",
+        "0E-75",
+        "0E-74",
+        "3E-75"
+      ],
+      "fast_Mach_upstream": 1.816340574050249,
+      "fast_Mach_downstream": 0.6381961246515607,
+      "entropy_over_cv": "0.23089369544439377619729136216869992576205278570951535634730002007659988753",
+      "eq5_residual": "-1E-74"
+    },
+    {
+      "r": "2.00880401760803521607043214086428172856345712691425382850765701531403062806",
+      "U_km_s": "667.03",
+      "c_km_s": "126",
+      "request": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "R89_06",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "frame": "common_inertial_local_basis",
+        "gamma": 1.6666666666666667,
+        "front_speed": 0,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "left": {
+          "rho": 1.0,
+          "p": 0.021409257550185575,
+          "u": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.5023025891098726,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.008804017608035,
+          "p": 0.14068635452075817,
+          "u": [
+            0.49780864197530866,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            1.00902745905883,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic"
+        }
+      },
+      "result": {
+        "case_id": "R89_06",
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock",
+        "scope": "one exact planar ideal-MHD discontinuity; Bn=0, Bt nonzero, 1<gamma<2",
+        "candidates": {
+          "fast_shock": {
+            "status": "SUPPORTED",
+            "reason": "Full RH, compression, nondecreasing entropy and super-fast to sub-fast normal-flow transition pass."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0,
+          "evaluation_boost": [
+            0,
+            0.0,
+            0.0
+          ],
+          "rh_scaled_inf": 1.9349226633642662e-16,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": -1.9349226633642662e-16,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": -1.1102230246251565e-16,
+            "t2_induction": 0.0,
+            "energy": -1.1102230246251565e-16
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.5366469854042389
+            },
+            "right": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.7896593634698437
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 1.0,
+            "right": 0.49780864197530866
+          },
+          "perpendicular": {
+            "upstream_side": "left",
+            "compression": 2.008804017608035,
+            "entropy_over_cv": 0.7201436708953,
+            "tangential_field_ratio": 2.0088040176080346,
+            "Bt_over_rho_continuous": true,
+            "tangential_velocity_continuous": true,
+            "compressed": true,
+            "entropy_accepted": true,
+            "field_amplified": true,
+            "upstream_superfast": true,
+            "downstream_subfast": true,
+            "fast_margin_upstream": 0.46335301459576106,
+            "fast_margin_downstream": 0.291850721494535,
+            "normal_slow_and_alfven_speeds": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "speed_tolerance": 1e-09,
+            "entropy_allowance": -1e-10
+          }
+        },
+        "result_sentence": "A fast shock passes conservation, entropy and characteristic-speed checks for these exact states; the field lies along the front surface (90 degrees to its normal).",
+        "next_action": "Assess measurement errors and geometry before applying this local result to an observed front.",
+        "diagnostic_extension": "RMO-exact-perpendicular-0.1",
+        "geometry": "exactly perpendicular as supplied: field along the front surface; not inferred from observations",
+        "baseline_status": "DEGENERATE_NOT_CLASSIFIED",
+        "solar_identification": false,
+        "stability_tested": false,
+        "field_to_normal_angle_degrees": {
+          "left": 90.0,
+          "right": 90.0
+        },
+        "geometry_subtype": "perpendicular"
+      },
+      "direct_RH_residuals": [
+        "0E-74",
+        "-1E-75",
+        "0E-74",
+        "-4E-75"
+      ],
+      "fast_Mach_upstream": 1.8634223748536147,
+      "fast_Mach_downstream": 0.6304093448444489,
+      "entropy_over_cv": "0.72014367089529991343074812687848573844968319234415394315402115373758040809",
+      "eq5_residual": "1E-74"
+    },
+    {
+      "r": "2.00880401760803521607043214086428172856345712691425382850765701531403062806",
+      "U_km_s": "667.03",
+      "c_km_s": "186",
+      "request": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "R89_07",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "frame": "common_inertial_local_basis",
+        "gamma": 1.6666666666666667,
+        "front_speed": 0,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "left": {
+          "rho": 1.0,
+          "p": 0.04665373357308013,
+          "u": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.46506951587050843,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 2.008804017608035,
+          "p": 0.2205937914707182,
+          "u": [
+            0.49780864197530866,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.9342335119477013,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic"
+        }
+      },
+      "result": {
+        "case_id": "R89_07",
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock",
+        "scope": "one exact planar ideal-MHD discontinuity; Bn=0, Bt nonzero, 1<gamma<2",
+        "candidates": {
+          "fast_shock": {
+            "status": "SUPPORTED",
+            "reason": "Full RH, compression, nondecreasing entropy and super-fast to sub-fast normal-flow transition pass."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0,
+          "evaluation_boost": [
+            0,
+            0.0,
+            0.0
+          ],
+          "rh_scaled_inf": 1.1102230246251565e-16,
+          "rh_components": {
+            "mass": 0.0,
+            "normal_momentum": 0.0,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 5.551115123125783e-17,
+            "t2_induction": 0.0,
+            "energy": -1.1102230246251565e-16
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.5422599719819169
+            },
+            "right": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.7858155127288
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 1.0,
+            "right": 0.49780864197530866
+          },
+          "perpendicular": {
+            "upstream_side": "left",
+            "compression": 2.008804017608035,
+            "entropy_over_cv": 0.3910041233411583,
+            "tangential_field_ratio": 2.0088040176080355,
+            "Bt_over_rho_continuous": true,
+            "tangential_velocity_continuous": true,
+            "compressed": true,
+            "entropy_accepted": true,
+            "field_amplified": true,
+            "upstream_superfast": true,
+            "downstream_subfast": true,
+            "fast_margin_upstream": 0.4577400280180831,
+            "fast_margin_downstream": 0.28800687075349135,
+            "normal_slow_and_alfven_speeds": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "speed_tolerance": 1e-09,
+            "entropy_allowance": -1e-10
+          }
+        },
+        "result_sentence": "A fast shock passes conservation, entropy and characteristic-speed checks for these exact states; the field lies along the front surface (90 degrees to its normal).",
+        "next_action": "Assess measurement errors and geometry before applying this local result to an observed front.",
+        "diagnostic_extension": "RMO-exact-perpendicular-0.1",
+        "geometry": "exactly perpendicular as supplied: field along the front surface; not inferred from observations",
+        "baseline_status": "DEGENERATE_NOT_CLASSIFIED",
+        "solar_identification": false,
+        "stability_tested": false,
+        "field_to_normal_angle_degrees": {
+          "left": 90.0,
+          "right": 90.0
+        },
+        "geometry_subtype": "perpendicular"
+      },
+      "direct_RH_residuals": [
+        "0E-74",
+        "1E-75",
+        "0E-74",
+        "1E-75"
+      ],
+      "fast_Mach_upstream": 1.8441339056340076,
+      "fast_Mach_downstream": 0.6334930195595566,
+      "entropy_over_cv": "0.39100412334115834074034212417947699598914278419787185175815810484356876083",
+      "eq5_residual": "0E-74"
+    },
+    {
+      "r": "1.56",
+      "U_km_s": "600",
+      "c_km_s": "156",
+      "request": {
+        "schema_version": "rmo-local-discontinuity-0.1",
+        "case_id": "R89_08",
+        "model": "ideal_mhd_single_planar_discontinuity",
+        "units": "normalized_mu0_1",
+        "frame": "common_inertial_local_basis",
+        "gamma": 1.6666666666666667,
+        "front_speed": 0,
+        "basis": {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "t1": [
+            0,
+            1,
+            0
+          ],
+          "t2": [
+            0,
+            0,
+            1
+          ]
+        },
+        "left": {
+          "rho": 1.0,
+          "p": 0.04056,
+          "u": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            0.6442292057516988,
+            0.0
+          ]
+        },
+        "right": {
+          "rho": 1.56,
+          "p": 0.10203994496560351,
+          "u": [
+            0.6410256410256411,
+            0.0,
+            0.0
+          ],
+          "B": [
+            0.0,
+            1.00499756097265,
+            0.0
+          ]
+        },
+        "uncertainty": {
+          "mode": "exact_synthetic"
+        }
+      },
+      "result": {
+        "case_id": "R89_08",
+        "status": "SUPPORTED_LOCAL_CLASS",
+        "family": "fast_shock",
+        "scope": "one exact planar ideal-MHD discontinuity; Bn=0, Bt nonzero, 1<gamma<2",
+        "candidates": {
+          "fast_shock": {
+            "status": "SUPPORTED",
+            "reason": "Full RH, compression, nondecreasing entropy and super-fast to sub-fast normal-flow transition pass."
+          },
+          "slow_shock": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "rotational_discontinuity": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          },
+          "contact": {
+            "status": "NOT_ASSESSED",
+            "reason": "Required checks not completed."
+          }
+        },
+        "coverage": {
+          "intermediate_switch_limits": "NOT_IMPLEMENTED; never automatically excluded",
+          "full_fan_and_compound": "NOT_TESTED by a two-state discontinuity check",
+          "smooth_waves_and_image_alternatives": "NOT_TESTED; require their own spatial/observational model"
+        },
+        "global_uniqueness": false,
+        "uncertainty_propagated": false,
+        "checks": {
+          "front_speed": 0,
+          "evaluation_boost": [
+            0,
+            0.0,
+            0.0
+          ],
+          "rh_scaled_inf": 2.2204460492503126e-16,
+          "rh_components": {
+            "mass": 2.2204460492503126e-16,
+            "normal_momentum": 1.7790957433893202e-16,
+            "t1_momentum": 0.0,
+            "t2_momentum": 0.0,
+            "t1_induction": 0.0,
+            "t2_induction": 0.0,
+            "energy": 0.0
+          },
+          "characteristics": {
+            "left": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.6947166829315852
+            },
+            "right": {
+              "slow": 0.0,
+              "alfven_n": 0.0,
+              "fast": 0.8697504330021726
+            }
+          },
+          "front_relative_normal_velocity": {
+            "left": 1.0,
+            "right": 0.6410256410256411
+          },
+          "perpendicular": {
+            "upstream_side": "left",
+            "compression": 1.56,
+            "entropy_over_cv": 0.18143895921339415,
+            "tangential_field_ratio": 1.5599999999999998,
+            "Bt_over_rho_continuous": true,
+            "tangential_velocity_continuous": true,
+            "compressed": true,
+            "entropy_accepted": true,
+            "field_amplified": true,
+            "upstream_superfast": true,
+            "downstream_subfast": true,
+            "fast_margin_upstream": 0.30528331706841483,
+            "fast_margin_downstream": 0.2287247919765315,
+            "normal_slow_and_alfven_speeds": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "speed_tolerance": 1e-09,
+            "entropy_allowance": -1e-10
+          }
+        },
+        "result_sentence": "A fast shock passes conservation, entropy and characteristic-speed checks for these exact states; the field lies along the front surface (90 degrees to its normal).",
+        "next_action": "Assess measurement errors and geometry before applying this local result to an observed front.",
+        "diagnostic_extension": "RMO-exact-perpendicular-0.1",
+        "geometry": "exactly perpendicular as supplied: field along the front surface; not inferred from observations",
+        "baseline_status": "DEGENERATE_NOT_CLASSIFIED",
+        "solar_identification": false,
+        "stability_tested": false,
+        "field_to_normal_angle_degrees": {
+          "left": 90.0,
+          "right": 90.0
+        },
+        "geometry_subtype": "perpendicular"
+      },
+      "direct_RH_residuals": [
+        "0E-74",
+        "1E-75",
+        "0E-74",
+        "1E-74"
+      ],
+      "fast_Mach_upstream": 1.439435707488946,
+      "fast_Mach_downstream": 0.7370225028954251,
+      "entropy_over_cv": "0.181438959213394270601948555782526911999662685460981789999840432501286442102",
+      "eq5_residual": "0E-74"
+    }
+  ]
+}

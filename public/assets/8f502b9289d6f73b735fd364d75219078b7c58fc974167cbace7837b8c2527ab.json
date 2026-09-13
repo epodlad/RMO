@@ -1,0 +1,113 @@
+{
+  "scope": "Page-referenced source audit, not a remeasurement.",
+  "evidence": [
+    {
+      "id": "E01",
+      "object": "outer_front",
+      "instruments": "TRACE/EIT",
+      "supported_statement": "Outer front is present; source image-pattern speed about 500 +/- 20 km/s.",
+      "locator": "M2015 pp.3-5, section 3.1",
+      "inference_limit": "Not a plasma velocity, normal speed, or independent MHD label.",
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "E02",
+      "object": "outer_front",
+      "instruments": "TRACE/CDS",
+      "supported_statement": "The weak front traverses the CDS field of view.",
+      "locator": "M2015 p.3 reporting HS2003; inherited audits 19/19A",
+      "inference_limit": "FOV crossing does not supply a new pixel-time registration or resolved state pair.",
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "E03",
+      "object": "outer_front",
+      "instruments": "TRACE/SUMER",
+      "supported_statement": "The front passes under the SUMER slit during 15:31-15:39 UT.",
+      "locator": "M2015 p.8; Fig.2 panels 4-7",
+      "inference_limit": "Positive geometric sampling at source level; not a newly measured trajectory.",
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "E04",
+      "object": "outer_front",
+      "instruments": "CDS",
+      "supported_statement": "No substantial line shift; the source reports an approximate LOS response below 10 km/s.",
+      "locator": "M2015 p.3 reporting HS2003; retained audits",
+      "inference_limit": "Instrument-conditioned response scale; no independent normal-flow bound or confidence level.",
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "E05",
+      "object": "outer_front",
+      "instruments": "SUMER",
+      "supported_statement": "No wave signature in the first exposure; useful first-window lines have log10(Tmax/K) about 4.9-5.8.",
+      "locator": "M2015 Table 1 and p.8",
+      "inference_limit": "Response temperature is not a measured front temperature; lack of detection does not prove T > 600000 K or T > 1 MK.",
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "E06",
+      "object": "filament",
+      "instruments": "TRACE/EIT/CDS/SUMER/Halpha",
+      "supported_statement": "Later strong Doppler emission belongs to an asymmetric eruptive filament.",
+      "locator": "M2015 pp.6-9; Figs.3-8",
+      "inference_limit": "The same eruption does not make this the same front or the same plasma patch.",
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "E07",
+      "object": "filament",
+      "instruments": "CDS/SUMER",
+      "supported_statement": "Reported body speeds reach about 150 km/s; the leading material reaches about 300-350 km/s.",
+      "locator": "M2015 pp.8-9; source reports and reanalysis distinguished in review",
+      "inference_limit": "Do not combine these filament components with the outer-front image speed.",
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "E08",
+      "object": "filament",
+      "instruments": "CDS",
+      "supported_statement": "The event-related 609 A blue wing can be accounted for by O IV 609.83 A, blended with Mg X 609.79 A.",
+      "locator": "M2015 pp.7-8, section 3.2",
+      "inference_limit": "Not proof of a hot coronal component; not proof that all coronal/background emission is absent.",
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "E09",
+      "object": "filament",
+      "instruments": "SUMER",
+      "supported_statement": "The apparent Doppler rise occurs as faster leading material enters the slit.",
+      "locator": "M2015 p.9, Fig.8",
+      "inference_limit": "Space-time sampling change is not acceleration of a tracked plasma element.",
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "E10",
+      "object": "compression_dimming",
+      "instruments": "TRACE",
+      "supported_statement": "Compression and outer wave separate after about 15:33 UT; dimming/compression disperses before reaching SUMER.",
+      "locator": "M2015 pp.4-5,8",
+      "inference_limit": "Do not use the semicircle fits or Table 2 dimming speeds as local outer-front measurements.",
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "E11",
+      "object": "background",
+      "instruments": "CDS",
+      "supported_statement": "The relative rest component is obtained from an upper-left raster region unaffected by the filament.",
+      "locator": "M2015 p.8",
+      "inference_limit": "A spectral reference is not independently identified as local upstream plasma.",
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "E12",
+      "object": "filament",
+      "instruments": "CDS",
+      "supported_statement": "Published Doppler errors include at least 5 km/s fitting uncertainty and at least 5 km/s relative-reference uncertainty.",
+      "locator": "M2015 p.9",
+      "inference_limit": "Neither a joint confidence interval nor independent Gaussian errors is specified; do not add in quadrature without justification.",
+      "provenance": "SOURCE_DERIVED"
+    }
+  ]
+}

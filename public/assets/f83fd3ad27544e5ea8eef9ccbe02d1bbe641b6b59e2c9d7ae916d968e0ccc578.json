@@ -1,0 +1,26 @@
+{
+  "event": "E02",
+  "records": [],
+  "solver_status": "NOT_RUN_INPUT_GATE",
+  "reason": "No observationally supported, locally associated upstream/downstream state domain for either image structure.",
+  "checks": {
+    "mass": "NOT_RUN_INPUT_GATE",
+    "normal magnetic continuity": "NOT_RUN_INPUT_GATE",
+    "normal and tangential momentum": "NOT_RUN_INPUT_GATE",
+    "induction": "NOT_RUN_INPUT_GATE",
+    "total energy": "NOT_RUN_INPUT_GATE",
+    "entropy": "NOT_RUN_INPUT_GATE",
+    "characteristic ordering": "NOT_RUN_INPUT_GATE",
+    "evolutionary admissibility": "NOT_RUN_INPUT_GATE",
+    "positivity": "NOT_RUN_INPUT_GATE",
+    "scaled residuals": "NOT_RUN_INPUT_GATE",
+    "root completeness": "NOT_RUN_INPUT_GATE",
+    "numerical degeneracies": "NOT_RUN_INPUT_GATE"
+  },
+  "zero_records_is_not_zero_solutions": true,
+  "accepted_FAST_roots": null,
+  "accepted_SLOW_roots": null,
+  "root_completeness_claim": false,
+  "numerical_unresolved_case_count": null,
+  "epistemic_status": "OBSERVATIONAL_IDENTIFIABILITY_UNRESOLVED"
+}

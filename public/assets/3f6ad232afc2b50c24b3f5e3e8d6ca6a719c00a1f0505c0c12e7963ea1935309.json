@@ -1,0 +1,28 @@
+{
+  "checkpoint": "R138",
+  "event": "E08",
+  "date": "1998-06-13",
+  "E08_R138_RESULT": "ASSOCIATION CONTROL RESOLVED; OUTER-FRONT MHD FAMILY NOT IDENTIFIED",
+  "observer_facing_result": "The outer front crosses the spectrometer sampling geometry. The strong later spectrum belongs to the erupting filament and must not be used as the front plasma state.",
+  "imaging_structure": "Weak outer propagating EUV front, separated from compression/dimming and erupting filament in the source analysis.",
+  "spectroscopic_structure": "Strong later CDS/SUMER transition-region components: eruptive filament. Earlier outer-front passage: instrument-conditioned non-detection.",
+  "same_physical_object": {
+    "outer_front_and_later_positive_filament_spectrum": "NO",
+    "source_level_outer_front_geometric_crossing": "YES",
+    "outer_front_resolved_spectroscopic_state_pair": "NOT_ESTABLISHED"
+  },
+  "spectroscopy_constrains_outer_family": "Not sufficiently for FAST/SLOW selection. It constrains the recorded response under the actual exposure and line sensitivity.",
+  "prevents": "Combining outer-front image kinematics with filament Doppler shifts or blended hot-line emission into one fictitious MHD state; treating a non-detection as proof of no wave.",
+  "family_status": "NOT_EVALUATED_INPUT_GATE",
+  "admissible_families": null,
+  "family_excluded_by_R138": null,
+  "root_search_run": false,
+  "new_MHD_roots": 0,
+  "numerical_solver_failure": false,
+  "minimum_next_observation": "A time-resolved, spatially registered, blend-controlled coronal spectrum of the outer-front passage itself, with a bounded front-emission contribution and calibrated sensitivity. MHD selection additionally requires sufficient local upstream/downstream state and geometry constraints.",
+  "required_numeric_precision": null,
+  "precision_reason": "No measured local state domain or front-emission lower bound supports a numerical requirement in this control.",
+  "scope": "Published-source and retained-record association control; no raw solar data reprocessing.",
+  "R137_inherited_files_unchanged_required": true,
+  "next_event_started": false
+}

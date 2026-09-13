@@ -1,0 +1,114 @@
+{
+  "stage": "R132",
+  "status": "PRE_RUN_FROZEN",
+  "created_UTC": "2026-09-10T15:58:39.674021+00:00",
+  "baseline_tree": "RMO/RMO_R0-R131_CANONICAL_VERIFIED",
+  "baseline_manifest_sha256": "9c6f1ad767871948bd914a17d332205ffbe1e0cdfdbff8dad8a87e71003e42e5",
+  "thresholds": {
+    "min_abs_mu": 0.001,
+    "min_cross_norm": 1e-08,
+    "min_compression_denominator_margin": 1e-06,
+    "min_compression_excess": 5e-08,
+    "min_pole_relative_distance": 1e-06,
+    "polynomial_root_residual": 1e-12,
+    "flux_residual": 1e-10,
+    "min_relative_leading_coefficient": 1e-12,
+    "min_relative_discriminant": 1e-12,
+    "min_relative_root_separation": 1e-07,
+    "characteristic_guard": 1e-07,
+    "field_component_guard": 1e-08,
+    "entropy_guard": 1e-09,
+    "pressure_guard": 1e-10,
+    "tangential_LOS_relative": 1e-12,
+    "Doppler_absolute_km_s": 1e-09
+  },
+  "threshold_definitions": {
+    "min_pole_relative_distance": "abs(1-X*bn^2)/max(1,abs(X*bn^2)); guard if below 1e-6",
+    "polynomial_root_residual": "abs(a*z^2+b*z+c)/(abs(a)*z^2+abs(b)*z+abs(c))",
+    "flux_residual": "max component discrepancy divided by max(1,abs(flux_left),abs(flux_right)); both native and independently dimensionalized checks",
+    "characteristic_guard": "minimum distance of abs(front-relative normal speed) to any characteristic speed, divided by max(1,all speeds); the same relative guard on characteristic-speed coincidences",
+    "entropy_guard": "dimensionless log(p2/p1)-gamma*log(X); ordinary accepted shock must exceed the guard",
+    "pressure_guard": "normalized pressure p/(rho_up*D^2)",
+    "tangential_LOS_relative": "abs(v_t dot ell)/max(1 km/s, norm(v_t)); explicitly calculated for both constructed states and their difference",
+    "guard_policy": "Guarded candidates are UNRESOLVED, retained in root records and never used for a decisive ordinary-family claim. Existing R131 diagnostic thresholds are unchanged; the extra R132 conditioning guards are applied separately."
+  },
+  "fixed_constraints": {
+    "MEASURED": {
+      "relative_centroid_km_s": 16.559600881163973
+    },
+    "SOURCE_DERIVED": {
+      "conditional_effective_density_cm3": 235053642.40666732,
+      "published_EIS_surface_speed_proxy_km_s": 371.0
+    },
+    "ASSUMED": {
+      "downstream_temperature_K": 1584893.1924611141,
+      "density_assigned_to_downstream": true,
+      "relative_centroid_assigned_to_state_jump": true,
+      "reference_is_upstream": true,
+      "upstream_velocity": [
+        0,
+        0,
+        0
+      ],
+      "pure_hydrogen": true,
+      "Te_equals_Tp": true,
+      "isotropic_ideal_MHD": true,
+      "gamma": 1.6666666666666667,
+      "extra_heat_flux": false,
+      "height_m": 0,
+      "propagation_azimuth": "northward local surface tangent",
+      "field_azimuth": "e1 parallel n cross LOS; same R131 polarity convention",
+      "second_tangential_velocity_component": 0,
+      "aperture_and_reference": "R131 selected R127 central rows334-338, exposure25, reference1-10; no re-selection"
+    },
+    "MODEL_DERIVED": "D,mu,compression,upstream state,field strengths,and velocity jumps recomputed from those fixed inputs; none independently adjustable"
+  },
+  "scan": {
+    "alpha_deg": [
+      -89,
+      89
+    ],
+    "theta_deg": [
+      1,
+      89
+    ],
+    "initial_spacing_deg": 1,
+    "initial_location_count": 15931,
+    "refinement_spacings_deg": [
+      0.5,
+      0.25,
+      0.125
+    ],
+    "max_unique_angular_locations": 50000,
+    "refinement_rule": "bisect cells whose corner classes, root counts, or unresolved flags differ; refine guard locations; stop at .125deg or global cap. No family-preferred ordering.",
+    "outside_domain": "not mapped; no grid exclusion extrapolated outside domain"
+  },
+  "root_enumeration": "Complete stable quadratic formula in positive field-squared variable z; complex/negative roots retained; repeated/degree-loss roots guarded; no finite B search cutoff.",
+  "joint_uncertainty": {
+    "shape": "axis-aligned box",
+    "definition": "[alpha0-delta_alpha,alpha0+delta_alpha] x [theta0-delta_theta,theta0+delta_theta]",
+    "category": "ASSUMED planning region",
+    "covariance_available": false,
+    "confidence_level": null,
+    "ellipse_claimed": false,
+    "candidate_halfwidths_deg": [
+      0.25,
+      0.5,
+      1,
+      2,
+      3,
+      5,
+      7.5,
+      10,
+      15,
+      20
+    ],
+    "precision_policy": "Angular separation of examples is not a family precision. Boxes must retain an admissible candidate and exclude all competing-family possibilities supported by the calculation; sampling-only claims are labelled as such."
+  },
+  "delivery_status": "review results only; no update ZIP, BUNDLE_MANIFEST_R132 or final checkpoint until user review",
+  "source_credits": {
+    "surface_speed": "Veronig et al.2011, saved R131 provenance",
+    "spectroscopic_reductions": "saved R127/R130 RMO reductions with retained source, atomic-data and software provenance",
+    "diagnostic": "unchanged R131 local_diagnosis/diagnose.py"
+  }
+}

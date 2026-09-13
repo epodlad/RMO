@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checkpoint": "R101",
+  "candidate_count": 1,
+  "outcome": "FAST_WITNESS_EXISTS_IN_B",
+  "compression": "2.15",
+  "relative_Mach": "1.09",
+  "normal_acoustic_Mach_squared": "3.5643",
+  "diagnostic_family": "fast_shock",
+  "saved_reference_family": "slow_shock",
+  "exact_RH_fluxes": "all zero",
+  "exact_entropy_sign": "positive",
+  "exact_characteristic_checks": "PASS",
+  "max_scaled_vector_flux_residual": "3E-90",
+  "inside_B": true,
+  "inside_A": false,
+  "inside_C": false,
+  "historical_tests_rerun": false,
+  "solar_identification": false,
+  "full_fan_solution": false,
+  "all_B_points_feasible": false,
+  "native_browser_tested": false
+}

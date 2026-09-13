@@ -1,0 +1,79 @@
+{
+  "tracks": [
+    {
+      "track_id": "A1",
+      "source_label": "F1",
+      "slice": "A",
+      "pattern_speed_km_s": 560,
+      "error_km_s": null,
+      "phase": "Early segment; later deceleration",
+      "provenance": "SOURCE_DERIVED",
+      "source_anchor": "CW11 section 3; Figure 2"
+    },
+    {
+      "track_id": "A2",
+      "source_label": "S1",
+      "slice": "A",
+      "pattern_speed_km_s": 190,
+      "error_km_s": null,
+      "phase": "Initial value; decelerates and becomes nearly stationary",
+      "provenance": "SOURCE_DERIVED",
+      "source_anchor": "CW11 sections 3/4.1; Figure 2"
+    },
+    {
+      "track_id": "A3",
+      "source_label": "F2",
+      "slice": "A",
+      "pattern_speed_km_s": 310,
+      "error_km_s": null,
+      "phase": "Additional later weak branch; not the early A1 segment",
+      "provenance": "SOURCE_DERIVED",
+      "source_anchor": "CW11 section 3; Figure 2"
+    },
+    {
+      "track_id": "B1",
+      "source_label": "F3",
+      "slice": "B",
+      "pattern_speed_km_s": 470,
+      "error_km_s": null,
+      "phase": "Leading image track",
+      "provenance": "SOURCE_DERIVED",
+      "source_anchor": "CW11 section 3; Figure 2"
+    },
+    {
+      "track_id": "B2",
+      "source_label": "S2",
+      "slice": "B",
+      "pattern_speed_km_s": 170,
+      "error_km_s": null,
+      "phase": "Faint trailing image track",
+      "provenance": "SOURCE_DERIVED",
+      "source_anchor": "CW11 section 3; Figure 2"
+    }
+  ],
+  "source_label_warning": "F/S are historical track identifiers, never classifier family inputs.",
+  "motion_definition": "Source slice speeds on adopted solar-surface great circles; neither measured local 3-D normal speed nor plasma-frame speed.",
+  "source_observation": {
+    "instrument": "SDO/AIA",
+    "channel_A": 193,
+    "cadence_s": 12,
+    "reported_resolution_arcsec": 1.2,
+    "base_image_UTC": "2010-07-27T08:44:55",
+    "rotation_correction_reported": true,
+    "processing": "(I(t)-Iref)/Iref",
+    "slice_definition": "Two solar-surface great-circle paths through the source, on opposite sides of a local loop."
+  },
+  "source_time_anchors_UTC": {
+    "A1_early_segment_until": "08:52:44",
+    "A2_clearly_separate_since": "08:52:00",
+    "A3_onset": "08:54:54",
+    "A2_stationarity_section3": "09:02:28",
+    "A2_stationarity_section4": "09:02:40"
+  },
+  "source_cadence_control": {
+    "degraded_cadence_s": 150,
+    "reported_separation_requirement_s": "less than 70 for this example",
+    "RMO_reproduced_from_raw_data": false
+  },
+  "direct_RMO_measurements": 0
+}

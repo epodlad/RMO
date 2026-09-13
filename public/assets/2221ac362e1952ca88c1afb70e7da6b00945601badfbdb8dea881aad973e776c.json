@@ -1,0 +1,18 @@
+{
+  "scope": "Conditional analytic explanation, not an E08 numerical inference.",
+  "relation": "v_centroid = f_line * v_front_LOS",
+  "conditions": [
+    "Optically thin additive profiles",
+    "Line-centroid velocities in the nonrelativistic limit",
+    "Stationary background in this illustration"
+  ],
+  "source_limit_km_s": 10,
+  "source_limit_is_approximate": true,
+  "f_line_lower_bound": null,
+  "intrinsic_velocity_upper_bound": null,
+  "normal_velocity_upper_bound": null,
+  "reason": "For any finite intrinsic velocity, sufficiently small positive f_line can keep the recorded centroid below the response scale. No E08 f_line lower bound is available.",
+  "extra_projection_issue": "v_front_LOS = v_n (n dot LOS) + v_t dot LOS; these geometric components are not supplied for this E08 patch.",
+  "front_dwell_time_s": null,
+  "slit_width_divided_by_image_speed_used": false
+}

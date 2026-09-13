@@ -1,0 +1,30 @@
+[
+  {
+    "case_id": "A17",
+    "source_fixture": "B05_oblique_slow_RH",
+    "reference_family": "slow",
+    "reference_speed": 0.0,
+    "reference_independence": "B01/B02 exact invariant fixtures. B04/B05 frozen production roots originally selected using expected labels; not independent held-out references. New diagnostics must not access this scoring record."
+  },
+  {
+    "case_id": "A42",
+    "source_fixture": "B01_contact",
+    "reference_family": "contact",
+    "reference_speed": 0.2,
+    "reference_independence": "B01/B02 exact invariant fixtures. B04/B05 frozen production roots originally selected using expected labels; not independent held-out references. New diagnostics must not access this scoring record."
+  },
+  {
+    "case_id": "A63",
+    "source_fixture": "B04_oblique_fast_RH",
+    "reference_family": "fast",
+    "reference_speed": 0.0,
+    "reference_independence": "B01/B02 exact invariant fixtures. B04/B05 frozen production roots originally selected using expected labels; not independent held-out references. New diagnostics must not access this scoring record."
+  },
+  {
+    "case_id": "A88",
+    "source_fixture": "B02_rotation_right",
+    "reference_family": "alfven_plus",
+    "reference_speed": 1.0,
+    "reference_independence": "B01/B02 exact invariant fixtures. B04/B05 frozen production roots originally selected using expected labels; not independent held-out references. New diagnostics must not access this scoring record."
+  }
+]

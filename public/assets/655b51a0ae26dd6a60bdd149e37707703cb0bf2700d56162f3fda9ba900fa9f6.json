@@ -1,0 +1,92 @@
+{
+  "baseline": "Verified R135",
+  "files": [
+    {
+      "id": "Ma2011",
+      "path": "observational_pilot/source/ma2011_text.txt",
+      "bytes": 68283,
+      "sha256": "b7c9a59fbf0913fd497ece4a96d28cbc4ca0c2c7a146072cf94c3a15d2025804"
+    },
+    {
+      "id": "Kozarev2011",
+      "path": "observational_pilot/matching_R108/source/kozarev2011_text.txt",
+      "bytes": 28048,
+      "sha256": "3418569e42c5ed3c2744c3422c9e4645391d9779f79f20e589cd892da4ce6a12"
+    },
+    {
+      "id": "Gopalswamy2012",
+      "path": "observational_pilot/F1_evidence_R121/sources/gopalswamy2012.txt",
+      "bytes": 36980,
+      "sha256": "0243f6f60f648f4de5f91c3898236341f688c012d112a483b666b3253f86a4c8"
+    },
+    {
+      "id": "Lee2019",
+      "path": "observational_pilot/constraint_R111/source/lee2019_text.txt",
+      "bytes": 54894,
+      "sha256": "4559ddd3dafce92e186820b2cd9a9edc697b9c7ea44717407c9e2d446980f8a1"
+    },
+    {
+      "id": "R108",
+      "path": "observational_pilot/matching_R108/R108_matching.json",
+      "bytes": 10653,
+      "sha256": "121ff3aee021cb8052012087bdb5e9b61779db2c356c95f21bd90d38460e2c68"
+    },
+    {
+      "id": "R109",
+      "path": "observational_pilot/scenario_R109/R109_conditional_inputs.json",
+      "bytes": 14683,
+      "sha256": "a5426092090ca25b093fbc529c282700f41c321777a383095229d8b6b6e09636"
+    },
+    {
+      "id": "R119",
+      "path": "observational_pilot/event_result_R119/R119_conditional_bound.json",
+      "bytes": 4985,
+      "sha256": "78500288359bdac5facfcec6277149a0441ada11387670af2d60cd01e6983bf0"
+    },
+    {
+      "id": "R94",
+      "path": "results/upstream_flow/RMO_upstream_flow_report.md",
+      "bytes": 12828,
+      "sha256": "068f9831708033f728975c4dbfbed571c85bac7ae9c6f2c13012836d695e6459"
+    },
+    {
+      "id": "R135_geometry",
+      "path": "observational_pilot/e11_closure_R135/source/R135_geometry_and_association_evidence.json",
+      "bytes": 2780,
+      "sha256": "77af7400c3c440cf758896645aa98b743086e43d5d35cb01e55bef511b76221a"
+    },
+    {
+      "id": "R135_flow",
+      "path": "observational_pilot/e11_closure_R135/results/R135_flow_closure.json",
+      "bytes": 240614,
+      "sha256": "3a0bf08e681fbcd73b093266e74ee669277fab4111a4ac291ed549eb867d7621"
+    },
+    {
+      "id": "R135_result",
+      "path": "observational_pilot/e11_closure_R135/results/R135_scientific_result.json",
+      "bytes": 12989,
+      "sha256": "8b507fce57c9de0c2db4e40bfd68872ad7db52a2bd715ee1384ca646cd0bee32"
+    },
+    {
+      "id": "R135_lock",
+      "path": "observational_pilot/e11_closure_R135/verification/R135_scientific_lock.json",
+      "bytes": 792,
+      "sha256": "5db0043e991ce67efe0469e813be617fdb1d25e9dea6c24b0c879171eff23759"
+    },
+    {
+      "id": "R135",
+      "path": "BUNDLE_MANIFEST_R135.json",
+      "bytes": 746947,
+      "sha256": "659effb4f552c2b816a8165045de18c899e1cc3fb5fbee917a534d3db16d5d63"
+    }
+  ],
+  "scope": "Retained E11 outer-front material only.",
+  "primary_texts_read": [
+    "Ma2011",
+    "Kozarev2011",
+    "Gopalswamy2012",
+    "Lee2019"
+  ],
+  "new_data_downloads": 0,
+  "new_literature_acquisitions": 0
+}

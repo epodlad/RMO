@@ -1,0 +1,75 @@
+{
+  "scope": "Evidence-based inference controls, not numerical MHD root tests.",
+  "controls": [
+    {
+      "id": "C01",
+      "proposition": "Front intersects sampling geometry",
+      "result": "SUPPORTED",
+      "evidence": "E02,E03",
+      "reason": "Accept source-level crossing; do not convert it to a positive spectrum."
+    },
+    {
+      "id": "C02",
+      "proposition": "Later filament Doppler component is the outer-front velocity",
+      "result": "REJECTED",
+      "evidence": "E06,E07",
+      "reason": "Different source-supported feature and sampling time."
+    },
+    {
+      "id": "C03",
+      "proposition": "SUMER non-detection proves no outer wave or shock",
+      "result": "REJECTED",
+      "evidence": "E03,E05",
+      "reason": "Response, emissivity and temporal integration are limiting."
+    },
+    {
+      "id": "C04",
+      "proposition": "CDS response below 10 km/s gives intrinsic normal plasma speed below 10 km/s",
+      "result": "REJECTED",
+      "evidence": "E04,E11,E12",
+      "reason": "LOS projection, emission weighting, reference and exposure remain unresolved."
+    },
+    {
+      "id": "C05",
+      "proposition": "609 A wing proves hot Mg X material or a coronal temperature jump",
+      "result": "REJECTED",
+      "evidence": "E08",
+      "reason": "The independently evaluated O IV blend removes this inference."
+    },
+    {
+      "id": "C06",
+      "proposition": "SUMER Doppler rise measures acceleration of the same material",
+      "result": "REJECTED",
+      "evidence": "E09",
+      "reason": "A different portion of the filament enters the slit."
+    },
+    {
+      "id": "C07",
+      "proposition": "A CDS raster can be treated as one simultaneous upstream/downstream image",
+      "result": "REJECTED",
+      "evidence": "E02,E06",
+      "reason": "Pixel-level time sampling is required."
+    },
+    {
+      "id": "C08",
+      "proposition": "The Fig.2 semicircle and dimming speed are the outer-wave local geometry and speed",
+      "result": "REJECTED",
+      "evidence": "E10",
+      "reason": "These overlays and speeds refer to a different component."
+    },
+    {
+      "id": "C09",
+      "proposition": "A published fast-mode interpretation can be an RMO solver input label",
+      "result": "REJECTED",
+      "evidence": "E01",
+      "reason": "Preserve the interpretation and credit; no independent R138 family calculation is implied."
+    },
+    {
+      "id": "C10",
+      "proposition": "MHD inversion of a matched outer-front state pair is ready",
+      "result": "NOT_ESTABLISHED",
+      "evidence": "E01-E12",
+      "reason": "The required same-patch physical states are not reconstructed."
+    }
+  ]
+}

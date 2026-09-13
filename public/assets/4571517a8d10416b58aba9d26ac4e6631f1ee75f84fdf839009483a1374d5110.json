@@ -1,0 +1,157 @@
+{
+  "schema_version": "rmo-literature-draft-0.1.0",
+  "kind": "literature_constraints_with_optional_assumptions",
+  "checkpoint": "RMO-67",
+  "event_id": "E05",
+  "draft": {
+    "event_id": "E05",
+    "rows": [
+      {
+        "value": "590",
+        "low": "",
+        "high": "",
+        "error": "",
+        "note": ""
+      },
+      {
+        "value": "20",
+        "low": "",
+        "high": "",
+        "error": "",
+        "note": ""
+      },
+      {
+        "value": "-5",
+        "low": "",
+        "high": "",
+        "error": "",
+        "note": ""
+      }
+    ],
+    "beta": {
+      "mode": "unknown",
+      "beta0": "",
+      "low": "",
+      "high": "",
+      "height": "",
+      "reference_height": "",
+      "scale_height": "",
+      "plot_min": "",
+      "plot_max": "",
+      "basis": "",
+      "origin": "user_assumption"
+    },
+    "nickname": "",
+    "region": "",
+    "notes": "Example file for learning the RMO literature import. Published constraints retained; no solar classification has been calculated."
+  },
+  "source_snapshot": {
+    "id": "E05",
+    "date": "2011-02-16",
+    "title": "Fast image motion, modest Doppler response",
+    "category": "CONFIRMATORY",
+    "scope": "EUV",
+    "priority": 2,
+    "source": "Veronig et al. (2011), including Vršnak, abstract",
+    "url": "https://doi.org/10.1088/2041-8205/743/1/L10",
+    "read_url": "https://arxiv.org/abs/1111.3505",
+    "read_level": "Primary abstract",
+    "instruments": "Hinode/EIS sit-and-stare + SDO/AIA",
+    "facts": "The front travels along the EIS slit. Coronal lines show redshifts up to 20 km/s followed by blueshifts near −5 km/s; the expected density response is within diagnostic noise.",
+    "values": [
+      {
+        "name": "Initial along-slit image speed",
+        "value": 590,
+        "error": null,
+        "unit": "km/s",
+        "role": "image_pattern_speed"
+      },
+      {
+        "name": "Maximum downward LOS velocity",
+        "value": 20,
+        "error": null,
+        "unit": "km/s",
+        "role": "plasma_LOS_velocity"
+      },
+      {
+        "name": "Later upward LOS velocity",
+        "value": -5,
+        "error": null,
+        "unit": "km/s",
+        "role": "plasma_LOS_velocity"
+      }
+    ],
+    "uncertainty_note": "Approximate abstract values; no fitted profile errors reconstructed.",
+    "author_interpretation": "Response consistent with a coronal fast-mode MHD wave.",
+    "answer": "A front's image speed and the plasma Doppler velocity are different observables, even during a real crossing.",
+    "next": "Use the crossing exposure, quiet control and full geometry; do not insert 590 km/s as plasma u_n.",
+    "missing": [
+      "Full vector plasma velocities and front normal",
+      "Significant density jump",
+      "Magnetic-field vectors"
+    ],
+    "solver_ready": false,
+    "rmo_family_result": null,
+    "figure": null
+  },
+  "review": {
+    "status": "CONSTRAINTS_REVIEWED",
+    "errors": [],
+    "rows": [
+      {
+        "name": "Initial along-slit image speed",
+        "unit": "km/s",
+        "role": "image_pattern_speed",
+        "value": 590,
+        "range": null,
+        "error": null,
+        "note": "",
+        "provenance": "published_extraction"
+      },
+      {
+        "name": "Maximum downward LOS velocity",
+        "unit": "km/s",
+        "role": "plasma_LOS_velocity",
+        "value": 20,
+        "range": null,
+        "error": null,
+        "note": "",
+        "provenance": "published_extraction"
+      },
+      {
+        "name": "Later upward LOS velocity",
+        "unit": "km/s",
+        "role": "plasma_LOS_velocity",
+        "value": -5,
+        "range": null,
+        "error": null,
+        "note": "",
+        "provenance": "published_extraction"
+      }
+    ],
+    "beta": {
+      "status": "UNKNOWN",
+      "provenance": "not_supplied",
+      "value": null,
+      "points": [],
+      "band": null
+    },
+    "edited": 0,
+    "solver_ready": false,
+    "rmo_family_result": null
+  },
+  "result_in_one_sentence": "3 published parameter rows loaded; no new RMO classification has been calculated.",
+  "contributor": {
+    "display_name": null,
+    "display_as": "Anonymous"
+  },
+  "calculation": {
+    "status": "NOT_RUN",
+    "beta_arithmetic_only": false,
+    "rmo_result": null
+  },
+  "publication": {
+    "status": "NOT_PUBLISHED",
+    "submitted": false
+  }
+}

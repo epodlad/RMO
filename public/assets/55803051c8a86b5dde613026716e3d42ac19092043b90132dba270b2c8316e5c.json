@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "Source-evidence consistency and inference-scope lock; not a new observational reduction or MHD validation.",
+  "positive_front_crossing_preserved": true,
+  "later_filament_spectrum_not_assigned_to_outer_front": true,
+  "null_response_not_absent_wave": true,
+  "CDS_limit_not_intrinsic_normal_velocity": true,
+  "blend_veto_scoped_to_event_wing": true,
+  "source_fast_label_not_solver_label": true,
+  "new_MHD_roots": 0,
+  "physical_family_set_is_null_not_empty": true,
+  "rounded_source_times_not_promoted_to_archive_precision": true,
+  "unknown_front_emissivity_and_dwell_time_remain_unknown": true,
+  "raw_solar_data_downloaded": false,
+  "other_event_analysis_started": false
+}

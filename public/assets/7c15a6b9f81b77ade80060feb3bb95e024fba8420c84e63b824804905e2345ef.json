@@ -1,0 +1,7 @@
+{
+  "status": "NOT_RUN_INPUT_GATE",
+  "records": [],
+  "interpretation": "No root problem was posed. This empty execution record is not an empty physical solution set.",
+  "admissible_family_set": null,
+  "conservation_entropy_characteristic_checks": "NOT_RUN; no same-patch E08 state pair is supplied."
+}

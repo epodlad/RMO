@@ -1,0 +1,39 @@
+{
+  "document_kind": "synthetic_input_specification_examples_not_executed",
+  "status": "DESIGN_REQUIREMENTS_NOT_TEST_RESULTS",
+  "source": "results/r6d_final/RMO_R6d_schema_regular.json",
+  "request": {
+    "schema_version": "rmo-quicklook-synthetic-request-draft-0.1.0",
+    "request_id": "draft_brio_wu_gamma2_initial_states",
+    "purpose": "synthetic_initial_value",
+    "execution_mode": "preflight_only",
+    "physics": {"model": "ideal_mhd_1d", "gamma": 2, "mu0_normalized": 1},
+    "normalization": {"rho0": 1, "v0": 1, "B0": 1, "p0": 1, "source_units": "synthetic_normalized"},
+    "geometry": {
+      "source_frame": "RIEMANN_COMPUTATIONAL", "solver_frame": "RIEMANN_COMPUTATIONAL",
+      "normal": [1, 0, 0], "t1": [0, 1, 0], "t2": [0, 0, 1],
+      "galilean_offset": [0, 0, 0], "handedness": "right"
+    },
+    "shared_Bn": 0.75,
+    "initial_states": {
+      "left": {"rho": 1, "p": 1, "u": [0, 0, 0], "B_t": [1, 0], "id": "X_L0", "role": "initial_left", "frame": "RIEMANN_COMPUTATIONAL", "units": "normalized_mu0_1"},
+      "right": {"rho": 0.125, "p": 0.1, "u": [0, 0, 0], "B_t": [-1, 0], "id": "X_R0", "role": "initial_right", "frame": "RIEMANN_COMPUTATIONAL", "units": "normalized_mu0_1"}
+    },
+    "policies": ["REGULAR_EVOLUTIONARY_1.0", "ENUMERATE_NONREGULAR_1.0"],
+    "uncertainty": {"mode": "exact_synthetic"},
+    "missing_reasons": {}
+  },
+  "acceptance_design": [
+    {"id": "I01", "edits": [], "expected": "Input valid; no general complete-fan calculation is implied", "executed": false},
+    {"id": "I02", "edits": [{"path": "/physics/gamma", "value": 1.6666666666666667}], "expected": "Preserve changed gamma; no longer the gamma=2 preset; invalidate stale result", "executed": false},
+    {"id": "I03", "edits": [{"path": "/initial_states/right/p", "value": -0.1}], "expected": "INVALID_STATE; no solver, floor or physical exclusion", "executed": false},
+    {"id": "I04", "edits": [{"path": "/initial_states/right/rho", "value": 1e-12}], "expected": "OUTSIDE_NUMERIC_DOMAIN; no clipping", "executed": false},
+    {"id": "I05", "edits": [{"path": "/initial_states/left/u/2", "value": null}, {"path": "/missing_reasons", "value": {"/initial_states/left/u/2": "Unspecified synthetic component"}}], "expected": "INCOMPLETE input; null not replaced by zero", "executed": false},
+    {"id": "I06", "edits": [{"path": "/initial_states/left/u/2", "value": null}], "expected": "Missing-reason error; no computation", "executed": false},
+    {"id": "I10", "edits": [{"path": "/shared_Bn", "value": 0}], "expected": "Valid zero normal field; no general degenerate-fan capability claim", "executed": false},
+    {"id": "I11", "edits": [{"path": "/initial_states/right/u/2", "value": 0.1}], "expected": "Do not route to coplanar continuation solely from magnetic collinearity", "executed": false},
+    {"id": "I13", "edits": [{"path": "/evidence", "value": "uniquely identified"}], "expected": "Unknown request field rejected; no supplied classification flags accepted", "executed": false},
+    {"id": "I14", "edits": [{"path": "/uncertainty", "value": {"mode": "joint_covariance_metadata_only", "parameters": ["rho_L", "p_L"], "covariance": [[0.0001, 0.00005], [0.00005, 0.0004]], "propagation": "not_implemented"}}], "expected": "Retain joint metadata; do not claim propagated uncertainty or probabilities", "executed": false},
+    {"id": "I15", "edits": [{"path": "/uncertainty", "value": {"mode": "joint_covariance_metadata_only", "parameters": ["rho_L", "p_L"], "covariance": [[1, 2], [2, 1]], "propagation": "not_implemented"}}], "expected": "COVARIANCE_INVALID under semantic validation; no jitter repair", "executed": false}
+  ]
+}

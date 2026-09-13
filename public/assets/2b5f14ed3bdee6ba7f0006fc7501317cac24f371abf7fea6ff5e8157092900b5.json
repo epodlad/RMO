@@ -1,0 +1,30 @@
+{
+  "checkpoint": "R135",
+  "scope": "Additional bounded closure requested during execution: what upstream flow must observations rule out to make FAST the unique regular evolutionary compressive family?",
+  "prior_results_preserved": true,
+  "new_observations": false,
+  "equations": {
+    "wcrit": "sqrt(5*p1/rho1*r/(4-r))",
+    "ucrit": "Vn-wcrit",
+    "r": "(fU/fL)^2; the same radio pair determines density",
+    "pressure": "p1/rho1=2*kB*T/mp under the frozen R109 pure-H equal-temperature closure"
+  },
+  "FAST_certificate": {
+    "r_domain": "Exact saved radio compression enclosure",
+    "eta": "b / ((4-r)/(5*r)); 0<eta<1",
+    "t": "r*h; 0<=t<1",
+    "method": "Exact Bernstein coefficient bounds on an 8x4x8 cover plus analytic positive factors. Boundary eta=1, theta=0 and zero pressure remain degenerate; this certifies the open regular domain only."
+  },
+  "SLOW_onset_certificate": {
+    "construction": "h=2 as one explicitly assumed sub-Alfvenic normal-field coordinate; b=((4-r)/(5*r))*(1+zeta)",
+    "zeta_domain": "0<zeta<=1/10000",
+    "method": "Exact rational polynomial sign certificates over the complete radio-r interval, with an 8x4 cover. Positive entropy follows from the gas-Hugoniot limit and d(p2/b)/db>0 because W<0. Strict nonzero Bt and characteristic splitting require zeta>0.",
+    "meaning": "Prove existence arbitrarily above the conditional ucrit without asserting a measured field, geometry or flow. This is an onset infimum, not a universal classification above the threshold."
+  },
+  "finite_controls": {
+    "source_cases": "R110 central plus eight retained R109 radio/T corners",
+    "zeta": [0.0001, 0.00001, 0.000001, 0.0000001, 0.00000001],
+    "classification": "Unchanged state-only classifier and already frozen R135 safeguards; guard-limited controls stay UNRESOLVED even where an exact open-domain theorem applies."
+  },
+  "observational_comparison": "Central threshold and conservative whole-source-domain threshold at frozen Vn. A future joint Vn/u1n interval must satisfy min(Vn-u1n)>max(wcrit), with shared dependencies retained. A bound on flow alone does not establish radio/EUV patch association or identify a shock surface."
+}

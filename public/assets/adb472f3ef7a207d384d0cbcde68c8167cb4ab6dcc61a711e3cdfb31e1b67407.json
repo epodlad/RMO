@@ -1,0 +1,39 @@
+{
+  "source_id": "CW11",
+  "authors": [
+    "P. F. Chen",
+    "Y. Wu"
+  ],
+  "year": 2011,
+  "event_date": "2010-07-27",
+  "title": "First Evidence of Coexisting EIT Wave and Coronal Moreton Wave from SDO/AIA Observations",
+  "doi": "10.1088/2041-8205/732/2/L20",
+  "canonical_url": "https://arxiv.org/abs/1103.0871",
+  "download_url": "https://arxiv.org/pdf/1103.0871",
+  "version_identified_in_PDF": "arXiv:1103.0871v1, 4 March 2011",
+  "retrieved_UTC_date": "2026-09-11",
+  "identity": {
+    "path": "source/chen_wu_2011_arxiv_1103.0871v1.pdf",
+    "bytes": 1511720,
+    "sha256": "2e65509f5fa83c7721c36023b1feec9e531b7e4b2fa5f472349e05b839acd121"
+  },
+  "read_scope": "Full text; Figures 1–4 visually inspected from local PDF renders.",
+  "why_this_one_new_source": "The saved E02 record only inspected the abstract. Full same-event evidence is essential to test structural independence.",
+  "raw_AIA_downloaded": false,
+  "movie_downloaded_or_viewed": false,
+  "scientific_credit": "Original observations, processing, tracks and interpretations belong to Chen and Wu and the instrument teams. R137 contributes the evidence audit and conditional identifiability analysis.",
+  "source_inconsistencies": [
+    {
+      "location": "Figure 1 caption",
+      "issue": "July 7 differs from July 27 in the title-event record, abstract and body; retained as a caption discrepancy."
+    },
+    {
+      "location": "Sections 3 and 4.1",
+      "issue": "S1 stopping reported as 09:02:28 / about 253 arcsec and 09:02:40 / about 250 arcsec. This discrepancy is not an observational error distribution."
+    },
+    {
+      "location": "Section 4.1, slice B discussion",
+      "issue": "A reflection sentence uses F2 where slice B elsewhere uses F3. No track relabelling or reflection-based mode selection is made."
+    }
+  ]
+}

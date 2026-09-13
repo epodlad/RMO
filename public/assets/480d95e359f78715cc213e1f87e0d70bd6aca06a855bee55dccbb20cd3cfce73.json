@@ -1,0 +1,25 @@
+{
+  "event": "E02",
+  "date": "2010-07-27",
+  "physical_state_domain": null,
+  "geometry_interval": null,
+  "plasma_frame_speed_interval": null,
+  "compression_interval": null,
+  "temperature_interval": null,
+  "vector_field_interval": null,
+  "joint_observational_covariance": null,
+  "arbitrary_independent_error_boxes_added": false,
+  "shared_dependencies": [
+    "same base frame",
+    "same instrument and timing",
+    "surface-slice deprojection",
+    "ridge/phase identity",
+    "local plasma association"
+  ],
+  "mathematical_range_is_not_observational_domain": true,
+  "numerical_grid": null,
+  "root_residual_tolerance": null,
+  "numerical_guard_bands": null,
+  "why_no_solver_thresholds": "No event-specific state domain or root calculation was authorized by the structural/input gate. A future solver must predefine its numerical thresholds before execution.",
+  "no_inherited_E05_E11_input_transferred": true
+}
