@@ -1,8 +1,10 @@
-# Zenodo release preparation
+# Zenodo release publication
+
+Software version **1.0.0-rc3** is published with DOI [10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502). The [GitHub release](https://github.com/epodlad/RMO/releases/tag/v1.0.0-rc3) identifies commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. Subsequent DOI/citation documentation updates do not alter that archived tag. The scientific companion remains a separate, pending deposit.
 
 Version 1.0.0-rc3 is a release candidate. The application is hosted at https://rmo-solar.org/. See [release acceptance](RELEASE_ACCEPTANCE.md) for the targeted checks completed on 2026-09-14 and the interactive coverage that remains open. Retain that scope in the release description.
 
-## Software: archive the GitHub release
+## Software archiving workflow
 
 1. Make the reviewed `epodlad/RMO` repository public in GitHub Settings.
 2. Sign in to Zenodo and link the GitHub account. In Zenodo's GitHub settings, sync the repository list and enable `epodlad/RMO`.
