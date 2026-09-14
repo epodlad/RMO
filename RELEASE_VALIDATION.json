@@ -160,7 +160,7 @@
     "broken_fragment_links": [],
     "missing_assets": [],
     "referenced_assets": 338,
-    "browser_acceptance": "not performed; structural checks only"
+    "browser_acceptance": "Targeted hosted smoke checks recorded 2026-09-14; complete interactive coverage remains open. See docs/RELEASE_ACCEPTANCE.md."
   },
   "scientific_core": {
     "files_compared": 25,
@@ -180,7 +180,7 @@
     "output_sha256": "185c1a0213b56cbd5557c14e5a2f73eea29d945f27b58f463077bddb02c6ada9",
     "saved_singular_values_match": true,
     "singular_value_rtol": 1e-12,
-    "singular_value_atol": 1e-09,
+    "singular_value_atol": 1e-9,
     "all_rank_max_abs_error": 3.126388037344441e-12,
     "weighted_all_rank_max_abs_error": 7.389644451905042e-13,
     "shape": [
@@ -239,8 +239,9 @@
     "render_yaml_parsed": true
   },
   "remaining_acceptance": [
-    "Interactive browser acceptance of this derivative",
-    "Initial Render deployment and hosted acceptance"
+    "Complete interactive coverage: 38 analysis links, all viewer frame controls, lower historical sections and remaining import forms",
+    "Separate direct browser confirmation of www-to-apex redirect",
+    "Production load testing is outside the completed smoke-check scope"
   ],
   "full_scientific_campaign_rerun": false,
   "navigation_regression_2026_09_14": {
@@ -434,7 +435,150 @@
     },
     "scope": "Isolated HTTP route checks with small public fixtures; no scientific calculations or interactive browser run.",
     "baseline_observation": "Unmodified server fails external link opens application with HTTP 403.",
-    "hosted_redeploy_acceptance": "PENDING",
-    "original_release_archives": "Remain the immutable baseline; refresh the application release archive after hosted acceptance."
+    "hosted_redeploy_acceptance": "Landing-page navigation confirmed by maintainer after deployment of 3e18e62; see hosted_acceptance_2026_09_14.",
+    "original_release_archives": "Immutable baseline; current software archive must be generated from the prepared release tag, including navigation fix and updated release records. Scientific companion unchanged."
+  },
+  "hosted_acceptance_2026_09_14": {
+    "runtime_commit": "3e18e62a628c26df227bdadf2ca3cc5d3f80c24a",
+    "application_url": "https://rmo-solar.org/",
+    "scope": "Maintainer browser smoke checks and inspection of exported results; complete interactive coverage not established.",
+    "report": "docs/RELEASE_ACCEPTANCE.md",
+    "a63": {
+      "input_bound_factor": 0.01,
+      "result": "CONDITIONAL_ROBUST_CLASS",
+      "class": "fast_shock",
+      "pdf_download_inspected": true,
+      "input_result_identity_checked": true,
+      "import_recalculation_reported": true,
+      "matching_result_exports_sha256": "fe704db44119c10cf9a380e85d36fc956539adcc5b9bdf81a1285d6189215241"
+    },
+    "b01": {
+      "input_status": "VALID",
+      "execution_status": "FINISHED",
+      "solver_calls": 2,
+      "checks_per_policy": 37,
+      "all_inspected_checks": "PASS",
+      "source_manifest_records_checked": 31,
+      "source_manifest_mismatches": []
+    },
+    "two_window_test": {
+      "different_execution_ids": true,
+      "results": [
+        {
+          "bytes": 38754,
+          "execution": {
+            "elapsed_seconds": 5.282269313931465,
+            "ended_utc": "2026-09-14T03:03:12.026103+00:00",
+            "solver_call_count": 2,
+            "started_utc": "2026-09-14T03:03:06.743839+00:00",
+            "status": "FINISHED",
+            "total_budget_seconds": 30
+          },
+          "execution_id": "rmo_f8890f8f-bc40-4b9a-ab97-1693b1c100db",
+          "file": "RMO_computed_rmo_f8890f8f-bc40-4b9a-ab97-1693b1c100db.json",
+          "input_errors": [],
+          "input_status": "VALID",
+          "normal_velocities": {
+            "left": 0.2,
+            "right": 0.2
+          },
+          "request_hash_matches": true,
+          "request_matches_input": true,
+          "runs": [
+            {
+              "check_count": 37,
+              "errors": [],
+              "nonpassing_checks": [],
+              "policy": "REGULAR_EVOLUTIONARY_1.0",
+              "returncode": 0,
+              "status": "FINISHED",
+              "validation": "PASS",
+              "wave_speeds": [
+                0.2
+              ]
+            },
+            {
+              "check_count": 37,
+              "errors": [],
+              "nonpassing_checks": [],
+              "policy": "ENUMERATE_NONREGULAR_1.0",
+              "returncode": 0,
+              "status": "FINISHED",
+              "validation": "PASS",
+              "wave_speeds": [
+                0.2
+              ]
+            }
+          ],
+          "sha256": "240a30194dee2526680b3db1d468009d4bcb7fa09a82664abe3523136de266a0"
+        },
+        {
+          "bytes": 38766,
+          "execution": {
+            "elapsed_seconds": 5.136687824502587,
+            "ended_utc": "2026-09-14T03:06:22.616130+00:00",
+            "solver_call_count": 2,
+            "started_utc": "2026-09-14T03:06:17.479470+00:00",
+            "status": "FINISHED",
+            "total_budget_seconds": 30
+          },
+          "execution_id": "rmo_8c981d5d-699b-4e5a-a8bc-97f68f70f037",
+          "file": "RMO_computed_rmo_8c981d5d-699b-4e5a-a8bc-97f68f70f037.json",
+          "input_errors": [],
+          "input_status": "VALID",
+          "normal_velocities": {
+            "left": 0.45,
+            "right": 0.45
+          },
+          "request_hash_matches": true,
+          "request_matches_input": true,
+          "runs": [
+            {
+              "check_count": 37,
+              "errors": [],
+              "nonpassing_checks": [],
+              "policy": "REGULAR_EVOLUTIONARY_1.0",
+              "returncode": 0,
+              "status": "FINISHED",
+              "validation": "PASS",
+              "wave_speeds": [
+                0.45
+              ]
+            },
+            {
+              "check_count": 37,
+              "errors": [],
+              "nonpassing_checks": [],
+              "policy": "ENUMERATE_NONREGULAR_1.0",
+              "returncode": 0,
+              "status": "FINISHED",
+              "validation": "PASS",
+              "wave_speeds": [
+                0.45
+              ]
+            }
+          ],
+          "sha256": "5273359ab032b5685d3cf35cb138c87408591953dde505cd02527cb756c6d20f"
+        }
+      ],
+      "source_records_identical": true
+    },
+    "saved_brio_wu_viewer": {
+      "evidence": "maintainer report",
+      "three_images_displayed": true,
+      "compound_fan_download_reported": true
+    },
+    "custom_domain": {
+      "evidence": "maintainer report and pasted JSON excerpts",
+      "tls_apex_and_www": "Verified / Certificate Issued reported",
+      "input_status": "VALID",
+      "shown_policy": "ENUMERATE_NONREGULAR_1.0",
+      "shown_returncode": 0,
+      "shown_errors": [],
+      "validation_execution": "FINISHED",
+      "validation": "PASS",
+      "full_export_reviewed": false,
+      "aggregate_status_and_second_policy_reviewed": false
+    }
   }
 }

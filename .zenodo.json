@@ -1,7 +1,7 @@
 {
   "title": "RMO — Riemann Map Operator",
   "upload_type": "software",
-  "description": "R139 scientific release candidate: local ideal-MHD interpretation of declared solar constraints, with the established QuickLook interface, runtime source and a separate scientific-data companion. Scientific statements remain conditional on documented inputs, models and search limits. Original RMO code is Apache-2.0; third-party material retains its specified terms and source acknowledgements.",
+  "description": "RMO version 1.0.0-rc3 preserves the R139 scientific state and the established QuickLook interface for local ideal-MHD interpretation of declared solar constraints. The hosted application is available at https://rmo-solar.org/. This software archive contains runtime source, reviewed presentation assets, licenses, citation metadata and scoped validation records. Targeted hosted checks cover A63 local diagnosis and exports, B01 contact calculations and a normal/incognito comparison. Remaining interactive coverage is documented in docs/RELEASE_ACCEPTANCE.md. Scientific statements remain conditional on documented inputs, models and search limits; full MHD branch coverage, uniqueness, stability and observational identification are not established by these smoke tests. The scientific data and reproduction companion R139 is a separate archive. Original RMO code is Apache-2.0; third-party material retains its specified terms and source acknowledgements.",
   "creators": [
     {
       "name": "Podladchikova, Elena"
@@ -22,5 +22,6 @@
       "relation": "isSupplementTo",
       "scheme": "url"
     }
-  ]
+  ],
+  "access_right": "open"
 }

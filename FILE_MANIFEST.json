@@ -17,13 +17,13 @@
     },
     {
       "path": ".zenodo.json",
-      "bytes": 892,
-      "sha256": "a101646f1a80bc39438059489b1f421cfdfb2ef65b53dc19c6c400628da6dd0f"
+      "bytes": 1481,
+      "sha256": "6cff6579f17d6c7fd756fb86834534e453fc90babce6de5d1f82f78d9a4571e1"
     },
     {
       "path": "CITATION.cff",
-      "bytes": 451,
-      "sha256": "10a72bea595efcae1dcb7c0713bd197e8854ffbebd2ae80a98533198162cb0b9"
+      "bytes": 479,
+      "sha256": "860983a090f9d0720e821286982884e06061b046504ce65973b789f15395286a"
     },
     {
       "path": "LICENSE",
@@ -32,13 +32,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 3114,
-      "sha256": "124865a48d968656205c78f30387ec19f61c063fe2abec029299c7305e820d14"
+      "bytes": 3432,
+      "sha256": "c76a0f1c21c64552875158de59db42cb1faa4a8dd0c502a473ae928656a85dcd"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "bytes": 1435,
+      "sha256": "e9957764a41edd647728858cb7f475ae2ea365f0b5b440cdae270e713fecc2b3"
     },
     {
       "path": "RELEASE_VALIDATION.json",
-      "bytes": 11981,
-      "sha256": "f942397361351ef602646e4007a4cc2babb0c77d5421e84b174dbe390472c769"
+      "bytes": 17307,
+      "sha256": "0aba151a98cfe17cd9a0d83b0255ff8cff8354e46db19f350be33b5db1455908"
     },
     {
       "path": "RMO/RMO_benchmark_manifest_v1_1.yaml",
@@ -61,9 +66,14 @@
       "sha256": "b78ed143a0b59b1b4f25d7567c6d7de2b2bfb29bbe6318861975c1c0863a1e9f"
     },
     {
+      "path": "docs/RELEASE_ACCEPTANCE.md",
+      "bytes": 4214,
+      "sha256": "17cb41ad0e4cc736ed832210c4c3ca17ccc14ee0d3f386434dfce65508039405"
+    },
+    {
       "path": "docs/RELEASE_ZENODO.md",
-      "bytes": 1901,
-      "sha256": "39aef59ec9ed71e3a2b21ad5c86dc92d71461afff604bdffeb45a72cd22103f9"
+      "bytes": 2938,
+      "sha256": "489950e8e40a35ac6b8942be55972a5e62d58a06c2805fef48251d7c1a3f3b9f"
     },
     {
       "path": "docs/REPRODUCIBILITY.md",
