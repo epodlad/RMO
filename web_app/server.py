@@ -51,7 +51,7 @@ class State:
             self.output = Path(os.environ.get('RMO_RESULTS_DIR',str(ROOT/'results/local_runs'))) / uuid.uuid4().hex
             self.output.mkdir(parents=True,exist_ok=False)
 
-    def origin(self, request):
+    def origin(self, request, *, allow_navigation=False):
         hosts = request.headers.getall('Host', [])
         if len(hosts) != 1:
             raise web.HTTPForbidden(text='One valid Host header is required.')
@@ -59,7 +59,14 @@ class State:
         origin = scheme + '://' + hosts[0]
         if origin not in self.origins:
             raise web.HTTPForbidden(text='Unrecognized application origin.')
-        if request.headers.get('Sec-Fetch-Site') not in (None, 'none', 'same-origin'):
+        # Public links may open the landing page, while APIs and assets retain
+        # the strict request policy. Only the index handler enables this case.
+        navigation = (allow_navigation and request.path == '/'
+                      and request.method in ('GET', 'HEAD')
+                      and request.headers.get('Sec-Fetch-Site') in ('cross-site', 'same-site')
+                      and request.headers.get('Sec-Fetch-Mode') == 'navigate'
+                      and request.headers.get('Sec-Fetch-Dest') == 'document')
+        if request.headers.get('Sec-Fetch-Site') not in (None, 'none', 'same-origin') and not navigation:
             raise web.HTTPForbidden(text='Cross-site requests are disabled.')
         return origin
 
@@ -113,7 +120,7 @@ async def headers(request, handler):
     return response
 
 async def index(request):
-    state=request.app[STATE];origin=state.origin(request)
+    state=request.app[STATE];origin=state.origin(request,allow_navigation=True)
     ident, session=state.session(request,create=True)
     marker='<script id="local-config" type="application/json">{"enabled":false}</script>'
     if state.page.count(marker)!=1:

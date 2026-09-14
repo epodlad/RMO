@@ -242,5 +242,199 @@
     "Interactive browser acceptance of this derivative",
     "Initial Render deployment and hosted acceptance"
   ],
-  "full_scientific_campaign_rerun": false
+  "full_scientific_campaign_rerun": false,
+  "navigation_regression_2026_09_14": {
+    "baseline_commit": "7c7a35dfd1c626f3e743c22057676d597157325f",
+    "change": "Allow GET/HEAD top-level document navigation only at the public index; keep Host, API, token and session checks.",
+    "command": "python -B verification/navigation_smoke.py",
+    "verification": {
+      "checks": [
+        {
+          "name": "external link opens application",
+          "pass": true
+        },
+        {
+          "name": "navigation retains protected cookie",
+          "pass": true
+        },
+        {
+          "name": "navigation retains response isolation",
+          "pass": true
+        },
+        {
+          "name": "navigation uses configured origin",
+          "pass": true
+        },
+        {
+          "name": "cross-site GET document navigation",
+          "pass": true
+        },
+        {
+          "name": "cross-site HEAD document navigation",
+          "pass": true
+        },
+        {
+          "name": "cross-site cors/empty blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site no-cors/image blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site navigate/iframe blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site navigate/frame blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site navigate/empty blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site cors/document blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site without navigation metadata blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site cannot extend navigation exception to /api/status",
+          "pass": true
+        },
+        {
+          "name": "cross-site cannot extend navigation exception to /api/run",
+          "pass": true
+        },
+        {
+          "name": "cross-site cannot extend navigation exception to /api/diagnose",
+          "pass": true
+        },
+        {
+          "name": "cross-site cannot extend navigation exception to /api/cancel",
+          "pass": true
+        },
+        {
+          "name": "cross-site cannot extend navigation exception to /assets/0000000000000000000000000000000000000000000000000000000000000000.txt",
+          "pass": true
+        },
+        {
+          "name": "same-site GET document navigation",
+          "pass": true
+        },
+        {
+          "name": "same-site HEAD document navigation",
+          "pass": true
+        },
+        {
+          "name": "same-site cors/empty blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site no-cors/image blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site navigate/iframe blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site navigate/frame blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site navigate/empty blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site cors/document blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site without navigation metadata blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site cannot extend navigation exception to /api/status",
+          "pass": true
+        },
+        {
+          "name": "same-site cannot extend navigation exception to /api/run",
+          "pass": true
+        },
+        {
+          "name": "same-site cannot extend navigation exception to /api/diagnose",
+          "pass": true
+        },
+        {
+          "name": "same-site cannot extend navigation exception to /api/cancel",
+          "pass": true
+        },
+        {
+          "name": "same-site cannot extend navigation exception to /assets/0000000000000000000000000000000000000000000000000000000000000000.txt",
+          "pass": true
+        },
+        {
+          "name": "existing direct/same-origin access: None",
+          "pass": true
+        },
+        {
+          "name": "existing direct/same-origin access: none",
+          "pass": true
+        },
+        {
+          "name": "existing direct/same-origin access: same-origin",
+          "pass": true
+        },
+        {
+          "name": "navigation does not enable POST on root",
+          "pass": true
+        },
+        {
+          "name": "navigation does not bypass Host allowlist",
+          "pass": true
+        },
+        {
+          "name": "same-origin session still works",
+          "pass": true
+        },
+        {
+          "name": "API rejects wrong token",
+          "pass": true
+        },
+        {
+          "name": "API rejects missing session",
+          "pass": true
+        },
+        {
+          "name": "API rejects foreign Origin",
+          "pass": true
+        },
+        {
+          "name": "separate navigation sessions have distinct tokens",
+          "pass": true
+        },
+        {
+          "name": "another session cannot reuse first token",
+          "pass": true
+        },
+        {
+          "name": "navigation never starts a calculation",
+          "pass": true
+        }
+      ],
+      "all_recorded_checks_pass": true
+    },
+    "environment": {
+      "python": "3.12.14",
+      "aiohttp": "3.13.5"
+    },
+    "scope": "Isolated HTTP route checks with small public fixtures; no scientific calculations or interactive browser run.",
+    "baseline_observation": "Unmodified server fails external link opens application with HTTP 403.",
+    "hosted_redeploy_acceptance": "PENDING",
+    "original_release_archives": "Remain the immutable baseline; refresh the application release archive after hosted acceptance."
+  }
 }
