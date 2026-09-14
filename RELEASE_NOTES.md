@@ -10,6 +10,6 @@ The hosted navigation fix enables external links to open the landing page while 
 
 Complete interactive coverage and production load testing remain open. Supported local classes and saved Brio–Wu solutions do not establish full MHD branch coverage, uniqueness or observational identification.
 
-The scientific companion `RMO_science_R139.zip` is distributed separately and is not needed to run the application. Its Zenodo record and the software DOI will be linked after publication.
+The software release is archived at DOI [10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502), corresponding to tag `v1.0.0-rc3` and commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. The scientific companion `RMO_science_R139.zip` is prepared for a separate deposit and is not needed to run the application. Its Zenodo record will be linked after publication.
 
 Original RMO code: **Apache-2.0**. Third-party software, fonts, data and source acknowledgements retain their respective terms in `THIRD_PARTY_NOTICES.md`.

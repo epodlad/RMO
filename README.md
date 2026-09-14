@@ -1,5 +1,7 @@
 # RMO — Riemann Map Operator
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22741502.svg)](https://doi.org/10.5281/zenodo.22741502)
+
 **Use the hosted application: [rmo-solar.org](https://rmo-solar.org/).**
 
 RMO connects declared solar-observation constraints with admissible local ideal-MHD interpretations. This release candidate preserves the R139 scientific results and the established QuickLook interface, including 38 analysis links, input forms, scientific image viewers, saved assessments and version history.
@@ -39,6 +41,6 @@ The hosted application has completed the targeted browser smoke checks documente
 
 ## Citation and rights
 
-Use `CITATION.cff` for the software citation. No DOI is assigned in this package. See [Zenodo preparation](docs/RELEASE_ZENODO.md).
+Cite the archived software release **1.0.0-rc3** using DOI [10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502). Machine-readable citation metadata is in `CITATION.cff`. This DOI identifies the source at tag [`v1.0.0-rc3`](https://github.com/epodlad/RMO/releases/tag/v1.0.0-rc3), commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. Later documentation updates on `main` are outside that archived snapshot. See [Zenodo publication details](docs/RELEASE_ZENODO.md).
 
 Original RMO code is distributed under Apache-2.0. Third-party code, fonts and observational data retain their own terms and acknowledgements: see `THIRD_PARTY_NOTICES.md`. Source links replace published figures and the 2017 preview sequence whose exact redistribution basis was not established. This does not change the retained scientific numerical results.

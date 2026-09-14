@@ -3,6 +3,8 @@ message: "Please cite this software and the original observational sources relev
 type: software
 title: "RMO — Riemann Map Operator"
 version: 1.0.0-rc3
+doi: 10.5281/zenodo.22741502
+date-released: 2026-09-14
 authors:
   - family-names: Podladchikova
     given-names: Elena
