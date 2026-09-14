@@ -1,6 +1,6 @@
 # Zenodo release publication
 
-Software version **1.0.0-rc3** is published with DOI [10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502). The [GitHub release](https://github.com/epodlad/RMO/releases/tag/v1.0.0-rc3) identifies commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. Subsequent DOI/citation documentation updates do not alter that archived tag. The scientific companion remains a separate, pending deposit.
+Software version **1.0.0-rc3** is published with DOI [10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502). The [GitHub release](https://github.com/epodlad/RMO/releases/tag/v1.0.0-rc3) identifies commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. Subsequent DOI/citation documentation updates do not alter that archived tag. The scientific companion **R139** is published as a separate dataset with DOI [10.5281/zenodo.22742107](https://doi.org/10.5281/zenodo.22742107).
 
 Version 1.0.0-rc3 is a release candidate. The application is hosted at https://rmo-solar.org/. See [release acceptance](RELEASE_ACCEPTANCE.md) for the targeted checks completed on 2026-09-14 and the interactive coverage that remains open. Retain that scope in the release description.
 
@@ -17,9 +17,9 @@ Zenodo gives [`.zenodo.json` precedence over `CITATION.cff`](https://help.zenodo
 
 ## Scientific companion: a separate linked record
 
-Use the already prepared `RMO_science_R139.zip` (1,316,283,163 bytes; SHA-256 `a4d65ddf121bdaa67b5fa75baa2a4fc8abfd5bdd189d6e142085f6a57f648191`). It contains retained scientific data, reproduction code, numerical results, figures, its own manifest and third-party notices. It is not contained in this application repository and will not be transferred by the repository's release webhook.
+Download [`RMO_science_R139.zip` from the published R139 record](https://doi.org/10.5281/zenodo.22742107) (1,316,283,163 bytes; SHA-256 `a4d65ddf121bdaa67b5fa75baa2a4fc8abfd5bdd189d6e142085f6a57f648191`). It contains retained scientific data, reproduction code, numerical results, figures, its own manifest and third-party notices. It is not contained in this application repository and will not be transferred by the repository's release webhook.
 
-Deposit the companion separately and describe its scientific scope and source-license distinctions. Link the software and companion records once their actual identifiers are available. Add the software DOI to citation metadata after assignment without altering the already archived tag.
+The scientific record links to the software release and the live application. Cite the software DOI for the application and the scientific DOI for the companion data and analyses, together with the relevant original sources. These documentation links do not alter the already archived software tag or either deposited archive.
 
 ## Manual software fallback
 
