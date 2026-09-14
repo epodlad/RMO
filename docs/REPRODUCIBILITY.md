@@ -8,7 +8,7 @@ The application retains the R139 scientific state. The web transport and packagi
 
 ## Scientific companion
 
-Extract `RMO_science_R139.zip` into a separate working directory. The top-level scientific folders, their `results/`, and `observational_pilot/` preserve the retained source inputs, saved numerical results and method code. File hashes are in `FILE_MANIFEST.json` and can be checked with `verify_manifest.py`. Historical per-study protocols describe the original executions; their old UI, package and full-snapshot paths are not instructions to rebuild this curated release.
+Download `RMO_science_R139.zip` from **Scientific Archive R139**, DOI [10.5281/zenodo.22742107](https://doi.org/10.5281/zenodo.22742107), and extract it into a separate working directory. The top-level scientific folders, their `results/`, and `observational_pilot/` preserve the retained source inputs, saved numerical results and method code. File hashes are in `FILE_MANIFEST.json` and can be checked with `verify_manifest.py`. Historical per-study protocols describe the original executions; their old UI, package and full-snapshot paths are not instructions to rebuild this curated release.
 
 For a bounded reproduction, copy the relevant study to a new output directory, inspect its per-study dependencies and input paths, and run its scientific calculation or figure script there. Original saved results should remain the comparison baseline. Some original protocols expect source data retrieved separately and the historical dependency versions in their runtime records. The entire R0–R139 campaign has not been rerun for this release.
 

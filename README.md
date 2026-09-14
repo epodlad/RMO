@@ -29,7 +29,7 @@ Local completed requests/results are written to a new directory under `results/l
 
 ## Scientific reproduction
 
-The application repository contains the runtime source, required fixtures and the reviewed presentation assets. The separate `RMO_science_R139.zip` companion contains retained scientific code, data, assessments and figures. See [scientific reproduction](docs/REPRODUCIBILITY.md). It is a companion archive for Zenodo, not a build dependency for Render.
+The application repository contains the runtime source, required fixtures and the reviewed presentation assets. The separate [`RMO_science_R139.zip` companion](https://doi.org/10.5281/zenodo.22742107) contains retained scientific code, data, assessments and figures. See [scientific reproduction](docs/REPRODUCIBILITY.md). It is a companion archive for Zenodo, not a build dependency for Render.
 
 Run the application smoke checks after installing dependencies:
 
@@ -42,5 +42,7 @@ The hosted application has completed the targeted browser smoke checks documente
 ## Citation and rights
 
 Cite the archived software release **1.0.0-rc3** using DOI [10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502). Machine-readable citation metadata is in `CITATION.cff`. This DOI identifies the source at tag [`v1.0.0-rc3`](https://github.com/epodlad/RMO/releases/tag/v1.0.0-rc3), commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. Later documentation updates on `main` are outside that archived snapshot. See [Zenodo publication details](docs/RELEASE_ZENODO.md).
+
+When using the scientific companion's data, figures or analyses, also cite **Scientific Archive R139**, DOI [10.5281/zenodo.22742107](https://doi.org/10.5281/zenodo.22742107), and the original sources relevant to the study.
 
 Original RMO code is distributed under Apache-2.0. Third-party code, fonts and observational data retain their own terms and acknowledgements: see `THIRD_PARTY_NOTICES.md`. Source links replace published figures and the 2017 preview sequence whose exact redistribution basis was not established. This does not change the retained scientific numerical results.
