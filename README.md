@@ -1,5 +1,7 @@
 # RMO — Riemann Map Operator
 
+**Use the hosted application: [rmo-solar.org](https://rmo-solar.org/).**
+
 RMO connects declared solar-observation constraints with admissible local ideal-MHD interpretations. This release candidate preserves the R139 scientific results and the established QuickLook interface, including 38 analysis links, input forms, scientific image viewers, saved assessments and version history.
 
 The calculations are conditional on the stated model, inputs and search limits. A supported local class does not establish a unique global Riemann solution or identify an observed solar front by itself. The interface keeps these distinctions beside the results.
@@ -33,7 +35,7 @@ Run the application smoke checks after installing dependencies:
 python3 -B verification/release_smoke.py
 ```
 
-The release validation report distinguishes HTTP/scientific checks from browser acceptance. Full interactive browser acceptance and the first hosted deployment remain release-candidate gates.
+The hosted application has completed the targeted browser smoke checks documented in [release acceptance](docs/RELEASE_ACCEPTANCE.md): A63 local diagnosis and exports, B01 contact calculations, and a normal/incognito comparison. The same report records the custom-domain check and the remaining interactive coverage. This is version 1.0.0-rc3; complete interactive acceptance, full MHD branch coverage and load testing are not claimed.
 
 ## Citation and rights
 
