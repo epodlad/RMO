@@ -37,8 +37,8 @@
     },
     {
       "path": "RELEASE_VALIDATION.json",
-      "bytes": 6289,
-      "sha256": "ad6715d58643156f5aeb7633d6b592733ca9118f2c50af694f1e3df7a4ece497"
+      "bytes": 11981,
+      "sha256": "f942397361351ef602646e4007a4cc2babb0c77d5421e84b174dbe390472c769"
     },
     {
       "path": "RMO/RMO_benchmark_manifest_v1_1.yaml",
@@ -2151,6 +2151,11 @@
       "sha256": "44a115627c9f2274e724331b869e6d137210af2e8ac09a171333d9b17c53f895"
     },
     {
+      "path": "verification/navigation_smoke.py",
+      "bytes": 6664,
+      "sha256": "a711b465a3e09a149e9de4523b0efdca5dc26d7ccc8546123efaa41c2c039a68"
+    },
+    {
       "path": "verification/public_service_smoke.py",
       "bytes": 3424,
       "sha256": "7a4c30d65aed9e28c8bde242bdd6a13392a389c82526b0b4cffa11b80f99612c"
@@ -2172,8 +2177,8 @@
     },
     {
       "path": "web_app/server.py",
-      "bytes": 12854,
-      "sha256": "1fc7fdbfeda3c2b53378b6d195297ec5eed2408b278ad51e417247beff78b1f7"
+      "bytes": 13455,
+      "sha256": "0b6a269e1ddbef37ed5d2a44c2e776a4de44132f2618065e2280cb47a771230b"
     }
   ]
 }
