@@ -37,8 +37,8 @@
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 2868,
-      "sha256": "1a21489ad69dfff8b04dc4153f586d5c8dab70af62ebf0229c3742030676e617"
+      "bytes": 3285,
+      "sha256": "7df391374405feb14413c61c493c5589f5b078bb54df9e5914b48d4d529090a6"
     },
     {
       "path": "RELEASE_VALIDATION.json",
@@ -64,6 +64,11 @@
       "path": "docs/DEPLOY_RENDER.md",
       "bytes": 2655,
       "sha256": "92a5c799946ec8104745d571d8f309ac5ffffebf92930f4857c5e279574db1c5"
+    },
+    {
+      "path": "docs/QUICKLOOK_GUIDE_PROVENANCE.json",
+      "bytes": 1295,
+      "sha256": "f2d0efa412632af02cb957771942d416193465bb4129806546f12403d2cd6930"
     },
     {
       "path": "docs/RELEASE_ACCEPTANCE.md",
@@ -361,6 +366,11 @@
       "sha256": "08c71803408513b35ff5626e8f40c610449a948288d106e12f8023b816f04d9a"
     },
     {
+      "path": "public/assets/08d3402091c0b8e93f2e660b4372180b93b358b486c69a02baf70402d26c59c3.svg",
+      "bytes": 59466,
+      "sha256": "08d3402091c0b8e93f2e660b4372180b93b358b486c69a02baf70402d26c59c3"
+    },
+    {
       "path": "public/assets/090d2bd9148969fdb28d22dbd998938526cc8b0c7b86dc7d59169909801fa938.png",
       "bytes": 69330,
       "sha256": "090d2bd9148969fdb28d22dbd998938526cc8b0c7b86dc7d59169909801fa938"
@@ -514,6 +524,11 @@
       "path": "public/assets/219341b746af07b7b0da4922a52bb5316b5b080e3088fc1d1eb0ee6ecca700e3.svg",
       "bytes": 40760,
       "sha256": "219341b746af07b7b0da4922a52bb5316b5b080e3088fc1d1eb0ee6ecca700e3"
+    },
+    {
+      "path": "public/assets/2203ea58d67bef8c4767d0bacf5428a7fe2e6c177af1d4bf0bd159218768ad8d.svg",
+      "bytes": 130951,
+      "sha256": "2203ea58d67bef8c4767d0bacf5428a7fe2e6c177af1d4bf0bd159218768ad8d"
     },
     {
       "path": "public/assets/2221ac362e1952ca88c1afb70e7da6b00945601badfbdb8dea881aad973e776c.json",
@@ -1091,11 +1106,6 @@
       "sha256": "727e588920d922b4ac23ac4a461b3750f6e205e396886f52767cbeaa632dea7c"
     },
     {
-      "path": "public/assets/72c8ce5dbc21c2e5e28c9a4ab15b82b76de74ef0a86d5e30952dba56b0a65ea8.txt",
-      "bytes": 5000014,
-      "sha256": "72c8ce5dbc21c2e5e28c9a4ab15b82b76de74ef0a86d5e30952dba56b0a65ea8"
-    },
-    {
       "path": "public/assets/743139d5c505499a298f5991b60e228a1b0fdce73a276cebf6a95a57379df811.png",
       "bytes": 1016648,
       "sha256": "743139d5c505499a298f5991b60e228a1b0fdce73a276cebf6a95a57379df811"
@@ -1164,6 +1174,11 @@
       "path": "public/assets/7c20788f5a3fb9d2507d49433824165e77e8307abb5c6e9526bedd28f8dee4f1.json",
       "bytes": 4529,
       "sha256": "7c20788f5a3fb9d2507d49433824165e77e8307abb5c6e9526bedd28f8dee4f1"
+    },
+    {
+      "path": "public/assets/7c6a07efa1fccbe107efffaa230cec20421fa7722afd4e416dbb27dc3e3f6dda.txt",
+      "bytes": 4999956,
+      "sha256": "7c6a07efa1fccbe107efffaa230cec20421fa7722afd4e416dbb27dc3e3f6dda"
     },
     {
       "path": "public/assets/7c7cd83ba09fd1f266bb53ffce143024bc31c8f27aa755e6f76f89b5027ed1cb.jpg",
@@ -1254,6 +1269,11 @@
       "path": "public/assets/86c2cb58e531f5205cb6b573099665eb1bbeea53f94c4911ca16a25505ebb2fe.json",
       "bytes": 17182,
       "sha256": "86c2cb58e531f5205cb6b573099665eb1bbeea53f94c4911ca16a25505ebb2fe"
+    },
+    {
+      "path": "public/assets/88426c92799199326fd73329639dd89d07f50e9182b295a3bbcce00da58fd44a.pdf",
+      "bytes": 10602,
+      "sha256": "88426c92799199326fd73329639dd89d07f50e9182b295a3bbcce00da58fd44a"
     },
     {
       "path": "public/assets/88708c10e033e1b69f7a4a546b9b2b1084efaf531ebfc6790f83777e9791d28b.png",
@@ -1846,6 +1866,11 @@
       "sha256": "ec99fd9644a11db3b698e3878f1d39cfa1e4a2d3fa544bcd9b386ac853ac8ad7"
     },
     {
+      "path": "public/assets/ed4fc8c8d70f2d237f018542399be0f556ed11806396cacf635055e833ab7409.pdf",
+      "bytes": 28853,
+      "sha256": "ed4fc8c8d70f2d237f018542399be0f556ed11806396cacf635055e833ab7409"
+    },
+    {
       "path": "public/assets/ed988f766506bd7580f6e891405601afb283163d310eb2e6f70ed3bcb070f585.png",
       "bytes": 69585,
       "sha256": "ed988f766506bd7580f6e891405601afb283163d310eb2e6f70ed3bcb070f585"
@@ -2027,8 +2052,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 2859010,
-      "sha256": "2809d6d9f527961f19844e93e7381af608b6cbced7a683ebe1e2cd3cfc4c1f08"
+      "bytes": 2863764,
+      "sha256": "b6b4b3885c820b2e071d58c773b8884eb5322af98132de12cfabfd51e13ecedd"
     },
     {
       "path": "render.yaml",

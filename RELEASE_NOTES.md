@@ -6,6 +6,8 @@ All 51 cropped JPEGs match the first 101 frames of NOAA's GOES-16/SUVI 195 Å an
 
 R139 numerical results, model assumptions and the calculation implementation are unchanged. The original scientific companion remains DOI [10.5281/zenodo.22742107](https://doi.org/10.5281/zenodo.22742107). This software update requires a new release and DOI; it does not change the archived rc3 tag. Attribution and reuse guidance are in `THIRD_PARTY_NOTICES.md`, and the source comparison is in `docs/SUVI_MEDIA_PROVENANCE.json`.
 
+The QuickLook opening now places the SUVI viewer above its explanation and gives an expanded example the full row. A short visual guide introduces connected plasma evolution using the manuscript's simple-wave panel and lower Riemann fan. The header links to the preprint [arXiv:2609.15210](https://arxiv.org/abs/2609.15210). The guide distinguishes the wider Riemann picture from the current local diagnostic tests.
+
 ## Previous release: RMO 1.0.0-rc3 — R139
 
 RMO provides a QuickLook interface for examining local ideal-MHD interpretations under declared inputs and assumptions.

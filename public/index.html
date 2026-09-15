@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; media-src 'self' data:; frame-src blob:; base-uri 'none'; form-action 'none'">
-<title>RMO QuickLook · rc3 build 4 · R132 layout · R139 science</title>
+<title>RMO QuickLook · Riemann Map Operator</title>
 <style>
 :root{color-scheme:light dark;--bg:#f5f6f3;--surface:#fff;--ink:#192e31;--muted:#506164;--line:#ccd7d3;--accent:#1b6663;--note:#e9f2ef;--warn:#7c4800;--warnbg:#fff1d7;--ok:#185e45;--okbg:#e4f3e9;--bad:#8b3030;--badbg:#fde9e8}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,sans-serif}main{max-width:1040px;margin:auto;padding:40px 24px 64px}header{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:24px}h1{font-size:clamp(30px,5vw,46px);letter-spacing:-1.5px;line-height:1.1;margin:10px 0}h2{font-size:23px;line-height:1.3;margin:8px 0 16px}h3{font-size:17px;margin:0 0 8px}p{margin:8px 0 16px}.eyebrow{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--accent);font-weight:700}.muted,small{color:var(--muted)}.scope{background:var(--note);border-left:4px solid var(--accent);padding:14px 18px;margin:20px 0}label{display:block;font-weight:650;margin-bottom:8px}select{font:inherit;color:var(--ink);background:var(--surface);width:100%;padding:12px;border:1px solid var(--line);border-radius:7px}select:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.summary{margin:24px 0}.badge{display:inline-block;border-radius:4px;padding:3px 9px;font-size:12px;letter-spacing:.4px;font-weight:750;background:var(--note);color:var(--ink)}.supported{background:var(--okbg);color:var(--ok)}.excluded{background:var(--badbg);color:var(--bad)}.ambiguous,.check-incomplete{background:var(--warnbg);color:var(--warn)}.grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px}.panel{border:1px solid var(--line);background:var(--surface);border-radius:9px;padding:20px;margin-bottom:18px;min-width:0}.candidate+.candidate{border-top:1px solid var(--line);padding-top:16px;margin-top:16px}.candidate p{font-size:14px}.candidate-title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}ul{margin:8px 0;padding-left:20px}li{margin:6px 0}details{border-top:1px solid var(--line);padding:15px 0}summary{cursor:pointer;font-weight:650}pre{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px;font:12px/1.6 ui-monospace,monospace;max-height:460px;overflow:auto}table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;padding:8px;border-bottom:1px solid var(--line);overflow-wrap:anywhere;vertical-align:top}footer{font-size:13px;border-top:1px solid var(--line);margin-top:24px;padding-top:16px}.nowrap-note{overflow-wrap:anywhere}
@@ -136,17 +136,54 @@
 #rmo-header-examples>details>summary{display:list-item;list-style-position:inside;text-align:right;cursor:pointer;color:#5e686d;font-size:13px;font-weight:400;line-height:1.5;padding:3px 0;min-height:0}
 #rmo-header-examples .r100-dynamic-body{margin-top:14px;min-width:0}#rmo-header-examples iframe{max-width:100%}
 @media(max-width:900px){#rmo-header-examples{grid-template-columns:1fr;gap:0}}
+</style><style id="rc4-quicklook-guide-style">
+#rmo-header-examples>details[open]{grid-column:1 / -1}
+#r100-viewer-host{margin-bottom:18px}
+#r100-viewer-host iframe{height:650px;min-height:460px;max-height:80vh}
+#rmo-paper-link{margin:10px 0 0;font-size:13px;line-height:1.55}
+#rmo-paper-link small{display:block;color:#5e686d}
+#rmo-quicklook-guide{margin:14px 0 6px;padding:0;border:0;background:none}
+#rmo-quicklook-guide>summary{cursor:pointer;color:#28656c;font-size:14px;font-weight:500;padding:5px 0;list-style-position:inside}
+#rmo-quicklook-guide .rmo-guide-body{padding:20px 22px;margin:10px 0 18px;border:1px solid #cbd8d8;border-radius:10px;background:#fff}
+#rmo-quicklook-guide h2{font-size:21px;margin:0 0 12px}
+#rmo-quicklook-guide p{font-size:15px;line-height:1.65;margin:10px 0 16px}
+#rmo-quicklook-guide figure{margin:18px 0 22px}
+#rmo-quicklook-guide img{display:block;width:100%;height:auto;background:#fff}
+#rmo-quicklook-guide .rmo-simple-wave{width:330px;max-width:100%;margin:0 auto 22px}
+#rmo-quicklook-guide figcaption{font-size:13px;color:#53646b;line-height:1.6;margin-top:9px}
+#rmo-quicklook-guide .rmo-guide-intro{display:grid;grid-template-columns: minmax(0,1fr) 330px;gap:28px;align-items:center}
+#rmo-quicklook-guide .rmo-guide-intro h3{font-size:17px;margin:0 0 8px}
+#rmo-quicklook-guide .rmo-guide-notes{margin:18px 0 0;border-top:1px solid #d6dede;padding-top:12px}
+#rmo-quicklook-guide .rmo-guide-notes summary{font-size:14px;cursor:pointer}
+@media(max-width:680px){#rmo-quicklook-guide .rmo-guide-body{padding:16px 14px}#rmo-quicklook-guide .rmo-guide-intro{grid-template-columns:1fr;gap:6px}#r100-viewer-host iframe{height:75vh;max-height:none}}
 </style></head><body><main>
 <header id="r73-welcome">
 <div class="eyebrow">Riemann Maps for Solar Observers</div>
-<div class="rmo-title-row"><div class="rmo-title-copy"><h1>RMO QuickLook</h1><p id="rmo-ui-build" class="r96-small">v1.0.0-rc4 · R139 scientific reference</p><a id="r98-model-summary" class="r132-button r132-slot" href="#r132-scientific-evidence" onclick="document.getElementById('r132-scientific-evidence').open=true">Scientific evidence · R132</a></div><div id="rmo-brand"><small id="r113-dedication"><i>To Bernhard Riemann — sound, shocks and geometry.</i></small><img src="/assets/ee4df8c90ed64e50352dc11eba24a553b4abcae2cb98d6bf03e8a3002d2557e7.svg" width="2048" height="700" alt="RMO: vector lettering and Riemann fan beside the selected solar illustration with a softly modulated arc"></div></div><div id="rmo-header-examples" aria-label="Dynamic solar examples"><details id="r100-dynamic-example">
+<div class="rmo-title-row"><div class="rmo-title-copy"><h1>RMO QuickLook</h1><p id="rmo-ui-build" class="r96-small">v1.0.0-rc4 · R139 scientific reference</p><a id="r98-model-summary" class="r132-button r132-slot" href="#r132-scientific-evidence" onclick="document.getElementById('r132-scientific-evidence').open=true">Scientific evidence · R132</a><p id="rmo-paper-link"><a href="https://arxiv.org/abs/2609.15210" target="_blank" rel="noopener noreferrer">Read the paper · arXiv:2609.15210</a><small>Preprint · submitted to Solar Physics</small></p></div><div id="rmo-brand"><small id="r113-dedication"><i>To Bernhard Riemann — sound, shocks and geometry.</i></small><img src="/assets/ee4df8c90ed64e50352dc11eba24a553b4abcae2cb98d6bf03e8a3002d2557e7.svg" width="2048" height="700" alt="RMO: vector lettering and Riemann fan beside the selected solar illustration with a softly modulated arc"></div></div><details id="rmo-quicklook-guide">
+<summary>What are we looking for in solar data?</summary>
+<div class="rmo-guide-body">
+<h2>Follow the connected evolution of the plasma</h2>
+<div class="rmo-guide-intro"><div><h3>Start with a familiar wave</h3>
+<p>A simple wave describes a smooth change within one wave family. It need not be sinusoidal.</p>
+<p>A solar flare or a sudden CME expansion can set the surrounding plasma into motion. Shocks, expanding regions and moving boundaries may then develop together as parts of one connected pattern.</p></div>
+<figure class="rmo-simple-wave"><img src="/assets/2203ea58d67bef8c4767d0bacf5428a7fe2e6c177af1d4bf0bd159218768ad8d.svg" width="244" height="185" loading="lazy" alt="A simple wave: a smooth pulse propagating within one wave family."></figure></div>
+<figure><img src="/assets/08d3402091c0b8e93f2e660b4372180b93b358b486c69a02baf70402d26c59c3.svg" width="985" height="252" loading="lazy" alt="Schematic gas-dynamic Riemann fan: a rarefaction, contact and shock spread from an initial disturbance labelled Solar flare explosion.">
+<figcaption>A simple starting picture: the lines trace the wave pattern through time. This gas-dynamic sketch illustrates a sudden disturbance; magnetic fields add further MHD wave families. It is a schematic, not a calculated solar-flare solution.</figcaption></figure>
+<p><strong>RMO asks which connections between neighbouring plasma states fit the observations.</strong> Density, pressure, flow and magnetic field must change together according to the physical equations. The connections that remain possible form a Riemann map.</p>
+<p>The current QuickLook tests local connections around a selected front and identifies measurements that could distinguish the surviving families. Reconstructing an eruption’s complete wave pattern is a wider goal.</p>
+<details class="rmo-guide-notes"><summary>Riemann solvers, figures and the paper</summary>
+<p>Modern MHD codes, including MPI-AMRVAC, PLUTO and Athena++, use Riemann solvers to calculate the evolution from specified states. RMO uses the same physical framework for an inverse question: which state connections are compatible with incomplete observations? See the paper for these methods and their references.</p>
+<p><a href="https://arxiv.org/html/2609.15210v1" target="_blank" rel="noopener noreferrer">Riemann Map Operator for Solar Front Diagnostics</a> · arXiv:2609.15210 · preprint submitted to Solar Physics.</p>
+<p>Figures by O. Olena Podladchikova, adapted from the manuscript diagrams. <a href="/assets/ed4fc8c8d70f2d237f018542399be0f556ed11806396cacf635055e833ab7409.pdf" target="_blank" rel="noopener noreferrer">Simple-wave panel (vector PDF)</a> · <a href="/assets/88426c92799199326fd73329639dd89d07f50e9182b295a3bbcce00da58fd44a.pdf" target="_blank" rel="noopener noreferrer">Riemann fan (vector PDF)</a>.</p>
+</details></div></details><div id="rmo-header-examples" aria-label="Dynamic solar examples"><details id="r100-dynamic-example">
 <summary>See a dynamic example</summary>
 <div class="r100-dynamic-body">
+<div id="r100-viewer-host"></div>
 <p><strong>Press Play to watch the Sun change.</strong> The original shows the supplied image. A base difference compares it with the first frame; a running difference compares it with an earlier frame. In the difference panels, white means increased brightness and black means decreased brightness. Use the Frame slider to look at one moment.</p>
 <p style="color:#5e686d">All 51 frames are included. Opening and reopening start at frame 23.</p>
 <p style="color:#5e686d">NOAA/GOES-16 SUVI 195 Å · 10 September 2017. Cropped JPEG excerpt of the <a href="https://www.goes-r.gov/multimedia/dataAndImageryVideosGoes-16.html" target="_blank" rel="noopener noreferrer">official NOAA animation</a> (credit: NOAA SWPC). Display processing: RMO. For detailed observations and processing, see <a href="https://doi.org/10.3847/2041-8213/aaa28e" target="_blank" rel="noopener noreferrer">Seaton &amp; Darnel (2018)</a>. These rendered-image changes help locate features; they do not establish a density jump or a shock type.</p>
 <p><a id="r100-open-viewer" hidden="" target="_blank" rel="noopener noreferrer">Open the viewer in a separate tab</a></p>
-<div id="r100-viewer-host"></div>
+
 <noscript><p>JavaScript is needed for this interactive view. The separately supplied RMO_2017_Difference_Viewer.html remains available.</p></noscript>
 </div></details><details id="rmo-header-r120"><summary>See a dynamic example with two fronts</summary><div class="r100-dynamic-body"><p class="r120-muted">13 June 2010 · SDO/AIA science team. Frame processing and crest marks: RMO (R120). Motion in images alone does not determine the MHD type.</p><h2>Watch both image fronts</h2><p>These are the actual SDO/AIA 193 Å images. Teal marks the inner ridge; orange marks the outer ridge. The colors do not assign fast or slow.</p>
 <div class="r120-controls"><button id="r120-play" type="button">Play</button><button id="r120-prev" type="button" aria-label="Previous frame">←</button><button id="r120-next" type="button" aria-label="Next frame">→</button><input id="r120-range" type="range" min="0" max="15" value="2" aria-label="Image time"><output id="r120-time">2010-06-13T05:38:32.06Z</output></div>
@@ -11537,7 +11574,7 @@ el('r75-connection').textContent=connection.enabled?'This page is connected to t
   });
 }());
 </script>
-<script id="r100-viewer-document" type="application/json">{"parts": ["/assets/72c8ce5dbc21c2e5e28c9a4ab15b82b76de74ef0a86d5e30952dba56b0a65ea8.txt", "/assets/c413edb66bb0afe20218158107aa27c9f1fed51af05e35669c2b1144759d2a0d.txt", "/assets/9d8d1e61454aaf73864e516770d2195382e97ca7f57fd428aa6d0462617d1f49.txt", "/assets/0c676943f6b39196d7f6718dde40bb568b509436aa45bd1c4d5c09fc7f3f34a6.txt", "/assets/100b1bc4ef5f2d114a60189337958a61a877c8b16f7d0d10963f460097c108b7.txt", "/assets/0b0fef49f33c2327fbaf5564130005eda06ca855a5b524889b4278361a662d08.txt", "/assets/3965b708c0d3e3247e9c759b346c7cfbeb5a4b532c6a69808406f53792b14cb8.txt"]}</script>
+<script id="r100-viewer-document" type="application/json">{"parts": ["/assets/7c6a07efa1fccbe107efffaa230cec20421fa7722afd4e416dbb27dc3e3f6dda.txt", "/assets/c413edb66bb0afe20218158107aa27c9f1fed51af05e35669c2b1144759d2a0d.txt", "/assets/9d8d1e61454aaf73864e516770d2195382e97ca7f57fd428aa6d0462617d1f49.txt", "/assets/0c676943f6b39196d7f6718dde40bb568b509436aa45bd1c4d5c09fc7f3f34a6.txt", "/assets/100b1bc4ef5f2d114a60189337958a61a877c8b16f7d0d10963f460097c108b7.txt", "/assets/0b0fef49f33c2327fbaf5564130005eda06ca855a5b524889b4278361a662d08.txt", "/assets/3965b708c0d3e3247e9c759b346c7cfbeb5a4b532c6a69808406f53792b14cb8.txt"]}</script>
 <script id="r100-viewer-toggle">(function(){
 'use strict';
 const disclosure=document.getElementById('r100-dynamic-example');

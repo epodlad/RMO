@@ -1,0 +1,30 @@
+{
+  "paper": "https://arxiv.org/abs/2609.15210",
+  "figures": [
+    {
+      "source": "riemann_fan_hd.pdf",
+      "source_sha256": "95eb2f10430a00bfdaceb6c3632b0e6e2142e01f42863a3b20dbcc51f29ae3f4",
+      "selection": "Lower gas-dynamic fan only",
+      "label_change": {
+        "from": "Everything is born here",
+        "to": "Solar flare explosion"
+      },
+      "outputs": {
+        "pdf": "/assets/88426c92799199326fd73329639dd89d07f50e9182b295a3bbcce00da58fd44a.pdf",
+        "svg": "/assets/08d3402091c0b8e93f2e660b4372180b93b358b486c69a02baf70402d26c59c3.svg"
+      }
+    },
+    {
+      "source": "fig1_concepts.pdf",
+      "source_sha256": "01756b7e8f9eaa14a5ea1e8fdd87272bf6f21b0dda37f84ccdc03f0976715092",
+      "selection": "Panel (a) only",
+      "outputs": {
+        "pdf": "/assets/ed4fc8c8d70f2d237f018542399be0f556ed11806396cacf635055e833ab7409.pdf",
+        "svg": "/assets/2203ea58d67bef8c4767d0bacf5428a7fe2e6c177af1d4bf0bd159218768ad8d.svg"
+      }
+    }
+  ],
+  "author": "O. Olena Podladchikova",
+  "format": "Vector PDF and SVG; no generated or raster-retraced scientific content.",
+  "scope": "Conceptual illustrations. The gas-dynamic fan is not an MHD solar-flare calculation. RMO tests local state connections; this UI update performs no scientific calculations."
+}
