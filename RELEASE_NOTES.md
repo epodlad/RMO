@@ -1,4 +1,12 @@
-# RMO 1.0.0-rc3 — R139
+# RMO 1.0.0-rc4 — SUVI preview restoration
+
+The 10 September 2017 SUVI example once again plays inside RMO. This update restores the 51-frame original/base-difference/running-difference viewer, the saved original/base-difference/base-ratio video, and the event-card still. The viewer starts at frame 23, retains frame stepping and playback controls, and loads only when opened.
+
+All 51 cropped JPEGs match the first 101 frames of NOAA's GOES-16/SUVI 195 Å animation at every second video frame. NOAA SWPC credit, the official animation and Seaton and Darnel (2018) are linked beside the media. Original JPEG bytes, saved difference images and the comparison MP4 are preserved. No Helioviewer download origin or calibrated observing cadence is inferred.
+
+R139 numerical results, model assumptions and the calculation implementation are unchanged. The original scientific companion remains DOI [10.5281/zenodo.22742107](https://doi.org/10.5281/zenodo.22742107). This software update requires a new release and DOI; it does not change the archived rc3 tag. Attribution and reuse guidance are in `THIRD_PARTY_NOTICES.md`, and the source comparison is in `docs/SUVI_MEDIA_PROVENANCE.json`.
+
+## Previous release: RMO 1.0.0-rc3 — R139
 
 RMO provides a QuickLook interface for examining local ideal-MHD interpretations under declared inputs and assumptions.
 

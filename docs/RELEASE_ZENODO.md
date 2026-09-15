@@ -1,5 +1,11 @@
 # Zenodo release publication
 
+## SUVI media update: 1.0.0-rc4
+
+Version **1.0.0-rc4** restores the original SUVI preview frames, interactive viewer, comparison MP4 and still with a verified NOAA source and attribution. Publish it as a **new GitHub pre-release**, tag `v1.0.0-rc4`, after deploying and checking the restored media. Keep `v1.0.0-rc3` and its DOI unchanged. The existing GitHub–Zenodo integration can archive the new tagged source as a new software version; retain the actual new DOI only after Zenodo has issued and verified it. The R139 scientific companion and its DOI remain the scientific reference because this update changes presentation, not its numerical data or analysis.
+
+The current `.zenodo.json` and `CITATION.cff` identify rc4 without assigning the rc3 DOI to it. The release description is at the top of `RELEASE_NOTES.md`. The published records below describe the preceding release.
+
 Software version **1.0.0-rc3** is published with DOI [10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502). The [GitHub release](https://github.com/epodlad/RMO/releases/tag/v1.0.0-rc3) identifies commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. Subsequent DOI/citation documentation updates do not alter that archived tag. The scientific companion **R139** is published as a separate dataset with DOI [10.5281/zenodo.22742107](https://doi.org/10.5281/zenodo.22742107).
 
 Version 1.0.0-rc3 is a release candidate. The application is hosted at https://rmo-solar.org/. See [release acceptance](RELEASE_ACCEPTANCE.md) for the targeted checks completed on 2026-09-14 and the interactive coverage that remains open. Retain that scope in the release description.

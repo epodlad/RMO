@@ -1,0 +1,300 @@
+{
+  "event_date": "2017-09-10",
+  "instrument": "NOAA/GOES-16 SUVI",
+  "passband_angstrom": 195,
+  "source_page": "https://www.goes-r.gov/multimedia/dataAndImageryVideosGoes-16.html",
+  "source_movie_url": "https://www.goes-r.gov/multimedia/originalVideoCopies/dataAndImagery/GOES16/suvi_195_dynamic_20170910.mp4",
+  "source_movie_sha256": "b5de965a83ee360098c8d005a35d52f461bb8edc01de8b7a4fe3e73e7886ce92",
+  "source_credit": "NOAA SWPC",
+  "reuse_guidance": "https://www.omao.noaa.gov/image-licensing-usage-info",
+  "scientific_reference": "https://doi.org/10.3847/2041-8213/aaa28e",
+  "description": "51 cropped/resized JPEG preview frames matched to frames 0, 2, ..., 100 of the official NOAA movie. The historical download route is not established; no Helioviewer origin is claimed.",
+  "matching": {
+    "method": "Fixed similarity transform estimated from frame 23; RGB correlation in x230:520/y40:410, including the evolving eruption; indices are video frames, not assigned observation times",
+    "rows": [
+      {
+        "jpeg_frame": 0,
+        "official_video_frame": 0,
+        "correlation_evolving_region": 0.993548250401998
+      },
+      {
+        "jpeg_frame": 1,
+        "official_video_frame": 2,
+        "correlation_evolving_region": 0.993741233401916
+      },
+      {
+        "jpeg_frame": 2,
+        "official_video_frame": 4,
+        "correlation_evolving_region": 0.9935851590572272
+      },
+      {
+        "jpeg_frame": 3,
+        "official_video_frame": 6,
+        "correlation_evolving_region": 0.9937801172035431
+      },
+      {
+        "jpeg_frame": 4,
+        "official_video_frame": 8,
+        "correlation_evolving_region": 0.9938354164848875
+      },
+      {
+        "jpeg_frame": 5,
+        "official_video_frame": 10,
+        "correlation_evolving_region": 0.9938345611315469
+      },
+      {
+        "jpeg_frame": 6,
+        "official_video_frame": 12,
+        "correlation_evolving_region": 0.9936888451561671
+      },
+      {
+        "jpeg_frame": 7,
+        "official_video_frame": 14,
+        "correlation_evolving_region": 0.9937788126072232
+      },
+      {
+        "jpeg_frame": 8,
+        "official_video_frame": 16,
+        "correlation_evolving_region": 0.9937863014078155
+      },
+      {
+        "jpeg_frame": 9,
+        "official_video_frame": 18,
+        "correlation_evolving_region": 0.993809210062445
+      },
+      {
+        "jpeg_frame": 10,
+        "official_video_frame": 20,
+        "correlation_evolving_region": 0.9937437310722206
+      },
+      {
+        "jpeg_frame": 11,
+        "official_video_frame": 22,
+        "correlation_evolving_region": 0.9937743027032869
+      },
+      {
+        "jpeg_frame": 12,
+        "official_video_frame": 24,
+        "correlation_evolving_region": 0.9938652058635161
+      },
+      {
+        "jpeg_frame": 13,
+        "official_video_frame": 26,
+        "correlation_evolving_region": 0.9937483501044146
+      },
+      {
+        "jpeg_frame": 14,
+        "official_video_frame": 28,
+        "correlation_evolving_region": 0.9939245985003643
+      },
+      {
+        "jpeg_frame": 15,
+        "official_video_frame": 30,
+        "correlation_evolving_region": 0.9937348199353024
+      },
+      {
+        "jpeg_frame": 16,
+        "official_video_frame": 32,
+        "correlation_evolving_region": 0.9936650486772765
+      },
+      {
+        "jpeg_frame": 17,
+        "official_video_frame": 34,
+        "correlation_evolving_region": 0.9937565298991005
+      },
+      {
+        "jpeg_frame": 18,
+        "official_video_frame": 36,
+        "correlation_evolving_region": 0.9936856910094949
+      },
+      {
+        "jpeg_frame": 19,
+        "official_video_frame": 38,
+        "correlation_evolving_region": 0.9936306176831423
+      },
+      {
+        "jpeg_frame": 20,
+        "official_video_frame": 40,
+        "correlation_evolving_region": 0.9937791186700371
+      },
+      {
+        "jpeg_frame": 21,
+        "official_video_frame": 42,
+        "correlation_evolving_region": 0.9937800373641122
+      },
+      {
+        "jpeg_frame": 22,
+        "official_video_frame": 44,
+        "correlation_evolving_region": 0.993708919615123
+      },
+      {
+        "jpeg_frame": 23,
+        "official_video_frame": 46,
+        "correlation_evolving_region": 0.993683037210268
+      },
+      {
+        "jpeg_frame": 24,
+        "official_video_frame": 48,
+        "correlation_evolving_region": 0.9938067926439329
+      },
+      {
+        "jpeg_frame": 25,
+        "official_video_frame": 50,
+        "correlation_evolving_region": 0.9936903182000676
+      },
+      {
+        "jpeg_frame": 26,
+        "official_video_frame": 52,
+        "correlation_evolving_region": 0.9937094268853632
+      },
+      {
+        "jpeg_frame": 27,
+        "official_video_frame": 54,
+        "correlation_evolving_region": 0.9936138871048087
+      },
+      {
+        "jpeg_frame": 28,
+        "official_video_frame": 56,
+        "correlation_evolving_region": 0.9935799011113762
+      },
+      {
+        "jpeg_frame": 29,
+        "official_video_frame": 58,
+        "correlation_evolving_region": 0.9934819059792176
+      },
+      {
+        "jpeg_frame": 30,
+        "official_video_frame": 60,
+        "correlation_evolving_region": 0.993479337991646
+      },
+      {
+        "jpeg_frame": 31,
+        "official_video_frame": 62,
+        "correlation_evolving_region": 0.9934975759089387
+      },
+      {
+        "jpeg_frame": 32,
+        "official_video_frame": 64,
+        "correlation_evolving_region": 0.9935216090147264
+      },
+      {
+        "jpeg_frame": 33,
+        "official_video_frame": 66,
+        "correlation_evolving_region": 0.9935917641018278
+      },
+      {
+        "jpeg_frame": 34,
+        "official_video_frame": 68,
+        "correlation_evolving_region": 0.9935968489726543
+      },
+      {
+        "jpeg_frame": 35,
+        "official_video_frame": 70,
+        "correlation_evolving_region": 0.9934886237989159
+      },
+      {
+        "jpeg_frame": 36,
+        "official_video_frame": 72,
+        "correlation_evolving_region": 0.9935022397368474
+      },
+      {
+        "jpeg_frame": 37,
+        "official_video_frame": 74,
+        "correlation_evolving_region": 0.9934176762627787
+      },
+      {
+        "jpeg_frame": 38,
+        "official_video_frame": 76,
+        "correlation_evolving_region": 0.9935730806368489
+      },
+      {
+        "jpeg_frame": 39,
+        "official_video_frame": 78,
+        "correlation_evolving_region": 0.9934958352656125
+      },
+      {
+        "jpeg_frame": 40,
+        "official_video_frame": 80,
+        "correlation_evolving_region": 0.9934869809842004
+      },
+      {
+        "jpeg_frame": 41,
+        "official_video_frame": 82,
+        "correlation_evolving_region": 0.9935538759590222
+      },
+      {
+        "jpeg_frame": 42,
+        "official_video_frame": 84,
+        "correlation_evolving_region": 0.9935399050054348
+      },
+      {
+        "jpeg_frame": 43,
+        "official_video_frame": 86,
+        "correlation_evolving_region": 0.9935351949641361
+      },
+      {
+        "jpeg_frame": 44,
+        "official_video_frame": 88,
+        "correlation_evolving_region": 0.9936094359732788
+      },
+      {
+        "jpeg_frame": 45,
+        "official_video_frame": 90,
+        "correlation_evolving_region": 0.993594457595559
+      },
+      {
+        "jpeg_frame": 46,
+        "official_video_frame": 92,
+        "correlation_evolving_region": 0.9936421440559993
+      },
+      {
+        "jpeg_frame": 47,
+        "official_video_frame": 94,
+        "correlation_evolving_region": 0.9936329722717917
+      },
+      {
+        "jpeg_frame": 48,
+        "official_video_frame": 96,
+        "correlation_evolving_region": 0.9934533599109077
+      },
+      {
+        "jpeg_frame": 49,
+        "official_video_frame": 98,
+        "correlation_evolving_region": 0.9936030840280955
+      },
+      {
+        "jpeg_frame": 50,
+        "official_video_frame": 100,
+        "correlation_evolving_region": 0.9936401775151102
+      }
+    ]
+  },
+  "affine_transform_640px_reference_to_jpeg": [
+    [
+      0.9368009462007412,
+      -0.00011880906616018774,
+      -63.53527854729219
+    ],
+    [
+      0.00011880906616018774,
+      0.9368009462007412,
+      -70.82045651717709
+    ]
+  ],
+  "matching_scope": "Supports identification of the preview source, event and passband. This is not a calibration or assignment of exposure times; no inferred times are used for scientific measurements.",
+  "restoration": "All 51 original JPEG bytes and all saved difference-image bytes are unchanged; the existing comparison MP4 is restored byte-for-byte. Only attribution and delivery were updated.",
+  "assets": {
+    "comparison_movie": "/assets/85d22001f4f177ce3fb7f538f8b16fe5741f47e1a5455ac007974921c0756771.mp4",
+    "comparison_poster": "/assets/a16371c42eb5f89312673274f67602e2452f3d3bbbad243b8587bf2d56cab71f.png",
+    "still": "/assets/fd5908428ed50c05e12a161b5ac51e2682ccbdf67976b9ae9e47dbf6a877d256.jpg",
+    "viewer_parts": [
+      "/assets/72c8ce5dbc21c2e5e28c9a4ab15b82b76de74ef0a86d5e30952dba56b0a65ea8.txt",
+      "/assets/c413edb66bb0afe20218158107aa27c9f1fed51af05e35669c2b1144759d2a0d.txt",
+      "/assets/9d8d1e61454aaf73864e516770d2195382e97ca7f57fd428aa6d0462617d1f49.txt",
+      "/assets/0c676943f6b39196d7f6718dde40bb568b509436aa45bd1c4d5c09fc7f3f34a6.txt",
+      "/assets/100b1bc4ef5f2d114a60189337958a61a877c8b16f7d0d10963f460097c108b7.txt",
+      "/assets/0b0fef49f33c2327fbaf5564130005eda06ca855a5b524889b4278361a662d08.txt",
+      "/assets/3965b708c0d3e3247e9c759b346c7cfbeb5a4b532c6a69808406f53792b14cb8.txt"
+    ]
+  }
+}

@@ -19,7 +19,7 @@ from uncertainty_diagnosis.service import validate, run as run_diagnosis
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / 'public'
-VERSION = '1.0.0-rc3'
+VERSION = '1.0.0-rc4'
 SESSION_SECONDS = 3600
 MAX_SESSIONS = 128
 MAX_ATTEMPTS = 32

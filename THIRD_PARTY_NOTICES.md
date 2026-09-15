@@ -19,6 +19,14 @@ STEREO/SECCHI, IRIS and Solar Orbiter/SWA records retain their source/provider a
 
 RMO-generated plots are derived scientific visualizations, not new observations. The existing RMO logo is artwork, not an observational image. Standard content-credential signatures on retained historical figures remain intact.
 
+## Restored GOES-16/SUVI preview
+
+The 10 September 2017 preview uses NOAA/GOES-16 SUVI 195 Å imagery, credited to **NOAA SWPC** on the [official NOAA source page](https://www.goes-r.gov/multimedia/dataAndImageryVideosGoes-16.html). The 51 cropped/resized JPEG frames correspond, in order, to video frames 0, 2, …, 100 of the [official animation](https://www.goes-r.gov/multimedia/originalVideoCopies/dataAndImagery/GOES16/suvi_195_dynamic_20170910.mp4). The original download route is not established; the frames are not attributed to Helioviewer.
+
+The original JPEGs, saved display-difference images and comparison MP4 are restored without changing their bytes. RMO produced the displayed differences and ratios of rendered brightness. These are visual previews, not calibrated intensity measurements or a shock classification. The source comparison and asset hashes are recorded in [SUVI media provenance](docs/SUVI_MEDIA_PROVENANCE.json).
+
+[NOAA's image and video guidance](https://www.omao.noaa.gov/image-licensing-usage-info) permits educational and informational reuse, including webpages. NOAA imagery remains separate from the Apache-2.0 license on RMO code; credit does not imply NOAA endorsement. For detailed scientific observations and processing, cite [Seaton and Darnel (2018)](https://doi.org/10.3847/2041-8213/aaa28e).
+
 ## Source-linked material
 
 The following published figures or composites are referenced through their sources rather than distributed in this release:
@@ -29,7 +37,6 @@ The following published figures or composites are referenced through their sourc
 | [Liu et al. (2012)](https://doi.org/10.1088/0004-637X/753/1/52) | Published tracking figure |
 | [Ma et al. (2011)](https://arxiv.org/abs/1106.6056) | Published photometry-box panels used in source/patch composites |
 | [Ye et al. (2026)](https://doi.org/10.1038/s41467-026-75039-z) | Published Figure 4 and original Source Data workbook |
-| [Seaton and Darnel (2018)](https://doi.org/10.3847/2041-8213/aaa28e) | Related GOES/SUVI study for the 2017 preview; exact original preview frames are not established |
 
 The Ye et al. publisher page specifies CC BY-NC-ND 4.0. The original workbook is obtained directly from the publisher for local reproduction. It is not incorporated into RMO's Apache-licensed distribution. The retained numerical profile records and independently calculated RMO results carry the original scientific citation; they are not presented as measurements acquired by RMO.
 
