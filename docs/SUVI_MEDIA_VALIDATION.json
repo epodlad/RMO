@@ -25,7 +25,7 @@
       "failed request shows retry message",
       "failed load is retried"
     ],
-    "native_browser_acceptance": "NOT_PERFORMED"
+    "native_browser_acceptance": "PASS for restored SUVI controls on rmo-solar.org, 2026-09-15; scope recorded below."
   },
   "media_and_http": {
     "checks": [
@@ -67,9 +67,34 @@
     "source_frames": 51,
     "scientific_state": "R139",
     "new_scientific_computations": false,
-    "native_browser_acceptance": "NOT_PERFORMED"
+    "native_browser_acceptance": "PASS for restored SUVI images and inline MP4; scope recorded below."
   },
   "comparison_video_full_decode": "PASS",
   "source_identification": "All 51 JPEG frames match the official NOAA animation in order (every second frame); minimum correlation over the evolving region exceeds 0.993.",
-  "hosted_rc4_acceptance": "NOT_PERFORMED; check the deployed version and restored media after deployment."
+  "hosted_rc4_acceptance": {
+    "date": "2026-09-15",
+    "url": "https://rmo-solar.org/",
+    "deployed_commit": "01de4bad30aedf67486204c3eb2ee184fcc78388",
+    "render_status": "live",
+    "health": {
+      "ready": true,
+      "version": "1.0.0-rc4"
+    },
+    "browser": "Chrome, native browser interactions",
+    "checks": [
+      "Main page identifies v1.0.0-rc4.",
+      "Opening See a dynamic example loads the embedded viewer at frame 23.",
+      "All three displayed images decode at 536 by 450 pixels.",
+      "Next frame advances 23 to 24.",
+      "Play advances the sequence and stops at frame 50.",
+      "Play at the end restarts; Pause stops playback at frame 2.",
+      "Closing removes the iframe; reopening starts at frame 23.",
+      "The 10 September 2017 event card displays the restored still.",
+      "Watch the image-processing preview opens the inline MP4 with native controls.",
+      "The MP4 plays through to 7.65 seconds, readyState 4, 1608 by 526 pixels, no media error.",
+      "NOAA SWPC attribution and Seaton and Darnel link appear beside the media.",
+      "Render error-level log query from deployment start through 16:12:03 UTC returned no entries."
+    ],
+    "scope": "Targeted acceptance of the restored SUVI media. This is not a new scientific calculation, complete application acceptance, or a load test."
+  }
 }

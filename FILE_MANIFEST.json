@@ -87,8 +87,8 @@
     },
     {
       "path": "docs/SUVI_MEDIA_VALIDATION.json",
-      "bytes": 3083,
-      "sha256": "848bf632a05973408716de0da454eb19df21188d589b2799fd7ec36bb95f3545"
+      "bytes": 4453,
+      "sha256": "7634984882c8912315118cf1f2e6af27057a5f98ee97e4ee6d0e23447119d9b7"
     },
     {
       "path": "implementation/reference/aegir_975cc7ed/LICENSE",
