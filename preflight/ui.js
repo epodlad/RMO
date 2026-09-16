@@ -15,7 +15,7 @@
   function visit(id,parents=[]) {
     for(const parent of parents) document.getElementById(parent).open=true;
     const target=document.getElementById(id);
-    if(target.tagName.toLowerCase()==="details") target.open=true;
+    for(let n=target;n;n=n.parentElement) if(n.tagName.toLowerCase()==="details") n.open=true;
     target.setAttribute("tabindex","-1");
     if(typeof target.focus==="function") target.focus({preventScroll:true});
     if(typeof target.scrollIntoView==="function") target.scrollIntoView({block:"start",behavior:"auto"});
@@ -125,14 +125,16 @@
     reportNode.replaceChildren();
     const titles={VALID:"Your input is ready.",INCOMPLETE:"Some information is still missing.",INVALID:"The input needs a correction."};
     const outcomes={VALID:"All required values are present and passed the input checks.",INCOMPLETE:"The known values passed the checks, but one or more values are still unknown. Their reasons have been kept.",INVALID:"At least one value or setting failed the input checks. Nothing was silently repaired."};
-    const next={VALID:"You have completed the input check. You may inspect the parameters or export the request; export is optional.",INCOMPLETE:"Click View / edit parameters to supply missing values if you know them. Otherwise, keep them unknown; you may export this incomplete draft.",INVALID:"Click View / edit parameters to correct the reported fields, or load Brio–Wu again. Then click Check input. Export is blocked while errors remain."};
+    const next={VALID:"Continue to Calculate this input directly below for a new attempt, or edit the parameters. Saving the request is optional.",INCOMPLETE:"Click View / edit parameters to supply missing values if you know them. Otherwise, keep them unknown; you may export this incomplete draft.",INVALID:"Click View / edit parameters to correct the reported fields, or load an example again. Then click Check input. Export is blocked while errors remain."};
     reportNode.append(el("h3",titles[report.input_status]),el("p",outcomes[report.input_status]),el("p","What next? "+next[report.input_status]));
     reportNode.append(button("report-edit-parameters","View / edit parameters",showParameters));
     const badge=el("strong","INPUT "+report.input_status,"badge input-status");reportNode.append(badge);
-    reportNode.append(el("p",report.input_status==="VALID"?"Input checks passed. This is not support for an MHD interpretation.":report.input_status==="INCOMPLETE"?"Unknown values are retained with reasons. This request is not ready for physical computation.":"Correct the listed input errors. Values have not been repaired or replaced."));
-    reportNode.append(el("p",connected?"Input check only: this action did not run the solver. Use Calculate new synthetic solution for an explicit, separate attempt.":"Calculation: DISABLED. No solver has run; no shock, wave family or observational classification has been assigned."));
+    const information=el("details");information.append(el("summary","What the input check means"));
+    information.append(el("p",report.input_status==="VALID"?"Input checks passed. This is not support for an MHD interpretation.":report.input_status==="INCOMPLETE"?"Unknown values are retained with reasons. This request is not ready for physical computation.":"Correct the listed input errors. Values have not been repaired or replaced."));
+    information.append(el("p",connected?"Input check only: this action did not run the solver. Use Calculate this input for an explicit, separate attempt.":"Calculation: DISABLED. No solver has run; no shock, wave family or observational classification has been assigned."));
     const uncertaintyText={NOT_CHECKED:"Uncertainty could not be checked because input errors remain.",INVALID_METADATA:"The covariance description needs correction; no uncertainty was propagated.",EXACT_SYNTHETIC_NO_PROPAGATION:"These are specified mathematical values. No observational uncertainty was inferred.",METADATA_ONLY_NOT_PROPAGATED:"Covariance metadata passed its checks. It has not been propagated into a physical result."};
-    reportNode.append(el("p",uncertaintyText[report.uncertainty.status]||"Uncertainty status is available in the technical report."));
+    information.append(el("p",uncertaintyText[report.uncertainty.status]||"Uncertainty status is available in the technical report."));
+    reportNode.append(information);
     if(report.issues.length) {
       const readable=el("ul");
       for(const issue of report.issues) {
@@ -197,7 +199,7 @@
     context.replaceChildren(el("strong",title),el("p",expectation),el("p","Parameters are filled automatically. Click Check input below. Use View / edit parameters if you want to inspect or change a value. Nothing has been calculated."));
   }
   const controls=el("div",undefined,"preflight-actions");
-  const presetButton=button("load-preset","1 · Start here — load Brio–Wu example",()=>loadExample("brio"));
+  const presetButton=button("load-preset","Load Brio–Wu · saved solutions only",()=>loadExample("brio"));
   presetButton.className="primary-start";
   const exampleHost=document.getElementById("guided-examples");
   exampleHost.append(presetButton);
@@ -211,9 +213,10 @@
   }
   exercises.append(extra);exampleHost.append(exercises);
   const resetButton=button("reset-input","Reset — clear all physical fields",()=>{fill(C.makeBlank(cfg.preset));resetReport("Physical fields cleared. No unknown has been assumed to be zero.");});
-  const checkButton=button("check-input","2 · Check input",checkInput);
+  const checkButton=button("check-input","3 · Check input",checkInput);
   const exportButton=button("export-request","Export request JSON (optional; not a result)",exportRequest);exportButton.disabled=true;
-  controls.append(checkButton,button("show-parameters","View / edit parameters",showParameters),el("span",connected?"Input check only. The separate Calculate button calls local Python.":"Input check only. No solver is connected.","help-small"));
+  document.getElementById("check-input-after-edit").addEventListener("click",checkInput);
+  controls.append(checkButton,button("show-parameters","View / edit parameters",showParameters),el("span",connected?"The check report and Calculate button appear below.":"Input check only. No solver is connected.","help-small"));
   document.getElementById("preflight-controls").append(controls);
   document.getElementById("help-navigation").append(
     button("open-help","Help",()=>visit("help-panel")),
@@ -221,8 +224,8 @@
     button("view-saved","View a saved solution",()=>visit("saved-solutions")));
   const optional=el("div",undefined,"preflight-actions");optional.append(exportButton,resetButton);document.getElementById("optional-controls").append(optional);
   fill(C.makeBlank(cfg.preset));
-  resetReport("First click Start here — load Brio–Wu example. The values will be filled automatically. Then click Check input.");
-  context.textContent="No example loaded yet. Click the large Start here button above. No manual input or solar measurements are needed.";
+  resetReport("Load contact to try a calculation, choose Brio–Wu to explore saved solutions, or enter your own values. Then check the input.");
+  context.textContent="No example loaded yet. Contact is the simplest calculation example. Open Parameters to enter your own normalized synthetic values.";
   // Read current fields through the same parser. Never accept a VALID badge as input.
   globalThis.RMOInputBridge=Object.freeze({
     snapshot(){const x=collect();return {request:C.copy(x.request),report:engine.check(x.request,x.parseIssues),revision};},

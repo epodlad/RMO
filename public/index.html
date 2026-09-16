@@ -156,6 +156,28 @@
 #rmo-quicklook-guide .rmo-guide-notes{margin:18px 0 0;border-top:1px solid #d6dede;padding-top:12px}
 #rmo-quicklook-guide .rmo-guide-notes summary{font-size:14px;cursor:pointer}
 @media(max-width:680px){#rmo-quicklook-guide .rmo-guide-body{padding:16px 14px}#rmo-quicklook-guide .rmo-guide-intro{grid-template-columns:1fr;gap:6px}#r100-viewer-host iframe{height:75vh;max-height:none}}
+</style><style id="rmo-workflow-style">
+button, input, select, summary { scroll-margin-top: 1rem; }
+button { min-height:44px; } summary { cursor:pointer; }
+button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #176e89; outline-offset: 3px; }
+.preflight-actions, .r75-actions, .r67-actions { display:flex; flex-wrap:wrap; align-items:center; gap:.65rem; }
+.preflight-actions button, .r75-actions button, .r67-actions button { min-height:44px; white-space:normal; line-height:1.35; }
+#live-status, #r75-action-status, #r67-review-status, .workflow-hint { padding:.65rem .8rem; border-left:3px solid #237d72; background:#f0f7f5; overflow-wrap:anywhere; }
+#r75-result, #live-output, #input-report, #r67-review-output, #advanced-input, #r75-inputs, #r67-values { scroll-margin-top:1rem; }
+[aria-invalid="true"] { border:2px solid #b64232 !important; }
+@media (max-width:640px) { .preflight-actions button, .r75-actions button, .r67-actions button { max-width:100%; } .state-grid { grid-template-columns:1fr !important; } .r75-actions label { max-width:100%; } .r75-actions select { max-width:100%; } }
+@media (max-width:650px) {
+ #r75-inputs .r75-table table, #r67-literature .r67-table-scroll table { min-width:0; width:100%; }
+ #r75-inputs .r75-table thead, #r67-literature .r67-table-scroll thead { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+ #r75-inputs .r75-table tbody, #r67-literature .r67-table-scroll tbody { display:block; }
+ #r75-inputs .r75-table tr, #r67-literature .r67-table-scroll tr { display:block; padding:.65rem; margin-bottom:.8rem; border:1px solid #ccdeda; border-radius:8px; }
+ #r75-inputs .r75-table td, #r75-inputs .r75-table th, #r67-literature .r67-table-scroll td { display:block; width:auto; min-width:0; box-sizing:border-box; }
+ #r75-inputs .r75-table td:nth-child(2)::before { content:"Central value"; display:block; font-weight:600; }
+ #r75-inputs .r75-table td:nth-child(3)::before { content:"Absolute half-width (value ± bound)"; display:block; font-weight:600; }
+ #r67-literature .r67-table-scroll td:nth-child(2)::before { content:"Published value — source reference"; display:block; font-weight:600; }
+ #r67-literature .r67-table-scroll td:nth-child(3)::before { content:"Your working values — editable"; display:block; font-weight:600; }
+ #r75-inputs input, #r75-inputs select { max-width:100%; }
+}
 </style></head><body><main>
 <header id="r73-welcome">
 <div class="eyebrow">Riemann Maps for Solar Observers</div>
@@ -186,7 +208,7 @@
 
 <noscript><p>JavaScript is needed for this interactive view. The separately supplied RMO_2017_Difference_Viewer.html remains available.</p></noscript>
 </div></details><details id="rmo-header-r120"><summary>See a dynamic example with two fronts</summary><div class="r100-dynamic-body"><p class="r120-muted">13 June 2010 · SDO/AIA science team. Frame processing and crest marks: RMO (R120). Motion in images alone does not determine the MHD type.</p><h2>Watch both image fronts</h2><p>These are the actual SDO/AIA 193 Å images. Teal marks the inner ridge; orange marks the outer ridge. The colors do not assign fast or slow.</p>
-<div class="r120-controls"><button id="r120-play" type="button">Play</button><button id="r120-prev" type="button" aria-label="Previous frame">←</button><button id="r120-next" type="button" aria-label="Next frame">→</button><input id="r120-range" type="range" min="0" max="15" value="2" aria-label="Image time"><output id="r120-time">2010-06-13T05:38:32.06Z</output></div>
+<div class="r120-controls"><button id="r120-play" type="button">Play</button><button id="r120-prev" type="button" aria-label="Previous frame">← Previous</button><button id="r120-next" type="button" aria-label="Next frame">Next →</button><input id="r120-range" type="range" min="0" max="15" value="2" aria-label="Image time"><output id="r120-time">2010-06-13T05:38:32.06Z</output></div>
 <div class="r120-controls"><label>Right panel <select id="r120-mode"><option value="base_a">Difference from A</option><option value="base_b">Difference from B</option><option value="running">Previous-frame difference</option></select></label><label><input type="checkbox" id="r120-marks" checked> Show measured crest fits</label><span id="r120-track-status" class="r120-muted"></span></div>
 <div class="r120-panels"><div class="r120-panel"><h3>Original intensity</h3><div class="r120-imagebox"><img id="r120-original" src="/assets/f48dc74787850ea048d5ba0089470c61d8e6e0b72add4918792f461f5f7e1177.png" alt="Original SDO/AIA 193 Å exposure"><svg id="r120-overlay-a" viewbox="0 0 456 451" aria-hidden="true"></svg></div><p class="r120-muted">SDO/AIA · 13 June 2010 · exposure-normalized data</p></div><div class="r120-panel"><h3 id="r120-right-title">Difference from A</h3><div class="r120-imagebox"><img id="r120-difference" src="/assets/2dbdb54fd609850b97be23fac3202d530ea956469f4aeb62cc12b588c6f83009.png" alt="Difference of SDO/AIA 193 Å exposures"><svg id="r120-overlay-b" viewbox="0 0 456 451" aria-hidden="true"></svg><span id="r120-empty" class="r120-empty" style="display:none">No previous consecutive science frame for this first exposure.</span></div><p class="r120-muted" id="r120-scale">Red: brighter; blue: dimmer. Fixed scale ±12 DN/s.</p></div></div>
 <p class="r120-muted">Solar X: 850–1214 arcsec; Solar Y: −710 to −350 arcsec. Actual exposure times are shown; playback is for inspection. Late low-contrast candidates carry no accepted overlay. Turn the fits off to inspect the images themselves.</p>
@@ -287,7 +309,7 @@
 <p><strong>This is a model demonstration:</strong> the parameters are artificial and fully specified. Start with a saved example to see the method work. For measured solar motion, use <a href="#r75-solar-example">the real EUV example</a>. The names fast and slow refer to MHD wave families.</p>
 <p><strong>Follow the result:</strong> read the one-sentence answer, look at the speed plot, then open the physical checks if you want the details.</p>
 </details>
-<div class="r75-actions"><label>Model <select id="r75-model"><option value="A63">A63 · Fast-shock test</option><option value="A17">A17 · Slow-shock test</option><option value="A42">A42 · Contact test</option><option value="A88">A88 · Rotation test</option><option value="P01">P01 · Perpendicular model (exact test)</option><option value="P02">P02 · Perpendicular model with input errors</option></select></label><label>Input-bound factor <select id="r75-factor"><option value="0">Exact model values</option><option value="0.01" selected>0.01 · small bounds</option><option value="0.05">0.05 · wider bounds</option><option value="0.1">0.10 · wider bounds</option></select></label><button type="button" id="r75-load" class="primary">Load example and view result</button></div>
+<div class="r75-actions"><label>Model <select id="r75-model"><option value="A63">A63 · Fast-shock test</option><option value="A17">A17 · Slow-shock test</option><option value="A42">A42 · Contact test</option><option value="A88">A88 · Rotation test</option><option value="P01">P01 · Perpendicular model (exact test)</option><option value="P02">P02 · Perpendicular model with input errors</option></select></label><label>Input-bound factor <select id="r75-factor"><option value="0">Exact model values</option><option value="0.01" selected>0.01 · small bounds</option><option value="0.05">0.05 · wider bounds</option><option value="0.1">0.10 · wider bounds</option></select></label><button type="button" id="r75-load" class="primary">1 · Open saved model result</button></div>
 <p id="r78-entry"><button type="button" id="r78-demo">Try the exact perpendicular model</button> See the result, speed diagram and physical checks. This is a constructed model, not a solar observation.</p>
 <p id="r79-entry"><button type="button" id="r79-demo">Try the perpendicular model with errors</button> Load the checked perpendicular model, then choose the error range. RMO applies the current physical checks automatically.</p>
 <details id="r82-method-help"><summary>How were the input errors checked?</summary>
@@ -298,6 +320,7 @@
 <p>The exact central model was checked separately using conservation laws and characteristic speeds. Those checks remain part of the result. An inconsistent central input is not silently repaired.</p>
 <p><a download="RMO_current_method_report.md" href="/assets/d2d6e0a2527c099e26ef10f6eb268141d0c027f81388322028b6f4d9d74ff48e.md">Save current method explanation and checks</a></p>
 </details>
+<div class="r75-actions"><button type="button" id="r75-edit-inputs">2 · Inspect or edit parameters</button></div>
 <p id="r75-status" role="status" aria-live="polite">Choose a model and click Load checked example. No parameters have been loaded here.</p>
 <details id="r104a-worksheet" class="r96-reading">
 <summary>Prepare solar inputs · measurements, published estimates or literature assumptions</summary>
@@ -332,7 +355,9 @@
 <p>The illustrative intervals 5–15 G and 3–20 G, and the 12 G threshold previously considered, are not results of RMO and are not defaults here.</p>
 </details>
 <p><a href="/assets/37bd4c9d87e64b0d5cb0b22502aafa47d0d707920189e3534bfe72932db3580a.md" download="RMO_observational_input_policy.md" data-r92-browser-download="">Save the input-source rules and observational plan</a></p>
-</div></details><details id="r75-inputs"><summary>Parameters and input file · inspect or edit</summary>
+</div></details><details id="r75-inputs"><summary>2 · Parameters and input file — open to edit</summary>
+<div class="r75-actions"><button type="button" id="r75-blank-inputs">Enter my own parameters</button><span>Start an empty form, or import your saved local-input JSON below. This clears the currently loaded model values.</span></div>
+<p class="workflow-hint">Enter a central value and its absolute error bound in the stated normalized units. Use a decimal dot, for example 0.45. Leave an unknown value blank and choose a reason. After editing, use <strong>3 · Calculate these parameters</strong> immediately below this form.</p>
 <p id="r75-units"><strong>Normalized model units, mu0 = 1.</strong> LEFT and RIGHT are the adjacent states of this one discontinuity in a common local frame. They are not the remote initial states of a full wave fan. The flow direction determines which side is upstream.</p>
 <p>Enter a central value and an absolute half-width: value ± half-width. Blank means unknown; it is never zero. Gamma and the normal direction are fixed assumptions in this test. The preset factor uses f |value| for density/pressure and f max(1, |value|) for speeds and fields. These are illustrative ranges, not instrument errors or confidence levels.</p>
 <label for="r75-gamma">Ratio of specific heats gamma</label><input id="r75-gamma" inputmode="decimal" value="1.6666666666666667">
@@ -356,10 +381,11 @@
 <p>This input format is specific to local diagnosis. The older literature drafts and full Riemann requests have their own import controls below.</p>
 </details>
 <div class="r75-actions"><button type="button" id="r75-run" aria-describedby="r75-run-help" disabled>Calculate these inputs with Python</button></div>
+<p id="r75-action-status" role="status" aria-live="polite"></p><p><a href="#r75-inputs">Return to the parameter fields</a></p>
 <p id="r75-run-help">A new calculation requires a Python connection. Saved examples can be opened without it.</p>
 <details><summary>Calculation connection</summary><p id="r75-connection">Checking whether this page was served with a Python connection.</p></details>
 <div id="r75-result" hidden="">
-<h3>Result in one sentence</h3><p id="r75-sentence" class="r75-outcome"></p>
+<h3>4 · Your result</h3><div class="r75-actions"><button type="button" id="r75-edit-result">Change these parameters</button></div><p id="r75-sentence" class="r75-outcome"></p>
 <p id="r75-source"></p>
 <p id="r79-assumptions" hidden=""></p>
 <div id="r75-plot"></div>
@@ -2182,14 +2208,8 @@ Files: `RMO_solar_speed_check.json`, `verification.json`, vector PDF/SVG, and th
   <div class="eyebrow" id="r67-category"></div><h2 id="r67-event-title"></h2>
   <p id="r67-context"></p>
   <p><a id="r67-source" target="_blank" rel="noopener noreferrer"></a></p>
-  <div class="r67-outcome" role="status" aria-live="polite">
-    <p id="r73-result-source" class="r73-source"></p>
-    <p><strong>Published interpretation:</strong> <span id="r73-published-interpretation"></span></p>
-    <h3>Result in one sentence</h3><p id="r67-sentence"></p><details><summary>Explanation and review details</summary><p id="r80-literature-detail"></p></details>
-    <p><strong>What next?</strong> <span id="r67-next"></span></p>
-    <p id="r67-review-status"></p>
-  </div>
-  <h3>Parameters in physical units</h3><p id="r74-literature-hint"><strong>Published value</strong> comes from the cited authors. <strong>Your working value</strong> is your editable copy; changes keep the source record intact. Check the quantity, unit and row note: two different fronts can have different values, even in the same event. Keep their identities and parameters separate.</p>
+  <p class="workflow-hint">These are published solar constraints. Loading a card shows its source values; reviewing checks your working copy. It does not calculate a complete solar MHD solution.</p><div class="r67-actions"><button type="button" id="r67-open-values">2 · Inspect or edit these values</button><button type="button" id="r67-review-top">3 · Review these constraints</button></div>
+  <h3 id="r67-values" tabindex="-1">2 · Parameters in physical units</h3><p id="r74-literature-hint"><strong>Published value</strong> comes from the cited authors. <strong>Your working value</strong> is your editable copy; changes keep the source record intact. Check the quantity, unit and row note: two different fronts can have different values, even in the same event. Keep their identities and parameters separate.</p>
   <p>These are literature constraints, not a complete LEFT/RIGHT state pair. A blank value means unknown. Pattern speed is not plasma velocity.</p>
   <div class="r67-table-scroll"><table><thead><tr><th>Quantity / unit</th><th>Published value</th><th>Your working value</th></tr></thead><tbody id="r67-rows"></tbody></table></div>
   <p id="r67-errors-note"></p>
@@ -2228,7 +2248,14 @@ Files: `RMO_solar_speed_check.json`, `verification.json`, vector PDF/SVG, and th
     <label for="r67-nickname">Optional name or nickname</label><input id="r67-nickname" maxlength="80" placeholder="Anonymous if blank">
     <p>Saved in your downloaded record only. This page does not submit an entry to a public catalogue.</p>
   </details>
-  <div class="r67-actions"><button id="r67-check" class="primary">2 · Review constraints</button><button id="r67-save" disabled>3 · Save current draft JSON</button><button id="r67-save-again" hidden="">Download again</button></div>
+  <div class="r67-actions"><button id="r67-check" class="primary">3 · Review constraints</button><button id="r67-save" disabled>4 · Save reviewed draft JSON</button><button id="r67-save-again" hidden="">Download again</button></div>
+<div id="r67-review-output" class="r67-outcome" tabindex="-1" role="status" aria-live="polite">
+    <p id="r73-result-source" class="r73-source"></p>
+    <p><strong>Published interpretation:</strong> <span id="r73-published-interpretation"></span></p>
+    <h3>Review of your working constraints</h3><p id="r67-sentence"></p><details><summary>Explanation and review details</summary><p id="r80-literature-detail"></p></details>
+    <p><strong>What next?</strong> <span id="r67-next"></span></p>
+    <p id="r67-review-status"></p>
+  <button type="button" id="r67-edit-reviewed">Change these values</button></div>
   <p>Identical drafts are not offered for download twice. Download again remains available if you need another copy. This browser remembers recent records when its local storage is available.</p>
   <div id="r67-beta-output" hidden=""><h3>Your assumed beta profile</h3><p id="r73-beta-source" class="r73-source"></p><div id="r67-beta-graph"></div>
     <p id="r67-beta-caption"></p><button id="r67-beta-svg">Save beta figure · vector SVG</button>
@@ -4502,19 +4529,32 @@ HTML comparison are retained.</p>
 <p>These known test examples establish a limited local demonstration. They do not establish a unique full Riemann solution or an independent external benchmark.</p>
 </section>
 </div></details><details id="r73-tools-workspace" class="r73-workspace"><summary><span>Contact, Brio–Wu and synthetic inputs</span><small>View saved wave diagrams, learn what the parameters mean, and try the input checker.</small></summary><div class="r73-workspace-body"><div id="r67-synthetic-workspace"><section id="r69-synthetic-intro"><h2>Synthetic examples, diagrams and tools</h2><p>This workspace uses its own normalized inputs. The saved contact and Brio–Wu plots illustrate synthetic solutions; they are not results for a literature event selected above.</p></section>
-<p>This prototype checks synthetic inputs and shows saved examples; it does not yet analyse observations.</p>
-<p>Try the input checker with a built-in example. <strong>You do not need to find or enter plasma parameters for these examples.</strong> Check input does not run the solver. The separate calculation panel reports whether Python is connected; all examples here are synthetic, not solar diagnoses.</p>
-<nav class="r63-top-links" aria-label="QuickLook tasks"><a href="#live-panel">Calculate a new solution</a><a href="#r63-results">Open saved results and pictures</a><a href="#start-heading">Try the input checker</a></nav><section id="live-panel" class="r63-results" aria-labelledby="live-title">
-<h2 id="live-title">Calculate a new synthetic solution</h2>
+<section class="start-panel" aria-labelledby="start-heading">
+<h2 id="start-heading">1 · Choose a synthetic example or enter your own values</h2>
+<ol><li><strong>Load an example.</strong> The button fills its parameters automatically.</li><li><strong>Click Check input.</strong> Read the explanation in the report below.</li><li><strong>Optional:</strong> click View / edit parameters to inspect or change a number. Then check again.</li></ol>
+<div class="preflight-actions"><button id="live-load-contact" type="button">Load contact · ready to calculate</button></div>
+<div id="guided-examples"></div>
+<div id="example-context" class="example-state" role="status" aria-live="polite">No example loaded yet. Start with Brio–Wu above; no solar data are needed.</div>
+<div id="preflight-controls"></div>
+</section>
+<details class="advanced-fields" id="advanced-input"><summary>2 · Parameters — enter or change values (optional for examples)</summary>
+<p>You can leave this section closed for the guided examples. LEFT and RIGHT are initial Riemann states, not upstream/downstream of a selected shock. An unknown value needs a reason; it is never assumed to be zero.</p>
+<div class="scope"><strong>Fixed units and frame</strong><p>Normalized synthetic units: ρ₀ = v₀ = B₀ = p₀ = 1; normalized μ₀ = 1. These are not SI units. Basis: n = +x, t₁ = +y, t₂ = +z; right-handed computational frame, zero velocity offset.</p><p>Density is mass density; pressure is thermal gas pressure. No temperature, brightness or image-speed conversion is performed.</p></div>
+<section id="input-editor" aria-label="Synthetic initial-state input"></section>
+<p class="muted">Numbers use a decimal dot, with optional e-notation. Blank means unknown, not zero. An incomplete request can be exported with reasons; invalid input cannot. Covariance, if supplied, is metadata only and is not propagated.</p>
+<div class="preflight-actions"><button type="button" id="check-input-after-edit" class="primary">3 · Check these values</button><span>After editing, check here. The report and Calculate button are directly below.</span></div></details>
+<section class="panel" aria-labelledby="report-title"><h2 id="report-title">3 · Check your input</h2><div id="input-report" aria-live="polite" tabindex="-1"></div></section>
+<section id="live-panel" class="r63-results" aria-labelledby="live-title">
+<h2 id="live-title">4 · Calculate and read your result</h2>
 <p>Load a contact example, optionally edit its values, then calculate. The answer and picture below come from that exact request, not from the saved examples.</p>
-<p><strong>Start:</strong> Load contact → Calculate new synthetic solution → Read the answer.</p>
-<div class="preflight-actions"><button id="live-load-contact" type="button">1 · Load contact into the input fields</button><button id="live-edit" type="button">View / edit parameters</button><button id="live-run" type="button" disabled>2 · Calculate new synthetic solution</button><button id="live-cancel" type="button" disabled>Cancel calculation</button></div>
+
+<div class="preflight-actions"><button id="live-edit" type="button">View / edit parameters</button><button id="live-run" type="button" disabled>4 · Calculate this input</button><button id="live-cancel" type="button" disabled>Cancel calculation</button></div>
 <p id="live-status" role="status" aria-live="polite">No calculation started.</p>
 <p>To test a change: set <strong>both normal velocities to 0.45</strong>, keeping the other contact values unchanged. A new checked contact should then move at 0.45. Changing just one side may leave this adapter's limited domain.</p>
 <div id="live-output" aria-live="polite"><p>No new result yet. The contact and Brio–Wu panels in “Open a saved solution” remain separate references.</p></div>
 <details id="live-history" hidden=""><summary>Previous attempt — not the current input</summary></details>
 <details><summary>Which calculations are available here?</summary><p>Only the existing synthetic special-case adapter: constant states, contacts, zero-field Euler cases, and two exact rotation/tangential fixtures. Brio–Wu is viewable as saved results, but is not rerun through this connection. General MHD branches, covariance propagation, observations and event classification are not implemented here.</p>
-<p>The calculation service runs on Linux in the present developer prototype. A future hosted page will not require visitors to install Linux or Python. This package is not a public deployment and has no live public URL.</p></details>
+<p>Use the connected application for a new calculation. A downloaded HTML file can show saved examples and check inputs; it cannot run the calculation service.</p></details>
 </section>
 <section id="r63-results" class="r63-results" tabindex="-1" aria-labelledby="r63-results-title">
 <h2 id="r63-results-title">Open a saved solution and its picture</h2>
@@ -9068,15 +9108,13 @@ L 698.4 207.792
 <p>Incomplete coverage is not an input error and not evidence that the solution is wrong. It limits what we may conclude: “this solution passed these checks” is supported; “this is the only possible physical interpretation” is not.</p>
 <p>RMO does not forbid a unique identification. It may be reported when the model, observations, admissibility tests, competing alternatives and uncertainty checks justify it. That has not been established by these tutorial panels.</p></details>
 </section>
-<section class="start-panel" aria-labelledby="start-heading">
-<h2 id="start-heading">Input checker — no manual input needed</h2>
-<ol><li><strong>Load an example.</strong> The button fills its parameters automatically.</li><li><strong>Click Check input.</strong> Read the explanation in the report below.</li><li><strong>Optional:</strong> click View / edit parameters to inspect or change a number. Then check again.</li></ol>
-<div id="guided-examples"></div>
-<div id="example-context" class="example-state" role="status" aria-live="polite">No example loaded yet. Start with Brio–Wu above; no solar data are needed.</div>
-<div id="preflight-controls"></div>
-</section>
+<p>This prototype checks synthetic inputs and shows saved examples; it does not yet analyse observations.</p>
+<p>Try the input checker with a built-in example. <strong>You do not need to find or enter plasma parameters for these examples.</strong> Check input does not run the solver. The separate calculation panel reports whether Python is connected; all examples here are synthetic, not solar diagnoses.</p>
+<nav class="r63-top-links" aria-label="QuickLook tasks"><a href="#live-panel">Calculate a new solution</a><a href="#r63-results">Open saved results and pictures</a><a href="#start-heading">Try the input checker</a></nav>
+
+
 <noscript><p>JavaScript must be enabled locally for the form and checks. No internet connection is required.</p></noscript>
-<section class="panel" aria-labelledby="report-title"><h2 id="report-title">What happened? — input check only</h2><div id="input-report" aria-live="polite" tabindex="-1"></div></section>
+
 <div id="help-navigation" class="preflight-actions" aria-label="Help and saved references"></div>
 <details id="help-panel"><summary>Help / FAQ — terms, examples and status messages</summary>
 <p id="r90-faq-navigation"><a href="#r90-physical-questions">Blast, piston, MHD type and self-similarity — a step-by-step explanation</a></p>
@@ -9136,12 +9174,7 @@ L 698.4 207.792
 </details>
 <p class="help-small">The three examples teach input handling. They are not three observed events and do not establish shock classifications.</p>
 </details>
-<details class="advanced-fields" id="advanced-input"><summary>Advanced — view or edit all filled parameters (optional)</summary>
-<p>You can leave this section closed for the guided examples. LEFT and RIGHT are initial Riemann states, not upstream/downstream of a selected shock. An unknown value needs a reason; it is never assumed to be zero.</p>
-<div class="scope"><strong>Fixed units and frame</strong><p>Normalized synthetic units: ρ₀ = v₀ = B₀ = p₀ = 1; normalized μ₀ = 1. These are not SI units. Basis: n = +x, t₁ = +y, t₂ = +z; right-handed computational frame, zero velocity offset.</p><p>Density is mass density; pressure is thermal gas pressure. No temperature, brightness or image-speed conversion is performed.</p></div>
-<section id="input-editor" aria-label="Synthetic initial-state input"></section>
-<p class="muted">Numbers use a decimal dot, with optional e-notation. Blank means unknown, not zero. An incomplete request can be exported with reasons; invalid input cannot. Covariance, if supplied, is metadata only and is not propagated.</p>
-</details>
+
 <details class="optional-controls"><summary>Optional — export your request or clear the fields</summary><p>Export saves the input only. It is not required to try the page and is not a physical result.</p><div id="optional-controls"></div></details>
 <details class="literature-note"><summary>What about examples from solar observations?</summary><p>Planned separately: a growing library of worked examples from published research, starting with a small clearly explained set. Each will distinguish measured quantities, uncertainties, model assumptions, missing information and the published interpretation. It will not be filled with guessed complete plasma states.</p><p>The aim is to let observers learn from these cases, then enter their own observational constraints. Neither this observational input layer nor an event classifier is implemented here. No observed event is loaded or analysed by these tutorial buttons.</p></details>
 <details><summary>Could another solver be connected?</summary><p>RMO is designed to support alternative solver backends through a common, validated adapter. The framework is not tied to one numerical implementation. Each backend must state its supported inputs, admissibility policy, unresolved branches and completeness limits, and pass the relevant shared checks.</p><p>This is an architectural goal, not a working plug-in feature of this page. The current interface performs input checks only; it does not connect or execute any solver.</p></details>
@@ -10263,7 +10296,7 @@ established. Checked results retain their stated scope.</p>
   function visit(id,parents=[]) {
     for(const parent of parents) document.getElementById(parent).open=true;
     const target=document.getElementById(id);
-    if(target.tagName.toLowerCase()==="details") target.open=true;
+    for(let n=target;n;n=n.parentElement) if(n.tagName.toLowerCase()==="details") n.open=true;
     target.setAttribute("tabindex","-1");
     if(typeof target.focus==="function") target.focus({preventScroll:true});
     if(typeof target.scrollIntoView==="function") target.scrollIntoView({block:"start",behavior:"auto"});
@@ -10373,14 +10406,16 @@ established. Checked results retain their stated scope.</p>
     reportNode.replaceChildren();
     const titles={VALID:"Your input is ready.",INCOMPLETE:"Some information is still missing.",INVALID:"The input needs a correction."};
     const outcomes={VALID:"All required values are present and passed the input checks.",INCOMPLETE:"The known values passed the checks, but one or more values are still unknown. Their reasons have been kept.",INVALID:"At least one value or setting failed the input checks. Nothing was silently repaired."};
-    const next={VALID:"You have completed the input check. You may inspect the parameters or export the request; export is optional.",INCOMPLETE:"Click View / edit parameters to supply missing values if you know them. Otherwise, keep them unknown; you may export this incomplete draft.",INVALID:"Click View / edit parameters to correct the reported fields, or load Brio–Wu again. Then click Check input. Export is blocked while errors remain."};
+    const next={VALID:"Continue to Calculate this input directly below for a new attempt, or edit the parameters. Saving the request is optional.",INCOMPLETE:"Click View / edit parameters to supply missing values if you know them. Otherwise, keep them unknown; you may export this incomplete draft.",INVALID:"Click View / edit parameters to correct the reported fields, or load an example again. Then click Check input. Export is blocked while errors remain."};
     reportNode.append(el("h3",titles[report.input_status]),el("p",outcomes[report.input_status]),el("p","What next? "+next[report.input_status]));
     reportNode.append(button("report-edit-parameters","View / edit parameters",showParameters));
     const badge=el("strong","INPUT "+report.input_status,"badge input-status");reportNode.append(badge);
-    reportNode.append(el("p",report.input_status==="VALID"?"Input checks passed. This is not support for an MHD interpretation.":report.input_status==="INCOMPLETE"?"Unknown values are retained with reasons. This request is not ready for physical computation.":"Correct the listed input errors. Values have not been repaired or replaced."));
-    reportNode.append(el("p",connected?"Input check only: this action did not run the solver. Use Calculate new synthetic solution for an explicit, separate attempt.":"Calculation: DISABLED. No solver has run; no shock, wave family or observational classification has been assigned."));
+    const information=el("details");information.append(el("summary","What the input check means"));
+    information.append(el("p",report.input_status==="VALID"?"Input checks passed. This is not support for an MHD interpretation.":report.input_status==="INCOMPLETE"?"Unknown values are retained with reasons. This request is not ready for physical computation.":"Correct the listed input errors. Values have not been repaired or replaced."));
+    information.append(el("p",connected?"Input check only: this action did not run the solver. Use Calculate this input for an explicit, separate attempt.":"Calculation: DISABLED. No solver has run; no shock, wave family or observational classification has been assigned."));
     const uncertaintyText={NOT_CHECKED:"Uncertainty could not be checked because input errors remain.",INVALID_METADATA:"The covariance description needs correction; no uncertainty was propagated.",EXACT_SYNTHETIC_NO_PROPAGATION:"These are specified mathematical values. No observational uncertainty was inferred.",METADATA_ONLY_NOT_PROPAGATED:"Covariance metadata passed its checks. It has not been propagated into a physical result."};
-    reportNode.append(el("p",uncertaintyText[report.uncertainty.status]||"Uncertainty status is available in the technical report."));
+    information.append(el("p",uncertaintyText[report.uncertainty.status]||"Uncertainty status is available in the technical report."));
+    reportNode.append(information);
     if(report.issues.length) {
       const readable=el("ul");
       for(const issue of report.issues) {
@@ -10445,7 +10480,7 @@ established. Checked results retain their stated scope.</p>
     context.replaceChildren(el("strong",title),el("p",expectation),el("p","Parameters are filled automatically. Click Check input below. Use View / edit parameters if you want to inspect or change a value. Nothing has been calculated."));
   }
   const controls=el("div",undefined,"preflight-actions");
-  const presetButton=button("load-preset","1 · Start here — load Brio–Wu example",()=>loadExample("brio"));
+  const presetButton=button("load-preset","Load Brio–Wu · saved solutions only",()=>loadExample("brio"));
   presetButton.className="primary-start";
   const exampleHost=document.getElementById("guided-examples");
   exampleHost.append(presetButton);
@@ -10459,9 +10494,10 @@ established. Checked results retain their stated scope.</p>
   }
   exercises.append(extra);exampleHost.append(exercises);
   const resetButton=button("reset-input","Reset — clear all physical fields",()=>{fill(C.makeBlank(cfg.preset));resetReport("Physical fields cleared. No unknown has been assumed to be zero.");});
-  const checkButton=button("check-input","2 · Check input",checkInput);
+  const checkButton=button("check-input","3 · Check input",checkInput);
   const exportButton=button("export-request","Export request JSON (optional; not a result)",exportRequest);exportButton.disabled=true;
-  controls.append(checkButton,button("show-parameters","View / edit parameters",showParameters),el("span",connected?"Input check only. The separate Calculate button calls local Python.":"Input check only. No solver is connected.","help-small"));
+  document.getElementById("check-input-after-edit").addEventListener("click",checkInput);
+  controls.append(checkButton,button("show-parameters","View / edit parameters",showParameters),el("span",connected?"The check report and Calculate button appear below.":"Input check only. No solver is connected.","help-small"));
   document.getElementById("preflight-controls").append(controls);
   document.getElementById("help-navigation").append(
     button("open-help","Help",()=>visit("help-panel")),
@@ -10469,8 +10505,8 @@ established. Checked results retain their stated scope.</p>
     button("view-saved","View a saved solution",()=>visit("saved-solutions")));
   const optional=el("div",undefined,"preflight-actions");optional.append(exportButton,resetButton);document.getElementById("optional-controls").append(optional);
   fill(C.makeBlank(cfg.preset));
-  resetReport("First click Start here — load Brio–Wu example. The values will be filled automatically. Then click Check input.");
-  context.textContent="No example loaded yet. Click the large Start here button above. No manual input or solar measurements are needed.";
+  resetReport("Load contact to try a calculation, choose Brio–Wu to explore saved solutions, or enter your own values. Then check the input.");
+  context.textContent="No example loaded yet. Contact is the simplest calculation example. Open Parameters to enter your own normalized synthetic values.";
   // Read current fields through the same parser. Never accept a VALID badge as input.
   globalThis.RMOInputBridge=Object.freeze({
     snapshot(){const x=collect();return {request:C.copy(x.request),report:engine.check(x.request,x.parseIssues),revision};},
@@ -10746,7 +10782,12 @@ established. Checked results retain their stated scope.</p>
   const byId=id=>document.getElementById(id), C=globalThis.RMOPreflight, bridge=globalThis.RMOInputBridge;
   const cfg=JSON.parse(byId("local-config").textContent), preset=JSON.parse(byId("local-contact-input").textContent);
   const status=byId("live-status"), output=byId("live-output"), history=byId("live-history"), runButton=byId("live-run"), cancelButton=byId("live-cancel");
-  let available=false,last=null;
+  let available=false,last=null,busy=false;
+  function syncRun(){
+    let snap;try{snap=bridge.snapshot();}catch(e){}
+    runButton.disabled=!available||busy||snap?.report.input_status!=="VALID"||snap?.request.uncertainty.mode!=="exact_synthetic";
+    runButton.setAttribute("aria-describedby","live-status");
+  }
   function el(tag,text){const n=document.createElement(tag);if(text!==undefined)n.textContent=String(text);return n;}
   function focusOutput(){output.setAttribute("tabindex","-1");output.focus({preventScroll:true});output.scrollIntoView({block:"start"});}
   function details(title,node){const d=el("details");d.append(el("summary",title),node);return d;}
@@ -10819,7 +10860,7 @@ established. Checked results retain their stated scope.</p>
     checkBox.append(el("p","— means no separate numerical value or tolerance was reported; it does not mean zero."));
     output.append(details("Independent checks and policy outcomes",checkBox));
     output.append(el("p",reply.saved_directory ? "Saved on the calculation machine: "+reply.saved_directory : "Save the input and result JSON to keep this calculation."));
-    const download=el("button","Export computed result JSON (not just the request)");download.type="button";download.addEventListener("click",()=>exportJSON(r,"RMO_computed_"+r.identity.execution_id+".json"));output.append(download);
+    const download=el("button","5 · Save this input and computed result JSON");download.type="button";download.addEventListener("click",()=>exportJSON(r,"RMO_computed_"+r.identity.execution_id+".json"));output.append(download);
     output.append(details("Exact input, result and provenance",el("pre",JSON.stringify(r,null,2))));
     focusOutput();
   }
@@ -10835,9 +10876,9 @@ established. Checked results retain their stated scope.</p>
     }finally{clearTimeout(timer);}
   }
   function notify(event,data){
-    if(event==="running"){last=null;output.replaceChildren(el("p","Calculating this exact input. No saved result is used as a fallback."));runButton.disabled=true;cancelButton.disabled=false;status.textContent="Running; total adapter budget: 30 seconds.";}
+    if(event==="running"){busy=true;last=null;output.replaceChildren(el("p","Calculating this exact input. No saved result is used as a fallback."));runButton.disabled=true;cancelButton.disabled=false;status.textContent="Running; total adapter budget: 30 seconds.";}
     if(event==="input_blocked"){status.textContent="No calculation: "+data.status+". Use Check input to see details.";bridge.check();}
-    if(event==="stale"){last=null;output.replaceChildren(el("p","Input changed. No previous computed result is current. Calculate again when ready."));}
+    if(event==="stale"){last=null;status.textContent="Input changed. Check the current values below the parameter fields before calculating again.";syncRun();output.replaceChildren(el("p","Input changed. No previous computed result is current. Calculate again when ready."));}
     if(event==="cancelling")status.textContent="Cancellation requested. Waiting for the attempt to finish; any returned result will be history only.";
     if(event==="cancel_error")status.textContent="Cancellation could not be confirmed. The 30-second server budget still applies. "+data.message;
     if(event==="result"){render(data);status.textContent="Attempt finished. Read the short answer and its limits below.";}
@@ -10848,10 +10889,10 @@ established. Checked results retain their stated scope.</p>
       status.textContent="Previous response retained as history only.";
     }
     if(event==="error"){last=null;output.replaceChildren(el("p","No current result: "+data.message),el("p","No physical family is excluded by a connection failure. Completed attempts, if any, remain on the calculation machine. Reload before retrying if the server stopped."));status.textContent="Attempt unavailable; no saved-result fallback.";}
-    if(event==="idle"){runButton.disabled=!available;cancelButton.disabled=true;}
+    if(event==="idle"){busy=false;syncRun();cancelButton.disabled=true;}
   }
   const controller=globalThis.RMOLocalClient.controller({C,bridge,send,notify,makeId:()=>"rmo_"+crypto.randomUUID()});
-  byId("live-load-contact").addEventListener("click",()=>{bridge.load(preset);bridge.check();status.textContent=available?"Contact values loaded. Click Calculate new synthetic solution.":"Contact values loaded for inspection. This offline file cannot run Python.";});
+  byId("live-load-contact").addEventListener("click",()=>{bridge.load(preset);bridge.check();status.textContent=available?"Contact values loaded. Review the input check, then click Calculate this input below.":"Contact values loaded for inspection. This offline file cannot run Python.";});
   byId("live-edit").addEventListener("click",()=>bridge.showParameters());
   runButton.addEventListener("click",()=>void controller.run());cancelButton.addEventListener("click",()=>void controller.cancel());
   if(cfg.enabled===true&&location.origin===cfg.origin){
@@ -10859,11 +10900,11 @@ established. Checked results retain their stated scope.</p>
     status.textContent="Checking the Python calculation connection…";
     send("/api/status").then(data=>{
       if(data.ready!==true)throw new Error("Service not ready");
-      runButton.disabled=false;status.textContent="Python connected on the calculation machine. Load contact → Calculate. Your browser's operating system does not select the solver.";
+      syncRun();status.textContent="Calculation service connected. Load contact or enter values → Check input → Calculate this input.";
     }).catch(err=>{available=false;runButton.disabled=true;status.textContent="Connection unavailable: "+err.message;});
   }else{
     runButton.disabled=true;cancelButton.disabled=true;
-    status.textContent="Offline preview: saved examples and input checks work, but this file does not run Python. A hosted calculation URL is not available yet. No installation is needed just to view this page.";
+    status.textContent="Offline preview: saved examples and input checks work, but this file does not run Python. Open rmo-solar.org for a connected calculation. No installation is needed just to view this page.";
   }
 })();
 </script><script id="r67-config" type="application/json">{"cards": [{"id": "E01", "date": "2007-05-19", "title": "One event, different measured speeds", "category": "CONTROL", "scope": "EUV", "priority": 1, "source": "Long et al. (2008); Long's thesis, Chapter 4, Table 4.1 and adjacent text", "url": "https://doi.org/10.1086/589742", "read_url": "https://arxiv.org/html/1202.4360v1", "read_level": "Author's primary thesis chapter containing this analysis; original article abstract metadata. Not a new image measurement.", "instruments": "STEREO-A/EUVI", "facts": "Reported peak speeds differ between EUVI passbands with different observing cadences. These peaks are not simultaneous upstream and downstream velocities.", "values": [{"name": "171 \u00c5 peak pattern speed", "value": 475, "error": 47, "unit": "km/s", "role": "image_peak_speed", "cadence_s": 150}, {"name": "195 \u00c5 peak pattern speed", "value": 262, "error": 4, "unit": "km/s", "role": "image_peak_speed", "cadence_s": 600}, {"name": "304 \u00c5 peak pattern speed", "value": 238, "error": 20, "unit": "km/s", "role": "image_peak_speed", "cadence_s": 600}, {"name": "284 \u00c5 peak pattern speed", "value": 153, "error": 5, "unit": "km/s", "role": "image_peak_speed", "cadence_s": 1200}], "uncertainty_note": "Reported errors copied as published; distribution/covariance not reconstructed.", "author_interpretation": "Authors discuss an impulsively generated magnetoacoustic disturbance and cadence effects.", "answer": "Different image speeds do not, by themselves, identify different MHD families.", "next": "Match the tracked feature, passband, cadence, sector, geometry and fit interval before comparing speeds.", "missing": ["Matched front-normal geometry", "Co-spatial plasma velocity vectors", "Magnetic-field vectors on both sides", "Complete thermodynamic states"], "solver_ready": false, "rmo_family_result": null, "figure": "E01_published_speeds.svg"}, {"id": "E02", "date": "2010-07-27", "title": "Two distinct propagating structures", "category": "EXPLORATORY", "scope": "EUV", "priority": 2, "source": "Chen & Wu (2011), abstract", "url": "https://doi.org/10.1088/2041-8205/732/2/L20", "read_url": "https://arxiv.org/abs/1103.0871", "read_level": "Primary abstract", "instruments": "SDO/AIA", "facts": "The authors report a leading feature near 560 km/s and a trailing feature near 190 km/s.", "values": [{"name": "Leading feature", "value": 560, "error": null, "unit": "km/s", "role": "image_pattern_speed"}, {"name": "Trailing feature", "value": 190, "error": null, "unit": "km/s", "role": "image_pattern_speed"}], "uncertainty_note": "Approximate reported speeds; no numerical uncertainties supplied by the inspected abstract.", "author_interpretation": "Leading fast-mode wave and trailing field-line-stretching signature.", "answer": "Two image features need separate identities; the slower feature is not automatically a slow-mode shock.", "next": "Associate each track with its own geometry and plasma response.", "missing": ["Independent reconstruction of each trajectory", "Both-side density, pressure, velocity and magnetic field"], "solver_ready": false, "rmo_family_result": null, "figure": "E02_two_features.svg"}, {"id": "E03", "date": null, "title": "Wave trains ahead of CME restructuring", "category": "EXPLORATORY", "scope": "EUV", "priority": 1, "source": "Liu et al. (2012), abstract", "url": "https://doi.org/10.1088/0004-637X/753/1/52", "read_url": "https://arxiv.org/abs/1204.5470", "read_level": "Primary abstract; exact event date not independently extracted from full text in this pass", "instruments": "SDO/AIA", "facts": "Coherent trains precede the lateral CME front; reported initial speeds reach 1400 km/s and later approach 650 km/s. The dominant period is about two minutes.", "values": [{"name": "Initial speed, up to", "value": 1400, "error": null, "unit": "km/s", "role": "image_pattern_speed"}, {"name": "Later speed, approximately", "value": 650, "error": null, "unit": "km/s", "role": "image_pattern_speed"}, {"name": "Dominant period, approximately", "value": 120, "error": null, "unit": "s", "role": "period"}], "uncertainty_note": "Summary values, not sampled trajectory points or statistical error bars.", "author_interpretation": "Outer primary fast-mode wave, distinct from slower inner CME restructuring.", "answer": "Repeated outer fronts can be distinguished from the driver without identifying a shock from speed alone.", "next": "Keep each ripple, the CME flank and local transverse responses as separate objects.", "missing": ["Digitized time series and error model", "Local states on both sides of a selected front", "Local characteristic speeds"], "solver_ready": false, "rmo_family_result": null, "figure": null}, {"id": "E04", "date": "2011-02-15", "title": "Weak compression with a thermal response", "category": "CONFIRMATORY", "scope": "EUV", "priority": 1, "source": "Vanninathan et al. (2015), abstract and Sections II.4 / III", "url": "https://doi.org/10.1088/0004-637X/812/2/173", "read_url": "https://arxiv.org/html/1509.05269v1", "read_level": "Primary abstract and methods/results passages", "instruments": "SDO/AIA, six coronal EUV channels", "facts": "The paper derives density increases of 6\u20139% and temperature increases of 5\u20136%. The assumed line-of-sight depth is 90 Mm.", "values": [{"name": "Density enhancement", "range": [6, 9], "unit": "%", "role": "model_dependent_density_change"}, {"name": "Temperature enhancement", "range": [5, 6], "unit": "%", "role": "DEM_temperature_change"}, {"name": "Assumed LOS depth", "value": 90, "error": null, "unit": "Mm", "role": "assumption"}], "uncertainty_note": "Ranges summarize published enhancements; they are not confidence intervals and must not be used as an uncertainty covariance.", "author_interpretation": "Compressive fast-mode wave or shock; heating consistent with adiabatic compression.", "answer": "Published DEM results support weak compression, but do not uniquely identify an MHD shock family.", "next": "Retain background, depth, filling-factor and temperature-resolution uncertainties with the compression estimate.", "missing": ["Measured LOS depth and filling factor", "Pressure including ion contribution", "Local vector magnetic field", "Front-frame plasma velocities"], "solver_ready": false, "rmo_family_result": null, "figure": "E04_published_enhancements.svg"}, {"id": "E05", "date": "2011-02-16", "title": "Fast image motion, modest Doppler response", "category": "CONFIRMATORY", "scope": "EUV", "priority": 2, "source": "Veronig et al. (2011), including Vr\u0161nak, abstract", "url": "https://doi.org/10.1088/2041-8205/743/1/L10", "read_url": "https://arxiv.org/abs/1111.3505", "read_level": "Primary abstract", "instruments": "Hinode/EIS sit-and-stare + SDO/AIA", "facts": "The front travels along the EIS slit. Coronal lines show redshifts up to 20 km/s followed by blueshifts near \u22125 km/s; the expected density response is within diagnostic noise.", "values": [{"name": "Initial along-slit image speed", "value": 590, "error": null, "unit": "km/s", "role": "image_pattern_speed"}, {"name": "Maximum downward LOS velocity", "value": 20, "error": null, "unit": "km/s", "role": "plasma_LOS_velocity"}, {"name": "Later upward LOS velocity", "value": -5, "error": null, "unit": "km/s", "role": "plasma_LOS_velocity"}], "uncertainty_note": "Approximate abstract values; no fitted profile errors reconstructed.", "author_interpretation": "Response consistent with a coronal fast-mode MHD wave.", "answer": "A front's image speed and the plasma Doppler velocity are different observables, even during a real crossing.", "next": "Use the crossing exposure, quiet control and full geometry; do not insert 590 km/s as plasma u_n.", "missing": ["Full vector plasma velocities and front normal", "Significant density jump", "Magnetic-field vectors"], "solver_ready": false, "rmo_family_result": null, "figure": null}, {"id": "E06", "date": "2011-06-07", "title": "CASHeW: front, peak and back", "category": "EXPLORATORY", "scope": "EUV", "priority": 1, "source": "Kozarev et al. (2017), CASHeW Section 3.1 / Figure 4", "url": "https://doi.org/10.1051/swsc/2017028", "read_url": "https://arxiv.org/html/1710.05302v1", "read_level": "Primary methods/results passages", "instruments": "SDO/AIA; PFSS geometry from HMI-based modelling", "facts": "CASHeW reports a radial front maximum near 1200 km/s and mean near 800 km/s for the M2.5-associated event.", "values": [{"name": "Radial front maximum, approximately", "value": 1200, "error": null, "unit": "km/s", "role": "image_front_maximum"}, {"name": "Radial front mean, approximately", "value": 800, "error": null, "unit": "km/s", "role": "image_front_mean"}], "uncertainty_note": "Not coeval states. Front, peak and back are separately tracked; no curve digitization here.", "author_interpretation": "CASHeW off-limb coronal bright-front characterization.", "answer": "A front tracker and a model field provide useful constraints, not a complete measured Riemann state pair.", "next": "Inspect the selected front location and retain PFSS and LOS assumptions.", "missing": ["Full local state pair", "Independent coronal vector-field constraint"], "solver_ready": false, "rmo_family_result": null, "figure": null}, {"id": "E07", "date": "2013-12-12", "title": "CASHeW: a C-class front", "category": "EXPLORATORY", "scope": "EUV", "priority": 1, "source": "Kozarev et al. (2017), CASHeW Section 3.2", "url": "https://doi.org/10.1051/swsc/2017028", "read_url": "https://arxiv.org/html/1710.05302v1", "read_level": "Primary results passage", "instruments": "SDO/AIA", "facts": "The C4.6-associated filament eruption has a reported mean radial front speed of 450 km/s.", "values": [{"name": "Mean radial front speed", "value": 450, "error": null, "unit": "km/s", "role": "image_front_mean"}], "uncertainty_note": "Approximate published mean; not plasma velocity.", "author_interpretation": "Off-limb coronal bright-front case.", "answer": "A C-class eruption belongs in the example pool; flare class does not supply a shock classification.", "next": "Keep feature separation and local diagnostics ahead of GOES class.", "missing": ["Both-side thermodynamic and vector states"], "solver_ready": false, "rmo_family_result": null, "figure": null}, {"id": "E08", "date": "1998-06-13", "title": "Harra control: front is not filament", "category": "CONTROL", "scope": "EUV", "priority": 2, "source": "Harra & Sterling (2003); Madjarska et al. (2015); accepted project control audit", "url": "https://doi.org/10.1051/0004-6361/201424754", "read_url": "https://arxiv.org/abs/1412.1984", "read_level": "Accepted control audit retained; primary Madjarska abstract checked only, no repeated archive audit", "instruments": "TRACE / EIT / CDS / SUMER", "facts": "The accepted control separates the weak outer front from the erupting filament. SUMER's null wave result and the O IV blend correction are retained.", "values": [], "uncertainty_note": "Null response remains instrument-conditioned, not proof of absent wave or absent shock.", "objects": [{"object": "outer_front", "classification": "GEO_POS / SPEC_NEG_INSTRUMENT_CONDITIONED / CONTROL_ONLY"}, {"object": "eruptive_filament", "classification": "SPEC_POS / NON_TARGET"}], "author_interpretation": "Distinct wave/compression/filament components; Mg X 609.79 \u00c5 interpretation affected by O IV 609.83 \u00c5 blend.", "answer": "Crossing geometry is positive, but a filament spectrum must not be attributed to the outer front.", "next": "Use only crossing, temporal averaging, sensitivity, feature identity and blend-veto controls.", "missing": ["No new observations or shock inversion authorized"], "solver_ready": false, "rmo_family_result": null, "figure": null}, {"id": "E09", "date": "2015-06-22", "title": "IRIS slow-shock literature comparison", "category": "EXPLORATORY", "scope": "RELATED_FLARE_LOOP_NOT_GLOBAL_EUV_FRONT", "priority": 3, "source": "Ye et al. (2026), Nature Communications 17, 8150", "url": "https://doi.org/10.1038/s41467-026-75039-z", "read_url": "https://www.nature.com/articles/s41467-026-75039-z", "read_level": "Primary abstract/introduction plus indexed primary Methods and Figure 4 caption; date confirmed in both. No full spectral reproduction.", "instruments": "IRIS Fe XXI 1354 \u00c5; AIA; 3D MHD modelling", "facts": "The authors combine flare-loop modelling and spectroscopy to identify propagating slow-mode shocks; Fe XXI Doppler changes and asymmetric broadening are central diagnostics.", "values": [], "uncertainty_note": "Simulated and observed quantities must remain separate; no upstream/downstream numbers transcribed here.", "author_interpretation": "Propagating normal slow shocks in dynamic flare loops.", "answer": "A published slow-shock interpretation is retained, but has not been independently reproduced by RMO.", "next": "Check co-spatial states, uncertainties and conductive versus adiabatic closure; do not transfer a flare-loop interpretation to a global EUV front.", "parameter_audit": [{"quantity": "Fe XXI Doppler shift and asymmetric width", "evidence": "Spectral signatures compared with MHD modelling by the authors.", "status": "Reported diagnostic; numerical profile errors not extracted"}, {"quantity": "Coronal vector B and thermal pressure p", "evidence": "A complete co-spatial observed pair was not recovered in this extraction.", "status": "UNKNOWN in this extraction"}, {"quantity": "Plasma beta", "evidence": "No numeric beta with verified model/observation provenance is transcribed here.", "status": "UNKNOWN; not filled from another event"}, {"quantity": "Event and geometry", "evidence": "Methods and Figure 4 identify 22 June 2015. The previous 2017 limb context is withdrawn.", "status": "Date corrected; local shock normal not reconstructed"}, {"quantity": "Energy closure", "evidence": "Thermal conduction and a nearly isothermal model shock require comparison with the adiabatic RMO closure.", "status": "MODEL_APPLICABILITY_REQUIRES_CHECK"}], "parameter_audit_note": "RMO-68 corrects the event identification while retaining the authors' slow-shock interpretation. Numerical model states are not observed states. Exact beta and its provenance remain unextracted.", "missing": ["Exact observed versus simulated state extraction", "Uncertainty and geometry audit", "Applicable non-ideal terms"], "solver_ready": false, "rmo_family_result": null, "figure": null, "source_correction": {"checkpoint": "RMO-68", "card_id": "E09", "source_url": "https://www.nature.com/articles/s41467-026-75039-z", "source_locations": ["Methods: Observational data", "Figure 4 caption"], "access_date": "2026-09-06", "withdrawn": {"date": "2017-09-10", "geometry": "Off-limb context borrowed from the incorrect event"}, "historical_source_action": "Preserve RMO-66; apply this overlay only to the current card"}}, {"id": "E10", "date": "2011-01-27", "title": "Vr\u0161nak co-authored catalogue: a B-class example", "category": "EXPLORATORY", "scope": "EUV", "priority": 1, "source": "Muhr, Veronig, Kienreich, Vr\u0161nak et al. (2014), Table 4, 08:45 UT row", "url": "https://doi.org/10.1007/s11207-014-0594-7", "read_url": "https://arxiv.org/html/1408.2513v1", "read_level": "Primary table header and exact event row; methods/selection passages", "instruments": "STEREO-A/EUVI", "facts": "For the 08:45 UT entry associated with B6.6, the linear-fit speed is 341 \u00b1 13 km/s, the fitted start speed 610 \u00b1 71 km/s, and acceleration \u2212340 \u00b1 48 m/s\u00b2.", "values": [{"name": "Linear-fit interval speed", "value": 341, "error": 13, "unit": "km/s", "role": "image_linear_fit_speed"}, {"name": "Quadratic-fit start speed", "value": 610, "error": 71, "unit": "km/s", "role": "image_start_speed"}, {"name": "Fitted acceleration", "value": -340, "error": 48, "unit": "m/s\u00b2", "role": "image_acceleration"}], "uncertainty_note": "Published fit errors. Only the 08:45 entry is used; separate 12:00 and 19:55 entries are not mixed into this example.", "author_interpretation": "Catalogue kinematics are discussed in a fast-mode framework; this row does not supply a unique local MHD state pair.", "answer": "A B-class event can have a rapidly decelerating EUV front; its start speed and mean speed are different quantities.", "next": "Retain fit definition and interval, then constrain geometry, compression and local characteristic speeds.", "missing": ["Local thermodynamic and vector states", "Front-normal geometry", "Independent local characteristic speed"], "solver_ready": false, "rmo_family_result": null, "figure": "E10_Bclass_kinematics.svg"}, {"id": "E11", "date": "2010-06-13", "title": "An EUV dome ahead of a CME bubble", "category": "CONFIRMATORY", "scope": "EUV_WITH_RADIO_CONSTRAINT", "priority": 1, "source": "Ma et al. (2011), primary abstract", "url": "https://doi.org/10.1088/0004-637X/738/2/160", "read_url": "https://arxiv.org/abs/1106.6056", "read_level": "Primary abstract; event states and full Methods not independently reconstructed", "instruments": "SDO/AIA 193 and 211 \u00c5; radio constraint", "facts": "The authors describe a dome ahead of the CME bubble, a radio-derived compression ratio of 1.56 and a shock temperature near 2.8 MK. Reported dome speeds decrease approximately from 600 to 550 km/s.", "values": [{"name": "Density compression ratio", "value": 1.56, "error": null, "unit": "dimensionless", "role": "radio_derived_compression"}, {"name": "Reported shocked-plasma temperature, approximately", "value": 2.8, "error": null, "unit": "MK", "role": "published_temperature_estimate"}, {"name": "Early dome speed, approximately", "value": 600, "error": null, "unit": "km/s", "role": "image_pattern_speed"}, {"name": "Later dome speed, approximately", "value": 550, "error": null, "unit": "km/s", "role": "image_pattern_speed"}], "uncertainty_note": "Abstract summary values, with no numerical errors extracted. The radio compression is not an AIA density measurement. Temperature-estimation assumptions require the Methods; no new kinematics or inversion was performed.", "author_interpretation": "CME-driven shock and an on-limb EUV wave consistent with, or containing, a fast-wave component.", "answer": "This published EUV shock interpretation has imaging and radio constraints that RMO can compare with, but no new RMO solution has been calculated.", "next": "Audit radio-band interpretation, thermodynamics and co-spatial geometry before attempting a model-conditioned reproduction.", "missing": ["Uncertainties and radio-band interpretation", "Co-spatial pressure and density on both sides", "Local magnetic vectors and front-frame plasma velocity", "Verified same-object association for every diagnostic"], "solver_ready": false, "rmo_family_result": null, "figure": null}], "figures": {"E01": {"svg": {"filename": "E01_published_speeds.svg", "sha256": "15f6cd932c28c61d55ad8e909c3b0d1fe14844f235bf5a5498dde62116a88663", "bytes": 50113, "url": "/assets/15f6cd932c28c61d55ad8e909c3b0d1fe14844f235bf5a5498dde62116a88663.svg"}, "pdf": {"filename": "E01_published_speeds.pdf", "sha256": "f4faa9da16babc1065bb816a5920b725b4810a78727f32577d4f1e5dd6545703", "bytes": 14135, "url": "/assets/f4faa9da16babc1065bb816a5920b725b4810a78727f32577d4f1e5dd6545703.pdf"}, "png": {"filename": "E01_published_speeds.png", "sha256": "ee8dcf2615fe9d26e1f7b492143ce278cae6a02853751c74f4d238830f8dff19", "bytes": 67779, "url": "/assets/ee8dcf2615fe9d26e1f7b492143ce278cae6a02853751c74f4d238830f8dff19.png"}}, "E02": {"svg": {"filename": "E02_two_features.svg", "sha256": "219341b746af07b7b0da4922a52bb5316b5b080e3088fc1d1eb0ee6ecca700e3", "bytes": 40760, "url": "/assets/219341b746af07b7b0da4922a52bb5316b5b080e3088fc1d1eb0ee6ecca700e3.svg"}, "pdf": {"filename": "E02_two_features.pdf", "sha256": "a384872b880816c32be36d6471b4d697d83e77e7caddb603465bcbff93556eb8", "bytes": 14417, "url": "/assets/a384872b880816c32be36d6471b4d697d83e77e7caddb603465bcbff93556eb8.pdf"}, "png": {"filename": "E02_two_features.png", "sha256": "070acb5e45b3cc8aed8fcaaf03675368c07fffc89362995041fd12c9ccb72217", "bytes": 46044, "url": "/assets/070acb5e45b3cc8aed8fcaaf03675368c07fffc89362995041fd12c9ccb72217.png"}}, "E04": {"svg": {"filename": "E04_published_enhancements.svg", "sha256": "c390737c19a43365f1977ce75b67931629d98c6336dba4e2dde1fba80a0da174", "bytes": 39235, "url": "/assets/c390737c19a43365f1977ce75b67931629d98c6336dba4e2dde1fba80a0da174.svg"}, "pdf": {"filename": "E04_published_enhancements.pdf", "sha256": "182fdc728b66c3492f6b916e03dbe688c4b7cdc46b8fb719576b95081fcea696", "bytes": 13109, "url": "/assets/182fdc728b66c3492f6b916e03dbe688c4b7cdc46b8fb719576b95081fcea696.pdf"}, "png": {"filename": "E04_published_enhancements.png", "sha256": "9c9e349ec896aef5f2a4a70c82a8dd033a8950abaecfc98f4cfd3082e63ec6c8", "bytes": 47081, "url": "/assets/9c9e349ec896aef5f2a4a70c82a8dd033a8950abaecfc98f4cfd3082e63ec6c8.png"}}, "E10": {"svg": {"filename": "E10_Bclass_kinematics.svg", "sha256": "26f1959ec8f9dac1b7c49fc122816b7f81b1b5d2a4c10c499941047f9abaae09", "bytes": 45409, "url": "/assets/26f1959ec8f9dac1b7c49fc122816b7f81b1b5d2a4c10c499941047f9abaae09.svg"}, "pdf": {"filename": "E10_Bclass_kinematics.pdf", "sha256": "c6da21eb293b68240e1f0c74d5605ca6edc31b92cab4808ba956ed27386550e2", "bytes": 14480, "url": "/assets/c6da21eb293b68240e1f0c74d5605ca6edc31b92cab4808ba956ed27386550e2.pdf"}, "png": {"filename": "E10_Bclass_kinematics.png", "sha256": "c506c558cf77f3c96c62b0da2a35b6df36f745d696b19dde63c05649783d5a5a", "bytes": 49602, "url": "/assets/c506c558cf77f3c96c62b0da2a35b6df36f745d696b19dde63c05649783d5a5a.png"}}}}</script>
@@ -11100,7 +11141,7 @@ established. Checked results retain their stated scope.</p>
     $('r67-save').disabled=true;$('r67-save-again').hidden=true;$('r67-beta-output').hidden=true;
     const r=M.validate(c,d);$('r67-sentence').textContent=globalThis.RMOPlainResult.literature(r);$('r80-literature-detail').textContent=M.sentence(c,d,r);$('r67-next').textContent=c.next;
     $('r67-review-status').textContent=restored?'Draft restored. Review before saving it again. Imported result labels were not reused.':'Published inputs loaded. Review constraints after any edits. No solar solve has run.';
-    notice((restored?'Restored: ':'Loaded: ')+c.title+'. Parameters and result are below, in this page.');
+    notice((restored?'Restored: ':'Loaded: ')+c.title+'. Source values are loaded below. Inspect or edit them, then review your constraints.');
   }
   function loadSelected() {
     workingRevision++;
@@ -11113,7 +11154,7 @@ established. Checked results retain their stated scope.</p>
       notice((id==='contact'?'Contact':'Brio–Wu')+' inputs loaded. The diagrams below are saved references; a new calculation requires an explicit Run.');
       return;
     }
-    const found=cfg.cards.find(c=>c.id===id);if(found)loadLiterature(found);
+    const found=cfg.cards.find(c=>c.id===id);if(found){loadLiterature(found);jump('r67-event-title');}
   }
   function escapeXML(s) {return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');}
   function plot(b) {
@@ -11159,6 +11200,8 @@ established. Checked results retain their stated scope.</p>
   // Navigation changes only the viewed reference. It never loads a preset or runs Python.
   function jump(id) {
     const target=$(id); if(!target)return;
+    for(let n=target;n;n=n.parentElement)if(n.tagName==='DETAILS')n.open=true;
+    target.setAttribute('tabindex','-1');
     target.focus({preventScroll:true});target.scrollIntoView({block:'start',behavior:'auto'});
   }
   for(const id of ['contact','brio'])$('r69-'+id+'-view').addEventListener('click',()=>{
@@ -11173,7 +11216,9 @@ established. Checked results retain their stated scope.</p>
     jump('input-editor');
   });
   $('r67-choice').addEventListener('change',()=>notice('Selected: '+($('r67-choice').value)+'. Click 1 · Load example to fill its fields. Existing inputs stay unchanged until then.'));
-  $('r67-check').addEventListener('click',review);
+  $('r67-check').addEventListener('click',()=>{review();jump('r67-review-output');});
+  $('r67-review-top').addEventListener('click',()=>{review();jump('r67-review-output');});
+  for(const id of ['r67-open-values','r67-edit-reviewed'])$(id).addEventListener('click',()=>jump('r67-values'));
   $('r67-beta-mode').addEventListener('change',()=>{betaVisibility();invalidate();});
   for(const k of [...numeric,'basis'])$('r67-b-'+k).addEventListener('input',()=>{if(draft)draft.beta.origin='user_assumption';invalidate();});
   for(const id of ['r67-region','r67-nickname','r67-notes'])$(id).addEventListener('input',invalidate);
@@ -11224,7 +11269,7 @@ established. Checked results retain their stated scope.</p>
       if(revision!==workingRevision)throw Error('The working inputs changed while the file was being read. Click Import selected JSON again if you want to replace them with this file.');
       const result=M.restore(text.replace(/^\uFEFF/,''),cfg.cards);loadLiterature(result.card,result.draft,true);
       status.textContent='Imported: '+name+' · '+result.card.id+'. Input import completed. Review the working fields below before saving. No new calculation was run.';
-      notice('Imported: '+name+'. '+result.card.title+' parameters are below.');
+      notice('Imported: '+name+'. '+result.card.title+' parameters are below.');jump('r67-event-title');
     }catch(e){
       if(attempt!==importAttempt)return;
       const reason=e.name==='SyntaxError'?'This file is not valid JSON. Choose a saved RMO .json draft, for example RMO_E05_import_example.json.':e.message;
@@ -11355,16 +11400,31 @@ established. Checked results retain their stated scope.</p>
 const el=id=>document.getElementById(id), cfg=JSON.parse(el('r75-config').textContent), connection=JSON.parse(el('local-config').textContent);
 const clone=x=>JSON.parse(JSON.stringify(x)), fields=cfg.fields, id=k=>'r75-'+k.replaceAll('.','-');
 let current=null, revision=0, latest=null, busy=false;
+const labelNames=Object.fromEntries([...el('r75-inputs').querySelectorAll('label[for]')].map(n=>[n.htmlFor,n.textContent.trim()]));
+function setStatus(note){el('r75-status').textContent=note;el('r75-action-status').textContent=note;}
+function visit(target){for(let n=target;n;n=n.parentElement)if(n.tagName==='DETAILS')n.open=true;target.setAttribute('tabindex','-1');target.focus({preventScroll:true});target.scrollIntoView({block:'start',behavior:'auto'});}
+function syncRun(){el('r75-run').disabled=busy||!connection.enabled||!current;}
 const get=(o,k)=>k.split('.').reduce((a,b)=>a[b],o);
 const put=(o,k,v)=>{const a=k.split('.');let p=o;for(const n of a.slice(0,-1))p=p[n];p[a.at(-1)]=v;};
 const safe=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 function reason(k){const known=el(id(k)).value.trim()!=='';el(id(k)+'-reason').hidden=known;el(id(k)+'-reason-other').hidden=known||el(id(k)+'-reason').value!=='__other__';}
-function invalidate(note){revision++;latest=null;el('r75-result').hidden=true;for(const k of ['result','svg','pdf'])el('r75-save-'+k).disabled=true;if(note)el('r75-status').textContent=note;}
+function invalidate(note){revision++;latest=null;el('r75-result').hidden=true;for(const k of ['result','svg','pdf'])el('r75-save-'+k).disabled=true;if(note)setStatus(note);}
 function number(s,unknown=false){if(s.trim()===''){if(unknown)return null;throw Error('Every half-width needs a number; use 0 for an exact model quantity.');}const n=Number(s);if(!Number.isFinite(n))throw Error('Use finite decimal numbers.');return n;}
+function fieldNumber(input,label,unknown=false){
+ try{const n=number(input.value,unknown);input.removeAttribute('aria-invalid');return n;}
+ catch(e){input.setAttribute('aria-invalid','true');throw Error(label+': '+e.message);}
+}
 function read(){
- if(!current)throw Error('Load or import a local input first.');
- const r=clone(current);r.missing_reasons={};r.nominal.gamma=number(el('r75-gamma').value);
- for(const k of fields){const v=number(el(id(k)).value,true),w=number(el(id(k)+'-width').value);if(w<0)throw Error('Half-widths must be nonnegative.');put(r.nominal,k,v);r.half_widths[k]=w;if(v===null&&el(id(k)+'-reason').value)r.missing_reasons[k]=el(id(k)+'-reason').value==='__other__'?el(id(k)+'-reason-other').value.trim():el(id(k)+'-reason').value;}
+ if(!current)throw Error('Load or import a local input first, or choose Enter my own parameters.');
+ const r=clone(current);r.missing_reasons={};r.nominal.gamma=fieldNumber(el('r75-gamma'),'Gamma');
+ if(r.nominal.gamma<=1){el('r75-gamma').setAttribute('aria-invalid','true');throw Error('Gamma must be greater than 1.');}
+ for(const k of fields){
+  const name=labelNames[id(k)]||el(id(k)).getAttribute('aria-label')||k;
+  const v=fieldNumber(el(id(k)),name,true),w=fieldNumber(el(id(k)+'-width'),name+' half-width');
+  if(w<0){el(id(k)+'-width').setAttribute('aria-invalid','true');throw Error(name+': half-width must be 0 or greater.');}
+  put(r.nominal,k,v);r.half_widths[k]=w;
+  if(v===null&&el(id(k)+'-reason').value)r.missing_reasons[k]=el(id(k)+'-reason').value==='__other__'?el(id(k)+'-reason-other').value.trim():el(id(k)+'-reason').value;
+ }
  r.nominal.right.B[0]=r.nominal.left.B[0];r.half_widths['right.B.0']=r.half_widths['left.B.0'];
  if(r.nominal.right.B[0]===null&&r.missing_reasons['left.B.0'])r.missing_reasons['right.B.0']=r.missing_reasons['left.B.0'];
  if(!Object.keys(r.missing_reasons).length)delete r.missing_reasons;
@@ -11373,11 +11433,12 @@ function read(){
 function fill(r){
  if(r.schema_version!=='rmo-bounded-local-0.1'||r.bounds_kind!=='deterministic_box'||r.fixed_geometry_and_gamma!==true||!r.nominal||!r.half_widths)throw Error('This is not a bounded local-diagnosis request. Use the matching import control for a literature draft or Riemann request.');
  // Validate before replacing any visible values.
+ if(typeof r.nominal.gamma!=='number'||!Number.isFinite(r.nominal.gamma)||r.nominal.gamma<=1)throw Error('Imported gamma must be a finite number greater than 1.');
  for(const k of [...fields,'right.B.0']){const v=get(r.nominal,k),w=r.half_widths[k];if(!(v===null||typeof v==='number'&&Number.isFinite(v))||typeof w!=='number'||!Number.isFinite(w)||w<0)throw Error('Invalid local value or width: '+k);}
  if(r.nominal.left.B[0]!==r.nominal.right.B[0]||r.half_widths['left.B.0']!==r.half_widths['right.B.0'])throw Error('This editor requires one shared normal field and width. Separate normal fields are not silently merged.');
  current=clone(r);el('r75-gamma').value=String(r.nominal.gamma);
  for(const k of fields){const v=get(r.nominal,k);el(id(k)).value=v===null?'':String(v);el(id(k)+'-width').value=String(r.half_widths[k]);const why=r.missing_reasons?.[k]||'';el(id(k)+'-reason').value=['','Not measured','Not reported in the source','Measurement unreliable','Geometry not known','Deliberately withheld for this test'].includes(why)?why:'__other__';el(id(k)+'-reason-other').value=why;reason(k);}
- invalidate();
+ invalidate();syncRun();
 }
 function plot(out){
  if(!out.characteristic_bounds&&!out.characteristic_values)return '';
@@ -11400,7 +11461,7 @@ function show(request,out,source,pdf=null){
  const fixedPerpendicular=['RMO79-fixed-perpendicular-bounds','RMO81-conservation-coupled-perpendicular'].includes(out.integration);
  el('r79-assumptions').hidden=!fixedPerpendicular;
  el('r79-assumptions').textContent=fixedPerpendicular?'Model condition: B_n is fixed at zero (field along the front surface). Only the other supplied ranges are tested. The complete range of independent inputs does not satisfy the conservation laws; the type statement applies to states that do.':'';
- el('r75-status').textContent=source+'. Result, plot and checks are below.';
+ setStatus(source+'. Result, plot and checks are below.');
  el('r75-plot').innerHTML=plot(out)||(out.status==='PERPENDICULAR_UNCERTAINTY_NOT_SUPPORTED'?'<p>No uncertainty plot is shown: the perpendicular error ranges have not been evaluated. The exact central-state checks are available below.</p>':'');
  const rows=[['Nominal exact-state check',out.nominal?.status||'Not evaluated'],['Independent nominal conservation',out.independent_check?.status||'Not evaluated'],['Conservation witness',out.witness?.independent_check?.status||'No separate witness required or obtained'],['Bounded type test',out.status],['Complete Riemann-fan uniqueness','Not established']];
  if(out.joint_entropy_check)rows.push(['Entropy check','Uses the conservation relation between the states']);
@@ -11412,45 +11473,52 @@ function show(request,out,source,pdf=null){
  el('r75-save-result').disabled=false;el('r75-save-svg').disabled=!(out.characteristic_bounds||out.characteristic_values);el('r75-save-pdf').disabled=false;
  el('r75-save-pdf').textContent=pdf?'Save this result report PDF':'Save complete study PDF';
 }
-function load(viewResult=false){try{const row=cfg.cases.find(r=>r.id===el('r75-model').value&&r.factor===Number(el('r75-factor').value));if(!row)throw Error('Saved example is unavailable.');fill(row.input);show(read(),row.output,'Saved checked model '+row.id+'; no new calculation',row.pdf_base64||null);if(viewResult)el('r75-result').scrollIntoView({behavior:'smooth',block:'start'});}catch(e){el('r75-status').textContent=e.message;}}
+function load(viewResult=false){try{const row=cfg.cases.find(r=>r.id===el('r75-model').value&&r.factor===Number(el('r75-factor').value));if(!row)throw Error('Saved example is unavailable.');fill(row.input);show(read(),row.output,'Saved checked model '+row.id+'; no new calculation',row.pdf_base64||null);if(viewResult)visit(el('r75-result'));}catch(e){setStatus(e.message);}}
 function save(name,blob){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function checkedLatest(){if(!latest||JSON.stringify(read())!==latest.signature){invalidate('Inputs changed. Calculate these inputs or reload a checked example before saving a result.');throw Error('The previous result does not belong to the current inputs.');}return latest;}
 function decode(b64){const s=atob(b64);return Uint8Array.from(s,c=>c.charCodeAt(0));}
 async function run(){
  if(busy||!connection.enabled)return;
- let r;try{r=read();}catch(e){el('r75-status').textContent=e.message;return;}
- invalidate();const rev=revision,body=JSON.stringify(r);busy=true;el('r75-run').disabled=true;el('r75-status').textContent='Calculating the local diagnosis with Python…';
+ let r;try{r=read();}catch(e){setStatus(e.message);visit(el('r75-action-status'));return;}
+ invalidate();const rev=revision,body=JSON.stringify(r);busy=true;el('r75-run').disabled=true;setStatus('Calculating these parameters… The new result will open below.');
  try{
   const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(body));
   const sha=Array.from(new Uint8Array(digest)).map(x=>x.toString(16).padStart(2,'0')).join('');
   const env={execution_id:'diagnosis_'+crypto.randomUUID().replaceAll('-',''),input_revision:rev,request_body:body,request_sha256:sha};
   const response=await fetch('/api/diagnose',{method:'POST',headers:{'Content-Type':'application/json','X-RMO-Token':connection.token},body:JSON.stringify(env)});
   const result=await response.json();
-  if(revision!==rev||JSON.stringify(read())!==body){el('r75-status').textContent='Inputs changed during calculation. The older response was not displayed as a current result.';return;}
+  if(revision!==rev||JSON.stringify(read())!==body){setStatus('Inputs changed during calculation. The older response was not displayed as a current result.');return;}
   if(!response.ok||result.error)throw Error(result.error||'The local diagnosis service did not complete.');
   const identity=result.identity;
   if(!identity||identity.execution_id!==env.execution_id||identity.input_revision!==rev||identity.request_sha256!==sha||identity.request_body!==body)throw Error('Response/input identity mismatch; result was not displayed.');
-  show(r,result.assessment,'New Python local diagnosis; exact input and result preserved',result.pdf_base64);
- }catch(e){el('r75-status').textContent='Calculation unavailable: '+e.message;}finally{busy=false;el('r75-run').disabled=!connection.enabled;}
+  show(r,result.assessment,'New calculation for these parameters; exact input and result preserved',result.pdf_base64);visit(el('r75-result'));
+ }catch(e){setStatus('Calculation unavailable: '+e.message);visit(el('r75-action-status'));}finally{busy=false;syncRun();}
 }
+
+for(const k of ['r75-edit-inputs','r75-edit-result'])el(k).addEventListener('click',()=>visit(el('r75-inputs')));
+el('r75-blank-inputs').addEventListener('click',()=>{
+ const r=clone(cfg.cases[0].input);r.missing_reasons={};r.nominal.case_id='user_input';r.nominal.uncertainty={mode:'exact_synthetic',note:'User-entered normalized model inputs; inspect the supplied deterministic half-widths.'};
+ for(const k of [...fields,'right.B.0']){put(r.nominal,k,null);r.half_widths[k]=0;}
+ fill(r);setStatus('Blank input opened. Enter normalized values in the stated frame. Blank means unknown; give its reason. Half-width 0 means an exact model value. Gamma starts at 5/3; review this assumption. Calculate below when ready.');visit(el('r75-inputs'));
+});
 el('r75-load').addEventListener('click',()=>load(true));
 el('r75-demo-top').addEventListener('click',()=>{el('r75-model').value='A63';el('r75-factor').value='0.01';el('r75-workspace').open=true;load();el('r75-tool').scrollIntoView({behavior:'smooth',block:'start'});});
 el('r78-demo').addEventListener('click',()=>{el('r75-model').value='P01';el('r75-factor').value='0';el('r75-workspace').open=true;load(true);});
 el('r79-demo').addEventListener('click',()=>{el('r75-model').value='P02';el('r75-factor').value='0.01';el('r75-workspace').open=true;load(true);});
 el('r75-solar-top').addEventListener('click',()=>{el('r75-workspace').open=true;el('r75-solar-example').open=true;el('r75-solar-view').scrollIntoView({behavior:'smooth',block:'start'});});
-for(const k of fields)for(const suffix of ['','-width','-reason','-reason-other'])el(id(k)+suffix).addEventListener(suffix==='-reason'?'change':'input',()=>{reason(k);invalidate('Inputs edited. The saved result is no longer current; calculate or export this request.');});
+for(const k of fields)for(const suffix of ['','-width','-reason','-reason-other'])el(id(k)+suffix).addEventListener(suffix==='-reason'?'change':'input',()=>{el(id(k)+suffix).removeAttribute('aria-invalid');reason(k);invalidate('Inputs edited. The saved result is no longer current; calculate or export this request.');});
 el('r75-gamma').addEventListener('input',()=>invalidate('Gamma changed; the previous result is no longer current.'));
-for(const k of ['model','factor'])el('r75-'+k).addEventListener('change',()=>{el('r75-status').textContent='Selection changed. Click Load example and view result to replace the current parameters and result.';});
+for(const k of ['model','factor'])el('r75-'+k).addEventListener('change',()=>{setStatus('Selection changed. Click Open saved model result to replace the current parameters and result.');});
 el('r75-run').addEventListener('click',run);
-el('r75-import').addEventListener('change',async()=>{const f=el('r75-import').files?.[0];if(!f)return;try{if(f.size>50000)throw Error('Input file exceeds 50 kB.');const r=JSON.parse(await f.text());fill(r);el('r75-inputs').open=true;el('r75-status').textContent='Imported '+f.name+'. Parameters are loaded. A new diagnosis has not yet been calculated.';}catch(e){el('r75-status').textContent='Import failed: '+e.message;}});
-el('r75-export-input').addEventListener('click',()=>{try{save('RMO_local_input.json',new Blob([JSON.stringify(read(),null,2)],{type:'application/json'}));}catch(e){el('r75-status').textContent=e.message;}});
-el('r75-save-result').addEventListener('click',()=>{try{const r=checkedLatest();save('RMO_local_result.json',new Blob([JSON.stringify({source:r.source,input:r.request,assessment:r.assessment},null,2)],{type:'application/json'}));}catch(e){el('r75-status').textContent=e.message;}});
-el('r75-save-svg').addEventListener('click',()=>{try{const r=checkedLatest();save('RMO_local_speed_bounds.svg',new Blob([plot(r.assessment)],{type:'image/svg+xml'}));}catch(e){el('r75-status').textContent=e.message;}});
-el('r75-save-pdf').addEventListener('click',()=>{try{const r=checkedLatest(),b64=r.pdf||cfg.study_pdf.split(',')[1];save(r.pdf?'RMO_local_result.pdf':'RMO_uncertainty_diagnosis.pdf',new Blob([decode(b64)],{type:'application/pdf'}));}catch(e){el('r75-status').textContent=e.message;}});
-el('r75-run').disabled=!connection.enabled;
-el('r75-run').textContent=connection.enabled?'Calculate these inputs with Python':'Calculate with Python — not connected';
-el('r75-run-help').textContent=connection.enabled?'Use this button after editing the parameters to calculate a new local diagnosis.':'This downloaded page is offline, so a new Python calculation is unavailable here. Use Load example and view result above to explore the saved models and error ranges.';
-el('r75-connection').textContent=connection.enabled?'This page is connected to the Python calculation service. Calculate these inputs runs the local diagnosis; it is not a full Riemann solve.':'Offline page: checked demos, parameters and downloads work here. A fresh diagnosis requires the Python service; editing alone does not recalculate the result.';
+el('r75-import').addEventListener('change',async()=>{const f=el('r75-import').files?.[0];if(!f)return;try{if(f.size>50000)throw Error('Input file exceeds 50 kB.');const r=JSON.parse(await f.text());fill(r);setStatus('Imported '+f.name+'. Inspect the values, then press Calculate these parameters below.');visit(el('r75-inputs'));}catch(e){setStatus('Import failed: '+e.message);}});
+el('r75-export-input').addEventListener('click',()=>{try{save('RMO_local_input.json',new Blob([JSON.stringify(read(),null,2)],{type:'application/json'}));}catch(e){setStatus(e.message);}});
+el('r75-save-result').addEventListener('click',()=>{try{const r=checkedLatest();save('RMO_local_result.json',new Blob([JSON.stringify({source:r.source,input:r.request,assessment:r.assessment},null,2)],{type:'application/json'}));}catch(e){setStatus(e.message);}});
+el('r75-save-svg').addEventListener('click',()=>{try{const r=checkedLatest();save('RMO_local_speed_bounds.svg',new Blob([plot(r.assessment)],{type:'image/svg+xml'}));}catch(e){setStatus(e.message);}});
+el('r75-save-pdf').addEventListener('click',()=>{try{const r=checkedLatest(),b64=r.pdf||cfg.study_pdf.split(',')[1];save(r.pdf?'RMO_local_result.pdf':'RMO_uncertainty_diagnosis.pdf',new Blob([decode(b64)],{type:'application/pdf'}));}catch(e){setStatus(e.message);}});
+syncRun();
+el('r75-run').textContent=connection.enabled?'3 · Calculate these parameters':'Calculation unavailable — offline file';
+el('r75-run-help').textContent=connection.enabled?'Load a saved model, import a matching input file, or choose Enter my own parameters. After editing, calculate here; the new result opens below.':'This downloaded page is offline, so a new Python calculation is unavailable here. Use Open saved model result above to explore the saved models and error ranges.';
+el('r75-connection').textContent=connection.enabled?'This page was served with the Python calculation service. Calculate these inputs runs the local diagnosis; it is not a full Riemann solve.':'Offline page: checked demos, parameters and downloads work here. A fresh diagnosis requires the Python service; editing alone does not recalculate the result.';
 })();
 </script><script id="r77-geometry-script">
 /* RMO77 geometry aid. It never edits a physical input or calls a solver. */

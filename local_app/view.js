@@ -4,7 +4,12 @@
   const byId=id=>document.getElementById(id), C=globalThis.RMOPreflight, bridge=globalThis.RMOInputBridge;
   const cfg=JSON.parse(byId("local-config").textContent), preset=JSON.parse(byId("local-contact-input").textContent);
   const status=byId("live-status"), output=byId("live-output"), history=byId("live-history"), runButton=byId("live-run"), cancelButton=byId("live-cancel");
-  let available=false,last=null;
+  let available=false,last=null,busy=false;
+  function syncRun(){
+    let snap;try{snap=bridge.snapshot();}catch(e){}
+    runButton.disabled=!available||busy||snap?.report.input_status!=="VALID"||snap?.request.uncertainty.mode!=="exact_synthetic";
+    runButton.setAttribute("aria-describedby","live-status");
+  }
   function el(tag,text){const n=document.createElement(tag);if(text!==undefined)n.textContent=String(text);return n;}
   function focusOutput(){output.setAttribute("tabindex","-1");output.focus({preventScroll:true});output.scrollIntoView({block:"start"});}
   function details(title,node){const d=el("details");d.append(el("summary",title),node);return d;}
@@ -77,7 +82,7 @@
     checkBox.append(el("p","— means no separate numerical value or tolerance was reported; it does not mean zero."));
     output.append(details("Independent checks and policy outcomes",checkBox));
     output.append(el("p",reply.saved_directory ? "Saved on the calculation machine: "+reply.saved_directory : "Save the input and result JSON to keep this calculation."));
-    const download=el("button","Export computed result JSON (not just the request)");download.type="button";download.addEventListener("click",()=>exportJSON(r,"RMO_computed_"+r.identity.execution_id+".json"));output.append(download);
+    const download=el("button","5 · Save this input and computed result JSON");download.type="button";download.addEventListener("click",()=>exportJSON(r,"RMO_computed_"+r.identity.execution_id+".json"));output.append(download);
     output.append(details("Exact input, result and provenance",el("pre",JSON.stringify(r,null,2))));
     focusOutput();
   }
@@ -93,9 +98,9 @@
     }finally{clearTimeout(timer);}
   }
   function notify(event,data){
-    if(event==="running"){last=null;output.replaceChildren(el("p","Calculating this exact input. No saved result is used as a fallback."));runButton.disabled=true;cancelButton.disabled=false;status.textContent="Running; total adapter budget: 30 seconds.";}
+    if(event==="running"){busy=true;last=null;output.replaceChildren(el("p","Calculating this exact input. No saved result is used as a fallback."));runButton.disabled=true;cancelButton.disabled=false;status.textContent="Running; total adapter budget: 30 seconds.";}
     if(event==="input_blocked"){status.textContent="No calculation: "+data.status+". Use Check input to see details.";bridge.check();}
-    if(event==="stale"){last=null;output.replaceChildren(el("p","Input changed. No previous computed result is current. Calculate again when ready."));}
+    if(event==="stale"){last=null;status.textContent="Input changed. Check the current values below the parameter fields before calculating again.";syncRun();output.replaceChildren(el("p","Input changed. No previous computed result is current. Calculate again when ready."));}
     if(event==="cancelling")status.textContent="Cancellation requested. Waiting for the attempt to finish; any returned result will be history only.";
     if(event==="cancel_error")status.textContent="Cancellation could not be confirmed. The 30-second server budget still applies. "+data.message;
     if(event==="result"){render(data);status.textContent="Attempt finished. Read the short answer and its limits below.";}
@@ -106,10 +111,10 @@
       status.textContent="Previous response retained as history only.";
     }
     if(event==="error"){last=null;output.replaceChildren(el("p","No current result: "+data.message),el("p","No physical family is excluded by a connection failure. Completed attempts, if any, remain on the calculation machine. Reload before retrying if the server stopped."));status.textContent="Attempt unavailable; no saved-result fallback.";}
-    if(event==="idle"){runButton.disabled=!available;cancelButton.disabled=true;}
+    if(event==="idle"){busy=false;syncRun();cancelButton.disabled=true;}
   }
   const controller=globalThis.RMOLocalClient.controller({C,bridge,send,notify,makeId:()=>"rmo_"+crypto.randomUUID()});
-  byId("live-load-contact").addEventListener("click",()=>{bridge.load(preset);bridge.check();status.textContent=available?"Contact values loaded. Click Calculate new synthetic solution.":"Contact values loaded for inspection. This offline file cannot run Python.";});
+  byId("live-load-contact").addEventListener("click",()=>{bridge.load(preset);bridge.check();status.textContent=available?"Contact values loaded. Review the input check, then click Calculate this input below.":"Contact values loaded for inspection. This offline file cannot run Python.";});
   byId("live-edit").addEventListener("click",()=>bridge.showParameters());
   runButton.addEventListener("click",()=>void controller.run());cancelButton.addEventListener("click",()=>void controller.cancel());
   if(cfg.enabled===true&&location.origin===cfg.origin){
@@ -117,10 +122,10 @@
     status.textContent="Checking the Python calculation connection…";
     send("/api/status").then(data=>{
       if(data.ready!==true)throw new Error("Service not ready");
-      runButton.disabled=false;status.textContent="Python connected on the calculation machine. Load contact → Calculate. Your browser's operating system does not select the solver.";
+      syncRun();status.textContent="Calculation service connected. Load contact or enter values → Check input → Calculate this input.";
     }).catch(err=>{available=false;runButton.disabled=true;status.textContent="Connection unavailable: "+err.message;});
   }else{
     runButton.disabled=true;cancelButton.disabled=true;
-    status.textContent="Offline preview: saved examples and input checks work, but this file does not run Python. A hosted calculation URL is not available yet. No installation is needed just to view this page.";
+    status.textContent="Offline preview: saved examples and input checks work, but this file does not run Python. Open rmo-solar.org for a connected calculation. No installation is needed just to view this page.";
   }
 })();

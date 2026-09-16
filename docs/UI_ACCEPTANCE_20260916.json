@@ -1,0 +1,2451 @@
+{
+  "date": "2026-09-16",
+  "version": "1.0.0-rc4",
+  "correction": "input-and-calculation-guidance-20260916",
+  "baseline_commit": "583092071299406f8eaf638ac9cbc30c780b48ee",
+  "scientific_state": "R139",
+  "ui_dom_and_real_api": {
+    "checks": [
+      {
+        "name": "all inline modules initialise without JavaScript exceptions",
+        "pass": true
+      },
+      {
+        "name": "no duplicate element IDs",
+        "pass": true
+      },
+      {
+        "name": "input, check, calculation and references follow reading order",
+        "pass": true
+      },
+      {
+        "name": "empty inputs cannot start either calculation",
+        "pass": true
+      },
+      {
+        "name": "contact load opens check and its collapsed ancestors",
+        "pass": true
+      },
+      {
+        "name": "contact is ready to calculate beside report",
+        "pass": true
+      },
+      {
+        "name": "editing opens and focuses parameters",
+        "pass": true
+      },
+      {
+        "name": "invalid manual input has named error and no calculation",
+        "pass": true
+      },
+      {
+        "name": "unknown value stays incomplete and keeps its reason",
+        "pass": true
+      },
+      {
+        "name": "real contact calculation displays current result and focuses it",
+        "pass": true
+      },
+      {
+        "name": "computed result can be saved",
+        "pass": true
+      },
+      {
+        "name": "editing removes former computed result",
+        "pass": true
+      },
+      {
+        "name": "edited contact computes the entered speed, not the saved speed",
+        "pass": true
+      },
+      {
+        "name": "cancelled response stays in history and does not become current",
+        "pass": true
+      },
+      {
+        "name": "calculation controls recover after cancellation",
+        "pass": true
+      },
+      {
+        "name": "saved local model A17 / 0 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A17 / 0.01 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A17 / 0.05 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A17 / 0.1 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A42 / 0 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A42 / 0.01 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A42 / 0.05 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A42 / 0.1 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A63 / 0 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A63 / 0.01 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A63 / 0.05 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A63 / 0.1 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A88 / 0 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A88 / 0.01 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A88 / 0.05 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model A88 / 0.1 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model P01 / 0 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model P01 / 0.01 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model P01 / 0.05 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model P01 / 0.1 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model P02 / 0 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model P02 / 0.01 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model P02 / 0.05 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved local model P02 / 0.1 shown explicitly as saved",
+        "pass": true
+      },
+      {
+        "name": "saved result offers direct return to parameters",
+        "pass": true
+      },
+      {
+        "name": "invalid error bound is labelled beside calculate and not sent",
+        "pass": true
+      },
+      {
+        "name": "new local result is focused automatically",
+        "pass": true
+      },
+      {
+        "name": "new result JSON and PDF export correctly",
+        "pass": true
+      },
+      {
+        "name": "input change during calculation cannot display or export stale result",
+        "pass": true
+      },
+      {
+        "name": "own-input route has no fabricated model measurements",
+        "pass": true
+      },
+      {
+        "name": "manual file import opens fields and explains next action",
+        "pass": true
+      },
+      {
+        "name": "parameters entered by hand produce their own new assessment",
+        "pass": true
+      },
+      {
+        "name": "bad import leaves current values intact",
+        "pass": true
+      },
+      {
+        "name": "invalid gamma rejected before replacing fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E01 loads source and visible fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E01 review follows controls",
+        "pass": true
+      },
+      {
+        "name": "solar card E02 loads source and visible fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E02 review follows controls",
+        "pass": true
+      },
+      {
+        "name": "solar card E03 loads source and visible fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E03 review follows controls",
+        "pass": true
+      },
+      {
+        "name": "solar card E04 loads source and visible fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E04 review follows controls",
+        "pass": true
+      },
+      {
+        "name": "solar card E05 loads source and visible fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E05 review follows controls",
+        "pass": true
+      },
+      {
+        "name": "solar card E06 loads source and visible fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E06 review follows controls",
+        "pass": true
+      },
+      {
+        "name": "solar card E07 loads source and visible fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E07 review follows controls",
+        "pass": true
+      },
+      {
+        "name": "solar card E08 loads source and visible fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E08 review follows controls",
+        "pass": true
+      },
+      {
+        "name": "solar card E09 loads source and visible fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E09 review follows controls",
+        "pass": true
+      },
+      {
+        "name": "solar card E10 loads source and visible fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E10 review follows controls",
+        "pass": true
+      },
+      {
+        "name": "solar card E11 loads source and visible fields",
+        "pass": true
+      },
+      {
+        "name": "solar card E11 review follows controls",
+        "pass": true
+      },
+      {
+        "name": "solar literature review never starts a solver",
+        "pass": true
+      },
+      {
+        "name": "reviewed solar draft can be saved",
+        "pass": true
+      },
+      {
+        "name": "edited solar draft cannot save an old review",
+        "pass": true
+      },
+      {
+        "name": "solar draft import opens its event and requires review",
+        "pass": true
+      },
+      {
+        "name": "solar review has a direct edit route",
+        "pass": true
+      },
+      {
+        "name": "navigation includes the full analysis collection",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r132-scientific-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r132-scientific-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r75-tool",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r75-tool",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r67-start",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r67-start",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r75-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r75-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r96-read-results",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r96-read-results",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r96-solar",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r96-solar",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r96-mhd",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r96-mhd",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r96-physics",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r96-physics",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r104-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r104-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r103-field-angle",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r103-field-angle",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r75-solar-example",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r75-solar-example",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r75-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r75-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r75-uncertainty-faq",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r75-uncertainty-faq",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r106-front-normal",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r106-front-normal",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r107-kinematics",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r107-kinematics",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r108-input-matching",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r108-input-matching",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r109-conditional-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r109-conditional-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r110-central-reconstruction",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r110-central-reconstruction",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r111-temperature-constraint",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r111-temperature-constraint",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r112-photometry-plan",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r112-photometry-plan",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r113-epoch-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r113-epoch-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r114-background-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r114-background-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r115-timing-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r115-timing-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r116-passage-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r116-passage-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r117-channels-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r117-channels-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r118-event-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r118-event-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r119-event-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r119-event-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r120-inner-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r120-inner-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r121-evidence-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r121-evidence-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r122-gap-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r122-gap-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-catalogue-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-catalogue-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r124-e05-crossing",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r124-e05-crossing",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r125-e05-matching",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r125-e05-matching",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r126-e05-alignment",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r126-e05-alignment",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r127-e05-spectra",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r127-e05-spectra",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r128-e05-geometry",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r128-e05-geometry",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r130-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r130-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r130-solar-wind",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r130-solar-wind",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r131-all-cases",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r131-all-cases",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r131-e05-models",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r131-e05-models",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r131-solar-wind",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r131-solar-wind",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r132-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r132-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r133-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r133-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r134-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r134-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r135-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r135-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r136-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r136-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r137-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r137-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r138-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r138-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r139-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r139-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r106-front-normal",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r106-front-normal",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r107-kinematics",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r107-kinematics",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r108-input-matching",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r108-input-matching",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r109-conditional-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r109-conditional-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r110-central-reconstruction",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r110-central-reconstruction",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r111-temperature-constraint",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r111-temperature-constraint",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r128-sources",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r128-sources",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r127-sources",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r127-sources",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r126-sources",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r126-sources",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r125-sources",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r125-sources",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-E01",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-E01",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-E02",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-E02",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-E03",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-E03",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-E04",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-E04",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-E05",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-E05",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-E06",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-E06",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-E07",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-E07",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-E08",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-E08",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-E09",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-E09",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-E10",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-E10",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-E11",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-E11",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-G2009",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-G2009",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-next",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-next",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r131-e05-models",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r131-e05-models",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r130-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r130-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r128-e05-geometry",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r128-e05-geometry",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r127-e05-spectra",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r127-e05-spectra",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #rmo-header-r120",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: rmo-header-r120",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r107-kinematics",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r107-kinematics",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r84-solar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r84-solar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r88-speed-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r88-speed-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r89-magnetic-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r89-magnetic-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r91-solar-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r91-solar-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r92-oblique-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r92-oblique-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r93-joint-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r93-joint-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r91-solar-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r91-solar-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r91-solar-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r91-solar-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r88-speed-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r88-speed-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r84-solar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r84-solar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r88-speed-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r88-speed-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r84-solar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r84-solar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r84-solar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r84-solar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r98-external-polar",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r98-external-polar",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r99-partial-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r99-partial-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r100-partial-bounds",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r100-partial-bounds",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r101-fast-witness",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r101-fast-witness",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r102-normal-alfven",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r102-normal-alfven",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r103-field-angle",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r103-field-angle",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r67-start",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r67-start",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #solar2017-case",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: solar2017-case",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r100-dynamic-example",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r100-dynamic-example",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r104a-worksheet",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r104a-worksheet",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r103-field-angle",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r103-field-angle",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r96-read-results",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r96-read-results",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r102-normal-alfven",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r102-normal-alfven",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r101-fast-witness",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r101-fast-witness",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r96-read-results",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r96-read-results",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r101-fast-witness",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r101-fast-witness",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r100-partial-bounds",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r100-partial-bounds",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r100-partial-bounds",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r100-partial-bounds",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r99-partial-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r99-partial-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r98-external-polar",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r98-external-polar",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r98-external-polar",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r98-external-polar",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r97-compression-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r97-compression-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r96-inverse-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r96-inverse-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r95-polar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r95-polar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r95-polar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r95-polar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r94-flow-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r94-flow-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r95-polar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r95-polar-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r94-flow-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r94-flow-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r94-flow-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r94-flow-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r93-joint-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r93-joint-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r88-speed-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r88-speed-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r91-solar-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r91-solar-evidence",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r72-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r72-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r72-checks",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r72-checks",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r72-full-report",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r72-full-report",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r73-contact-checks",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r73-contact-checks",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #live-panel",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: live-panel",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r63-results",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r63-results",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #start-heading",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: start-heading",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r90-physical-questions",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r90-physical-questions",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r77-geometry",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r77-geometry",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r75-complete-study",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r75-complete-study",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r90-physical-questions",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r90-physical-questions",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r90-physical-questions",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r90-physical-questions",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r63-contact-result",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r63-contact-result",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r63-brio-result",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r63-brio-result",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r89-magnetic-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r89-magnetic-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r63-results",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r63-results",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #live-panel",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: live-panel",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r75-tool",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r75-tool",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r63-contact-result",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r63-contact-result",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r72-diagnosis",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r63-brio-result",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r63-brio-result",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r67-start",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r67-start",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #input-editor",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: input-editor",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r105-observational-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r105-observational-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r106-front-normal",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r106-front-normal",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r107-kinematics",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r107-kinematics",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r108-input-matching",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r108-input-matching",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r109-conditional-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r109-conditional-inputs",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r110-central-reconstruction",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r110-central-reconstruction",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r111-temperature-constraint",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r111-temperature-constraint",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r112-photometry-plan",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r112-photometry-plan",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r113-epoch-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r113-epoch-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r114-background-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r114-background-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r115-timing-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r115-timing-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r116-passage-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r116-passage-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r117-channels-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r117-channels-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r118-event-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r118-event-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r119-event-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r119-event-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r120-inner-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r120-inner-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r121-evidence-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r121-evidence-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r122-gap-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r122-gap-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r123-catalogue-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r123-catalogue-check",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r124-e05-crossing",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r124-e05-crossing",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r125-e05-matching",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r125-e05-matching",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r126-e05-alignment",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r126-e05-alignment",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r127-e05-spectra",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r127-e05-spectra",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r128-e05-geometry",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r128-e05-geometry",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-protocol",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r129-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r129-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r130-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r130-e05-density",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r130-solar-wind",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r130-solar-wind",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r131-e05-models",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r131-e05-models",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r131-solar-wind",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r131-solar-wind",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r131-all-cases",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r131-all-cases",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r132-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r132-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r133-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r133-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r134-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r134-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r135-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r135-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r136-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r136-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r137-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r137-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r138-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r138-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r139-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r139-current",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r133-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r133-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r134-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r134-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r135-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r135-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r136-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r136-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r137-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r137-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r138-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r138-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target exists: #r139-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "analysis target ancestors open: r139-scientific-review",
+        "pass": true
+      },
+      {
+        "name": "r120 next frame advances",
+        "pass": true
+      },
+      {
+        "name": "r120 previous frame returns",
+        "pass": true
+      },
+      {
+        "name": "r117 next frame advances",
+        "pass": true
+      },
+      {
+        "name": "r117 previous frame returns",
+        "pass": true
+      },
+      {
+        "name": "r116 next frame advances",
+        "pass": true
+      },
+      {
+        "name": "r116 previous frame returns",
+        "pass": true
+      },
+      {
+        "name": "r115 next frame advances",
+        "pass": true
+      },
+      {
+        "name": "r115 previous frame returns",
+        "pass": true
+      },
+      {
+        "name": "r107 next frame advances",
+        "pass": true
+      },
+      {
+        "name": "r107 previous frame returns",
+        "pass": true
+      },
+      {
+        "name": "r120-play exposes playback state",
+        "pass": true
+      },
+      {
+        "name": "r128-play exposes playback state",
+        "pass": true
+      },
+      {
+        "name": "r127-play exposes playback state",
+        "pass": true
+      },
+      {
+        "name": "r117-play exposes playback state",
+        "pass": true
+      },
+      {
+        "name": "r116-play exposes playback state",
+        "pass": true
+      },
+      {
+        "name": "r115-play exposes playback state",
+        "pass": true
+      },
+      {
+        "name": "r107-play exposes playback state",
+        "pass": true
+      },
+      {
+        "name": "offline saved result works and live calculation explains unavailability",
+        "pass": true
+      },
+      {
+        "name": "all exercised UI handlers complete without JavaScript exceptions",
+        "pass": true
+      }
+    ],
+    "all_recorded_checks_pass": true,
+    "analysis_links": 211,
+    "scope": "DOM integration plus real isolated HTTP calculations. No browser rendering, mobile layout or production deployment verification."
+  },
+  "local_http": {
+    "checks": [
+      {
+        "name": "application HTTP",
+        "pass": true
+      },
+      {
+        "name": "separate browser-session tokens",
+        "pass": true
+      },
+      {
+        "name": "cookie protections",
+        "pass": true
+      },
+      {
+        "name": "foreign Host rejected",
+        "pass": true
+      },
+      {
+        "name": "no undeclared resource /private-record.txt",
+        "pass": true
+      },
+      {
+        "name": "no undeclared resource /results/local_runs",
+        "pass": true
+      },
+      {
+        "name": "no undeclared resource /local_app/server.py",
+        "pass": true
+      },
+      {
+        "name": "no undeclared resource /assets/../index.html",
+        "pass": true
+      },
+      {
+        "name": "no undeclared resource /assets/0000000000000000000000000000000000000000000000000000000000000000.png",
+        "pass": true
+      },
+      {
+        "name": "public asset delivery",
+        "pass": true
+      },
+      {
+        "name": "another session token rejected",
+        "pass": true
+      },
+      {
+        "name": "foreign Origin rejected",
+        "pass": true
+      },
+      {
+        "name": "A63 HTTP and input association",
+        "pass": true
+      },
+      {
+        "name": "A63 conditional result",
+        "pass": true
+      },
+      {
+        "name": "A63 exact saved assessment",
+        "pass": true
+      },
+      {
+        "name": "A63 PDF contains result and limits",
+        "pass": true
+      },
+      {
+        "name": "repeat execution ID rejected",
+        "pass": true
+      },
+      {
+        "name": "invalid input checksum rejected",
+        "pass": true
+      },
+      {
+        "name": "B01 HTTP and identity",
+        "pass": true
+      },
+      {
+        "name": "B01 checked contact",
+        "pass": true
+      },
+      {
+        "name": "no private runtime paths or worker commands",
+        "pass": true
+      }
+    ],
+    "metrics": {
+      "A63_seconds": 0.1421832740015816,
+      "B01_seconds": 0.7513056059979135,
+      "peak_process_tree_rss_bytes": 102899712
+    },
+    "all_recorded_checks_pass": true
+  },
+  "public_mode_http": {
+    "checks": [
+      {
+        "name": "public Secure/HttpOnly cookie",
+        "pass": true
+      },
+      {
+        "name": "HTTPS origin and HSTS",
+        "pass": true
+      },
+      {
+        "name": "public Secure/HttpOnly cookie",
+        "pass": true
+      },
+      {
+        "name": "HTTPS origin and HSTS",
+        "pass": true
+      },
+      {
+        "name": "forwarded Host cannot grant origin",
+        "pass": true
+      },
+      {
+        "name": "public A63 association",
+        "pass": true
+      },
+      {
+        "name": "public result omits execution paths",
+        "pass": true
+      },
+      {
+        "name": "calculation becomes active",
+        "pass": true
+      },
+      {
+        "name": "single calculation capacity",
+        "pass": true
+      },
+      {
+        "name": "other session cancellation remains local",
+        "pass": true
+      },
+      {
+        "name": "other session cannot cancel active result",
+        "pass": true
+      },
+      {
+        "name": "public calculation files disabled",
+        "pass": true
+      }
+    ],
+    "all_recorded_checks_pass": true
+  },
+  "navigation_http": {
+    "checks": [
+      {
+        "name": "external link opens application",
+        "pass": true
+      },
+      {
+        "name": "navigation retains protected cookie",
+        "pass": true
+      },
+      {
+        "name": "navigation retains response isolation",
+        "pass": true
+      },
+      {
+        "name": "navigation uses configured origin",
+        "pass": true
+      },
+      {
+        "name": "cross-site GET document navigation",
+        "pass": true
+      },
+      {
+        "name": "cross-site HEAD document navigation",
+        "pass": true
+      },
+      {
+        "name": "cross-site cors/empty blocked",
+        "pass": true
+      },
+      {
+        "name": "cross-site no-cors/image blocked",
+        "pass": true
+      },
+      {
+        "name": "cross-site navigate/iframe blocked",
+        "pass": true
+      },
+      {
+        "name": "cross-site navigate/frame blocked",
+        "pass": true
+      },
+      {
+        "name": "cross-site navigate/empty blocked",
+        "pass": true
+      },
+      {
+        "name": "cross-site cors/document blocked",
+        "pass": true
+      },
+      {
+        "name": "cross-site without navigation metadata blocked",
+        "pass": true
+      },
+      {
+        "name": "cross-site cannot extend navigation exception to /api/status",
+        "pass": true
+      },
+      {
+        "name": "cross-site cannot extend navigation exception to /api/run",
+        "pass": true
+      },
+      {
+        "name": "cross-site cannot extend navigation exception to /api/diagnose",
+        "pass": true
+      },
+      {
+        "name": "cross-site cannot extend navigation exception to /api/cancel",
+        "pass": true
+      },
+      {
+        "name": "cross-site cannot extend navigation exception to /assets/0000000000000000000000000000000000000000000000000000000000000000.txt",
+        "pass": true
+      },
+      {
+        "name": "same-site GET document navigation",
+        "pass": true
+      },
+      {
+        "name": "same-site HEAD document navigation",
+        "pass": true
+      },
+      {
+        "name": "same-site cors/empty blocked",
+        "pass": true
+      },
+      {
+        "name": "same-site no-cors/image blocked",
+        "pass": true
+      },
+      {
+        "name": "same-site navigate/iframe blocked",
+        "pass": true
+      },
+      {
+        "name": "same-site navigate/frame blocked",
+        "pass": true
+      },
+      {
+        "name": "same-site navigate/empty blocked",
+        "pass": true
+      },
+      {
+        "name": "same-site cors/document blocked",
+        "pass": true
+      },
+      {
+        "name": "same-site without navigation metadata blocked",
+        "pass": true
+      },
+      {
+        "name": "same-site cannot extend navigation exception to /api/status",
+        "pass": true
+      },
+      {
+        "name": "same-site cannot extend navigation exception to /api/run",
+        "pass": true
+      },
+      {
+        "name": "same-site cannot extend navigation exception to /api/diagnose",
+        "pass": true
+      },
+      {
+        "name": "same-site cannot extend navigation exception to /api/cancel",
+        "pass": true
+      },
+      {
+        "name": "same-site cannot extend navigation exception to /assets/0000000000000000000000000000000000000000000000000000000000000000.txt",
+        "pass": true
+      },
+      {
+        "name": "existing direct/same-origin access: None",
+        "pass": true
+      },
+      {
+        "name": "existing direct/same-origin access: none",
+        "pass": true
+      },
+      {
+        "name": "existing direct/same-origin access: same-origin",
+        "pass": true
+      },
+      {
+        "name": "navigation does not enable POST on root",
+        "pass": true
+      },
+      {
+        "name": "navigation does not bypass Host allowlist",
+        "pass": true
+      },
+      {
+        "name": "same-origin session still works",
+        "pass": true
+      },
+      {
+        "name": "API rejects wrong token",
+        "pass": true
+      },
+      {
+        "name": "API rejects missing session",
+        "pass": true
+      },
+      {
+        "name": "API rejects foreign Origin",
+        "pass": true
+      },
+      {
+        "name": "separate navigation sessions have distinct tokens",
+        "pass": true
+      },
+      {
+        "name": "another session cannot reuse first token",
+        "pass": true
+      },
+      {
+        "name": "navigation never starts a calculation",
+        "pass": true
+      }
+    ],
+    "all_recorded_checks_pass": true
+  },
+  "structure": {
+    "inline_modules_match_sources": {
+      "preflight/ui.js": true,
+      "local_app/client.js": true,
+      "local_app/view.js": true,
+      "literature_input/view.js": true,
+      "literature_input/first_visit.js": true,
+      "uncertainty_diagnosis/client.js": true
+    },
+    "unchanged_embedded_json": {
+      "r128-images-data": true,
+      "r127-spectra-data": true,
+      "r120-data": true,
+      "r117-frame-data": true,
+      "r116-frame-data": true,
+      "r115-frame-data": true,
+      "r107-frame-data": true,
+      "preflight-config": true,
+      "rmo-data": true,
+      "local-config": true,
+      "local-contact-input": true,
+      "r67-config": true,
+      "r75-config": true,
+      "r100-viewer-document": true
+    },
+    "referenced_assets": 352,
+    "missing_assets": [],
+    "incorrect_asset_hashes": [],
+    "syntax_errors": [],
+    "scripts_checked": 37,
+    "calculation_code_changed": [],
+    "all_recorded_checks_pass": true
+  },
+  "browser_visual_acceptance": "PENDING: local and file previews were blocked by the cloud browser URL policy. DOM focus/scroll calls are verified, not pixel layout or real browser focus behaviour.",
+  "production_deployment": "Not performed by preparation of this package",
+  "final_release": "Pending browser acceptance and version/DOI publication decision",
+  "full_scientific_campaign_rerun": false
+}

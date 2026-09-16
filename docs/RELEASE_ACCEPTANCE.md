@@ -1,3 +1,36 @@
+# Release acceptance
+
+## 2026-09-16: rc4 interface correction
+
+Baseline: `583092071299406f8eaf638ac9cbc30c780b48ee`. Scientific state R139.
+The correction remains **1.0.0-rc4**, pending acceptance of the revised interface in a real browser.
+
+Completed against the shipped HTML and an isolated Python service:
+
+- 21 local HTTP, 12 public-mode HTTP and 44 navigation/security checks passed.
+- 518 DOM/API assertions passed: all 24 saved local-model configurations, 11 solar literature cards, 211 internal links, core frame-step/play controls, manual fields, JSON imports, input/result/PDF exports, cancellation and rejection of stale results.
+- Default contact and edited contact at speed 0.45 were calculated with the real service. A63 was calculated after editing and after entering all parameters by hand.
+- Invalid imports preserve the current fields; invalid widths and gamma are reported beside the calculation controls. Unknown inputs remain unknown.
+- Inline source modules agree; 37 inline scripts pass syntax checks; all 352 referenced hashed assets are present with the expected bytes. Embedded JSON data and numerical Python implementation are unchanged.
+
+Machine-readable evidence: [UI_ACCEPTANCE_20260916.json](UI_ACCEPTANCE_20260916.json).
+The DOM tests use jsdom 26.1.0 and the pinned Python runtime. They record focus/scroll requests and run real API calls. They **do not render the page**. Browser preview of local and file URLs was blocked by the cloud browser policy; no alternative browser surface was used.
+
+### Before declaring the final version
+
+On the deployed corrected commit, check desktop and phone:
+
+1. Load a contact, open parameters, set both normal velocities to 0.45, check, calculate and save. The check and calculation must be easy to find below the fields; the answer must show speed 0.45.
+2. Open A63, change a bound, calculate, and save JSON/PDF. Also import the saved input. Errors and the next action must be visible without searching the page.
+3. Load and edit a solar literature card, review and save/import its draft. Confirm the reference values are distinct from working values and from newly calculated model results.
+4. Check vertical field layout on a phone, keyboard focus, image viewers (including the lazy SUVI iframe), PDF/download handling and the www redirect.
+
+Final-release browser acceptance and production load testing are not recorded here. These checks do not establish full MHD branch coverage, global uniqueness, stability or observational identification.
+
+## Historical acceptance, 2026-09-14 (rc3)
+
+The following report is preserved as dated evidence. Its deferred scrolling issue is addressed by the 2026-09-16 correction above; its browser results apply to the earlier deployed code.
+
 # Hosted release-candidate checks
 
 Version: 1.0.0-rc3. Scientific state: R139. Check date: 2026-09-14.

@@ -99,7 +99,7 @@
     $('r67-save').disabled=true;$('r67-save-again').hidden=true;$('r67-beta-output').hidden=true;
     const r=M.validate(c,d);$('r67-sentence').textContent=globalThis.RMOPlainResult.literature(r);$('r80-literature-detail').textContent=M.sentence(c,d,r);$('r67-next').textContent=c.next;
     $('r67-review-status').textContent=restored?'Draft restored. Review before saving it again. Imported result labels were not reused.':'Published inputs loaded. Review constraints after any edits. No solar solve has run.';
-    notice((restored?'Restored: ':'Loaded: ')+c.title+'. Parameters and result are below, in this page.');
+    notice((restored?'Restored: ':'Loaded: ')+c.title+'. Source values are loaded below. Inspect or edit them, then review your constraints.');
   }
   function loadSelected() {
     workingRevision++;
@@ -112,7 +112,7 @@
       notice((id==='contact'?'Contact':'Brio–Wu')+' inputs loaded. The diagrams below are saved references; a new calculation requires an explicit Run.');
       return;
     }
-    const found=cfg.cards.find(c=>c.id===id);if(found)loadLiterature(found);
+    const found=cfg.cards.find(c=>c.id===id);if(found){loadLiterature(found);jump('r67-event-title');}
   }
   function escapeXML(s) {return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');}
   function plot(b) {
@@ -158,6 +158,8 @@
   // Navigation changes only the viewed reference. It never loads a preset or runs Python.
   function jump(id) {
     const target=$(id); if(!target)return;
+    for(let n=target;n;n=n.parentElement)if(n.tagName==='DETAILS')n.open=true;
+    target.setAttribute('tabindex','-1');
     target.focus({preventScroll:true});target.scrollIntoView({block:'start',behavior:'auto'});
   }
   for(const id of ['contact','brio'])$('r69-'+id+'-view').addEventListener('click',()=>{
@@ -172,7 +174,9 @@
     jump('input-editor');
   });
   $('r67-choice').addEventListener('change',()=>notice('Selected: '+($('r67-choice').value)+'. Click 1 · Load example to fill its fields. Existing inputs stay unchanged until then.'));
-  $('r67-check').addEventListener('click',review);
+  $('r67-check').addEventListener('click',()=>{review();jump('r67-review-output');});
+  $('r67-review-top').addEventListener('click',()=>{review();jump('r67-review-output');});
+  for(const id of ['r67-open-values','r67-edit-reviewed'])$(id).addEventListener('click',()=>jump('r67-values'));
   $('r67-beta-mode').addEventListener('change',()=>{betaVisibility();invalidate();});
   for(const k of [...numeric,'basis'])$('r67-b-'+k).addEventListener('input',()=>{if(draft)draft.beta.origin='user_assumption';invalidate();});
   for(const id of ['r67-region','r67-nickname','r67-notes'])$(id).addEventListener('input',invalidate);
@@ -223,7 +227,7 @@
       if(revision!==workingRevision)throw Error('The working inputs changed while the file was being read. Click Import selected JSON again if you want to replace them with this file.');
       const result=M.restore(text.replace(/^\uFEFF/,''),cfg.cards);loadLiterature(result.card,result.draft,true);
       status.textContent='Imported: '+name+' · '+result.card.id+'. Input import completed. Review the working fields below before saving. No new calculation was run.';
-      notice('Imported: '+name+'. '+result.card.title+' parameters are below.');
+      notice('Imported: '+name+'. '+result.card.title+' parameters are below.');jump('r67-event-title');
     }catch(e){
       if(attempt!==importAttempt)return;
       const reason=e.name==='SyntaxError'?'This file is not valid JSON. Choose a saved RMO .json draft, for example RMO_E05_import_example.json.':e.message;

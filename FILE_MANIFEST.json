@@ -17,8 +17,8 @@
     },
     {
       "path": ".zenodo.json",
-      "bytes": 1694,
-      "sha256": "18fe113e9f93f5094e0829721b0bb69ea7dd5f9cfde80c5cb6bc26049a531d1b"
+      "bytes": 2034,
+      "sha256": "60c5d10c5aae574eaa37237446ddb684a471180aa5e65ca1d82edadac0b30640"
     },
     {
       "path": "CITATION.cff",
@@ -32,18 +32,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 4616,
-      "sha256": "4aa55b499c2cd1adaacfdf58bf716ef3ce910bec7ad25ea288ba6ad607cb390f"
+      "bytes": 5078,
+      "sha256": "e596399d037ba233b2ce23fcf435636b209bc89a9b8417bd1534dfdc1f78f714"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 3285,
-      "sha256": "7df391374405feb14413c61c493c5589f5b078bb54df9e5914b48d4d529090a6"
+      "bytes": 4760,
+      "sha256": "205320077501e78944702b6f3f2fd132ae5a60b06e98414a5ebdee6b5d66f16c"
     },
     {
       "path": "RELEASE_VALIDATION.json",
-      "bytes": 17307,
-      "sha256": "0aba151a98cfe17cd9a0d83b0255ff8cff8354e46db19f350be33b5db1455908"
+      "bytes": 19070,
+      "sha256": "cd9e76dd702b5abad352551ff62eb645a2daff699f065fd5d68a74b14112a992"
     },
     {
       "path": "RMO/RMO_benchmark_manifest_v1_1.yaml",
@@ -72,13 +72,13 @@
     },
     {
       "path": "docs/RELEASE_ACCEPTANCE.md",
-      "bytes": 4214,
-      "sha256": "17cb41ad0e4cc736ed832210c4c3ca17ccc14ee0d3f386434dfce65508039405"
+      "bytes": 6964,
+      "sha256": "e2e3a44cc765705d06d13af68017b2ed856f93230f7784f3c0ce221c3a242207"
     },
     {
       "path": "docs/RELEASE_ZENODO.md",
-      "bytes": 4397,
-      "sha256": "1a95fc654ee97ecf1d00f6846d615d3b111126c85d3665388f55b6f80b816c41"
+      "bytes": 2963,
+      "sha256": "448e6df9c129a6c3000a2fc42ef6be13c5f26173fd491890be17b80fdb0530fd"
     },
     {
       "path": "docs/REPRODUCIBILITY.md",
@@ -94,6 +94,11 @@
       "path": "docs/SUVI_MEDIA_VALIDATION.json",
       "bytes": 4453,
       "sha256": "7634984882c8912315118cf1f2e6af27057a5f98ee97e4ee6d0e23447119d9b7"
+    },
+    {
+      "path": "docs/UI_ACCEPTANCE_20260916.json",
+      "bytes": 62583,
+      "sha256": "8dbe573abe9b24e541f4845fcd72809aa1bcb114662bed8748bbc5c173200dd3"
     },
     {
       "path": "implementation/reference/aegir_975cc7ed/LICENSE",
@@ -207,8 +212,8 @@
     },
     {
       "path": "literature_input/view.js",
-      "bytes": 18428,
-      "sha256": "8c544060c4ee9e251df7e5cbb4e9d434c95b887c0cf94ebfa9c145f72ac60b4c"
+      "bytes": 18876,
+      "sha256": "b1711adbecb72fe529e559db84b8d6c0af5da03dc4c3fdfa307a4fda8740f0ae"
     },
     {
       "path": "local_app/__init__.py",
@@ -227,8 +232,8 @@
     },
     {
       "path": "local_app/view.js",
-      "bytes": 12393,
-      "sha256": "3985dcaf02b15bfe484ec433d77e9201f59a0e12c488b13da89f62bc3b2cf1c6"
+      "bytes": 12772,
+      "sha256": "61a5621e7ae2942cedec5cb8aba7839965fb03bc61927821b9f3e43e594689b0"
     },
     {
       "path": "local_diagnosis/diagnose.py",
@@ -287,8 +292,8 @@
     },
     {
       "path": "preflight/ui.js",
-      "bytes": 21370,
-      "sha256": "8c88b789cd13b9f94a296d57e45bc96a92298caa335bb187bdb3ecd0bdac7230"
+      "bytes": 21638,
+      "sha256": "cd5ec4b79eff878bbb2601bda601db42c1a591fe65487e6922fd93c8e2df050b"
     },
     {
       "path": "public/assets/00878b8878bc116f3e0533a4f8993ddfd6eeb7dfd925a3a6eefe8e1a86fe21a9.png",
@@ -2052,8 +2057,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 2863764,
-      "sha256": "b6b4b3885c820b2e071d58c773b8884eb5322af98132de12cfabfd51e13ecedd"
+      "bytes": 2870750,
+      "sha256": "ee2987eda829e5d5a09316bdc47bd51ce49ecb7109d07dd381f4a7000567d864"
     },
     {
       "path": "render.yaml",
@@ -2177,8 +2182,8 @@
     },
     {
       "path": "uncertainty_diagnosis/client.js",
-      "bytes": 14957,
-      "sha256": "91d4290113e24f182a4b49ff6a062989de6ded569064ce70e293f68b38072731"
+      "bytes": 16833,
+      "sha256": "acc0483e89fdee70cf3e555c3b5470f72343721a4d20b32c9ad3d248cc98ed07"
     },
     {
       "path": "uncertainty_diagnosis/fonts/DejaVuSans-Bold.ttf",
@@ -2261,6 +2266,11 @@
       "sha256": "94ead0f523c096adac40dcf5743f60bbf2026506983022d248c6286b1f230289"
     },
     {
+      "path": "verification/ui_workflow_smoke.cjs",
+      "bytes": 14452,
+      "sha256": "80f9bce3f7d9d94bd3ca91c1c1efc79dbb58cf0ec1ebc9bd625f03b1ec7111b4"
+    },
+    {
       "path": "verify_manifest.py",
       "bytes": 467,
       "sha256": "7f866e175018f80e2e8e51f35647cdedd273643640ee8a22c8858e0c101537c7"
@@ -2275,5 +2285,8 @@
       "bytes": 13455,
       "sha256": "2a89da6be29e54887610fbcfe86884a42f41ed34f0595c2f1767b89df5035417"
     }
-  ]
+  ],
+  "correction": "input-and-calculation-guidance-20260916",
+  "baseline_git_commit": "583092071299406f8eaf638ac9cbc30c780b48ee",
+  "source_bundle_note": "source_bundle_sha256 is the retained original source-bundle identifier, not the checksum of the corrected ZIP."
 }

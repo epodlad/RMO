@@ -1,6 +1,6 @@
 # RMO — Riemann Map Operator
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22741502.svg)](https://doi.org/10.5281/zenodo.22741502)
+Archived rc3: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22741502.svg)](https://doi.org/10.5281/zenodo.22741502)
 
 **Use the hosted application: [rmo-solar.org](https://rmo-solar.org/).**
 
@@ -9,6 +9,8 @@ RMO connects declared solar-observation constraints with admissible local ideal-
 Current source version **1.0.0-rc4** restores the SUVI preview inside the main page, its image-processing comparison video and the event-card still. The original preview frames are linked to NOAA's GOES-16/SUVI animation, with NOAA SWPC credit and Seaton and Darnel's scientific reference. The viewer loads when its example is opened.
 
 The calculations are conditional on the stated model, inputs and search limits. A supported local class does not establish a unique global Riemann solution or identify an observed solar front by itself. The interface keeps these distinctions beside the results.
+
+The **2026-09-16 interface correction** puts parameter entry, checks and calculation in sequence; adds direct edit/review actions to solar cards; and provides labels for the vertical input layout on phones. Automated acceptance is recorded in [the current report](docs/RELEASE_ACCEPTANCE.md). Visual acceptance of the corrected deployment remains pending.
 
 ## Run locally
 
@@ -43,7 +45,7 @@ The previous rc3 hosted application completed the targeted browser smoke checks 
 
 ## Citation and rights
 
-Cite the archived software release **1.0.0-rc3** using DOI [10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502). This DOI identifies the source at tag [`v1.0.0-rc3`](https://github.com/epodlad/RMO/releases/tag/v1.0.0-rc3), commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. The restored SUVI media on `main` are outside that archived snapshot and require a new software release. `CITATION.cff` describes the current source without assigning it the older release's DOI. See [Zenodo publication details](docs/RELEASE_ZENODO.md).
+Cite the archived software release **1.0.0-rc3** using DOI [10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502). This DOI identifies the source at tag [`v1.0.0-rc3`](https://github.com/epodlad/RMO/releases/tag/v1.0.0-rc3), commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. The already published rc4 archive is DOI [10.5281/zenodo.22776018](https://doi.org/10.5281/zenodo.22776018). Use the DOI for the version actually used; an existing rc3 citation remains valid. The 2026-09-16 interface correction is documented separately and keeps the rc4 version label. See [Zenodo publication details](docs/RELEASE_ZENODO.md).
 
 When using the scientific companion's data, figures or analyses, also cite **Scientific Archive R139**, DOI [10.5281/zenodo.22742107](https://doi.org/10.5281/zenodo.22742107), and the original sources relevant to the study.
 
