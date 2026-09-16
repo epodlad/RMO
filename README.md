@@ -1,52 +1,85 @@
 # RMO — Riemann Map Operator
 
-Archived rc3: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22741502.svg)](https://doi.org/10.5281/zenodo.22741502)
+**A bright front moves across the Sun. What is the plasma doing?**
 
-**Use the hosted application: [rmo-solar.org](https://rmo-solar.org/).**
+A solar flare or a sudden expansion of a coronal mass ejection can set the surrounding plasma into motion. Shocks, expanding regions and moving boundaries may develop together as parts of one connected wave pattern.
 
-RMO connects declared solar-observation constraints with admissible local ideal-MHD interpretations. This release candidate preserves the R139 scientific results and the established QuickLook interface, including 38 analysis links, input forms, scientific image viewers, saved assessments and version history.
+**RMO asks which connections between neighbouring plasma states are compatible with the observations.** Density, pressure, plasma flow and magnetic field must change together according to the physical equations. The connections that remain possible form a Riemann map.
 
-Current source version **1.0.0-rc4** restores the SUVI preview inside the main page, its image-processing comparison video and the event-card still. The original preview frames are linked to NOAA's GOES-16/SUVI animation, with NOAA SWPC credit and Seaton and Darnel's scientific reference. The viewer loads when its example is opened.
+QuickLook helps you compare possible explanations, inspect the supporting checks and identify which additional measurement could distinguish them. Start with a supplied model or a published solar event; you do not need to enter numbers to explore the examples.
 
-The calculations are conditional on the stated model, inputs and search limits. A supported local class does not establish a unique global Riemann solution or identify an observed solar front by itself. The interface keeps these distinctions beside the results.
+**[Open RMO QuickLook](https://rmo-solar.org/) · [Download the archived application](https://doi.org/10.5281/zenodo.22776018) · [Read the paper](https://arxiv.org/abs/2609.15210)**
 
-The **2026-09-16 interface correction** puts parameter entry, checks and calculation in sequence; adds direct edit/review actions to solar cards; and provides labels for the vertical input layout on phones. Automated acceptance is recorded in [the current report](docs/RELEASE_ACCEPTANCE.md). Visual acceptance of the corrected deployment remains pending.
+Current version: **1.0.0-rc4** · Scientific reference: **R139** · Author: **Olena Podladchikova**.
 
-## Run locally
+## Two ways to use RMO
 
-Use Python 3.12.14. From this repository root:
+### 1. Online — use the website
+
+Open **[rmo-solar.org](https://rmo-solar.org/)** in your browser. The website provides the QuickLook interface and a hosted Python calculation service. Supported new calculations run on that server; you do not need to install Python or download the code.
+
+- **Solar events:** inspect published measurements, edit a working copy, review its constraints and save a literature draft as JSON.
+- **Model examples:** explore supplied models, their results, plots and physical checks.
+- **Contact / enter values:** load a synthetic contact example or enter values, check the input and calculate a supported case.
+
+Download your input, result JSON and any available PDF from the interface to keep your work. Available calculations depend on the selected model and its supported input domain. Literature-event reviews and saved examples are labelled separately from newly calculated results.
+
+### 2. On your computer — download and run the code
+
+Download the complete application ZIP from [Zenodo](https://doi.org/10.5281/zenodo.22776018), or use **Code → Download ZIP** on [GitHub](https://github.com/epodlad/RMO). Extract the archive and open a terminal in the folder containing `requirements.txt`.
+
+The verified runtime is **Python 3.12.14**, with dependencies pinned in `requirements.txt`. Install them in a virtual environment, then start the local Python server.
+
+**Linux / macOS:**
 
 ```sh
-python3 -m venv .venv
+python3.12 -m venv .venv
 . .venv/bin/activate
-python3 -m pip install -r requirements.txt
-python3 -B -m local_app.server --port 8765
+python -m pip install -r requirements.txt
+python -B -m local_app.server --port 8765
 ```
 
-Open http://127.0.0.1:8765 in a browser. On Windows, activate `.venv\Scripts\activate` instead. Keep the Python process running while using the calculation forms. The application is served from this process; opening `public/index.html` directly does not enable calculations or resolve all assets.
+**Windows — Command Prompt:**
 
-Local completed requests/results are written to a new directory under `results/local_runs/` for each server session. Set `RMO_RESULTS_DIR` to choose a different output parent. Existing output directories are not overwritten. Download the input JSON, result JSON and available PDF from the interface to retain a portable record.
+```bat
+py -3.12 -m venv .venv
+.venv\Scripts\activate.bat
+python -m pip install -r requirements.txt
+python -B -m local_app.server --port 8765
+```
 
-## Web service
+Open **[http://127.0.0.1:8765](http://127.0.0.1:8765)** in a browser. The interface and calculations now run on your computer. Keep the terminal and Python process open while using the application. Opening `public/index.html` directly does not start the calculation service or resolve all assets.
 
-[Render setup](docs/DEPLOY_RENDER.md) uses the included `render.yaml`, one Python process and the supplied runtime dependencies. Public sessions receive separate request tokens. Only reviewed static assets are served; request bodies, calculation results and execution-machine details are not exposed as shared files. Public results are retained through the browser's downloads. One calculation runs at a time, with the existing bounded worker limits.
+Local completed requests and results are written under `results/local_runs/`, in a new directory for each server session. Set `RMO_RESULTS_DIR` to choose a different output parent. Existing session directories are not overwritten. The interface also offers portable JSON and, where available, PDF downloads.
 
-## Scientific reproduction
+## What the results mean
 
-The application repository contains the runtime source, required fixtures and the reviewed presentation assets. The separate [`RMO_science_R139.zip` companion](https://doi.org/10.5281/zenodo.22742107) contains retained scientific code, data, assessments and figures. See [scientific reproduction](docs/REPRODUCIBILITY.md). It is a companion archive for Zenodo, not a build dependency for Render.
+The current application tests local connections around a selected front within ideal magnetohydrodynamics (MHD). Results depend on the available measurements, stated assumptions, implemented models and search limits. Missing measurements remain unknown, and a front's image-pattern speed is kept distinct from the plasma velocity.
 
-Run the application smoke checks after installing dependencies:
+A literature-input review does not by itself determine the observed wave type. A supported local model does not establish a unique global Riemann solution, stability or exhaustive coverage of every MHD wave family. Reconstructing an eruption's complete wave pattern remains a wider goal.
+
+## Software and scientific reproduction
+
+This repository contains the application source, required fixtures, reviewed presentation assets, documentation, licences and validation records. The separate [Scientific Archive R139](https://doi.org/10.5281/zenodo.22742107) contains retained scientific code, data, assessments and figures; see [scientific reproduction](docs/REPRODUCIBILITY.md). That companion is not required to start this application.
+
+The **16 September 2026 interface correction**, through commit `89c15b7`, improves input and calculation guidance, adds direct navigation to solar events and models, and places review and save actions beside their results. It keeps the rc4 version label, numerical solvers and R139 scientific results. The SUVI preview, comparison video and event-card still retain their source attribution.
+
+Automated checks and the scope of completed and remaining browser checks are documented in [release acceptance](docs/RELEASE_ACCEPTANCE.md). After installing dependencies, run the application smoke checks with:
 
 ```sh
-python3 -B verification/release_smoke.py
+python -B verification/release_smoke.py
 ```
 
-The previous rc3 hosted application completed the targeted browser smoke checks documented in [release acceptance](docs/RELEASE_ACCEPTANCE.md): A63 local diagnosis and exports, B01 contact calculations, and a normal/incognito comparison. The same report records the custom-domain check and the remaining interactive coverage. These earlier checks do not establish browser acceptance of the restored rc4 media. Complete interactive acceptance, full MHD branch coverage and load testing are not claimed.
+These targeted checks are not a claim of complete interactive acceptance, exhaustive MHD coverage or load testing.
+
+## Hosting your own web service
+
+[Render setup](docs/DEPLOY_RENDER.md) documents the included `render.yaml`, runtime dependencies and public-server entry point `python -B -m web_app.server`. The hosted configuration uses one Python process, separate session tokens and bounded calculation workers. Only reviewed static assets are served; public results are retained through browser downloads rather than exposed in a shared results directory.
 
 ## Citation and rights
 
-Cite the archived software release **1.0.0-rc3** using DOI [10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502). This DOI identifies the source at tag [`v1.0.0-rc3`](https://github.com/epodlad/RMO/releases/tag/v1.0.0-rc3), commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. The already published rc4 archive is DOI [10.5281/zenodo.22776018](https://doi.org/10.5281/zenodo.22776018). Use the DOI for the version actually used; an existing rc3 citation remains valid. The 2026-09-16 interface correction is documented separately and keeps the rc4 version label. See [Zenodo publication details](docs/RELEASE_ZENODO.md).
+For the corrected rc4 application, cite DOI **[10.5281/zenodo.22776018](https://doi.org/10.5281/zenodo.22776018)** and identify the dated interface correction where relevant. The earlier rc3 DOI **[10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502)** remains valid for that version; it identifies tag [`v1.0.0-rc3`](https://github.com/epodlad/RMO/releases/tag/v1.0.0-rc3), commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. Use the DOI for the version actually used. See [Zenodo publication details](docs/RELEASE_ZENODO.md).
 
 When using the scientific companion's data, figures or analyses, also cite **Scientific Archive R139**, DOI [10.5281/zenodo.22742107](https://doi.org/10.5281/zenodo.22742107), and the original sources relevant to the study.
 
-Original RMO code is distributed under Apache-2.0. Third-party code, fonts and observational data retain their own terms and acknowledgements: see `THIRD_PARTY_NOTICES.md`. The SUVI preview is distributed with NOAA attribution; other source-linked published figures retain their existing treatment. The retained scientific numerical results are unchanged.
+Original RMO code is licensed under **Apache-2.0**. Third-party code, fonts and observational data retain their own terms and acknowledgements; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). SUVI imagery and video retain NOAA SWPC attribution, with Seaton and Darnel (2018) as the scientific reference.

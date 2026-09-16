@@ -5,7 +5,7 @@ title: "RMO — Riemann Map Operator"
 version: 1.0.0-rc4
 authors:
   - family-names: Podladchikova
-    given-names: Elena
+    given-names: Olena
 repository-code: https://github.com/epodlad/RMO
 url: https://rmo-solar.org/
 license: Apache-2.0

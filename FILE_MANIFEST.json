@@ -17,13 +17,13 @@
     },
     {
       "path": ".zenodo.json",
-      "bytes": 2034,
-      "sha256": "60c5d10c5aae574eaa37237446ddb684a471180aa5e65ca1d82edadac0b30640"
+      "bytes": 3928,
+      "sha256": "f7e6b7ac4d3933e6217b6ce27a0112ddaa357f8ab0c7d8c40e0b2b0721b75941"
     },
     {
       "path": "CITATION.cff",
       "bytes": 479,
-      "sha256": "783df14dfe66d3dda0bcf6f51fa1de6a3d4dd3eb40966e943ddfa4e80b3d2aec"
+      "sha256": "f02d7b0b17e085a030f74b28c1c2b2470d942b95919378e91981b29fd2ae7a87"
     },
     {
       "path": "LICENSE",
@@ -32,8 +32,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5078,
-      "sha256": "e596399d037ba233b2ce23fcf435636b209bc89a9b8417bd1534dfdc1f78f714"
+      "bytes": 6916,
+      "sha256": "c23286f2dec452c96626bb389e29ac46f8f76d854b96076dcae10714bf63ef22"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -2293,5 +2293,15 @@
   ],
   "correction": "navigation-and-save-actions-20260916",
   "baseline_git_commit": "ef4f83adb122c643dbe0065505fbae3c26f452d6",
-  "source_bundle_note": "source_bundle_sha256 is the retained original source-bundle identifier, not the checksum of the corrected ZIP."
+  "source_bundle_note": "source_bundle_sha256 is the retained original source-bundle identifier, not the checksum of the corrected ZIP.",
+  "documentation_update": {
+    "date": "2026-09-16",
+    "baseline_git_commit": "89c15b72799371ebbd6ddad84633c2df4f10a2cf",
+    "paths": [
+      "README.md",
+      ".zenodo.json",
+      "CITATION.cff"
+    ],
+    "scope": "Plain-language physics introduction, online and local run instructions, and creator-name consistency. Application runtime and numerical results unchanged."
+  }
 }
