@@ -7,6 +7,28 @@
   const offered=new Set(), storageKey='rmo67-offered-draft-hashes-v1';let saving=false;
   const numeric=['beta0','low','high','height','reference_height','scale_height','plot_min','plot_max'];
   function notice(text) {$('r67-notice').textContent=text;}
+  function saveNotice(text) {notice(text);$('r67-save-status').textContent=text;}
+  function nextStep(c) {
+    return c.id==='E05'?'Use the crossing exposure, quiet control and full geometry. Image-pattern speed is not the plasma normal velocity u_n.':c.next;
+  }
+  function showChanges(d) {
+    const box=$('r67-changes'),original=M.draft(card),changed=[];
+    const labels={value:'Value',low:'Lower bound',high:'Upper bound',error:'Error magnitude',note:'Note'};
+    card.values.forEach((v,i)=>{
+      for(const k of Object.keys(labels)) {
+        const before=String(original.rows[i][k]??'').trim(),after=String(d.rows[i][k]??'').trim();
+        if(before===after || (k!=='note' && before!=='' && after!=='' && Number(before)===Number(after)))continue;
+        const unit=k==='note'?'':' '+v.unit;
+        changed.push([v.name+' · '+labels[k],before?before+unit:'Unspecified',after?after+unit:'Unspecified']);
+      }
+    });
+    box.replaceChildren();
+    if(!changed.length){box.append(el('p',card.values.length?'Measurement fields match the published values.':'No numerical measurements have been extracted for this event.'));return;}
+    const table=el('table'),head=el('tr');
+    ['Changed field','Published value / note','Your working value / note'].forEach(label=>{const th=el('th',label);th.scope='col';head.append(th);});table.append(head);
+    changed.forEach(values=>{const row=el('tr');values.forEach(value=>row.append(el('td',value)));table.append(row);});
+    box.append(el('h4','Your changes to the published measurements'),table);
+  }
   function download(content,name,type) {
     const blob=new Blob([content],{type}), url=URL.createObjectURL(blob), a=el('a');
     a.href=url; a.download=name; document.body.append(a); a.click(); a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
@@ -21,6 +43,7 @@
   function invalidate() {
     workingRevision++;
     if (!draft) return;
+    $('r67-changes').replaceChildren();$('r67-save-status').textContent='';
     lastReviewed=null; $('r67-save').disabled=true; $('r67-save-again').hidden=true; $('r67-beta-output').hidden=true; betaSvg='';
     $('r67-review-status').textContent='Edited — review the current constraints before saving.';
     $('r67-sentence').textContent='Inputs changed: review them again before interpreting the result.';$('r80-literature-detail').textContent='Your working inputs have changed; no current scenario review or new RMO solution is available.';
@@ -82,7 +105,7 @@
     card=c;draft=d;lastReviewed=null;betaSvg='';
     $('r67-choice').value=c.id;$('r67-synthetic-workspace').hidden=false;$('r67-literature').hidden=false;
     $('r67-category').textContent=c.category+' · LITERATURE CONSTRAINTS · '+c.scope.replaceAll('_',' ');
-    $('r67-event-title').textContent=(c.date || 'Event date not extracted')+' · '+c.title;
+    $('r67-event-title').textContent=c.id+' · '+(c.date || 'Event date not extracted')+' · '+c.title;
     $('r67-context').textContent=c.instruments+'. '+c.facts;
     $('r67-source').textContent=c.source;$('r67-source').href=c.read_url;
     sourceLine('r73-result-source',c,'RMO review of literature constraints');
@@ -96,8 +119,9 @@
     $('r67-region').value=d.region;$('r67-notes').value=d.notes;$('r67-nickname').value=d.nickname;
     $('r67-beta-fields').disabled=c.id==='E08';$('r67-beta-restriction').hidden=c.id!=='E08';
     fillBeta(d.beta);renderRows();reference();
+    $('r67-changes').replaceChildren();$('r67-save-status').textContent='';
     $('r67-save').disabled=true;$('r67-save-again').hidden=true;$('r67-beta-output').hidden=true;
-    const r=M.validate(c,d);$('r67-sentence').textContent=globalThis.RMOPlainResult.literature(r);$('r80-literature-detail').textContent=M.sentence(c,d,r);$('r67-next').textContent=c.next;
+    const r=M.validate(c,d);$('r67-sentence').textContent=globalThis.RMOPlainResult.literature(r);$('r80-literature-detail').textContent=M.sentence(c,d,r);$('r67-next').textContent=nextStep(c);
     $('r67-review-status').textContent=restored?'Draft restored. Review before saving it again. Imported result labels were not reused.':'Published inputs loaded. Review constraints after any edits. No solar solve has run.';
     notice((restored?'Restored: ':'Loaded: ')+c.title+'. Source values are loaded below. Inspect or edit them, then review your constraints.');
   }
@@ -140,10 +164,10 @@
   }
   function review() {
     if(!card)return;
-    draft=collect();const r=M.validate(card,draft);
+    draft=collect();const r=M.validate(card,draft);showChanges(draft);$('r67-save-status').textContent='';
     $('r67-sentence').textContent=globalThis.RMOPlainResult.literature(r);$('r80-literature-detail').textContent=M.sentence(card,draft,r);
     $('r67-review-status').textContent=r.errors.length?'Needs correction: '+r.errors.join(' '):'Constraints reviewed. This is an input review, not a complete Riemann solution.';
-    $('r67-next').textContent=r.errors.length?'Correct the listed input and review again.':r.beta.status==='ASSUMED_SCENARIO'?'Constrain co-spatial thermal pressure, total magnetic-field strength and height. Front geometry and plasma-velocity jumps are also needed to distinguish MHD families.':card.next;
+    $('r67-next').textContent=r.errors.length?'Correct the listed input and review again.':r.beta.status==='ASSUMED_SCENARIO'?'Constrain co-spatial thermal pressure, total magnetic-field strength and height. Front geometry and plasma-velocity jumps are also needed to distinguish MHD families.':nextStep(card);
     lastReviewed=r.errors.length?null:JSON.stringify(draft);$('r67-save').disabled=r.errors.length>0;
     $('r67-beta-output').hidden=true;betaSvg='';
     if(!r.errors.length && r.beta.status==='ASSUMED_SCENARIO') {
@@ -198,13 +222,13 @@
       }
       if(card!==selected || !lastReviewed || JSON.stringify(collect())!==lastReviewed)throw Error('The inputs changed while preparing the download. Review them again.');
       if(!again && (offered.has(key) || (hash && stored.includes(hash)))) {
-        $('r67-save-again').hidden=false;notice('This identical draft was already offered for download. No second file was created. Use Download again if you need another copy.');return;
+        $('r67-save-again').hidden=false;saveNotice('This identical draft was already offered for download. No second file was created. Use Download again if you need another copy.');return;
       }
       download(JSON.stringify(rec,null,2),'RMO_'+selected.id+'_working_draft.json','application/json');offered.add(key);
       if(hash)try {globalThis.localStorage.setItem(storageKey,JSON.stringify([...new Set([...stored,hash])].slice(-256)));}catch(e){/* session detection remains active */}
       $('r67-save-again').hidden=false;
-      notice('JSON download offered. Your browser handles the file save; nothing was submitted to a public catalogue.');
-    }catch(e){notice(e.message);}finally{saving=false;}
+      saveNotice('JSON download offered. Your browser handles the file save; nothing was submitted to a public catalogue.');
+    }catch(e){saveNotice(e.message);}finally{saving=false;}
   }
   $('r67-save').addEventListener('click',()=>saveDraft(false));
   $('r67-save-again').addEventListener('click',()=>saveDraft(true));

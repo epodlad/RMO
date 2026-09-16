@@ -5,9 +5,18 @@
   const cfg=JSON.parse(byId("local-config").textContent), preset=JSON.parse(byId("local-contact-input").textContent);
   const status=byId("live-status"), output=byId("live-output"), history=byId("live-history"), runButton=byId("live-run"), cancelButton=byId("live-cancel");
   let available=false,last=null,busy=false;
+  function setRunDisabled(disabled){
+    runButton.disabled=disabled;
+    const shortcut=byId("report-calculate");if(shortcut)shortcut.disabled=disabled;
+  }
+  function setStatus(text){
+    status.textContent=text;
+    const shortStatus=byId("report-calculation-status");if(shortStatus)shortStatus.textContent=text;
+  }
   function syncRun(){
     let snap;try{snap=bridge.snapshot();}catch(e){}
-    runButton.disabled=!available||busy||snap?.report.input_status!=="VALID"||snap?.request.uncertainty.mode!=="exact_synthetic";
+    setRunDisabled(!available||busy||snap?.report.input_status!=="VALID"||snap?.request.uncertainty.mode!=="exact_synthetic");
+    setStatus(status.textContent);
     runButton.setAttribute("aria-describedby","live-status");
   }
   function el(tag,text){const n=document.createElement(tag);if(text!==undefined)n.textContent=String(text);return n;}
@@ -66,23 +75,24 @@
     const first=checked[0], waves=first?.solution.waves||[], contact=r.capability?.profile==="CONTACT"&&waves.length===1&&waves[0].structure==="contact";
     const s=contact?waves[0].speed:null;
     const sentence=contact?`A contact discontinuity was calculated and checked: the density boundary moves at ${Number(s.toPrecision(8))} in normalized units, while pressure, velocity and magnetic field remain continuous.`:r.presentation.sentence;
-    output.append(el("p",contact?"Contact: a density boundary travels with the plasma.":checked.length?"A model solution passed the checks; complete branch coverage is not established.":"No checked new solution is available for these inputs."));
+    output.append(el("p",contact?"Contact: the density boundary travels with the plasma at "+Number(s.toPrecision(8))+" in normalized units.":checked.length?"A model solution passed the checks; complete branch coverage is not established.":"No checked new solution is available for these inputs."));
+    const download=el("button","5 · Save this input and computed result JSON");download.type="button";download.addEventListener("click",()=>exportJSON(r,"RMO_computed_"+r.identity.execution_id+".json"));download.className="primary";const edit=el("button","Change values");edit.type="button";edit.addEventListener("click",()=>bridge.showParameters());const actions=el("div");actions.className="preflight-actions";actions.append(download,edit);output.append(actions);
     output.append(details("Physical explanation",el("p",sentence)));
     if(contact)output.append(el("p","For this solution: a contact, not a shock."));
     if(checked.length)output.append(el("p","Only the returned, independently checked solution(s) are described. Full MHD coverage, stability and a solar interpretation have not been established."));
     output.append(el("p","What next? "+(r.presentation.next_action||"Inspect the attempt details.")));
-    output.append(el("p","Actual solver calls: "+r.execution.solver_call_count+". Execution: "+r.execution.status+". Requested policies are reported separately below."));
+    const execution=el("p","Actual solver calls: "+r.execution.solver_call_count+". Execution: "+r.execution.status+". Requested policies are reported separately below.");
     if(contact)output.append(contactPlot(r.input.parsed_snapshot,s));
     for(const item of checked){
       const box=el("div");box.append(fanPlot(item.solution.waves),rows(["Order","Structure","Family","Speed / interval"],item.solution.waves.map(w=>[w.order,w.structure,w.family,w.speed])));
       output.append(details("Calculated wave fan — "+item.policy,box));
     }
-    const checkBox=el("div");
+    const checkBox=el("div");checkBox.append(execution);
     for(const p of r.policy_runs||[])checkBox.append(el("h4",p.policy+": "+p.status),rows(["Check","Status","Value","Tolerance"],(p.validation?.checks||[]).map(c=>[c.check,c.status,c.value,c.tolerance])));
     checkBox.append(el("p","— means no separate numerical value or tolerance was reported; it does not mean zero."));
     output.append(details("Independent checks and policy outcomes",checkBox));
     output.append(el("p",reply.saved_directory ? "Saved on the calculation machine: "+reply.saved_directory : "Save the input and result JSON to keep this calculation."));
-    const download=el("button","5 · Save this input and computed result JSON");download.type="button";download.addEventListener("click",()=>exportJSON(r,"RMO_computed_"+r.identity.execution_id+".json"));output.append(download);
+
     output.append(details("Exact input, result and provenance",el("pre",JSON.stringify(r,null,2))));
     focusOutput();
   }
@@ -98,34 +108,35 @@
     }finally{clearTimeout(timer);}
   }
   function notify(event,data){
-    if(event==="running"){busy=true;last=null;output.replaceChildren(el("p","Calculating this exact input. No saved result is used as a fallback."));runButton.disabled=true;cancelButton.disabled=false;status.textContent="Running; total adapter budget: 30 seconds.";}
-    if(event==="input_blocked"){status.textContent="No calculation: "+data.status+". Use Check input to see details.";bridge.check();}
-    if(event==="stale"){last=null;status.textContent="Input changed. Check the current values below the parameter fields before calculating again.";syncRun();output.replaceChildren(el("p","Input changed. No previous computed result is current. Calculate again when ready."));}
-    if(event==="cancelling")status.textContent="Cancellation requested. Waiting for the attempt to finish; any returned result will be history only.";
-    if(event==="cancel_error")status.textContent="Cancellation could not be confirmed. The 30-second server budget still applies. "+data.message;
-    if(event==="result"){render(data);status.textContent="Attempt finished. Read the short answer and its limits below.";}
+    if(event==="running"){busy=true;last=null;output.replaceChildren(el("p","Calculating this exact input. No saved result is used as a fallback."));setRunDisabled(true);cancelButton.disabled=false;setStatus("Running; total adapter budget: 30 seconds.");}
+    if(event==="input_blocked"){setStatus("No calculation: "+data.status+". Use Check input to see details.");bridge.check();}
+    if(event==="stale"){last=null;setStatus("Input changed. Check the current values below the parameter fields before calculating again.");syncRun();output.replaceChildren(el("p","No current calculation. Check the values and choose Calculate this input when ready."));}
+    if(event==="cancelling")setStatus("Cancellation requested. Waiting for the attempt to finish; any returned result will be history only.");
+    if(event==="cancel_error")setStatus("Cancellation could not be confirmed. The 30-second server budget still applies. "+data.message);
+    if(event==="result"){render(data);setStatus("Attempt finished. Read the short answer and its limits below.");}
     if(event==="history"){
       history.hidden=false;history.open=true;history.replaceChildren(el("summary","Previous attempt — not the current input"),el("p",data.reason));
       const b=el("button","Export previous attempt JSON");b.addEventListener("click",()=>exportJSON(data,"RMO_previous_attempt.json"));history.append(b,details("Exact previous response",el("pre",JSON.stringify(data,null,2))));
       output.replaceChildren(el("p","No current result. A late or cancelled response was kept separately, not applied to the edited fields."));
-      status.textContent="Previous response retained as history only.";
+      setStatus("Previous response retained as history only.");
     }
-    if(event==="error"){last=null;output.replaceChildren(el("p","No current result: "+data.message),el("p","No physical family is excluded by a connection failure. Completed attempts, if any, remain on the calculation machine. Reload before retrying if the server stopped."));status.textContent="Attempt unavailable; no saved-result fallback.";}
+    if(event==="error"){last=null;output.replaceChildren(el("p","No current result: "+data.message),el("p","No physical family is excluded by a connection failure. Completed attempts, if any, remain on the calculation machine. Reload before retrying if the server stopped."));setStatus("Attempt unavailable; no saved-result fallback.");}
     if(event==="idle"){busy=false;syncRun();cancelButton.disabled=true;}
   }
   const controller=globalThis.RMOLocalClient.controller({C,bridge,send,notify,makeId:()=>"rmo_"+crypto.randomUUID()});
-  byId("live-load-contact").addEventListener("click",()=>{bridge.load(preset);bridge.check();status.textContent=available?"Contact values loaded. Review the input check, then click Calculate this input below.":"Contact values loaded for inspection. This offline file cannot run Python.";});
+  byId("live-load-contact").addEventListener("click",()=>{bridge.load(preset);bridge.check();setStatus(available?"Contact values loaded and checked. Click Calculate this input to run them.":"Contact values loaded for inspection. This offline file cannot run Python.");});
+  document.addEventListener("rmo-input-checked",()=>{syncRun();if(!runButton.disabled)setStatus("Input checked. Click Calculate this input to run the current values.");});
   byId("live-edit").addEventListener("click",()=>bridge.showParameters());
   runButton.addEventListener("click",()=>void controller.run());cancelButton.addEventListener("click",()=>void controller.cancel());
   if(cfg.enabled===true&&location.origin===cfg.origin){
     available=true;
-    status.textContent="Checking the Python calculation connection…";
+    setStatus("Checking the Python calculation connection…");
     send("/api/status").then(data=>{
       if(data.ready!==true)throw new Error("Service not ready");
-      syncRun();status.textContent="Calculation service connected. Load contact or enter values → Check input → Calculate this input.";
-    }).catch(err=>{available=false;runButton.disabled=true;status.textContent="Connection unavailable: "+err.message;});
+      syncRun();setStatus("Calculation service connected. Load contact or enter values → Check input → Calculate this input.");
+    }).catch(err=>{available=false;setRunDisabled(true);setStatus("Connection unavailable: "+err.message);});
   }else{
-    runButton.disabled=true;cancelButton.disabled=true;
-    status.textContent="Offline preview: saved examples and input checks work, but this file does not run Python. Open rmo-solar.org for a connected calculation. No installation is needed just to view this page.";
+    setRunDisabled(true);cancelButton.disabled=true;
+    setStatus("Offline preview: saved examples and input checks work, but this file does not run Python. Open rmo-solar.org for a connected calculation. No installation is needed just to view this page.");
   }
 })();

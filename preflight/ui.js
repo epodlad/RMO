@@ -125,9 +125,18 @@
     reportNode.replaceChildren();
     const titles={VALID:"Your input is ready.",INCOMPLETE:"Some information is still missing.",INVALID:"The input needs a correction."};
     const outcomes={VALID:"All required values are present and passed the input checks.",INCOMPLETE:"The known values passed the checks, but one or more values are still unknown. Their reasons have been kept.",INVALID:"At least one value or setting failed the input checks. Nothing was silently repaired."};
-    const next={VALID:"Continue to Calculate this input directly below for a new attempt, or edit the parameters. Saving the request is optional.",INCOMPLETE:"Click View / edit parameters to supply missing values if you know them. Otherwise, keep them unknown; you may export this incomplete draft.",INVALID:"Click View / edit parameters to correct the reported fields, or load an example again. Then click Check input. Export is blocked while errors remain."};
+    const next={VALID:"Use Calculate this input to run these values, or View / edit parameters to change them.",INCOMPLETE:"Click View / edit parameters to supply missing values if you know them. Otherwise, keep them unknown; you may export this incomplete draft.",INVALID:"Click View / edit parameters to correct the reported fields, or load an example again. Then click Check input. Export is blocked while errors remain."};
     reportNode.append(el("h3",titles[report.input_status]),el("p",outcomes[report.input_status]),el("p","What next? "+next[report.input_status]));
-    reportNode.append(button("report-edit-parameters","View / edit parameters",showParameters));
+    const actions=el("div",undefined,"preflight-actions");
+    if(report.input_status==="VALID") {
+      const calculate=button("report-calculate","4 · Calculate this input",()=>document.getElementById("live-run").click());
+      calculate.className="primary";calculate.disabled=true;
+      calculate.setAttribute("aria-describedby","report-calculation-status");actions.append(calculate);
+    }
+    actions.append(button("report-edit-parameters","View / edit parameters",showParameters));reportNode.append(actions);
+    if(report.input_status==="VALID") {
+      const status=el("p");status.id="report-calculation-status";status.setAttribute("role","status");reportNode.append(status);
+    }
     const badge=el("strong","INPUT "+report.input_status,"badge input-status");reportNode.append(badge);
     const information=el("details");information.append(el("summary","What the input check means"));
     information.append(el("p",report.input_status==="VALID"?"Input checks passed. This is not support for an MHD interpretation.":report.input_status==="INCOMPLETE"?"Unknown values are retained with reasons. This request is not ready for physical computation.":"Correct the listed input errors. Values have not been repaired or replaced."));
@@ -154,8 +163,8 @@
       for(const f of C.FIELD_LIST) if(C.ptr(request,f.path)===null) missing.append(el("li",(f.side==="shared"?"":f.side.toUpperCase()+" — ")+labels[f.key]+": unknown. "+request.missing_reasons[f.path]));
       reportNode.append(missing);
     }
-    if(report.notes.length){const ul=el("ul");report.notes.forEach(note=>ul.append(el("li",note)));reportNode.append(ul);}
-    if(report.request_sha256)reportNode.append(el("p","Canonical request SHA-256: "+report.request_sha256,"fingerprint"));
+    if(report.notes.length){const ul=el("ul");report.notes.forEach(note=>ul.append(el("li",note)));information.append(ul);}
+    if(report.request_sha256)information.append(el("p","Canonical request SHA-256: "+report.request_sha256,"fingerprint"));
     const detail=el("details");detail.append(el("summary",report.input_status==="INVALID"?"Current draft JSON — input errors remain":"Checked request JSON — input only"),el("pre",JSON.stringify(request,null,2)));reportNode.append(detail);
     const trace=el("details");trace.append(el("summary","Preflight report — no physical result"),el("pre",JSON.stringify(report,null,2)));reportNode.append(trace);
     reference.textContent=report.full_preset_match
@@ -170,6 +179,7 @@
         ready={request:C.copy(request),canonical:C.canonical(request),report,revision};exportButton.disabled=false;
         exportButton.textContent=report.input_status==="INCOMPLETE"?"Export incomplete request (not a result)":"Export request JSON (not a result)";
       }
+      document.dispatchEvent(new Event("rmo-input-checked"));
       visit("input-report");
     }catch(e) {reportNode.replaceChildren(el("p","CHECK UNAVAILABLE: "+String(e.message)+". No result or export is available."));}
   }
@@ -196,11 +206,18 @@
       title="Example 3 · An intentional input error";expectation="Expected input status: INVALID. Right-side pressure is deliberately negative. This tests error reporting; it is not a physical plasma example.";
     }
     fill(request);resetReport("Example loaded automatically. Click Check input next. No manual entry or JSON export is required.");
-    context.replaceChildren(el("strong",title),el("p",expectation),el("p","Parameters are filled automatically. Click Check input below. Use View / edit parameters if you want to inspect or change a value. Nothing has been calculated."));
+    context.replaceChildren(el("strong","Loaded: "+title),el("p",expectation));
+    if(kind==="brio") {
+      const view=button("loaded-brio-view","View Brio–Wu saved solutions",()=>{
+        const choice=document.getElementById("r63-result-choice");choice.value="brio";choice.dispatchEvent(new Event("change"));visit("r63-results");
+      });
+      view.className="primary";context.append(el("p","Explore the saved solutions, or check and inspect the loaded parameters. A new Brio–Wu calculation is not available here."),view);
+    } else context.append(el("p","Click Check input to see the explanation of this exercise."));
+    visit("example-context");
   }
   const controls=el("div",undefined,"preflight-actions");
   const presetButton=button("load-preset","Load Brio–Wu · saved solutions only",()=>loadExample("brio"));
-  presetButton.className="primary-start";
+  presetButton.className="secondary-start";
   const exampleHost=document.getElementById("guided-examples");
   exampleHost.append(presetButton);
   const exercises=el("details");exercises.id="optional-exercises";

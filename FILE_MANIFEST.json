@@ -37,13 +37,13 @@
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 4760,
-      "sha256": "205320077501e78944702b6f3f2fd132ae5a60b06e98414a5ebdee6b5d66f16c"
+      "bytes": 6214,
+      "sha256": "3683d1bb068d203ab8554662d55e2e9c44c99731fe88027087d513d785f7e56a"
     },
     {
       "path": "RELEASE_VALIDATION.json",
-      "bytes": 19070,
-      "sha256": "cd9e76dd702b5abad352551ff62eb645a2daff699f065fd5d68a74b14112a992"
+      "bytes": 19422,
+      "sha256": "02f5a27a748846d9f078bd5bf51b680832c969e02f9f0c5702717d876588f819"
     },
     {
       "path": "RMO/RMO_benchmark_manifest_v1_1.yaml",
@@ -72,8 +72,8 @@
     },
     {
       "path": "docs/RELEASE_ACCEPTANCE.md",
-      "bytes": 6964,
-      "sha256": "e2e3a44cc765705d06d13af68017b2ed856f93230f7784f3c0ce221c3a242207"
+      "bytes": 8864,
+      "sha256": "737fa4487a00d09fece43749bb06a5cd2ae61c081e41bbf35d16a49a09dcc831"
     },
     {
       "path": "docs/RELEASE_ZENODO.md",
@@ -99,6 +99,11 @@
       "path": "docs/UI_ACCEPTANCE_20260916.json",
       "bytes": 62583,
       "sha256": "8dbe573abe9b24e541f4845fcd72809aa1bcb114662bed8748bbc5c173200dd3"
+    },
+    {
+      "path": "docs/UI_NAVIGATION_ACCEPTANCE_20260916.json",
+      "bytes": 59148,
+      "sha256": "de834a392f6e36f24a774a7a986c42fa463ac918df9e16daee94dadb2588287e"
     },
     {
       "path": "implementation/reference/aegir_975cc7ed/LICENSE",
@@ -212,8 +217,8 @@
     },
     {
       "path": "literature_input/view.js",
-      "bytes": 18876,
-      "sha256": "b1711adbecb72fe529e559db84b8d6c0af5da03dc4c3fdfa307a4fda8740f0ae"
+      "bytes": 20672,
+      "sha256": "3d419b74e2e3ff03f49322480dba96afc67e8bbddff760174fd7c5d9c73bf99b"
     },
     {
       "path": "local_app/__init__.py",
@@ -232,8 +237,8 @@
     },
     {
       "path": "local_app/view.js",
-      "bytes": 12772,
-      "sha256": "61a5621e7ae2942cedec5cb8aba7839965fb03bc61927821b9f3e43e594689b0"
+      "bytes": 13495,
+      "sha256": "0590448c9ae8a8b5e626421309d48b6faad680bb359ccef56d0fe28818936789"
     },
     {
       "path": "local_diagnosis/diagnose.py",
@@ -292,8 +297,8 @@
     },
     {
       "path": "preflight/ui.js",
-      "bytes": 21638,
-      "sha256": "cd5ec4b79eff878bbb2601bda601db42c1a591fe65487e6922fd93c8e2df050b"
+      "bytes": 22685,
+      "sha256": "d91398ef40d2d1c26985dbebd0a0fddf1af93a1b041c34140308af7bd8f76769"
     },
     {
       "path": "public/assets/00878b8878bc116f3e0533a4f8993ddfd6eeb7dfd925a3a6eefe8e1a86fe21a9.png",
@@ -2057,8 +2062,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 2870750,
-      "sha256": "ee2987eda829e5d5a09316bdc47bd51ce49ecb7109d07dd381f4a7000567d864"
+      "bytes": 2875694,
+      "sha256": "f7ed3b5f66f130ab7007af696a4f3e6a64fbf6bcbb281ea82bfa0ad73e1a5fc6"
     },
     {
       "path": "render.yaml",
@@ -2267,8 +2272,8 @@
     },
     {
       "path": "verification/ui_workflow_smoke.cjs",
-      "bytes": 14452,
-      "sha256": "80f9bce3f7d9d94bd3ca91c1c1efc79dbb58cf0ec1ebc9bd625f03b1ec7111b4"
+      "bytes": 18967,
+      "sha256": "c2ea580bfe42a5f680511481d42fad0b3618a7a0d15ef2a624ee8b15b0e34c90"
     },
     {
       "path": "verify_manifest.py",
@@ -2286,7 +2291,7 @@
       "sha256": "2a89da6be29e54887610fbcfe86884a42f41ed34f0595c2f1767b89df5035417"
     }
   ],
-  "correction": "input-and-calculation-guidance-20260916",
-  "baseline_git_commit": "583092071299406f8eaf638ac9cbc30c780b48ee",
+  "correction": "navigation-and-save-actions-20260916",
+  "baseline_git_commit": "ef4f83adb122c643dbe0065505fbae3c26f452d6",
   "source_bundle_note": "source_bundle_sha256 is the retained original source-bundle identifier, not the checksum of the corrected ZIP."
 }

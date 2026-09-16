@@ -1,4 +1,14 @@
-# RMO 1.0.0-rc4 — interface correction, 2026-09-16
+# RMO 1.0.0-rc4 — navigation correction, 2026-09-16
+
+The maintainer's desktop walkthrough completed an edited contact calculation and the E05 edit/save/import/review cycle, but exposed hard-to-find actions. This follow-up places Solar events, Model examples and Contact / enter values in the header. Solar selection comes before optional import instructions, and event titles include their E-number.
+
+The ready-input report now includes Calculate this input with the same validation, connection and running-state guards as the existing control. Contact is the primary starter; Brio–Wu loading shows confirmation and a direct route to saved solutions. The calculated contact speed and JSON export appear beside the short answer.
+
+Solar reports contain Save, Change values and download feedback together. A comparison table shows edited measurement fields against their published values, including the tested E05 change from 590 to 600 km/s. Source data remain intact. The 2017 card now explicitly says that an RMO diagnosis is not available for that event; it does not imply a running job. E05 guidance describes image-pattern speed without confusing it with an edited value.
+
+The current DOM/API tests pass; revised desktop/phone appearance and production deployment remain pending. See `docs/UI_NAVIGATION_ACCEPTANCE_20260916.json`. Numerical code, archived scientific data and R139 assets are unchanged. This is an rc4 correction without a new DOI or tag.
+
+## Earlier interface correction, 2026-09-16
 
 The input workflow now follows the reading order: choose an example, inspect or enter parameters, check the input, calculate, and save the result. The synthetic Calculate button sits below the check report. An extra Check button is available at the end of the parameter form.
 

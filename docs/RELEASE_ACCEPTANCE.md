@@ -1,5 +1,18 @@
 # Release acceptance
 
+## 2026-09-16: follow-up navigation and saving correction
+
+Update baseline: `ef4f83adb122c643dbe0065505fbae3c26f452d6` (`Update Zenodo metadata`), including the preceding UI commit `fd12152d64b490b049da73c39beb9cc2014798a7`. Version remains **1.0.0-rc4**, scientific state R139.
+
+On that baseline, maintainer screenshots show a completed contact calculation after both normal velocities changed to 0.45. The E05 workflow changed image speed 590 → 600, saved a draft, restored 600 and completed another review. The uploaded draft was independently parsed: published 590, working/reviewed 600, calculation NOT_RUN and publication NOT_PUBLISHED. These checks exposed navigation problems addressed by this follow-up.
+
+For the revised code, **544 DOM/API assertions passed**, including 214 internal links, 24 saved model configurations, 11 literature cards, a real edited contact calculation and export, A63 calculations/JSON/PDF, duplicate-click guards, offline disabling, stale/cancelled results and E05 save/import/re-review. The comparison table retains published 590 while displaying reviewed 600. Download feedback and retry are adjacent to Save.
+
+All 37 inline scripts pass syntax checks; six embedded source modules match their files. All 352 referenced hashed assets are intact. Embedded JSON and numerical code are unchanged. Evidence: [UI_NAVIGATION_ACCEPTANCE_20260916.json](UI_NAVIGATION_ACCEPTANCE_20260916.json).
+
+**Evidence limit:** these automated checks exercise the DOM and a real isolated Python API; they do not render pixels. The revised layout is not yet deployed or verified on desktop/phone. The previous screenshots establish baseline workflow outcomes and the need for the fix. After deployment, check the three header routes, Calculate beside the input report, Save beside the solar result, and narrow-screen readability. The broader final-release gates below still apply.
+
+
 ## 2026-09-16: rc4 interface correction
 
 Baseline: `583092071299406f8eaf638ac9cbc30c780b48ee`. Scientific state R139.

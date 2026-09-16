@@ -2,7 +2,7 @@
   "version": "1.0.0-rc4",
   "scientific_state": "R139",
   "correction_date": "2026-09-16",
-  "current_acceptance_report": "docs/UI_ACCEPTANCE_20260916.json",
+  "current_acceptance_report": "docs/UI_NAVIGATION_ACCEPTANCE_20260916.json",
   "current_summary": {
     "local_http_checks": 21,
     "public_mode_http_checks": 12,
@@ -598,5 +598,13 @@
         "aggregate_status_and_second_policy_reviewed": false
       }
     }
+  },
+  "previous_acceptance_report": "docs/UI_ACCEPTANCE_20260916.json",
+  "navigation_correction": {
+    "baseline_commit": "ef4f83adb122c643dbe0065505fbae3c26f452d6",
+    "dom_api_assertions_passed": 544,
+    "current_browser_visual_acceptance": "PENDING",
+    "production_deployment": "Not performed",
+    "numerical_code_changed": false
   }
 }

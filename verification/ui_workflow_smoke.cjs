@@ -43,19 +43,29 @@ async function main(){
   const ui=await page(true),{w,d,calls}=ui,$=id=>d.getElementById(id),click=id=>{$(id).click();},input=(id,v)=>{$(id).value=String(v);$(id).dispatchEvent(new w.Event('input',{bubbles:true}));},select=(id,v)=>{$(id).value=String(v);$(id).dispatchEvent(new w.Event('change',{bubbles:true}));};
   check('all inline modules initialise without JavaScript exceptions',errors.length===0);
   const ids=[...d.querySelectorAll('[id]')].map(x=>x.id);check('no duplicate element IDs',new Set(ids).size===ids.length);
+  check('welcome has three direct task routes',$('rmo-main-navigation').querySelectorAll('a').length===3&&$('rmo-main-navigation').closest('header'));
+  check('solar selection precedes optional import help and event preview',!!($('r67-choice').compareDocumentPosition($('r67-import-panel'))&4)&&!!($('r67-choice').compareDocumentPosition($('solar2017-case'))&4)&&!$('r67-import-panel').open);
+  check('2017 description states absence of event diagnosis without implying a running job',!$('solar2017-case').textContent.includes('diagnosis pending')&&$('solar2017-case').textContent.includes('not available for this event'));
   const steps=['guided-examples','advanced-input','input-report','live-panel','r63-results'];check('input, check, calculation and references follow reading order',steps.every((id,i)=>!i||!!($(steps[i-1]).compareDocumentPosition($(id))&4)));
   check('empty inputs cannot start either calculation',$('live-run').disabled&&$('r75-run').disabled);
   await until(()=>$('live-status').textContent.includes('connected'),'connection');
   click('live-load-contact');check('contact load opens check and its collapsed ancestors',w.lastScrolled==='input-report'&&$('r73-tools-workspace').open);
   check('contact is ready to calculate beside report',!$('live-run').disabled&&$('input-report').textContent.includes('Your input is ready'));
+  check('ready report offers an enabled calculate action with connection feedback',!$('report-calculate').disabled&&$('report-calculation-status').textContent.includes('checked'));
+  check('request fingerprint is available inside collapsed details',$('input-report').querySelector('.fingerprint').closest('details')&&!$('input-report').querySelector('.fingerprint').closest('details').open);
   click('live-edit');check('editing opens and focuses parameters',w.lastScrolled==='advanced-input'&&d.activeElement.id==='advanced-input');
   input('value-p_R','-1');click('check-input-after-edit');check('invalid manual input has named error and no calculation',$('input-report').textContent.includes('RIGHT')&&$('value-p_R').getAttribute('aria-invalid')==='true'&&$('live-run').disabled);
   input('value-p_R','');input('reason-p_R','Not measured');click('check-input-after-edit');check('unknown value stays incomplete and keeps its reason',$('input-report').textContent.includes('INCOMPLETE')&&$('input-report').textContent.includes('Not measured')&&$('live-run').disabled);
-  click('live-load-contact');click('live-run');await until(()=>$('live-output').textContent.includes('Density across')||$('live-output').textContent.includes('No current result:'),'contact calculation');
+  click('live-load-contact');const runsBefore=calls.filter(x=>x.path==='/api/run').length;click('report-calculate');click('report-calculate');click('live-run');
+  check('both calculate controls block duplicate clicks during the same attempt',$('report-calculate').disabled&&$('live-run').disabled&&calls.filter(x=>x.path==='/api/run').length===runsBefore+1);
+  await until(()=>$('live-output').textContent.includes('Density across')||$('live-output').textContent.includes('No current result:'),'contact calculation');
   check('real contact calculation displays current result and focuses it',w.lastScrolled==='live-output'&&$('live-output').textContent.includes('Density across'));
   check('computed result can be saved',!![...$('live-output').querySelectorAll('button')].find(b=>b.textContent.includes('Save this input')));
+  const saveContact=$('live-output').querySelector('button');check('computed save is before detailed explanations and plots',saveContact.textContent.includes('Save this input')&&!!(saveContact.compareDocumentPosition($('live-output').querySelector('details'))&4));
   input('value-u_n_L','.45');input('value-u_n_R','.45');check('editing removes former computed result',!$('live-output').textContent.includes('Density across'));
-  click('check-input-after-edit');click('live-run');await until(()=>$('live-output').textContent.includes('contact: 0.45'),'edited contact');check('edited contact computes the entered speed, not the saved speed',$('live-output').textContent.includes('contact: 0.45'));
+  click('check-input-after-edit');check('edited input review gives the current next step beside calculate',$('report-calculation-status').textContent.includes('Input checked.'));click('report-calculate');await until(()=>$('live-output').textContent.includes('contact: 0.45'),'edited contact');check('edited contact computes the entered speed, not the saved speed',$('live-output').textContent.includes('contact: 0.45'));
+  check('contact speed is shown in the short answer',$('live-output').querySelector('p').textContent.includes('0.45'));
+  $('live-output').querySelector('button').click();const computedExport=JSON.parse(await ui.downloads.at(-1).blob.text());check('prominent contact save exports the newly entered velocity',computedExport.input.parsed_snapshot.initial_states.left.u[0]===.45&&computedExport.input.parsed_snapshot.initial_states.right.u[0]===.45);
   click('live-run');await pause(80);click('live-cancel');await until(()=>!$('live-history').hidden&&$('live-cancel').disabled,'cancelled attempt');
   check('cancelled response stays in history and does not become current',$('live-output').textContent.includes('No current result')&&!$('live-history').hidden);
   check('calculation controls recover after cancellation',!$('live-run').disabled&&$('live-cancel').disabled);
@@ -78,9 +88,17 @@ async function main(){
   const lit=JSON.parse($('r67-config').textContent),postBefore=calls.filter(x=>x.path.startsWith('/api/')).length;
   for(const card of lit.cards){select('r67-choice',card.id);click('r67-load');check('solar card '+card.id+' loads source and visible fields',!$('r67-literature').hidden&&$('r67-event-title').textContent.includes(card.title)&&w.lastScrolled==='r67-event-title');click('r67-review-top');check('solar card '+card.id+' review follows controls',w.lastScrolled==='r67-review-output'&&$('r67-review-status').textContent.length>0);}
   check('solar literature review never starts a solver',calls.filter(x=>x.path.startsWith('/api/')).length===postBefore);
-  select('r67-choice','E05');click('r67-load');click('r67-check');click('r67-save');await pause(80);const litDownload=ui.downloads.filter(x=>x.name==='RMO_E05_working_draft.json').at(-1);check('reviewed solar draft can be saved',!!litDownload);const litText=await litDownload.blob.text();
+  select('r67-choice','E05');click('r67-load');input('r67-row-0-value','600');click('r67-check');
+  check('E05 report shows source 590 and edited 600 together',$('r67-changes').textContent.includes('590 km/s')&&$('r67-changes').textContent.includes('600 km/s')&&$('r67-event-title').textContent.startsWith('E05'));
+  check('E05 next action does not confuse original speed with working speed',!$('r67-next').textContent.includes('590')&&$('r67-next').textContent.includes('Image-pattern speed'));
+  check('save stays inside the report reached after review',$('r67-review-output').contains($('r67-save'))&&!$('r67-save').disabled);
+  click('r67-save');await pause(80);const litDownload=ui.downloads.filter(x=>x.name==='RMO_E05_working_draft.json').at(-1);check('reviewed solar draft can be saved',!!litDownload);const litText=await litDownload.blob.text();
+  const record=JSON.parse(litText);check('solar export preserves published values and reviewed edits separately',Number(record.draft.rows[0].value)===600&&record.source_snapshot.values[0].value===590&&record.review.rows[0].value===600&&record.calculation.status==='NOT_RUN');
+  check('download feedback is next to the solar save control',$('r67-save-status').textContent.includes('download offered'));
+  const downloadCount=ui.downloads.length;click('r67-save');await pause(80);check('identical draft download feedback and retry remain visible beside result',ui.downloads.length===downloadCount&&$('r67-save-status').textContent.includes('already offered')&&!$('r67-save-again').hidden);
   input('r67-row-0-value','-999');check('edited solar draft cannot save an old review',$('r67-save').disabled&&$('r67-review-status').textContent.includes('Edited'));
   Object.defineProperty($('r67-import'),'files',{configurable:true,value:[{name:'solar.json',size:litText.length,text:async()=>litText}]});$('r67-import').dispatchEvent(new w.Event('change',{bubbles:true}));await pause(50);check('solar draft import opens its event and requires review',w.lastScrolled==='r67-event-title'&&$('r70-import-status').textContent.includes('Imported')&&$('r67-save').disabled);
+  click('r67-review-top');check('imported 600 survives re-review with unchanged source 590',$('r67-row-0-value').value==='600'&&$('r67-changes').textContent.includes('590 km/s')&&$('r67-changes').textContent.includes('600 km/s')&&!$('r67-save').disabled);
   click('r67-edit-reviewed');check('solar review has a direct edit route',w.lastScrolled==='r67-values');
   const analysisLinks=[...d.querySelectorAll('a[href^="#"]')].filter(a=>a.textContent.trim());check('navigation includes the full analysis collection',analysisLinks.length>=38);for(const a of analysisLinks){const target=d.getElementById(a.getAttribute('href').slice(1));check('analysis target exists: '+a.getAttribute('href'),!!target);a.dispatchEvent(new w.MouseEvent('click',{bubbles:true,cancelable:true}));check('analysis target ancestors open: '+target.id,[...ancestors(target)].filter(n=>n.tagName==='DETAILS').every(n=>n.open));}
   function* ancestors(n){while(n){yield n;n=n.parentElement;}}
@@ -90,6 +108,9 @@ async function main(){
   }
   for(const b of d.querySelectorAll('button[id$="-play"]')){const before=b.textContent;b.click();check(b.id+' exposes playback state',b.textContent!==before||b.getAttribute('aria-pressed')==='true');b.click();}
   const offline=await page(false);offline.d.getElementById('r75-load').click();check('offline saved result works and live calculation explains unavailability',!offline.d.getElementById('r75-result').hidden&&offline.d.getElementById('r75-run').disabled&&offline.d.getElementById('r75-run-help').textContent.includes('offline'));
+  offline.d.getElementById('live-load-contact').click();check('offline report cannot enable a calculation shortcut',offline.d.getElementById('report-calculate').disabled&&offline.d.getElementById('report-calculation-status').textContent.includes('cannot run Python'));
+  offline.d.getElementById('load-preset').click();check('Brio-Wu load gives immediate feedback and a saved-view action',offline.w.lastScrolled==='example-context'&&offline.d.getElementById('example-context').textContent.includes('Loaded:')&&offline.d.getElementById('loaded-brio-view'));
+  offline.d.getElementById('loaded-brio-view').click();check('Brio-Wu view opens the saved solution without running Python',offline.w.lastScrolled==='r63-results'&&offline.d.getElementById('r63-result-choice').value==='brio'&&offline.calls.length===0);
   check('all exercised UI handlers complete without JavaScript exceptions',errors.length===0);
   console.log(JSON.stringify({checks,all_recorded_checks_pass:true,analysis_links:analysisLinks.length,scope:'DOM integration plus real isolated HTTP calculations. No browser rendering, mobile layout or production deployment verification.'},null,2));
  }catch(e){exitCode=1;console.error(e.stack);console.log(JSON.stringify({checks,errors,all_recorded_checks_pass:false},null,2));}
