@@ -72,8 +72,8 @@
     },
     {
       "path": "docs/RELEASE_ACCEPTANCE.md",
-      "bytes": 8864,
-      "sha256": "737fa4487a00d09fece43749bb06a5cd2ae61c081e41bbf35d16a49a09dcc831"
+      "bytes": 9850,
+      "sha256": "5e432af3230281172960e4211783a1f76cf2493de41decad8e2134816a5ed44f"
     },
     {
       "path": "docs/RELEASE_ZENODO.md",
@@ -2062,8 +2062,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 2875694,
-      "sha256": "f7ed3b5f66f130ab7007af696a4f3e6a64fbf6bcbb281ea82bfa0ad73e1a5fc6"
+      "bytes": 2876834,
+      "sha256": "2f209441a1dbf0c6f81172b6e7e26e0eeb175e4643ee8d27f3f4bbbc1cddd829"
     },
     {
       "path": "render.yaml",
@@ -2271,6 +2271,11 @@
       "sha256": "94ead0f523c096adac40dcf5743f60bbf2026506983022d248c6286b1f230289"
     },
     {
+      "path": "verification/test_asset_cache.py",
+      "bytes": 2037,
+      "sha256": "743c8f107a4b3025e72a9bf56a8f59dc84e1e8c394238eaf8fde139d8de49afc"
+    },
+    {
       "path": "verification/ui_workflow_smoke.cjs",
       "bytes": 18967,
       "sha256": "c2ea580bfe42a5f680511481d42fad0b3618a7a0d15ef2a624ee8b15b0e34c90"
@@ -2287,8 +2292,8 @@
     },
     {
       "path": "web_app/server.py",
-      "bytes": 13455,
-      "sha256": "2a89da6be29e54887610fbcfe86884a42f41ed34f0595c2f1767b89df5035417"
+      "bytes": 13645,
+      "sha256": "fbb3066e04640ffb185d75f3e25d358969a1167c47a6d5e6f2538ad51becfd46"
     }
   ],
   "correction": "navigation-and-save-actions-20260916",

@@ -114,7 +114,9 @@ async def headers(request, handler):
         response = web.json_response({'error':'The request could not be completed.'}, status=500)
     response.headers.update({'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY',
         'Referrer-Policy':'no-referrer','Cross-Origin-Opener-Policy':'same-origin',
-        'Content-Security-Policy':CSP,'Cache-Control':'no-store'})
+        'Content-Security-Policy':CSP})
+    # Only the reviewed, content-addressed asset handler opts into caching.
+    response.headers.setdefault('Cache-Control', 'no-store')
     if not request.app[STATE].local:
         response.headers['Strict-Transport-Security']='max-age=31536000'
     return response
@@ -137,7 +139,9 @@ async def asset(request):
     name=request.match_info['name']
     if not re.fullmatch(r'[0-9a-f]{64}\.[a-z0-9]+',name) or name not in state.assets:
         raise web.HTTPNotFound(text='No such public resource.')
-    return web.FileResponse(state.assets[name])
+    return web.FileResponse(state.assets[name], headers={
+        'Cache-Control': 'public, max-age=31536000, immutable'
+    })
 
 async def health(request):
     return web.json_response({'ready':True,'version':VERSION})

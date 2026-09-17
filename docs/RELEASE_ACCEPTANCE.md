@@ -1,5 +1,13 @@
 # Release acceptance
 
+## 2026-09-17: bandwidth optimization (pending deployment)
+
+The header image remains eager; the other 117 image elements use native browser lazy loading. All image sources, scientific text, embedded scripts, data and video controls are preserved. Browser scheduling determines when an offscreen image is fetched.
+
+Only allowlisted, SHA-256-named public assets receive `public, max-age=31536000, immutable`. Session HTML, API responses and errors retain `no-store`. Two HTTP regression tests in `verification/test_asset_cache.py` pass, covering asset responses, ETag/304 revalidation, private routes and cross-site rejection. All executable inline scripts pass Node syntax checks, and the file manifest verifies.
+
+These checks used the available local aiohttp 3.13.5 runtime, not the pinned production version. Browser transfer measurements and production verification remain pending; no measured bandwidth reduction is claimed yet. Version remains 1.0.0-rc4 and scientific state R139.
+
 ## 2026-09-16: follow-up navigation and saving correction
 
 Update baseline: `ef4f83adb122c643dbe0065505fbae3c26f452d6` (`Update Zenodo metadata`), including the preceding UI commit `fd12152d64b490b049da73c39beb9cc2014798a7`. Version remains **1.0.0-rc4**, scientific state R139.
