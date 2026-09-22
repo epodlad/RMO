@@ -91,6 +91,7 @@ async function run(){
   const response=await fetch('/api/diagnose',{method:'POST',headers:{'Content-Type':'application/json','X-RMO-Token':connection.token},body:JSON.stringify(env)});
   const result=await response.json();
   if(revision!==rev||JSON.stringify(read())!==body){setStatus('Inputs changed during calculation. The older response was not displayed as a current result.');return;}
+  if(response.status===409&&result.code==='CALCULATION_BUSY'){setStatus(result.error);visit(el('r75-action-status'));return;}
   if(!response.ok||result.error)throw Error(result.error||'The local diagnosis service did not complete.');
   const identity=result.identity;
   if(!identity||identity.execution_id!==env.execution_id||identity.input_revision!==rev||identity.request_sha256!==sha||identity.request_body!==body)throw Error('Response/input identity mismatch; result was not displayed.');

@@ -31,10 +31,17 @@ async def main():
     if app[STATE].busy:break
     await asyncio.sleep(.01)
    check('calculation becomes active',app[STATE].busy)
-   async with client.post(url+'/api/run',json=dict(env,execution_id='public-busy'),headers=b) as r:check('single calculation capacity',r.status==409)
+   retry_env=dict(env,execution_id='public-busy')
+   async with client.post(url+'/api/run',json=retry_env,headers=b) as r:
+    busy_reply=await r.json()
+    check('single calculation capacity',r.status==409)
+    check('busy response identifies a temporary wait without exposing another request',set(busy_reply)=={'code','error'} and busy_reply['code']=='CALCULATION_BUSY' and 'input values are unchanged' in busy_reply['error'])
    identity={k:env[k] for k in ['execution_id','request_body_sha256','input_revision']}
    async with client.post(url+'/api/cancel',json=identity,headers=b) as r:check('other session cancellation remains local',r.status==200 and (await r.json())['status']=='EARLY_CANCELLATION_RECORDED')
    status,value=await task;check('other session cannot cancel active result',status==200 and value['result']['execution']['status']=='FINISHED')
+   async with client.post(url+'/api/run',json=retry_env,headers=b) as r:
+    retried=await r.json()
+    check('busy attempt can retry unchanged after the first calculation finishes',r.status==200 and retried['result']['identity']==retry_env and retried['result']['execution']['status']=='FINISHED')
    check('public calculation files disabled',app[STATE].output is None and 'saved_directory' not in value)
   print(json.dumps({'checks':checks,'all_recorded_checks_pass':all(x['pass'] for x in checks)},indent=2))
  finally:await runner.cleanup()

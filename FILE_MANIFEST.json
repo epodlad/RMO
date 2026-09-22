@@ -37,8 +37,8 @@
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 6214,
-      "sha256": "3683d1bb068d203ab8554662d55e2e9c44c99731fe88027087d513d785f7e56a"
+      "bytes": 6651,
+      "sha256": "d50bbd685ea631581b3a667b2d7502d460ec7c8436e14e4dbc8eb998c1776261"
     },
     {
       "path": "RELEASE_VALIDATION.json",
@@ -61,6 +61,11 @@
       "sha256": "7bd3ccf4f05de697311d7f5a199a2ac006577843f143ef0ec580ffaa2077a1ef"
     },
     {
+      "path": "docs/BUSY_RESPONSE_ACCEPTANCE_20260922.json",
+      "bytes": 2267,
+      "sha256": "a2b8de54b8930773491bcc1e5ca347ee0c62ea7f808351a3a3c992022bd7f122"
+    },
+    {
       "path": "docs/DEPLOY_RENDER.md",
       "bytes": 2655,
       "sha256": "92a5c799946ec8104745d571d8f309ac5ffffebf92930f4857c5e279574db1c5"
@@ -72,8 +77,8 @@
     },
     {
       "path": "docs/RELEASE_ACCEPTANCE.md",
-      "bytes": 9850,
-      "sha256": "5e432af3230281172960e4211783a1f76cf2493de41decad8e2134816a5ed44f"
+      "bytes": 10969,
+      "sha256": "abf1a7144caf6c7d3f9153972afd09ad0d50cd478167e9a2835f96f5b6c71413"
     },
     {
       "path": "docs/RELEASE_ZENODO.md",
@@ -227,8 +232,8 @@
     },
     {
       "path": "local_app/client.js",
-      "bytes": 2689,
-      "sha256": "5639f1dc2e46d0f34c04c3fed675f7c63407fd0a4562067457f3738249a53474"
+      "bytes": 2734,
+      "sha256": "72aa54663d6040ca4d54264e985ecb557064a2b5bac44cfaf623a23ca2df9fd7"
     },
     {
       "path": "local_app/server.py",
@@ -237,8 +242,8 @@
     },
     {
       "path": "local_app/view.js",
-      "bytes": 13495,
-      "sha256": "0590448c9ae8a8b5e626421309d48b6faad680bb359ccef56d0fe28818936789"
+      "bytes": 13827,
+      "sha256": "60b0e852ed80f350e47c830f66835e1a3e689e8f29d3bdd0aaa1936a73a3023f"
     },
     {
       "path": "local_diagnosis/diagnose.py",
@@ -2062,8 +2067,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 2876834,
-      "sha256": "2f209441a1dbf0c6f81172b6e7e26e0eeb175e4643ee8d27f3f4bbbc1cddd829"
+      "bytes": 2877337,
+      "sha256": "cb14fbfc70754bfe0c47571cd488cbfa059857b66d7f1e5ea2327ae2a5a705b7"
     },
     {
       "path": "render.yaml",
@@ -2187,8 +2192,8 @@
     },
     {
       "path": "uncertainty_diagnosis/client.js",
-      "bytes": 16833,
-      "sha256": "acc0483e89fdee70cf3e555c3b5470f72343721a4d20b32c9ad3d248cc98ed07"
+      "bytes": 16959,
+      "sha256": "6e314fb875664c0699ad4980ae828f04740d40d8d98a21d3450e6ae44a228c96"
     },
     {
       "path": "uncertainty_diagnosis/fonts/DejaVuSans-Bold.ttf",
@@ -2262,8 +2267,8 @@
     },
     {
       "path": "verification/public_service_smoke.py",
-      "bytes": 3424,
-      "sha256": "7a4c30d65aed9e28c8bde242bdd6a13392a389c82526b0b4cffa11b80f99612c"
+      "bytes": 4002,
+      "sha256": "e6847328bd15d2077f22e418c5c2786ee8cec36561cfdc1b826b2a2589aaa3d1"
     },
     {
       "path": "verification/release_smoke.py",
@@ -2277,8 +2282,8 @@
     },
     {
       "path": "verification/ui_workflow_smoke.cjs",
-      "bytes": 18967,
-      "sha256": "c2ea580bfe42a5f680511481d42fad0b3618a7a0d15ef2a624ee8b15b0e34c90"
+      "bytes": 20375,
+      "sha256": "d4d4c6358a64841dc2b3f7aae34c13f5bbd5d701e3d120c07035bec2582f8f51"
     },
     {
       "path": "verify_manifest.py",
@@ -2292,8 +2297,8 @@
     },
     {
       "path": "web_app/server.py",
-      "bytes": 13645,
-      "sha256": "fbb3066e04640ffb185d75f3e25d358969a1167c47a6d5e6f2538ad51becfd46"
+      "bytes": 13811,
+      "sha256": "4516615791b8e22fdd991f1449acbada3bd51034c374b4eb02c759492b5dc06a"
     }
   ],
   "correction": "navigation-and-save-actions-20260916",

@@ -10786,7 +10786,7 @@ established. Checked results retain their stated scope.</p>
         const current=bridge.snapshot();
         if(!job.stale&&!job.cancelled&&matches(C,result,job.env,current))notify("result",reply);
         else notify("history",{...reply,reason:"Not a result for the current input: edited, cancelled or response identity mismatch."});
-      }catch(err){notify("error",{message:String(err.message)});}
+      }catch(err){notify(err.code==="CALCULATION_BUSY"?"service_busy":"error",{message:String(err.message)});}
       finally{active=null;notify("idle",{});}
       return true;
     }
@@ -10900,7 +10900,7 @@ established. Checked results retain their stated scope.</p>
         headers:{"Content-Type":"application/json","X-RMO-Token":cfg.token},...(payload===undefined?{}:{body:JSON.stringify(payload)})});
       if(Number(response.headers.get("Content-Length"))>3*1024*1024)throw new Error("Response exceeds display limit.");
       const text=await response.text();if(text.length>3*1024*1024)throw new Error("Response exceeds display limit.");
-      const data=JSON.parse(text);if(!response.ok)throw new Error(data.error||"Local service error "+response.status);return data;
+      const data=JSON.parse(text);if(!response.ok){const error=new Error(data.error||"Local service error "+response.status);if(response.status===409&&data.code==="CALCULATION_BUSY")error.code=data.code;throw error;}return data;
     }finally{clearTimeout(timer);}
   }
   function notify(event,data){
@@ -10917,6 +10917,7 @@ established. Checked results retain their stated scope.</p>
       setStatus("Previous response retained as history only.");
     }
     if(event==="error"){last=null;output.replaceChildren(el("p","No current result: "+data.message),el("p","No physical family is excluded by a connection failure. Completed attempts, if any, remain on the calculation machine. Reload before retrying if the server stopped."));setStatus("Attempt unavailable; no saved-result fallback.");}
+    if(event==="service_busy"){last=null;output.replaceChildren(el("p",data.message),el("p","Your calculation has not started. Keep this page open and use Calculate again after a short wait."));setStatus(data.message);focusOutput();}
     if(event==="idle"){busy=false;syncRun();cancelButton.disabled=true;}
   }
   const controller=globalThis.RMOLocalClient.controller({C,bridge,send,notify,makeId:()=>"rmo_"+crypto.randomUUID()});
@@ -11541,6 +11542,7 @@ async function run(){
   const response=await fetch('/api/diagnose',{method:'POST',headers:{'Content-Type':'application/json','X-RMO-Token':connection.token},body:JSON.stringify(env)});
   const result=await response.json();
   if(revision!==rev||JSON.stringify(read())!==body){setStatus('Inputs changed during calculation. The older response was not displayed as a current result.');return;}
+  if(response.status===409&&result.code==='CALCULATION_BUSY'){setStatus(result.error);visit(el('r75-action-status'));return;}
   if(!response.ok||result.error)throw Error(result.error||'The local diagnosis service did not complete.');
   const identity=result.identity;
   if(!identity||identity.execution_id!==env.execution_id||identity.input_revision!==rev||identity.request_sha256!==sha||identity.request_body!==body)throw Error('Response/input identity mismatch; result was not displayed.');

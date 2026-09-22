@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-22",
+  "version": "1.0.0-rc4",
+  "baseline_commit": "3eae090289e60281e4b1d735ae8e03c1f1a4e00c",
+  "scope": "A clear temporary-busy message for both calculation routes; no automatic queue; manual retry preserves current inputs.",
+  "scientific_state": "R139",
+  "numerical_code_changed": false,
+  "http_checks": {
+    "checks": [
+      {
+        "name": "public Secure/HttpOnly cookie",
+        "pass": true
+      },
+      {
+        "name": "HTTPS origin and HSTS",
+        "pass": true
+      },
+      {
+        "name": "public Secure/HttpOnly cookie",
+        "pass": true
+      },
+      {
+        "name": "HTTPS origin and HSTS",
+        "pass": true
+      },
+      {
+        "name": "forwarded Host cannot grant origin",
+        "pass": true
+      },
+      {
+        "name": "public A63 association",
+        "pass": true
+      },
+      {
+        "name": "public result omits execution paths",
+        "pass": true
+      },
+      {
+        "name": "calculation becomes active",
+        "pass": true
+      },
+      {
+        "name": "single calculation capacity",
+        "pass": true
+      },
+      {
+        "name": "busy response identifies a temporary wait without exposing another request",
+        "pass": true
+      },
+      {
+        "name": "other session cancellation remains local",
+        "pass": true
+      },
+      {
+        "name": "other session cannot cancel active result",
+        "pass": true
+      },
+      {
+        "name": "busy attempt can retry unchanged after the first calculation finishes",
+        "pass": true
+      },
+      {
+        "name": "public calculation files disabled",
+        "pass": true
+      }
+    ],
+    "all_recorded_checks_pass": true
+  },
+  "ui_checks": {
+    "count": 546,
+    "all_recorded_checks_pass": true,
+    "new_checks": [
+      {
+        "name": "busy contact displays wait guidance beside retry and preserves inputs",
+        "pass": true
+      },
+      {
+        "name": "busy diagnosis preserves input and shows waiting guidance with retry enabled",
+        "pass": true
+      }
+    ]
+  },
+  "environment": {
+    "python": "3.12.14",
+    "aiohttp": "3.13.5",
+    "jsdom": "26.1.0"
+  },
+  "production_verification": "PENDING",
+  "final_release": "Not declared by this correction."
+}

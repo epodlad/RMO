@@ -178,7 +178,10 @@ async def calculate(request):
     if len(session.seen)>=MAX_ATTEMPTS:
         raise web.HTTPTooManyRequests(text='Session calculation limit reached. Save your results and try later.')
     if state.busy:
-        raise web.HTTPConflict(text='A calculation is active. Try again after it finishes.')
+        return web.json_response({
+            'code': 'CALCULATION_BUSY',
+            'error': 'The calculation service is busy with another request. Please wait a moment, then click Calculate again. Your input values are unchanged.',
+        }, status=409)
     # No await between the capacity check and reservation.
     state.busy=True;session.seen.add(ident)
     cancel=threading.Event();session.active=(envelope,cancel)

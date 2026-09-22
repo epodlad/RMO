@@ -39,7 +39,7 @@
         const current=bridge.snapshot();
         if(!job.stale&&!job.cancelled&&matches(C,result,job.env,current))notify("result",reply);
         else notify("history",{...reply,reason:"Not a result for the current input: edited, cancelled or response identity mismatch."});
-      }catch(err){notify("error",{message:String(err.message)});}
+      }catch(err){notify(err.code==="CALCULATION_BUSY"?"service_busy":"error",{message:String(err.message)});}
       finally{active=null;notify("idle",{});}
       return true;
     }

@@ -1,3 +1,7 @@
+# RMO 1.0.0-rc4 — calculation wait guidance, 2026-09-22
+
+When another calculation is active, Contact and Model examples now display a clear wait-and-retry message. Current input values remain available and Calculate is re-enabled for a manual retry. Numerical results and the single-calculation capacity are unchanged. See `docs/BUSY_RESPONSE_ACCEPTANCE_20260922.json`. This correction does not publish a new release or create a DOI.
+
 # RMO 1.0.0-rc4 — navigation correction, 2026-09-16
 
 The maintainer's desktop walkthrough completed an edited contact calculation and the E05 edit/save/import/review cycle, but exposed hard-to-find actions. This follow-up places Solar events, Model examples and Contact / enter values in the header. Solar selection comes before optional import instructions, and event titles include their E-number.

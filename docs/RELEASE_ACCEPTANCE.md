@@ -1,5 +1,13 @@
 # Release acceptance
 
+## 2026-09-22: temporary calculation capacity feedback
+
+Both the contact and local-diagnosis interfaces now distinguish an occupied calculation slot from a connection failure. The user is asked to wait briefly and click Calculate again; entered values remain in the form. No calculation is queued or started automatically. The server returns a structured `CALCULATION_BUSY` response and does not consume the rejected attempt identifier.
+
+Fourteen public HTTP checks and 546 DOM/API assertions pass. A real two-session check confirms that a second request can retry unchanged after the first finishes. UI checks confirm preserved inputs, no stale result, visible wait guidance, and enabled retry for both routes. Python 3.12.14, aiohttp 3.13.5 and jsdom 26.1.0 were used; this is not a production load test. See `BUSY_RESPONSE_ACCEPTANCE_20260922.json`.
+
+The baseline commit `3eae090` is confirmed live on Render. Its contact workflow was exercised in a browser with both normal velocities set to 0.45, returning contact speed 0.45. Browser verification of the new busy message and final-release gates remains pending.
+
 ## 2026-09-17: bandwidth optimization (pending deployment)
 
 The header image remains eager; the other 117 image elements use native browser lazy loading. All image sources, scientific text, embedded scripts, data and video controls are preserved. Browser scheduling determines when an offscreen image is fetched.

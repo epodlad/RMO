@@ -22,7 +22,7 @@ async function main(){
    let cookie='';let html=fs.readFileSync(path.join(root,'public/index.html'),'utf8');
    if(online){const r=await fetch(origin);cookie=r.headers.get('set-cookie').split(';')[0];html=await r.text();}
    const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type!=='css parsing'&&e.type!=='not implemented')errors.push(e.message);});
-   const calls=[],downloads=[],blobs=new Map();let gate=null;
+   const calls=[],downloads=[],blobs=new Map();let gate=null,busyNext=false;
    const dom=new JSDOM(html,{url:origin,runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){
     w.TextEncoder=TextEncoder;w.TextDecoder=TextDecoder;w.Blob=Blob;w.AbortController=AbortController;
     Object.defineProperty(w.crypto,'subtle',{value:webcrypto.subtle});w.crypto.randomUUID=()=>webcrypto.randomUUID();
@@ -33,12 +33,13 @@ async function main(){
      const absolute=new URL(url,origin);if(absolute.origin!==origin)throw Error('External network not part of this test');
      calls.push({path:absolute.pathname,body:opts.body});
      if(!online)throw Error('Offline test');
+     if(busyNext&&['/api/run','/api/diagnose'].includes(absolute.pathname)){busyNext=false;return new Response(JSON.stringify({code:'CALCULATION_BUSY',error:'The calculation service is busy with another request. Please wait a moment, then click Calculate again. Your input values are unchanged.'}),{status:409,headers:{'Content-Type':'application/json'}});}
      const response=await fetch(absolute,{...opts,headers:{...opts.headers,Origin:origin,Cookie:cookie}});
      if(gate&&absolute.pathname==='/api/diagnose')await gate;
      return response;
     };
    }});windows.push(dom.window);await pause(50);
-   return {w:dom.window,d:dom.window.document,calls,downloads,delay(p){gate=p;}};
+   return {w:dom.window,d:dom.window.document,calls,downloads,delay(p){gate=p;},busyOnce(){busyNext=true;}};
   }
   const ui=await page(true),{w,d,calls}=ui,$=id=>d.getElementById(id),click=id=>{$(id).click();},input=(id,v)=>{$(id).value=String(v);$(id).dispatchEvent(new w.Event('input',{bubbles:true}));},select=(id,v)=>{$(id).value=String(v);$(id).dispatchEvent(new w.Event('change',{bubbles:true}));};
   check('all inline modules initialise without JavaScript exceptions',errors.length===0);
@@ -53,6 +54,8 @@ async function main(){
   check('contact is ready to calculate beside report',!$('live-run').disabled&&$('input-report').textContent.includes('Your input is ready'));
   check('ready report offers an enabled calculate action with connection feedback',!$('report-calculate').disabled&&$('report-calculation-status').textContent.includes('checked'));
   check('request fingerprint is available inside collapsed details',$('input-report').querySelector('.fingerprint').closest('details')&&!$('input-report').querySelector('.fingerprint').closest('details').open);
+  const waitingInput=$('value-u_n_L').value;ui.busyOnce();click('report-calculate');await until(()=>!$('report-calculate').disabled,'contact busy recovery');
+  check('busy contact displays wait guidance beside retry and preserves inputs',$('live-output').textContent.includes('Your calculation has not started')&&$('live-status').textContent.includes('Please wait')&&$('report-calculation-status').textContent.includes('Please wait')&&$('value-u_n_L').value===waitingInput&&!$('live-output').textContent.includes('connection failure'));
   click('live-edit');check('editing opens and focuses parameters',w.lastScrolled==='advanced-input'&&d.activeElement.id==='advanced-input');
   input('value-p_R','-1');click('check-input-after-edit');check('invalid manual input has named error and no calculation',$('input-report').textContent.includes('RIGHT')&&$('value-p_R').getAttribute('aria-invalid')==='true'&&$('live-run').disabled);
   input('value-p_R','');input('reason-p_R','Not measured');click('check-input-after-edit');check('unknown value stays incomplete and keeps its reason',$('input-report').textContent.includes('INCOMPLETE')&&$('input-report').textContent.includes('Not measured')&&$('live-run').disabled);
@@ -73,7 +76,9 @@ async function main(){
   for(const row of cfg.cases){select('r75-model',row.id);select('r75-factor',row.factor);click('r75-load');const json=JSON.parse($('r75-json').textContent);assert.equal(JSON.stringify(json.assessment),JSON.stringify(row.output));check('saved local model '+row.id+' / '+row.factor+' shown explicitly as saved',!$('r75-result').hidden&&$('r75-source').textContent.includes('no new calculation')&&w.lastScrolled==='r75-result');}
   click('r75-edit-result');check('saved result offers direct return to parameters',$('r75-inputs').open&&w.lastScrolled==='r75-inputs');
   select('r75-model','A63');select('r75-factor','0.01');click('r75-load');input('r75-left-rho-width','-1');const before=calls.length;click('r75-run');check('invalid error bound is labelled beside calculate and not sent',calls.length===before&&$('r75-action-status').textContent.includes('half-width')&&$('r75-left-rho-width').getAttribute('aria-invalid')==='true');
-  click('r75-load');click('r75-run');await until(()=>$('r75-source').textContent.startsWith('New calculation')&&!$('r75-result').hidden,'A63 new');check('new local result is focused automatically',w.lastScrolled==='r75-result'&&d.activeElement.id==='r75-result');
+  click('r75-load');const waitingBound=$('r75-left-rho-width').value;ui.busyOnce();click('r75-run');await until(()=>!$('r75-run').disabled,'diagnosis busy recovery');
+  check('busy diagnosis preserves input and shows waiting guidance with retry enabled',$('r75-action-status').textContent.includes('Please wait')&&$('r75-left-rho-width').value===waitingBound&&$('r75-result').hidden&&$('r75-save-result').disabled&&!$('r75-action-status').textContent.includes('Calculation unavailable'));
+  click('r75-run');await until(()=>$('r75-source').textContent.startsWith('New calculation')&&!$('r75-result').hidden,'A63 new');check('new local result is focused automatically',w.lastScrolled==='r75-result'&&d.activeElement.id==='r75-result');
   click('r75-save-result');click('r75-save-pdf');const resultFile=ui.downloads.find(x=>x.name==='RMO_local_result.json'),pdfFile=ui.downloads.find(x=>x.name==='RMO_local_result.pdf');check('new result JSON and PDF export correctly',JSON.parse(await resultFile.blob.text()).assessment.status==='CONDITIONAL_ROBUST_CLASS'&&(await pdfFile.blob.text()).startsWith('%PDF'));
   let release;ui.delay(new Promise(r=>release=r));click('r75-run');await pause(100);input('r75-left-rho','1.1');release();await until(()=>$('r75-action-status').textContent.includes('older response'),'stale response');ui.delay(null);check('input change during calculation cannot display or export stale result',$('r75-result').hidden&&$('r75-save-result').disabled);
   click('r75-blank-inputs');click('r75-export-input');const blank=JSON.parse(await ui.downloads.at(-1).blob.text());check('own-input route has no fabricated model measurements',blank.nominal.case_id==='user_input'&&blank.nominal.left.rho===null&&blank.nominal.right.rho===null&&blank.half_widths['left.rho']===0);

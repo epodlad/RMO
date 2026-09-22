@@ -104,7 +104,7 @@
         headers:{"Content-Type":"application/json","X-RMO-Token":cfg.token},...(payload===undefined?{}:{body:JSON.stringify(payload)})});
       if(Number(response.headers.get("Content-Length"))>3*1024*1024)throw new Error("Response exceeds display limit.");
       const text=await response.text();if(text.length>3*1024*1024)throw new Error("Response exceeds display limit.");
-      const data=JSON.parse(text);if(!response.ok)throw new Error(data.error||"Local service error "+response.status);return data;
+      const data=JSON.parse(text);if(!response.ok){const error=new Error(data.error||"Local service error "+response.status);if(response.status===409&&data.code==="CALCULATION_BUSY")error.code=data.code;throw error;}return data;
     }finally{clearTimeout(timer);}
   }
   function notify(event,data){
@@ -121,6 +121,7 @@
       setStatus("Previous response retained as history only.");
     }
     if(event==="error"){last=null;output.replaceChildren(el("p","No current result: "+data.message),el("p","No physical family is excluded by a connection failure. Completed attempts, if any, remain on the calculation machine. Reload before retrying if the server stopped."));setStatus("Attempt unavailable; no saved-result fallback.");}
+    if(event==="service_busy"){last=null;output.replaceChildren(el("p",data.message),el("p","Your calculation has not started. Keep this page open and use Calculate again after a short wait."));setStatus(data.message);focusOutput();}
     if(event==="idle"){busy=false;syncRun();cancelButton.disabled=true;}
   }
   const controller=globalThis.RMOLocalClient.controller({C,bridge,send,notify,makeId:()=>"rmo_"+crypto.randomUUID()});
