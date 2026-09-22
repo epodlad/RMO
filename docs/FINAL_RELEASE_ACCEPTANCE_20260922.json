@@ -1,0 +1,459 @@
+{
+  "date": "2026-09-22",
+  "prepared_version": "1.0.0",
+  "tested_baseline_commit": "aff327887a44ddf2471e840b3a34d0d21f5a809c",
+  "scientific_state": "R139",
+  "release_status": "DRAFT_NOT_PUBLISHED",
+  "desktop_browser": {
+    "site": "https://rmo-solar.org/",
+    "viewport_css_pixels": [
+      1363,
+      936
+    ],
+    "checks": [
+      {
+        "name": "Fresh-session contact with both normal velocities 0.45",
+        "status": "PASS",
+        "result": "Contact speed 0.45; FINISHED; both policy validations PASS"
+      },
+      {
+        "name": "Contact JSON download",
+        "status": "PASS",
+        "evidence": "Downloaded file parsed and hashed"
+      },
+      {
+        "name": "A63 factor 0.05 with front-speed half-width changed to 0.04",
+        "status": "PASS",
+        "result": "New calculation; CONDITIONAL_ROBUST_CLASS"
+      },
+      {
+        "name": "A63 input/result JSON and one-page PDF downloads",
+        "status": "PASS",
+        "evidence": "Files parsed; matching input half-width 0.04; PDF reports result and limits"
+      },
+      {
+        "name": "A63 saved-input import",
+        "status": "PASS",
+        "evidence": "Changed field to 0.03, imported saved file, observed restored 0.04; recalculation completed"
+      },
+      {
+        "name": "E05 review, save, import and review again",
+        "status": "PASS",
+        "evidence": "Published 590 km/s remains separate from working 600 km/s; changed to E04 before restoring E05"
+      },
+      {
+        "name": "SUVI lazy viewer, frame step and playback",
+        "status": "PASS",
+        "evidence": "Opened at 23/50, Next advanced to 24/50, Play changed to Pause and playback reached 50/50"
+      },
+      {
+        "name": "Keyboard focus in SUVI controls",
+        "status": "PASS",
+        "evidence": "Tab moved focus to Previous frame with a visible 3px outline"
+      },
+      {
+        "name": "www redirect",
+        "status": "PASS",
+        "evidence": "https://www.rmo-solar.org/ redirected to https://rmo-solar.org/"
+      }
+    ],
+    "limits": [
+      "The browser download-event observer timed out, but the files were downloaded, synchronized and independently parsed.",
+      "A restored old browser session initially expired; reloading established a fresh session and the contact calculation passed.",
+      "This is targeted desktop acceptance, not exhaustive UI traversal or a production load test."
+    ]
+  },
+  "automated": {
+    "local_http": {
+      "checks": [
+        {
+          "name": "application HTTP",
+          "pass": true
+        },
+        {
+          "name": "separate browser-session tokens",
+          "pass": true
+        },
+        {
+          "name": "cookie protections",
+          "pass": true
+        },
+        {
+          "name": "foreign Host rejected",
+          "pass": true
+        },
+        {
+          "name": "no undeclared resource /private-record.txt",
+          "pass": true
+        },
+        {
+          "name": "no undeclared resource /results/local_runs",
+          "pass": true
+        },
+        {
+          "name": "no undeclared resource /local_app/server.py",
+          "pass": true
+        },
+        {
+          "name": "no undeclared resource /assets/../index.html",
+          "pass": true
+        },
+        {
+          "name": "no undeclared resource /assets/0000000000000000000000000000000000000000000000000000000000000000.png",
+          "pass": true
+        },
+        {
+          "name": "public asset delivery",
+          "pass": true
+        },
+        {
+          "name": "another session token rejected",
+          "pass": true
+        },
+        {
+          "name": "foreign Origin rejected",
+          "pass": true
+        },
+        {
+          "name": "A63 HTTP and input association",
+          "pass": true
+        },
+        {
+          "name": "A63 conditional result",
+          "pass": true
+        },
+        {
+          "name": "A63 exact saved assessment",
+          "pass": true
+        },
+        {
+          "name": "A63 PDF contains result and limits",
+          "pass": true
+        },
+        {
+          "name": "repeat execution ID rejected",
+          "pass": true
+        },
+        {
+          "name": "invalid input checksum rejected",
+          "pass": true
+        },
+        {
+          "name": "B01 HTTP and identity",
+          "pass": true
+        },
+        {
+          "name": "B01 checked contact",
+          "pass": true
+        },
+        {
+          "name": "no private runtime paths or worker commands",
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "A63_seconds": 0.14534908800123958,
+        "B01_seconds": 0.8482391619982081,
+        "peak_process_tree_rss_bytes": 102895616
+      },
+      "all_recorded_checks_pass": true
+    },
+    "public_http": {
+      "checks": [
+        {
+          "name": "public Secure/HttpOnly cookie",
+          "pass": true
+        },
+        {
+          "name": "HTTPS origin and HSTS",
+          "pass": true
+        },
+        {
+          "name": "public Secure/HttpOnly cookie",
+          "pass": true
+        },
+        {
+          "name": "HTTPS origin and HSTS",
+          "pass": true
+        },
+        {
+          "name": "forwarded Host cannot grant origin",
+          "pass": true
+        },
+        {
+          "name": "public A63 association",
+          "pass": true
+        },
+        {
+          "name": "public result omits execution paths",
+          "pass": true
+        },
+        {
+          "name": "calculation becomes active",
+          "pass": true
+        },
+        {
+          "name": "single calculation capacity",
+          "pass": true
+        },
+        {
+          "name": "busy response identifies a temporary wait without exposing another request",
+          "pass": true
+        },
+        {
+          "name": "other session cancellation remains local",
+          "pass": true
+        },
+        {
+          "name": "other session cannot cancel active result",
+          "pass": true
+        },
+        {
+          "name": "busy attempt can retry unchanged after the first calculation finishes",
+          "pass": true
+        },
+        {
+          "name": "public calculation files disabled",
+          "pass": true
+        }
+      ],
+      "all_recorded_checks_pass": true
+    },
+    "navigation_http": {
+      "checks": [
+        {
+          "name": "external link opens application",
+          "pass": true
+        },
+        {
+          "name": "navigation retains protected cookie",
+          "pass": true
+        },
+        {
+          "name": "navigation retains response isolation",
+          "pass": true
+        },
+        {
+          "name": "navigation uses configured origin",
+          "pass": true
+        },
+        {
+          "name": "cross-site GET document navigation",
+          "pass": true
+        },
+        {
+          "name": "cross-site HEAD document navigation",
+          "pass": true
+        },
+        {
+          "name": "cross-site cors/empty blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site no-cors/image blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site navigate/iframe blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site navigate/frame blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site navigate/empty blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site cors/document blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site without navigation metadata blocked",
+          "pass": true
+        },
+        {
+          "name": "cross-site cannot extend navigation exception to /api/status",
+          "pass": true
+        },
+        {
+          "name": "cross-site cannot extend navigation exception to /api/run",
+          "pass": true
+        },
+        {
+          "name": "cross-site cannot extend navigation exception to /api/diagnose",
+          "pass": true
+        },
+        {
+          "name": "cross-site cannot extend navigation exception to /api/cancel",
+          "pass": true
+        },
+        {
+          "name": "cross-site cannot extend navigation exception to /assets/0000000000000000000000000000000000000000000000000000000000000000.txt",
+          "pass": true
+        },
+        {
+          "name": "same-site GET document navigation",
+          "pass": true
+        },
+        {
+          "name": "same-site HEAD document navigation",
+          "pass": true
+        },
+        {
+          "name": "same-site cors/empty blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site no-cors/image blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site navigate/iframe blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site navigate/frame blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site navigate/empty blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site cors/document blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site without navigation metadata blocked",
+          "pass": true
+        },
+        {
+          "name": "same-site cannot extend navigation exception to /api/status",
+          "pass": true
+        },
+        {
+          "name": "same-site cannot extend navigation exception to /api/run",
+          "pass": true
+        },
+        {
+          "name": "same-site cannot extend navigation exception to /api/diagnose",
+          "pass": true
+        },
+        {
+          "name": "same-site cannot extend navigation exception to /api/cancel",
+          "pass": true
+        },
+        {
+          "name": "same-site cannot extend navigation exception to /assets/0000000000000000000000000000000000000000000000000000000000000000.txt",
+          "pass": true
+        },
+        {
+          "name": "existing direct/same-origin access: None",
+          "pass": true
+        },
+        {
+          "name": "existing direct/same-origin access: none",
+          "pass": true
+        },
+        {
+          "name": "existing direct/same-origin access: same-origin",
+          "pass": true
+        },
+        {
+          "name": "navigation does not enable POST on root",
+          "pass": true
+        },
+        {
+          "name": "navigation does not bypass Host allowlist",
+          "pass": true
+        },
+        {
+          "name": "same-origin session still works",
+          "pass": true
+        },
+        {
+          "name": "API rejects wrong token",
+          "pass": true
+        },
+        {
+          "name": "API rejects missing session",
+          "pass": true
+        },
+        {
+          "name": "API rejects foreign Origin",
+          "pass": true
+        },
+        {
+          "name": "separate navigation sessions have distinct tokens",
+          "pass": true
+        },
+        {
+          "name": "another session cannot reuse first token",
+          "pass": true
+        },
+        {
+          "name": "navigation never starts a calculation",
+          "pass": true
+        }
+      ],
+      "all_recorded_checks_pass": true
+    },
+    "asset_cache": {
+      "test_count": 2,
+      "status": "PASS"
+    },
+    "environment": {
+      "python": "3.12.14",
+      "aiohttp": "3.14.3",
+      "dependencies": "All installed versions match requirements.txt; pinned runtime used for this run."
+    },
+    "inherited_dom_api_evidence": {
+      "assertions": 546,
+      "report": "docs/BUSY_RESPONSE_ACCEPTANCE_20260922.json",
+      "rerun_in_this_preparation": false
+    }
+  },
+  "download_evidence": {
+    "contact": {
+      "sha256": "e1cf36593509d0c3bd9b9dee3783a7411d7de291a81fc1f6f62ab107a4d82d1f",
+      "bytes": 38766
+    },
+    "a63_input": {
+      "sha256": "a2fa996ef596d54601d78831556b6ff8faa3ca1da1aef8da81721f6b53af5177",
+      "bytes": 1621
+    },
+    "a63_result": {
+      "sha256": "33755d26910a5e58e34158e35b200ab25123560f79c6e7cef4d20ff1e4edd44d",
+      "bytes": 16855
+    },
+    "a63_pdf": {
+      "sha256": "29c7fe7808139862289c4247baab6aa18cefa3016a7893b0cfa2b21d6c3edfab",
+      "bytes": 45394
+    },
+    "e05_draft": {
+      "sha256": "3fbad20a143cb48a8e79545122606361cc168619617ab18ea1aba1ca7451b36e",
+      "bytes": 4223
+    }
+  },
+  "remaining_gates": [
+    {
+      "name": "Phone-width rendering and usability",
+      "status": "NOT_PERFORMED",
+      "reason": "The available browser has no advertised viewport or device-emulation capability; browser settings navigation was blocked. A phone check is still required."
+    },
+    {
+      "name": "Final archiving and DOI policy",
+      "status": "DECISION_PENDING",
+      "reason": "The maintainer requested preserving DOI 10.5281/zenodo.22776018. Do not publish an integration-triggering GitHub release until its archiving behavior is explicitly settled."
+    },
+    {
+      "name": "Stable-version deployment and publication",
+      "status": "NOT_PERFORMED",
+      "reason": "Prepared branch only; main, live deployment and published rc4 record remain unchanged."
+    }
+  ],
+  "numerical_code_changed": false,
+  "scientific_campaign_rerun": false
+}

@@ -1,3 +1,7 @@
+# Stable release preparation
+
+Version 1.0.0 is prepared but unpublished. The no-new-DOI instruction remains unresolved for a new stable release. Keep the current published rc4 record intact until the archiving decision is explicit; see [release preparation](RELEASE_PREPARATION_20260922.md). The following text describes the previous rc4 correction workflow.
+
 # Publication of the rc4 interface correction
 
 The published software rc4 record is [10.5281/zenodo.22776018](https://doi.org/10.5281/zenodo.22776018), published 2026-09-15. The existing rc3 DOI [10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502) remains valid for citations to that version. The scientific companion R139 remains [10.5281/zenodo.22742107](https://doi.org/10.5281/zenodo.22742107).

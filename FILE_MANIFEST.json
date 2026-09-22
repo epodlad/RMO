@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "version": "1.0.0-rc4",
+  "version": "1.0.0",
   "scientific_state": "R139",
   "source_bundle_sha256": "76fc6c7ce2e14c84e7ae84b8a0ce399a7c65e4109d08266391988d86ad35ba78",
   "manifest_self_excluded": true,
@@ -17,13 +17,13 @@
     },
     {
       "path": ".zenodo.json",
-      "bytes": 3928,
-      "sha256": "f7e6b7ac4d3933e6217b6ce27a0112ddaa357f8ab0c7d8c40e0b2b0721b75941"
+      "bytes": 4533,
+      "sha256": "15df29022a1ae29cd109e21a9191d3fdfb7e8781a23044acf5012ca0a11ff90c"
     },
     {
       "path": "CITATION.cff",
-      "bytes": 479,
-      "sha256": "f02d7b0b17e085a030f74b28c1c2b2470d942b95919378e91981b29fd2ae7a87"
+      "bytes": 475,
+      "sha256": "0ba29c357cb085b8e0bf0e77d1f9fc1cff97d5ec2806602f95189fb2fb228d9a"
     },
     {
       "path": "LICENSE",
@@ -32,18 +32,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 6916,
-      "sha256": "c23286f2dec452c96626bb389e29ac46f8f76d854b96076dcae10714bf63ef22"
+      "bytes": 7233,
+      "sha256": "d68ebe2797dc00a249a724f0f24a5096cca20cc9d86b3e6ca652ade5fce9bf46"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 6651,
-      "sha256": "d50bbd685ea631581b3a667b2d7502d460ec7c8436e14e4dbc8eb998c1776261"
+      "bytes": 7505,
+      "sha256": "a8c81ac5ba075d916b256a5ecb8bd9965580bf644ab5d469115b0577efa4247c"
     },
     {
       "path": "RELEASE_VALIDATION.json",
-      "bytes": 19422,
-      "sha256": "02f5a27a748846d9f078bd5bf51b680832c969e02f9f0c5702717d876588f819"
+      "bytes": 19998,
+      "sha256": "f961887ed0761dcf7469beb648de3568e6a15f764d22aed12d35e27d7b267894"
     },
     {
       "path": "RMO/RMO_benchmark_manifest_v1_1.yaml",
@@ -71,19 +71,29 @@
       "sha256": "92a5c799946ec8104745d571d8f309ac5ffffebf92930f4857c5e279574db1c5"
     },
     {
+      "path": "docs/FINAL_RELEASE_ACCEPTANCE_20260922.json",
+      "bytes": 13187,
+      "sha256": "42fc3bbaa1cbd14790f016c12152d1b8a39798b3546ad66739b3dc768952fe80"
+    },
+    {
       "path": "docs/QUICKLOOK_GUIDE_PROVENANCE.json",
       "bytes": 1295,
       "sha256": "f2d0efa412632af02cb957771942d416193465bb4129806546f12403d2cd6930"
     },
     {
       "path": "docs/RELEASE_ACCEPTANCE.md",
-      "bytes": 10969,
-      "sha256": "abf1a7144caf6c7d3f9153972afd09ad0d50cd478167e9a2835f96f5b6c71413"
+      "bytes": 11240,
+      "sha256": "a16da6172c511603317a0dc326c4a0581ed15a511362f5d36c2dfbebc84398a4"
+    },
+    {
+      "path": "docs/RELEASE_PREPARATION_20260922.md",
+      "bytes": 2399,
+      "sha256": "7d84a4c35af4506c6311211e7ada0274149017bb39775c63f8c372579851b387"
     },
     {
       "path": "docs/RELEASE_ZENODO.md",
-      "bytes": 2963,
-      "sha256": "448e6df9c129a6c3000a2fc42ef6be13c5f26173fd491890be17b80fdb0530fd"
+      "bytes": 3323,
+      "sha256": "6ea4b0e6d0063faa837d7ff1c16ded9b74d829a670a77529f9b6d026bd326276"
     },
     {
       "path": "docs/REPRODUCIBILITY.md",
@@ -2067,8 +2077,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 2877337,
-      "sha256": "cb14fbfc70754bfe0c47571cd488cbfa059857b66d7f1e5ea2327ae2a5a705b7"
+      "bytes": 2877333,
+      "sha256": "13f96dbadb8abfebc2e70111179035906608f235d1674107f83efc601034ba00"
     },
     {
       "path": "render.yaml",
@@ -2297,12 +2307,12 @@
     },
     {
       "path": "web_app/server.py",
-      "bytes": 13811,
-      "sha256": "4516615791b8e22fdd991f1449acbada3bd51034c374b4eb02c759492b5dc06a"
+      "bytes": 13807,
+      "sha256": "9c7caac1dbcf32dfef67070264acd46baad2f12571f07dd97f09cd91ab3e590b"
     }
   ],
   "correction": "navigation-and-save-actions-20260916",
-  "baseline_git_commit": "ef4f83adb122c643dbe0065505fbae3c26f452d6",
+  "baseline_git_commit": "aff327887a44ddf2471e840b3a34d0d21f5a809c",
   "source_bundle_note": "source_bundle_sha256 is the retained original source-bundle identifier, not the checksum of the corrected ZIP.",
   "documentation_update": {
     "date": "2026-09-16",
@@ -2313,5 +2323,10 @@
       "CITATION.cff"
     ],
     "scope": "Plain-language physics introduction, online and local run instructions, and creator-name consistency. Application runtime and numerical results unchanged."
+  },
+  "release_preparation": {
+    "date": "2026-09-22",
+    "status": "DRAFT_NOT_PUBLISHED",
+    "report": "docs/RELEASE_PREPARATION_20260922.md"
   }
 }
