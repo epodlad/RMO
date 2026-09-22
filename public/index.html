@@ -87,7 +87,7 @@
 
 
 .r74-table{overflow-x:auto}.r74-table th,.r74-table td{vertical-align:top;font-size:.95rem;padding:.65rem}.r74-table th:first-child{min-width:8rem}.r74-field-hint{display:block;color:var(--muted);margin:.3rem 0 .6rem}.r74-form{display:grid;gap:.5rem;max-width:48rem}.r74-form label{margin-top:.65rem;font-weight:650}#r74-report-preview{white-space:pre-wrap;overflow-wrap:anywhere;max-height:26rem}#r74-problem{border:1px solid var(--line);border-radius:8px;padding:1rem}#r74-purpose a,#r74-background a,#r74-modes a{color:var(--accent);text-decoration:underline}
-.r75-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:18px 0}.r75-actions label{display:flex;flex-direction:column;gap:8px}.r75-table{overflow-x:auto}.r75-table input{min-width:95px;width:100%;box-sizing:border-box}.r75-table td{min-width:125px}.r75-table th{text-align:left}.r75-outcome{padding:20px;border-left:5px solid #20766e;background:#e7f1ee;font-size:1.1em}.r75-report,#r75-json{white-space:pre-wrap;overflow-wrap:anywhere;max-height:600px;overflow:auto;font-size:.9em}#r75-plot svg{width:100%;height:auto;background:white}#r75-demo-top{font-weight:700}#r75-tool button:disabled{opacity:.55;cursor:default}
+.r75-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:18px 0}.r75-actions label{display:flex;flex-direction:column;gap:8px}.r75-table{overflow-x:auto}.r75-table input{min-width:95px;width:100%;box-sizing:border-box}.r75-table td{min-width:125px}.r75-table th{text-align:left}.r75-outcome{padding:20px;border-left:5px solid var(--accent);background:var(--note);color:var(--ink);font-size:1.1em}.r75-report,#r75-json{white-space:pre-wrap;overflow-wrap:anywhere;max-height:600px;overflow:auto;font-size:.9em}#r75-plot svg{width:100%;height:auto;background:white}#r75-demo-top{font-weight:700}#r75-tool button:disabled{opacity:.55;cursor:default}
 </style><style id="r96-layout">
 .r96-lead{font-size:clamp(19px,2.7vw,25px);line-height:1.4;max-width:760px;margin:20px 0 12px}
 .r96-start-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0 14px}
@@ -162,7 +162,7 @@ button { min-height:44px; } summary { cursor:pointer; }
 button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #176e89; outline-offset: 3px; }
 .preflight-actions, .r75-actions, .r67-actions { display:flex; flex-wrap:wrap; align-items:center; gap:.65rem; }
 .preflight-actions button, .r75-actions button, .r67-actions button { min-height:44px; white-space:normal; line-height:1.35; }
-#live-status, #r75-action-status, #r67-review-status, .workflow-hint { padding:.65rem .8rem; border-left:3px solid #237d72; background:#f0f7f5; overflow-wrap:anywhere; }
+#live-status, #r75-action-status, #r67-review-status, .workflow-hint { padding:.65rem .8rem; border-left:3px solid #237d72; background:var(--note); color:var(--ink); overflow-wrap:anywhere; }
 #r75-result, #live-output, #input-report, #r67-review-output, #advanced-input, #r75-inputs, #r67-values { scroll-margin-top:1rem; }
 [aria-invalid="true"] { border:2px solid #b64232 !important; }
 @media (max-width:640px) { .preflight-actions button, .r75-actions button, .r67-actions button { max-width:100%; } .state-grid { grid-template-columns:1fr !important; } .r75-actions label { max-width:100%; } .r75-actions select { max-width:100%; } }
@@ -189,12 +189,28 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
 .fingerprint{overflow-wrap:anywhere}
 @media(max-width:600px){#rmo-main-navigation a{flex:1 1 140px;justify-content:center}.preflight-actions,.r67-actions{gap:10px}.preflight-actions button,.r67-actions button{max-width:100%;white-space:normal}#r67-choice{font-size:16px;max-width:100%}}
 </style>
+<style id="rmo-model-shortcuts-style">
+.rmo-model-shortcuts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}
+.rmo-model-shortcuts button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0;min-height:64px;padding:10px 8px;color:var(--ink);background:var(--surface);border:1px solid var(--accent);border-radius:8px;line-height:1.3}
+.rmo-model-shortcuts button strong{font-size:15px}.rmo-model-shortcuts button span{font-size:12px;color:var(--muted)}
+.rmo-model-shortcuts button:hover{background:var(--note)}
+.rmo-model-shortcuts button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:680px){.rmo-model-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-color-scheme:dark){#r98-model-summary,#rmo-quicklook-guide>summary{color:var(--accent)}#r98-model-summary{border-color:var(--accent)}#rmo-header-examples>details>summary{color:var(--muted)}}
+</style>
 </head><body><main>
 <header id="r73-welcome">
 <div class="eyebrow">Riemann Maps for Solar Observers</div>
 <div class="rmo-title-row"><div class="rmo-title-copy"><h1>RMO QuickLook</h1><nav id="rmo-main-navigation" aria-label="Start here">
 <a href="#r67-start">Solar events</a><a href="#r75-tool">Model examples</a><a href="#r73-tools-workspace">Contact / enter values</a>
-</nav><p id="rmo-ui-build" class="r96-small">v1.0.0 · R139 scientific reference</p><a id="r98-model-summary" class="r132-button r132-slot" href="#r132-scientific-evidence" onclick="document.getElementById('r132-scientific-evidence').open=true">Scientific evidence · R132</a><p id="rmo-paper-link"><a href="https://arxiv.org/abs/2609.15210" target="_blank" rel="noopener noreferrer">Read the paper · arXiv:2609.15210</a><small>Preprint · submitted to Solar Physics</small></p></div><div id="rmo-brand"><small id="r113-dedication"><i>To Bernhard Riemann — sound, shocks and geometry.</i></small><img src="/assets/ee4df8c90ed64e50352dc11eba24a553b4abcae2cb98d6bf03e8a3002d2557e7.svg" width="2048" height="700" alt="RMO: vector lettering and Riemann fan beside the selected solar illustration with a softly modulated arc"></div></div><details id="rmo-quicklook-guide">
+</nav>
+<div class="rmo-model-shortcuts" role="group" aria-label="Open a saved model example">
+<button type="button" id="rmo-top-model-A63" data-rmo-model="A63" aria-controls="r75-result"><strong>Fast shock</strong><span>Open saved example</span></button>
+<button type="button" id="rmo-top-model-A17" data-rmo-model="A17" aria-controls="r75-result"><strong>Slow shock</strong><span>Open saved example</span></button>
+<button type="button" id="rmo-top-model-A42" data-rmo-model="A42" aria-controls="r75-result"><strong>Contact</strong><span>Open saved example</span></button>
+<button type="button" id="rmo-top-model-A88" data-rmo-model="A88" aria-controls="r75-result"><strong>Rotational discontinuity</strong><span>Open saved example</span></button>
+</div>
+<p id="rmo-ui-build" class="r96-small">v1.0.0 · R139 scientific reference</p><a id="r98-model-summary" class="r132-button r132-slot" href="#r132-scientific-evidence" onclick="document.getElementById('r132-scientific-evidence').open=true">Scientific evidence · R132</a><p id="rmo-paper-link"><a href="https://arxiv.org/abs/2609.15210" target="_blank" rel="noopener noreferrer">Read the paper · arXiv:2609.15210</a><small>Preprint · submitted to Solar Physics</small></p></div><div id="rmo-brand"><small id="r113-dedication"><i>To Bernhard Riemann — sound, shocks and geometry.</i></small><img src="/assets/ee4df8c90ed64e50352dc11eba24a553b4abcae2cb98d6bf03e8a3002d2557e7.svg" width="2048" height="700" alt="RMO: vector lettering and Riemann fan beside the selected solar illustration with a softly modulated arc"></div></div><details id="rmo-quicklook-guide">
 <summary>What are we looking for in solar data?</summary>
 <div class="rmo-guide-body">
 <h2>Follow the connected evolution of the plasma</h2>
@@ -322,6 +338,13 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
 <p><strong>This is a model demonstration:</strong> the parameters are artificial and fully specified. Start with a saved example to see the method work. For measured solar motion, use <a href="#r75-solar-example">the real EUV example</a>. The names fast and slow refer to MHD wave families.</p>
 <p><strong>Follow the result:</strong> read the one-sentence answer, look at the speed plot, then open the physical checks if you want the details.</p>
 </details>
+<div class="rmo-model-shortcuts" role="group" aria-label="Open a saved model example">
+<button type="button" id="rmo-inner-model-A63" data-rmo-model="A63" aria-controls="r75-result"><strong>Fast shock</strong><span>Open saved example</span></button>
+<button type="button" id="rmo-inner-model-A17" data-rmo-model="A17" aria-controls="r75-result"><strong>Slow shock</strong><span>Open saved example</span></button>
+<button type="button" id="rmo-inner-model-A42" data-rmo-model="A42" aria-controls="r75-result"><strong>Contact</strong><span>Open saved example</span></button>
+<button type="button" id="rmo-inner-model-A88" data-rmo-model="A88" aria-controls="r75-result"><strong>Rotational discontinuity</strong><span>Open saved example</span></button>
+</div>
+<p class="r96-small">Open a saved result with exact model values. To calculate edited values, use Calculate these parameters below.</p>
 <div class="r75-actions"><label>Model <select id="r75-model"><option value="A63">A63 · Fast-shock test</option><option value="A17">A17 · Slow-shock test</option><option value="A42">A42 · Contact test</option><option value="A88">A88 · Rotation test</option><option value="P01">P01 · Perpendicular model (exact test)</option><option value="P02">P02 · Perpendicular model with input errors</option></select></label><label>Input-bound factor <select id="r75-factor"><option value="0">Exact model values</option><option value="0.01" selected>0.01 · small bounds</option><option value="0.05">0.05 · wider bounds</option><option value="0.1">0.10 · wider bounds</option></select></label><button type="button" id="r75-load" class="primary">1 · Open saved model result</button></div>
 <p id="r78-entry"><button type="button" id="r78-demo">Try the exact perpendicular model</button> See the result, speed diagram and physical checks. This is a constructed model, not a solar observation.</p>
 <p id="r79-entry"><button type="button" id="r79-demo">Try the perpendicular model with errors</button> Load the checked perpendicular model, then choose the error range. RMO applies the current physical checks automatically.</p>
@@ -4543,7 +4566,7 @@ HTML comparison are retained.</p>
 <div class="scope"><strong>Fixed units and frame</strong><p>Normalized synthetic units: ρ₀ = v₀ = B₀ = p₀ = 1; normalized μ₀ = 1. These are not SI units. Basis: n = +x, t₁ = +y, t₂ = +z; right-handed computational frame, zero velocity offset.</p><p>Density is mass density; pressure is thermal gas pressure. No temperature, brightness or image-speed conversion is performed.</p></div>
 <section id="input-editor" aria-label="Synthetic initial-state input"></section>
 <p class="muted">Numbers use a decimal dot, with optional e-notation. Blank means unknown, not zero. An incomplete request can be exported with reasons; invalid input cannot. Covariance, if supplied, is metadata only and is not propagated.</p>
-<div class="preflight-actions"><button type="button" id="check-input-after-edit" class="primary">3 · Check these values</button><span>After editing, check here. The report and Calculate button are directly below.</span></div></details>
+<div class="preflight-actions"><button type="button" id="check-input-after-edit" class="primary">Check input values</button><span>Check the entered values here, then use Calculate below to run them.</span></div></details>
 <section class="panel" aria-labelledby="report-title"><h2 id="report-title">3 · Check your input</h2><div id="input-report" aria-live="polite" tabindex="-1"></div></section>
 <section id="live-panel" class="r63-results" aria-labelledby="live-title">
 <h2 id="live-title">4 · Calculate and read your result</h2>
@@ -11557,6 +11580,11 @@ el('r75-blank-inputs').addEventListener('click',()=>{
  fill(r);setStatus('Blank input opened. Enter normalized values in the stated frame. Blank means unknown; give its reason. Half-width 0 means an exact model value. Gamma starts at 5/3; review this assumption. Calculate below when ready.');visit(el('r75-inputs'));
 });
 el('r75-load').addEventListener('click',()=>load(true));
+document.querySelectorAll('[data-rmo-model]').forEach(button=>button.addEventListener('click',()=>{
+ el('r75-model').value=button.dataset.rmoModel;
+ el('r75-factor').value='0';
+ load(true);
+}));
 el('r75-demo-top').addEventListener('click',()=>{el('r75-model').value='A63';el('r75-factor').value='0.01';el('r75-workspace').open=true;load();el('r75-tool').scrollIntoView({behavior:'smooth',block:'start'});});
 el('r78-demo').addEventListener('click',()=>{el('r75-model').value='P01';el('r75-factor').value='0';el('r75-workspace').open=true;load(true);});
 el('r79-demo').addEventListener('click',()=>{el('r75-model').value='P02';el('r75-factor').value='0.01';el('r75-workspace').open=true;load(true);});

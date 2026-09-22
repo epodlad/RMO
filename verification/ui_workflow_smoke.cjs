@@ -73,6 +73,21 @@ async function main(){
   check('cancelled response stays in history and does not become current',$('live-output').textContent.includes('No current result')&&!$('live-history').hidden);
   check('calculation controls recover after cancellation',!$('live-run').disabled&&$('live-cancel').disabled);
   const cfg=JSON.parse($('r75-config').textContent);
+  const modelFamilies={A63:'fast_shock',A17:'slow_shock',A42:'contact',A88:'rotational_discontinuity'};
+  const shortcutCalls=calls.length;
+  for(const place of ['top','inner'])for(const [model,family] of Object.entries(modelFamilies)){
+   $('r75-workspace').open=false;click('rmo-'+place+'-model-'+model);
+   const saved=JSON.parse($('r75-json').textContent);
+   check(place+' '+model+' shortcut opens the exact saved family with focus',
+    $('r75-model').value===model&&$('r75-factor').value==='0'&&saved.input.nominal.case_id===model&&
+    saved.assessment.status==='EXACT_LOCAL_CLASS'&&saved.assessment.family===family&&
+    $('r75-workspace').open&&!$('r75-result').hidden&&d.activeElement.id==='r75-result'&&w.lastScrolled==='r75-result'&&
+    $('r75-source').textContent.includes('Saved checked model '+model+'; no new calculation'));
+  }
+  check('opening model shortcuts never starts an API calculation',calls.length===shortcutCalls);
+  check('input-check action is clear and step number stays in the report heading',
+   $('check-input-after-edit').textContent==='Check input values'&&$('report-title').textContent.startsWith('3'));
+
   for(const row of cfg.cases){select('r75-model',row.id);select('r75-factor',row.factor);click('r75-load');const json=JSON.parse($('r75-json').textContent);assert.equal(JSON.stringify(json.assessment),JSON.stringify(row.output));check('saved local model '+row.id+' / '+row.factor+' shown explicitly as saved',!$('r75-result').hidden&&$('r75-source').textContent.includes('no new calculation')&&w.lastScrolled==='r75-result');}
   click('r75-edit-result');check('saved result offers direct return to parameters',$('r75-inputs').open&&w.lastScrolled==='r75-inputs');
   select('r75-model','A63');select('r75-factor','0.01');click('r75-load');input('r75-left-rho-width','-1');const before=calls.length;click('r75-run');check('invalid error bound is labelled beside calculate and not sent',calls.length===before&&$('r75-action-status').textContent.includes('half-width')&&$('r75-left-rho-width').getAttribute('aria-invalid')==='true');
@@ -81,6 +96,11 @@ async function main(){
   click('r75-run');await until(()=>$('r75-source').textContent.startsWith('New calculation')&&!$('r75-result').hidden,'A63 new');check('new local result is focused automatically',w.lastScrolled==='r75-result'&&d.activeElement.id==='r75-result');
   click('r75-save-result');click('r75-save-pdf');const resultFile=ui.downloads.find(x=>x.name==='RMO_local_result.json'),pdfFile=ui.downloads.find(x=>x.name==='RMO_local_result.pdf');check('new result JSON and PDF export correctly',JSON.parse(await resultFile.blob.text()).assessment.status==='CONDITIONAL_ROBUST_CLASS'&&(await pdfFile.blob.text()).startsWith('%PDF'));
   let release;ui.delay(new Promise(r=>release=r));click('r75-run');await pause(100);input('r75-left-rho','1.1');release();await until(()=>$('r75-action-status').textContent.includes('older response'),'stale response');ui.delay(null);check('input change during calculation cannot display or export stale result',$('r75-result').hidden&&$('r75-save-result').disabled);
+  click('rmo-inner-model-A63');let finishOld;ui.delay(new Promise(r=>finishOld=r));click('r75-run');await pause(100);
+  click('rmo-top-model-A88');const selectedRotation=$('r75-json').textContent;finishOld();
+  await until(()=>!$('r75-run').disabled,'shortcut during calculation');ui.delay(null);
+  check('late calculation cannot replace a model selected through a shortcut',
+   !$('r75-result').hidden&&$('r75-json').textContent===selectedRotation&&$('r75-source').textContent.includes('Saved checked model A88'));
   click('r75-blank-inputs');click('r75-export-input');const blank=JSON.parse(await ui.downloads.at(-1).blob.text());check('own-input route has no fabricated model measurements',blank.nominal.case_id==='user_input'&&blank.nominal.left.rho===null&&blank.nominal.right.rho===null&&blank.half_widths['left.rho']===0);
   async function importLocal(text){Object.defineProperty($('r75-import'),'files',{configurable:true,value:[{name:'input.json',size:text.length,text:async()=>text}]});$('r75-import').dispatchEvent(new w.Event('change',{bubbles:true}));await pause(30);}
   const saved=cfg.cases.find(r=>r.id==='A63'&&r.factor===.01).input;await importLocal(JSON.stringify(saved));check('manual file import opens fields and explains next action',w.lastScrolled==='r75-inputs'&&$('r75-action-status').textContent.startsWith('Imported')&&$('r75-result').hidden);

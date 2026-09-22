@@ -2,9 +2,15 @@
 
 This candidate includes the rc4 navigation and input-workflow improvements, result-adjacent saving, E05 working-versus-published comparison, image lazy loading and asset caching, and a clear wait-and-retry message when the calculation slot is busy. Supported model calculations remain distinct from literature-input reviews.
 
-Desktop workflow checks and pinned-runtime regression checks passed on the current implementation. Phone acceptance and the final archiving policy remain pending; this branch does not declare publication or a stable deployment. See [release preparation](docs/RELEASE_PREPARATION_20260922.md).
+The 1.0.0 preparation was deployed from merged commit `3b2be87`. Desktop workflow checks and pinned-runtime regression checks passed; real Android contact calculations and JSON exports at speeds 0.2 and 0.45 are confirmed. Other phone workflows and the final archiving policy remain pending; the GitHub stable release is unpublished. See [release preparation](docs/RELEASE_PREPARATION_20260922.md).
 
 The numerical solvers and R139 scientific results are unchanged. Existing rc3/rc4 citations remain valid for their archived versions. No new DOI has been assigned to this draft.
+
+## Model shortcuts and clearer actions — prepared follow-up
+
+Fast shock, Slow shock, Contact and Rotation are available as matching **Open saved example** buttons at the top and inside Model examples. Each opens its exact saved model and the existing result view. **Check input values** checks entered values; Calculate remains the separate action for a new computation. The check button no longer repeats its heading's step number. Theme colours improve the affected notices, model outcomes and dark header links.
+
+The follow-up passes 557 DOM/API checks, including navigation and late-response protection. Scientific data and solvers are unchanged. This follow-up is not yet deployed; its phone appearance remains to be confirmed.
 
 # RMO 1.0.0-rc4 — calculation wait guidance, 2026-09-22
 

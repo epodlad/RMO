@@ -37,8 +37,8 @@
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 7505,
-      "sha256": "a8c81ac5ba075d916b256a5ecb8bd9965580bf644ab5d469115b0577efa4247c"
+      "bytes": 8347,
+      "sha256": "9af7b0dd4fd8bd74d42c957e0b4b6ebdefee893ac4ebebe3de6e0d95e4b31689"
     },
     {
       "path": "RELEASE_VALIDATION.json",
@@ -72,8 +72,13 @@
     },
     {
       "path": "docs/FINAL_RELEASE_ACCEPTANCE_20260922.json",
-      "bytes": 13187,
-      "sha256": "42fc3bbaa1cbd14790f016c12152d1b8a39798b3546ad66739b3dc768952fe80"
+      "bytes": 18244,
+      "sha256": "980b1fdd556f2fbfe636c0fd5b1446c45911046a247dcae80029b6e711028d03"
+    },
+    {
+      "path": "docs/MODEL_SHORTCUTS_ACCEPTANCE_20260922.json",
+      "bytes": 58569,
+      "sha256": "6e7dce57a4aa87c108287d5dd31fda91134a0493d93c741265a2f5035ff5dfc2"
     },
     {
       "path": "docs/QUICKLOOK_GUIDE_PROVENANCE.json",
@@ -82,13 +87,13 @@
     },
     {
       "path": "docs/RELEASE_ACCEPTANCE.md",
-      "bytes": 11240,
-      "sha256": "a16da6172c511603317a0dc326c4a0581ed15a511362f5d36c2dfbebc84398a4"
+      "bytes": 11667,
+      "sha256": "04f7c512136f85b456e68d8aa62bf2faadbc35c383080adaf3fd9b2a98dd604d"
     },
     {
       "path": "docs/RELEASE_PREPARATION_20260922.md",
-      "bytes": 2399,
-      "sha256": "7d84a4c35af4506c6311211e7ada0274149017bb39775c63f8c372579851b387"
+      "bytes": 3985,
+      "sha256": "d8648b6f608e3a8f05765cfe014ce95e29bca8454e13211a57ebbb5a57761778"
     },
     {
       "path": "docs/RELEASE_ZENODO.md",
@@ -2077,8 +2082,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 2877333,
-      "sha256": "13f96dbadb8abfebc2e70111179035906608f235d1674107f83efc601034ba00"
+      "bytes": 2880192,
+      "sha256": "ee9786bf78a521f092fac5910d5bf68675583a3acdd74078130aadcf39cacee2"
     },
     {
       "path": "render.yaml",
@@ -2292,8 +2297,8 @@
     },
     {
       "path": "verification/ui_workflow_smoke.cjs",
-      "bytes": 20375,
-      "sha256": "d4d4c6358a64841dc2b3f7aae34c13f5bbd5d701e3d120c07035bec2582f8f51"
+      "bytes": 22034,
+      "sha256": "19f1ffee89544adceb4802d09286978a2c3924b27ea3b0b82dd4db1ef62ebc92"
     },
     {
       "path": "verify_manifest.py",
@@ -2328,5 +2333,11 @@
     "date": "2026-09-22",
     "status": "DRAFT_NOT_PUBLISHED",
     "report": "docs/RELEASE_PREPARATION_20260922.md"
+  },
+  "interface_followup": {
+    "date": "2026-09-22",
+    "status": "PREPARED_NOT_DEPLOYED",
+    "baseline_deployed_commit": "3b2be8769d6030e23e02aea0ff4f86f648234bbe",
+    "acceptance_report": "docs/MODEL_SHORTCUTS_ACCEPTANCE_20260922.json"
   }
 }

@@ -1,6 +1,6 @@
 # Current preparation status
 
-The 22 September desktop and pinned-runtime checks are recorded in [release preparation](RELEASE_PREPARATION_20260922.md). Phone acceptance and final publication remain pending. The dated reports below are preserved as historical evidence.
+The 22 September desktop and pinned-runtime checks are recorded in [release preparation](RELEASE_PREPARATION_20260922.md). PR #5 was merged and commit `3b2be87` deployed as version 1.0.0. Real Android contact calculations at 0.2 and 0.45, plus both downloaded JSON exports, passed the scoped checks. Other phone workflows, a screenshot contrast observation and final publication remain pending. A requested shortcut/label/theme follow-up is prepared locally with 557 passing DOM/API checks; see [follow-up evidence](MODEL_SHORTCUTS_ACCEPTANCE_20260922.json). It is not yet deployed or visually confirmed. The dated reports below are preserved as historical evidence.
 
 # Release acceptance
 

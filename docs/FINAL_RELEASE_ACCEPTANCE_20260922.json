@@ -440,8 +440,8 @@
   "remaining_gates": [
     {
       "name": "Phone-width rendering and usability",
-      "status": "NOT_PERFORMED",
-      "reason": "The available browser has no advertised viewport or device-emulation capability; browser settings navigation was blocked. A phone check is still required."
+      "status": "PARTIAL",
+      "reason": "Real Android contact workflow, edited result and downloaded JSON passed. Other phone workflows and the observed contrast issue remain pending; see mobile_browser."
     },
     {
       "name": "Final archiving and DOI policy",
@@ -450,10 +450,126 @@
     },
     {
       "name": "Stable-version deployment and publication",
-      "status": "NOT_PERFORMED",
-      "reason": "Prepared branch only; main, live deployment and published rc4 record remain unchanged."
+      "status": "DEPLOYED_PUBLICATION_PENDING",
+      "reason": "PR #5 merged and source 3b2be87 deployed; live 1.0.0 identity and phone contact flow confirmed. GitHub stable release remains a draft pending remaining acceptance and archiving decisions."
     }
   ],
   "numerical_code_changed": false,
-  "scientific_campaign_rerun": false
+  "scientific_campaign_rerun": false,
+  "deployment": {
+    "status": "LIVE_CONFIRMED",
+    "commit": "3b2be8769d6030e23e02aea0ff4f86f648234bbe",
+    "pull_request": 5,
+    "service": "https://rmo-solar.org/",
+    "evidence": [
+      "Maintainer Render screenshot: Deploy succeeded / Live, source 3b2be87.",
+      "Earlier post-deploy public check: root HTTP 200; /healthz ready=true and version=1.0.0; session-config-normalized HTML matched the prepared release."
+    ],
+    "github_release_published": false
+  },
+  "mobile_browser": {
+    "status": "PARTIAL",
+    "site": "https://rmo-solar.org/",
+    "device_evidence": "Maintainer Android screenshots; image dimensions 720 x 1600, not a measured CSS viewport.",
+    "checks": [
+      {
+        "name": "Contact entry, vertical fields, check and calculation controls",
+        "status": "PASS",
+        "evidence": "Maintainer screenshots and report; controls used on the phone."
+      },
+      {
+        "name": "Default contact calculation",
+        "status": "PASS",
+        "result": "Exported left/right normal velocities 0.2; screenshot result and plot at 0.2."
+      },
+      {
+        "name": "Edited contact calculation",
+        "status": "PASS",
+        "result": "Exported left/right normal velocities 0.45; screenshot result and plot at 0.45."
+      },
+      {
+        "name": "Contact result JSON download",
+        "status": "PASS",
+        "evidence": "Six uploaded files parsed: two distinct completed calculations, three byte-identical copies of each. Request snapshots and SHA-256 associations verified."
+      }
+    ],
+    "exports": [
+      {
+        "file": "RMO_computed_rmo_7553d7f5-d21c-437f-b8f9-b9137d9c78fc.json",
+        "sha256": "d2cdcc2f38b207bb35188338c93ea0235463a52b1b2e28756bc73f5d4f0cfb74",
+        "bytes": 38753,
+        "identical_uploaded_copies": 3,
+        "execution_id": "rmo_7553d7f5-d21c-437f-b8f9-b9137d9c78fc",
+        "left_normal_velocity": 0.2,
+        "right_normal_velocity": 0.2,
+        "input_status": "VALID",
+        "execution_status": "FINISHED",
+        "request_snapshot_and_checksum_match": true,
+        "policy_validations": [
+          {
+            "policy": "REGULAR_EVOLUTIONARY_1.0",
+            "status": "PASS",
+            "passed_checks": 37
+          },
+          {
+            "policy": "ENUMERATE_NONREGULAR_1.0",
+            "status": "PASS",
+            "passed_checks": 37
+          }
+        ]
+      },
+      {
+        "file": "RMO_computed_rmo_fb870b9e-4b60-4576-a1d7-70eae49bc57a.json",
+        "sha256": "58e1dc5a757c22daf8aa1db6cda232b38ec84c76bc9c338c0281146d8ad793cc",
+        "bytes": 38766,
+        "identical_uploaded_copies": 3,
+        "execution_id": "rmo_fb870b9e-4b60-4576-a1d7-70eae49bc57a",
+        "left_normal_velocity": 0.45,
+        "right_normal_velocity": 0.45,
+        "input_status": "VALID",
+        "execution_status": "FINISHED",
+        "request_snapshot_and_checksum_match": true,
+        "policy_validations": [
+          {
+            "policy": "REGULAR_EVOLUTIONARY_1.0",
+            "status": "PASS",
+            "passed_checks": 37
+          },
+          {
+            "policy": "ENUMERATE_NONREGULAR_1.0",
+            "status": "PASS",
+            "passed_checks": 37
+          }
+        ]
+      }
+    ],
+    "observations": [
+      {
+        "name": "Repeated step 3 on check button and report heading",
+        "status": "FIX_PREPARED_NOT_DEPLOYED",
+        "detail": "Maintainer noticed repetition, then confirmed the action and explanation were understandable. The prepared follow-up removes the number from the button."
+      },
+      {
+        "name": "Dark-screen contrast",
+        "status": "FIX_PREPARED_VISUAL_CONFIRMATION_PENDING",
+        "detail": "Some links and the pale completion notice had low contrast in phone screenshots; cause not established. Hard-coded notice/outcome backgrounds were replaced with theme tokens; scoped dark header-link colours added."
+      }
+    ],
+    "limits": [
+      "An earlier screenshot reported no checked solution; the corresponding failed-attempt export was not supplied. Its cause remains unknown. The later edited calculation and its export passed.",
+      "A63 edit/import/JSON/PDF, solar-card working-draft save/import, viewer controls and phone www redirect remain unverified.",
+      "This is a targeted contact workflow check, not complete mobile acceptance, a new scientific campaign or a load test."
+    ]
+  },
+  "prepared_interface_followup": {
+    "status": "PREPARED_NOT_DEPLOYED",
+    "report": "docs/MODEL_SHORTCUTS_ACCEPTANCE_20260922.json",
+    "changes": [
+      "Four saved exact-model shortcuts at the top and inside Model examples.",
+      "Explicit Open saved example and Check input values actions; repeated step number removed from check button.",
+      "Theme-aware colours for workflow notices and model outcome; dark header links clarified."
+    ],
+    "dom_api_checks_passed": 557,
+    "phone_confirmation_pending": true
+  }
 }
