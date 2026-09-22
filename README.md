@@ -8,9 +8,11 @@ A solar flare or a sudden expansion of a coronal mass ejection can set the surro
 
 QuickLook helps you compare possible explanations, inspect the supporting checks and identify which additional measurement could distinguish them. Start with a supplied model or a published solar event; you do not need to enter numbers to explore the examples.
 
-**[Open RMO QuickLook](https://rmo-solar.org/) · [Download the archived application](https://doi.org/10.5281/zenodo.22776018) · [Read the paper](https://arxiv.org/abs/2609.15210)**
+**[Open RMO QuickLook](https://rmo-solar.org/) · [Download the published rc4 archive](https://doi.org/10.5281/zenodo.22776018) · [Read the paper](https://arxiv.org/abs/2609.15210)**
 
-Current version: **1.0.0-rc4** · Scientific reference: **R139** · Author: **Olena Podladchikova**.
+Prepared version: **1.0.0** (unpublished release draft) · Scientific reference: **R139** · Author: **Olena Podladchikova**.
+
+This branch prepares the stable release. Publication is pending the phone-layout check and an explicit archiving decision that respects the existing DOI. The live site and the DOI-linked archive remain rc4 until publication. See [release preparation](docs/RELEASE_PREPARATION_20260922.md).
 
 ## Two ways to use RMO
 

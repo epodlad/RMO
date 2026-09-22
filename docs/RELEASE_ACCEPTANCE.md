@@ -1,3 +1,7 @@
+# Current preparation status
+
+The 22 September desktop and pinned-runtime checks are recorded in [release preparation](RELEASE_PREPARATION_20260922.md). Phone acceptance and final publication remain pending. The dated reports below are preserved as historical evidence.
+
 # Release acceptance
 
 ## 2026-09-22: temporary calculation capacity feedback

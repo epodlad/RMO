@@ -1,3 +1,11 @@
+# RMO 1.0.0 — prepared stable release (unpublished)
+
+This candidate includes the rc4 navigation and input-workflow improvements, result-adjacent saving, E05 working-versus-published comparison, image lazy loading and asset caching, and a clear wait-and-retry message when the calculation slot is busy. Supported model calculations remain distinct from literature-input reviews.
+
+Desktop workflow checks and pinned-runtime regression checks passed on the current implementation. Phone acceptance and the final archiving policy remain pending; this branch does not declare publication or a stable deployment. See [release preparation](docs/RELEASE_PREPARATION_20260922.md).
+
+The numerical solvers and R139 scientific results are unchanged. Existing rc3/rc4 citations remain valid for their archived versions. No new DOI has been assigned to this draft.
+
 # RMO 1.0.0-rc4 — calculation wait guidance, 2026-09-22
 
 When another calculation is active, Contact and Model examples now display a clear wait-and-retry message. Current input values remain available and Calculate is re-enabled for a manual retry. Numerical results and the single-calculation capacity are unchanged. See `docs/BUSY_RESPONSE_ACCEPTANCE_20260922.json`. This correction does not publish a new release or create a DOI.

@@ -1,18 +1,17 @@
 {
-  "version": "1.0.0-rc4",
+  "version": "1.0.0",
   "scientific_state": "R139",
   "correction_date": "2026-09-16",
-  "current_acceptance_report": "docs/UI_NAVIGATION_ACCEPTANCE_20260916.json",
+  "current_acceptance_report": "docs/FINAL_RELEASE_ACCEPTANCE_20260922.json",
   "current_summary": {
     "local_http_checks": 21,
-    "public_mode_http_checks": 12,
+    "public_mode_http_checks": 14,
     "navigation_http_checks": 44,
-    "dom_and_api_checks": 518,
-    "saved_model_configurations": 24,
-    "solar_literature_cards": 11,
-    "internal_navigation_links": 211,
+    "asset_cache_tests": 2,
+    "pinned_runtime": "Python 3.12.14 / aiohttp 3.14.3",
     "all_recorded_automated_checks_pass": true,
-    "browser_visual_acceptance": "PENDING",
+    "desktop_targeted_browser_acceptance": "PASS",
+    "phone_browser_acceptance": "NOT_PERFORMED",
     "full_scientific_campaign_rerun": false
   },
   "historical_rc3_validation": {
@@ -606,5 +605,23 @@
     "current_browser_visual_acceptance": "PENDING",
     "production_deployment": "Not performed",
     "numerical_code_changed": false
+  },
+  "release_status": "DRAFT_NOT_PUBLISHED",
+  "remaining_gates": [
+    "Phone visual acceptance",
+    "Final archiving policy",
+    "Stable deployment and publication"
+  ],
+  "previous_rc4_summary": {
+    "local_http_checks": 21,
+    "public_mode_http_checks": 12,
+    "navigation_http_checks": 44,
+    "dom_and_api_checks": 518,
+    "saved_model_configurations": 24,
+    "solar_literature_cards": 11,
+    "internal_navigation_links": 211,
+    "all_recorded_automated_checks_pass": true,
+    "browser_visual_acceptance": "PENDING",
+    "full_scientific_campaign_rerun": false
   }
 }
