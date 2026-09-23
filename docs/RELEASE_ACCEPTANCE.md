@@ -1,8 +1,18 @@
-# Current preparation status
+# RMO 1.0.0 verification
 
-The 22 September desktop and pinned-runtime checks are recorded in [release preparation](RELEASE_PREPARATION_20260922.md). PR #5 was merged and commit `3b2be87` deployed as version 1.0.0. Real Android contact calculations at 0.2 and 0.45, plus both downloaded JSON exports, passed the scoped checks. Other phone workflows, a screenshot contrast observation and final publication remain pending. A requested shortcut/label/theme follow-up is prepared locally with 557 passing DOM/API checks; see [follow-up evidence](MODEL_SHORTCUTS_ACCEPTANCE_20260922.json). It is not yet deployed or visually confirmed. The dated reports below are preserved as historical evidence.
+RMO 1.0.0 is published on [GitHub](https://github.com/epodlad/RMO/releases/tag/v1.0.0) and [Zenodo](https://doi.org/10.5281/zenodo.22905556). The original 1.0.0 source snapshot is commit `67e48146088e9ddf8b27cd193881453baccd2240`; deployment of that commit on Render was confirmed live on 22 September 2026. This archive includes subsequent documentation-only corrections; its numerical source and scientific data remain those of the original snapshot. The scientific reference remains R139.
 
-# Release acceptance
+The recorded checks have the following scope:
+
+- The pinned runtime passed 21 local HTTP, 14 public HTTP and 44 navigation checks, plus two asset-cache tests. The interface follow-up passed 557 DOM/API assertions; 37 executable inline scripts parsed and 14 embedded JSON data blocks were unchanged. DOM checks use an isolated Python API and do not render pixels.
+- Desktop checks covered an edited contact at 0.45, A63 bound editing and JSON/PDF export and input import, E05 working-value review and draft save/import, SUVI frame stepping and playback, keyboard focus and the www redirect. Subsequent live desktop checks confirmed that the Fast shock and Rotational discontinuity shortcuts open their saved models.
+- On a real Android phone, contacts at 0.2 and 0.45 produced matching text and plots. Both downloaded result JSON files were inspected: request snapshots and checksums match, with 37/37 independent checks passing for each of two policies. These phone checks apply to the initial 1.0.0 deployment, before the shortcut and theme follow-up.
+
+Other phone workflows and the follow-up's phone layout remain unverified. These are scoped checks, not complete browser coverage, production load testing, or a new scientific validation campaign. They do not establish full MHD branch coverage, global uniqueness, stability or observational identification.
+
+## Historical verification records
+
+The dated sections and JSON reports below preserve the conditions and outcomes of earlier checks. Their release-candidate versions, deployment states and pending items describe those dates, not the current publication status. The latest automated interface evidence is in [MODEL_SHORTCUTS_ACCEPTANCE_20260922.json](MODEL_SHORTCUTS_ACCEPTANCE_20260922.json); desktop and Android evidence is in [FINAL_RELEASE_ACCEPTANCE_20260922.json](FINAL_RELEASE_ACCEPTANCE_20260922.json).
 
 ## 2026-09-22: temporary calculation capacity feedback
 
@@ -24,7 +34,7 @@ These checks used the available local aiohttp 3.13.5 runtime, not the pinned pro
 
 Update baseline: `ef4f83adb122c643dbe0065505fbae3c26f452d6` (`Update Zenodo metadata`), including the preceding UI commit `fd12152d64b490b049da73c39beb9cc2014798a7`. Version remains **1.0.0-rc4**, scientific state R139.
 
-On that baseline, maintainer screenshots show a completed contact calculation after both normal velocities changed to 0.45. The E05 workflow changed image speed 590 → 600, saved a draft, restored 600 and completed another review. The uploaded draft was independently parsed: published 590, working/reviewed 600, calculation NOT_RUN and publication NOT_PUBLISHED. These checks exposed navigation problems addressed by this follow-up.
+On that baseline, maintainer screenshots show a completed contact calculation after both normal velocities changed to 0.45. The E05 workflow changed image speed 590 → 600, saved a draft, restored 600 and completed another review. The exported draft was independently parsed: published 590, working/reviewed 600, calculation NOT_RUN and publication NOT_PUBLISHED. These checks exposed navigation problems addressed by this follow-up.
 
 For the revised code, **544 DOM/API assertions passed**, including 214 internal links, 24 saved model configurations, 11 literature cards, a real edited contact calculation and export, A63 calculations/JSON/PDF, duplicate-click guards, offline disabling, stale/cancelled results and E05 save/import/re-review. The comparison table retains published 590 while displaying reviewed 600. Download feedback and retry are adjacent to Save.
 
@@ -47,7 +57,7 @@ Completed against the shipped HTML and an isolated Python service:
 - Inline source modules agree; 37 inline scripts pass syntax checks; all 352 referenced hashed assets are present with the expected bytes. Embedded JSON data and numerical Python implementation are unchanged.
 
 Machine-readable evidence: [UI_ACCEPTANCE_20260916.json](UI_ACCEPTANCE_20260916.json).
-The DOM tests use jsdom 26.1.0 and the pinned Python runtime. They record focus/scroll requests and run real API calls. They **do not render the page**. Browser preview of local and file URLs was blocked by the cloud browser policy; no alternative browser surface was used.
+The DOM tests use jsdom 26.1.0 and the pinned Python runtime. They record focus/scroll requests and run real API calls. They **do not render the page**.
 
 ### Before declaring the final version
 

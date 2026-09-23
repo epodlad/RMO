@@ -161,4 +161,4 @@ map of all MHD branches.
 These local-diagnostic input files use their own documented schema. They are
 not literature drafts for the existing QuickLook file-import control.
 
-No production numerical core or current HTML was changed.  The earlier project history and the HTML comparison are retained.
+No production numerical core was changed.

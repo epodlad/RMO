@@ -11,7 +11,7 @@
     "pinned_runtime": "Python 3.12.14 / aiohttp 3.14.3",
     "all_recorded_automated_checks_pass": true,
     "desktop_targeted_browser_acceptance": "PASS",
-    "phone_browser_acceptance": "NOT_PERFORMED",
+    "phone_browser_acceptance": "PARTIAL: Android contact calculations and JSON exports at 0.2 and 0.45 verified; other phone workflows not fully checked.",
     "full_scientific_campaign_rerun": false
   },
   "historical_rc3_validation": {
@@ -623,5 +623,6 @@
     "all_recorded_automated_checks_pass": true,
     "browser_visual_acceptance": "PENDING",
     "full_scientific_campaign_rerun": false
-  }
+  },
+  "record_scope": "Recorded software validation evidence for RMO 1.0.0. Dated records describe the source and environment tested; they do not assert complete browser or production-load coverage."
 }

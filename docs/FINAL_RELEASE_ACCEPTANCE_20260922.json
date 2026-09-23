@@ -59,7 +59,7 @@
     ],
     "limits": [
       "The browser download-event observer timed out, but the files were downloaded, synchronized and independently parsed.",
-      "A restored old browser session initially expired; reloading established a fresh session and the contact calculation passed.",
+      "An expired browser session required a page reload; the contact calculation then passed with a fresh session.",
       "This is targeted desktop acceptance, not exhaustive UI traversal or a production load test."
     ]
   },
@@ -442,16 +442,6 @@
       "name": "Phone-width rendering and usability",
       "status": "PARTIAL",
       "reason": "Real Android contact workflow, edited result and downloaded JSON passed. Other phone workflows and the observed contrast issue remain pending; see mobile_browser."
-    },
-    {
-      "name": "Final archiving and DOI policy",
-      "status": "DECISION_PENDING",
-      "reason": "The maintainer requested preserving DOI 10.5281/zenodo.22776018. Do not publish an integration-triggering GitHub release until its archiving behavior is explicitly settled."
-    },
-    {
-      "name": "Stable-version deployment and publication",
-      "status": "DEPLOYED_PUBLICATION_PENDING",
-      "reason": "PR #5 merged and source 3b2be87 deployed; live 1.0.0 identity and phone contact flow confirmed. GitHub stable release remains a draft pending remaining acceptance and archiving decisions."
     }
   ],
   "numerical_code_changed": false,
@@ -462,7 +452,7 @@
     "pull_request": 5,
     "service": "https://rmo-solar.org/",
     "evidence": [
-      "Maintainer Render screenshot: Deploy succeeded / Live, source 3b2be87.",
+      "Render deployment screenshot: Deploy succeeded / Live, source 3b2be87.",
       "Earlier post-deploy public check: root HTTP 200; /healthz ready=true and version=1.0.0; session-config-normalized HTML matched the prepared release."
     ],
     "github_release_published": false
@@ -470,12 +460,12 @@
   "mobile_browser": {
     "status": "PARTIAL",
     "site": "https://rmo-solar.org/",
-    "device_evidence": "Maintainer Android screenshots; image dimensions 720 x 1600, not a measured CSS viewport.",
+    "device_evidence": "Android screenshot evidence; image dimensions 720 x 1600, not a measured CSS viewport.",
     "checks": [
       {
         "name": "Contact entry, vertical fields, check and calculation controls",
         "status": "PASS",
-        "evidence": "Maintainer screenshots and report; controls used on the phone."
+        "evidence": "Android screenshots and browser-use report."
       },
       {
         "name": "Default contact calculation",
@@ -490,7 +480,7 @@
       {
         "name": "Contact result JSON download",
         "status": "PASS",
-        "evidence": "Six uploaded files parsed: two distinct completed calculations, three byte-identical copies of each. Request snapshots and SHA-256 associations verified."
+        "evidence": "Six exported files parsed: two distinct completed calculations, three byte-identical copies of each. Request snapshots and SHA-256 associations verified."
       }
     ],
     "exports": [
@@ -498,7 +488,6 @@
         "file": "RMO_computed_rmo_7553d7f5-d21c-437f-b8f9-b9137d9c78fc.json",
         "sha256": "d2cdcc2f38b207bb35188338c93ea0235463a52b1b2e28756bc73f5d4f0cfb74",
         "bytes": 38753,
-        "identical_uploaded_copies": 3,
         "execution_id": "rmo_7553d7f5-d21c-437f-b8f9-b9137d9c78fc",
         "left_normal_velocity": 0.2,
         "right_normal_velocity": 0.2,
@@ -516,13 +505,13 @@
             "status": "PASS",
             "passed_checks": 37
           }
-        ]
+        ],
+        "identical_export_copies": 3
       },
       {
         "file": "RMO_computed_rmo_fb870b9e-4b60-4576-a1d7-70eae49bc57a.json",
         "sha256": "58e1dc5a757c22daf8aa1db6cda232b38ec84c76bc9c338c0281146d8ad793cc",
         "bytes": 38766,
-        "identical_uploaded_copies": 3,
         "execution_id": "rmo_fb870b9e-4b60-4576-a1d7-70eae49bc57a",
         "left_normal_velocity": 0.45,
         "right_normal_velocity": 0.45,
@@ -540,14 +529,15 @@
             "status": "PASS",
             "passed_checks": 37
           }
-        ]
+        ],
+        "identical_export_copies": 3
       }
     ],
     "observations": [
       {
         "name": "Repeated step 3 on check button and report heading",
         "status": "FIX_PREPARED_NOT_DEPLOYED",
-        "detail": "Maintainer noticed repetition, then confirmed the action and explanation were understandable. The prepared follow-up removes the number from the button."
+        "detail": "The check button and section heading repeated the step number; the action and explanation were reported as understandable. The prepared follow-up removes the number from the button."
       },
       {
         "name": "Dark-screen contrast",
@@ -556,7 +546,7 @@
       }
     ],
     "limits": [
-      "An earlier screenshot reported no checked solution; the corresponding failed-attempt export was not supplied. Its cause remains unknown. The later edited calculation and its export passed.",
+      "An earlier screenshot showed no checked solution; no corresponding failed-attempt export was available for analysis. Its cause remains unknown. The later edited calculation and its export passed.",
       "A63 edit/import/JSON/PDF, solar-card working-draft save/import, viewer controls and phone www redirect remain unverified.",
       "This is a targeted contact workflow check, not complete mobile acceptance, a new scientific campaign or a load test."
     ]

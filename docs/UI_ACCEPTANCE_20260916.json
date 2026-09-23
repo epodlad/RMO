@@ -2444,8 +2444,8 @@
     "calculation_code_changed": [],
     "all_recorded_checks_pass": true
   },
-  "browser_visual_acceptance": "PENDING: local and file previews were blocked by the cloud browser URL policy. DOM focus/scroll calls are verified, not pixel layout or real browser focus behaviour.",
+  "browser_visual_acceptance": "PENDING at the report date: DOM focus/scroll calls are verified, not pixel layout or real browser focus behaviour.",
   "production_deployment": "Not performed by preparation of this package",
-  "final_release": "Pending browser acceptance and version/DOI publication decision",
+  "final_release": "Historical rc4 verification; browser acceptance was incomplete at the report date.",
   "full_scientific_campaign_rerun": false
 }

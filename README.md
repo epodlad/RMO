@@ -8,11 +8,9 @@ A solar flare or a sudden expansion of a coronal mass ejection can set the surro
 
 QuickLook helps you compare possible explanations, inspect the supporting checks and identify which additional measurement could distinguish them. Start with a supplied model or a published solar event; you do not need to enter numbers to explore the examples.
 
-**[Open RMO QuickLook](https://rmo-solar.org/) · [Download the published rc4 archive](https://doi.org/10.5281/zenodo.22776018) · [Read the paper](https://arxiv.org/abs/2609.15210)**
+**[Open RMO QuickLook](https://rmo-solar.org/) · [Download RMO 1.0.0](https://doi.org/10.5281/zenodo.22905556) · [Read the paper](https://arxiv.org/abs/2609.15210)**
 
-Prepared version: **1.0.0** (unpublished release draft) · Scientific reference: **R139** · Author: **Olena Podladchikova**.
-
-This branch prepares the stable release. Publication is pending the phone-layout check and an explicit archiving decision that respects the existing DOI. The live site and the DOI-linked archive remain rc4 until publication. See [release preparation](docs/RELEASE_PREPARATION_20260922.md).
+Version: **1.0.0** · Scientific reference: **R139** · Author: **Olena Podladchikova**.
 
 ## Two ways to use RMO
 
@@ -28,7 +26,7 @@ Download your input, result JSON and any available PDF from the interface to kee
 
 ### 2. On your computer — download and run the code
 
-Download the complete application ZIP from [Zenodo](https://doi.org/10.5281/zenodo.22776018), or use **Code → Download ZIP** on [GitHub](https://github.com/epodlad/RMO). Extract the archive and open a terminal in the folder containing `requirements.txt`.
+Download the complete application ZIP from [Zenodo](https://doi.org/10.5281/zenodo.22905556), or use **Code → Download ZIP** on [GitHub](https://github.com/epodlad/RMO). Extract the archive and open a terminal in the folder containing `requirements.txt`.
 
 The verified runtime is **Python 3.12.14**, with dependencies pinned in `requirements.txt`. Install them in a virtual environment, then start the local Python server.
 
@@ -64,8 +62,6 @@ A literature-input review does not by itself determine the observed wave type. A
 
 This repository contains the application source, required fixtures, reviewed presentation assets, documentation, licences and validation records. The separate [Scientific Archive R139](https://doi.org/10.5281/zenodo.22742107) contains retained scientific code, data, assessments and figures; see [scientific reproduction](docs/REPRODUCIBILITY.md). That companion is not required to start this application.
 
-The **16 September 2026 interface correction**, through commit `89c15b7`, improves input and calculation guidance, adds direct navigation to solar events and models, and places review and save actions beside their results. It keeps the rc4 version label, numerical solvers and R139 scientific results. The SUVI preview, comparison video and event-card still retain their source attribution.
-
 Automated checks and the scope of completed and remaining browser checks are documented in [release acceptance](docs/RELEASE_ACCEPTANCE.md). After installing dependencies, run the application smoke checks with:
 
 ```sh
@@ -80,7 +76,7 @@ These targeted checks are not a claim of complete interactive acceptance, exhaus
 
 ## Citation and rights
 
-For the corrected rc4 application, cite DOI **[10.5281/zenodo.22776018](https://doi.org/10.5281/zenodo.22776018)** and identify the dated interface correction where relevant. The earlier rc3 DOI **[10.5281/zenodo.22741502](https://doi.org/10.5281/zenodo.22741502)** remains valid for that version; it identifies tag [`v1.0.0-rc3`](https://github.com/epodlad/RMO/releases/tag/v1.0.0-rc3), commit `ff6fdf7b289d32b20d4185d57c4e96bbe7a1f40f`. Use the DOI for the version actually used. See [Zenodo publication details](docs/RELEASE_ZENODO.md).
+For RMO 1.0.0, cite DOI **[10.5281/zenodo.22905556](https://doi.org/10.5281/zenodo.22905556)**. Use the DOI for the version actually used; previous versions retain their own citations. See [archive details](docs/RELEASE_ZENODO.md).
 
 When using the scientific companion's data, figures or analyses, also cite **Scientific Archive R139**, DOI [10.5281/zenodo.22742107](https://doi.org/10.5281/zenodo.22742107), and the original sources relevant to the study.
 

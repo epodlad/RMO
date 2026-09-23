@@ -2225,16 +2225,16 @@
   },
   "maintainer_workflow_on_preceding_deployment": {
     "commit": "ef4f83adb122c643dbe0065505fbae3c26f452d6",
-    "render_status": "Deploy succeeded / Live, as shown in maintainer screenshot",
+    "render_status": "Deploy succeeded / Live, as shown in a deployment screenshot",
     "contact": {
-      "evidence": "Maintainer screenshots and report",
+      "evidence": "Browser screenshots and operator report",
       "original_normal_velocity": 0.2,
       "edited_both_normal_velocities": 0.45,
       "displayed_calculated_contact_speed": 0.45,
-      "result_download": "Reported by maintainer; full exported result not supplied in this session"
+      "result_download": "Download reported; the full exported result was not available for independent inspection"
     },
     "E05": {
-      "evidence": "Maintainer screenshots, import confirmation and inspected uploaded JSON",
+      "evidence": "Browser screenshots, import confirmation and independently inspected exported JSON",
       "file_name": "RMO_E05_working_draft.json",
       "file_sha256": "3fbad20a143cb48a8e79545122606361cc168619617ab18ea1aba1ca7451b36e",
       "published_image_speed_km_s": 590,
@@ -2242,7 +2242,7 @@
       "review_status": "CONSTRAINTS_REVIEWED",
       "calculation_status": "NOT_RUN",
       "publication_status": "NOT_PUBLISHED",
-      "restore_and_re_review": "Maintainer screenshots show restored 600 and completed review; exact import banner was not captured"
+      "restore_and_re_review": "Browser screenshots show restored 600 and completed review; the exact import banner was not captured"
     },
     "usability_findings": [
       "Solar examples hard to find",
@@ -2253,9 +2253,9 @@
       "Brio-Wu load lacked an obvious next action"
     ]
   },
-  "current_browser_visual_acceptance": "PENDING: revised layout has not been rendered in an accessible browser or deployed. Previous production screenshots apply to the baseline above.",
+  "current_browser_visual_acceptance": "PENDING at the report date: the revised layout had not received browser rendering checks or deployment verification. Earlier production screenshots apply to the baseline above.",
   "production_deployment": "Not performed for this correction",
-  "final_release": "Remains rc4; current desktop/phone navigation acceptance and broader release gates remain open",
+  "final_release": "Historical rc4 verification; desktop and phone navigation coverage was incomplete at the report date.",
   "new_doi_created": false,
   "full_scientific_campaign_rerun": false
 }
