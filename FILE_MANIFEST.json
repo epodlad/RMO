@@ -2101,8 +2101,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 2937666,
-      "sha256": "4ab3893622e0c4e615483158be614329dea9928c7635e779224e8aa9ccfc9dd9"
+      "bytes": 2945206,
+      "sha256": "8344d77bfc96dbd65cb48b9d0a19fc760ead5840d2b806ca06f103f6c1620b3d"
     },
     {
       "path": "render.yaml",
@@ -2333,6 +2333,131 @@
       "path": "web_app/server.py",
       "bytes": 13807,
       "sha256": "9c7caac1dbcf32dfef67070264acd46baad2f12571f07dd97f09cd91ab3e590b"
+    },
+    {
+      "path": "examples/solar20170910_full_fan/README.md",
+      "sha256": "a87058fdaa7614f9891fd6e9737f8d00bed1dce4bc3d72e976eff90a551ca1a9",
+      "bytes": 1984
+    },
+    {
+      "path": "examples/solar20170910_full_fan/all_states_physical.csv",
+      "sha256": "821429c1fb2b8b67eba3a1c65178baea15dc52e1c2273b1e5c19615605f6ed70",
+      "bytes": 1337
+    },
+    {
+      "path": "examples/solar20170910_full_fan/alternative_slow_rarefaction.json",
+      "sha256": "44baed56be0a5d010d188b9a7a25f41e57655e1c81eb112c8df546ea02969bd1",
+      "bytes": 3686
+    },
+    {
+      "path": "examples/solar20170910_full_fan/assets.json",
+      "sha256": "d2bad724e3b7733e95366624aefd59eca8ebd0b52a1da77d5db265a43c75c3c4",
+      "bytes": 1331
+    },
+    {
+      "path": "examples/solar20170910_full_fan/left_right.json",
+      "sha256": "bd165646bb0e3db6ba971fef2c783a47dc00344f3f66cc1a685f96d4c9ec0080",
+      "bytes": 3527
+    },
+    {
+      "path": "examples/solar20170910_full_fan/manual_energy_fluxes_SI.csv",
+      "sha256": "99987c2c77abc44939ba6ae2770ea4a0963e0a7ba58ceea5ef2086f7ce113fd7",
+      "bytes": 693
+    },
+    {
+      "path": "examples/solar20170910_full_fan/proposed_measurement_windows.json",
+      "sha256": "ae809d50b852577ddb8374fc2cd4a89fa16c5e721a59e50d603fb911209d6fe6",
+      "bytes": 1087
+    },
+    {
+      "path": "examples/solar20170910_full_fan/run.py",
+      "sha256": "9b4508cf284dbe518334a38c5b79be91d56fbdd64222fdf840b1909cbc3d5bd6",
+      "bytes": 1669
+    },
+    {
+      "path": "examples/solar20170910_full_fan/wave_table.csv",
+      "sha256": "489baebc7dc591f94d878d54812fef13d552d636946ce4ce8446e6d6effccb63",
+      "bytes": 466
+    },
+    {
+      "path": "public/assets/12782d55ff21fa8c9027edb5c8fcdd57cbbb5ec2b9738717c04333331bc9ac72.png",
+      "sha256": "12782d55ff21fa8c9027edb5c8fcdd57cbbb5ec2b9738717c04333331bc9ac72",
+      "bytes": 156118
+    },
+    {
+      "path": "public/assets/27c11564687290b2bd973042e9d0cb2e655bfd734c0fea722ab83e785e67a64f.pdf",
+      "sha256": "27c11564687290b2bd973042e9d0cb2e655bfd734c0fea722ab83e785e67a64f",
+      "bytes": 210026
+    },
+    {
+      "path": "public/assets/44baed56be0a5d010d188b9a7a25f41e57655e1c81eb112c8df546ea02969bd1.json",
+      "sha256": "44baed56be0a5d010d188b9a7a25f41e57655e1c81eb112c8df546ea02969bd1",
+      "bytes": 3686
+    },
+    {
+      "path": "public/assets/489baebc7dc591f94d878d54812fef13d552d636946ce4ce8446e6d6effccb63.csv",
+      "sha256": "489baebc7dc591f94d878d54812fef13d552d636946ce4ce8446e6d6effccb63",
+      "bytes": 466
+    },
+    {
+      "path": "public/assets/51cae1825df9b8e5b60673e61eff754713b39bbe4efadec3374d14943747163a.png",
+      "sha256": "51cae1825df9b8e5b60673e61eff754713b39bbe4efadec3374d14943747163a",
+      "bytes": 721756
+    },
+    {
+      "path": "public/assets/5a59f22d836a2bcc39fce38124b0733cddd61c4e4d02581c3bd61e0c31cf6069.png",
+      "sha256": "5a59f22d836a2bcc39fce38124b0733cddd61c4e4d02581c3bd61e0c31cf6069",
+      "bytes": 212892
+    },
+    {
+      "path": "public/assets/821429c1fb2b8b67eba3a1c65178baea15dc52e1c2273b1e5c19615605f6ed70.csv",
+      "sha256": "821429c1fb2b8b67eba3a1c65178baea15dc52e1c2273b1e5c19615605f6ed70",
+      "bytes": 1337
+    },
+    {
+      "path": "public/assets/925a2f21d1feef2ee476a2736396632354ad59b49336aee9a0ca78254cda5757.png",
+      "sha256": "925a2f21d1feef2ee476a2736396632354ad59b49336aee9a0ca78254cda5757",
+      "bytes": 89634
+    },
+    {
+      "path": "public/assets/930183d7495ccc03321936a14c171bf004824a8ecce62100a5a1788e15b3c30d.pdf",
+      "sha256": "930183d7495ccc03321936a14c171bf004824a8ecce62100a5a1788e15b3c30d",
+      "bytes": 40106
+    },
+    {
+      "path": "public/assets/99987c2c77abc44939ba6ae2770ea4a0963e0a7ba58ceea5ef2086f7ce113fd7.csv",
+      "sha256": "99987c2c77abc44939ba6ae2770ea4a0963e0a7ba58ceea5ef2086f7ce113fd7",
+      "bytes": 693
+    },
+    {
+      "path": "public/assets/a6841cde531207341c47ffd24aabc742aa4b23253b0e6375065d1453f0961778.pdf",
+      "sha256": "a6841cde531207341c47ffd24aabc742aa4b23253b0e6375065d1453f0961778",
+      "bytes": 28522
+    },
+    {
+      "path": "public/assets/ae809d50b852577ddb8374fc2cd4a89fa16c5e721a59e50d603fb911209d6fe6.json",
+      "sha256": "ae809d50b852577ddb8374fc2cd4a89fa16c5e721a59e50d603fb911209d6fe6",
+      "bytes": 1087
+    },
+    {
+      "path": "public/assets/bd165646bb0e3db6ba971fef2c783a47dc00344f3f66cc1a685f96d4c9ec0080.json",
+      "sha256": "bd165646bb0e3db6ba971fef2c783a47dc00344f3f66cc1a685f96d4c9ec0080",
+      "bytes": 3527
+    },
+    {
+      "path": "public/assets/cb9d949ffa98d007af4fc37d045ac1e7a14f15ef250655d4e67f7564d6faae2c.png",
+      "sha256": "cb9d949ffa98d007af4fc37d045ac1e7a14f15ef250655d4e67f7564d6faae2c",
+      "bytes": 468045
+    },
+    {
+      "path": "examples/solar20170910_full_fan/check_conservation.py",
+      "bytes": 2246,
+      "sha256": "a84ec16d61ab8045c09af85023ee6a83316638a872c012f4b19120698479f1eb"
+    },
+    {
+      "path": "docs/SOLAR_FRONT_TERMINOLOGY.md",
+      "bytes": 2964,
+      "sha256": "24748c1a41cfe5a65b0555bf8dd86baf84fdbe4de49f06102cdbca01d3cdfa20"
     }
   ]
 }

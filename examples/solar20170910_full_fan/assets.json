@@ -1,0 +1,16 @@
+{
+  "initial_states": "/assets/bd165646bb0e3db6ba971fef2c783a47dc00344f3f66cc1a685f96d4c9ec0080.json",
+  "states": "/assets/821429c1fb2b8b67eba3a1c65178baea15dc52e1c2273b1e5c19615605f6ed70.csv",
+  "waves": "/assets/489baebc7dc591f94d878d54812fef13d552d636946ce4ce8446e6d6effccb63.csv",
+  "energy": "/assets/99987c2c77abc44939ba6ae2770ea4a0963e0a7ba58ceea5ef2086f7ce113fd7.csv",
+  "fan": "/assets/5a59f22d836a2bcc39fce38124b0733cddd61c4e4d02581c3bd61e0c31cf6069.png",
+  "fan_pdf": "/assets/a6841cde531207341c47ffd24aabc742aa4b23253b0e6375065d1453f0961778.pdf",
+  "solar": "/assets/51cae1825df9b8e5b60673e61eff754713b39bbe4efadec3374d14943747163a.png",
+  "profiles": "/assets/12782d55ff21fa8c9027edb5c8fcdd57cbbb5ec2b9738717c04333331bc9ac72.png",
+  "windows": "/assets/ae809d50b852577ddb8374fc2cd4a89fa16c5e721a59e50d603fb911209d6fe6.json",
+  "slow_alternative": "/assets/44baed56be0a5d010d188b9a7a25f41e57655e1c81eb112c8df546ea02969bd1.json",
+  "slow_comparison": "/assets/925a2f21d1feef2ee476a2736396632354ad59b49336aee9a0ca78254cda5757.png",
+  "solar_pdf": "/assets/27c11564687290b2bd973042e9d0cb2e655bfd734c0fea722ab83e785e67a64f.pdf",
+  "didactic": "/assets/cb9d949ffa98d007af4fc37d045ac1e7a14f15ef250655d4e67f7564d6faae2c.png",
+  "didactic_pdf": "/assets/930183d7495ccc03321936a14c171bf004824a8ecce62100a5a1788e15b3c30d.pdf"
+}

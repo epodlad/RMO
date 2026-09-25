@@ -1,0 +1,44 @@
+{
+  "source_file": "NCEI_SUVI_195_G16_20170910_155534_v_0_1_0.fits.gz",
+  "time_UTC": "2017-09-10T15:55:34.234",
+  "windows": [
+    {
+      "id": "A",
+      "projected_radius_Rsun": [
+        1.142,
+        1.158
+      ],
+      "polar_angle_deg": [
+        -4.5,
+        -1.5
+      ],
+      "status": "PROPOSED_MEASUREMENT_WINDOW; NO_PLASMA_STATE_ASSIGNMENT"
+    },
+    {
+      "id": "B",
+      "projected_radius_Rsun": [
+        1.142,
+        1.158
+      ],
+      "polar_angle_deg": [
+        6.5,
+        9.5
+      ],
+      "status": "PROPOSED_MEASUREMENT_WINDOW; NO_PLASMA_STATE_ASSIGNMENT"
+    },
+    {
+      "id": "C",
+      "projected_radius_Rsun": [
+        1.142,
+        1.158
+      ],
+      "polar_angle_deg": [
+        20.5,
+        23.5
+      ],
+      "status": "PROPOSED_MEASUREMENT_WINDOW; NO_PLASMA_STATE_ASSIGNMENT"
+    }
+  ],
+  "projection": "solar-image arc s is not an established 3D normal n",
+  "warning": "Windows are proposed locations for inspection, not automatically upstream/downstream regions. They must be relocated using traced boundaries at each time."
+}
