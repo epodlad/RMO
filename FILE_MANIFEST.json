@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6189,
-      "sha256": "e84ac4c5f68430ed4979118500915fed1c64db4505d22bd17b2da5f4e62e69d5"
+      "bytes": 6636,
+      "sha256": "11aa9d90562423e3fd9825cbadbff057008d4a0cdf12a7f241716828a6ffc226"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -73,6 +73,11 @@
       "path": "docs/FINAL_RELEASE_ACCEPTANCE_20260922.json",
       "bytes": 17625,
       "sha256": "31fa4080fca7da31fd23b49648d9ba2bca5917a33bea006f258d33856c4cf52b"
+    },
+    {
+      "path": "docs/FRONT_INTERACTION.md",
+      "bytes": 2560,
+      "sha256": "6fb0db49a23e062fca8dad3c44fb1bf5af7357f4c479af494c0bf3602d89a8f1"
     },
     {
       "path": "docs/MODEL_SHORTCUTS_ACCEPTANCE_20260922.json",
@@ -123,6 +128,21 @@
       "path": "docs/UI_NAVIGATION_ACCEPTANCE_20260916.json",
       "bytes": 59222,
       "sha256": "67dfc7eced9c553c4f7dcda2f342884be8955ae451daf52606936149c443e687"
+    },
+    {
+      "path": "examples/front_interaction/results/connected_interaction.json",
+      "bytes": 70097,
+      "sha256": "339f9f2bb65d74c2fc899bba6be3911faf8e36f5a89eb60518e67b8e5b0303c4"
+    },
+    {
+      "path": "examples/front_interaction/run.py",
+      "bytes": 12569,
+      "sha256": "1070d14ad6a7eedac8700d5cdc72217580254d590d87a2638c8a09b304542d25"
+    },
+    {
+      "path": "examples/front_interaction/solver_input.json",
+      "bytes": 6856,
+      "sha256": "eae10de8b6e17604980645ad88ac59fadc1ff1ea411e228303b5cd6b18549639"
     },
     {
       "path": "implementation/reference/aegir_975cc7ed/LICENSE",
@@ -2081,8 +2101,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 2879431,
-      "sha256": "964cff3911bf1b19ff94db11afeab0b61fe1edb35b0b5688aaa053883798c127"
+      "bytes": 2937666,
+      "sha256": "4ab3893622e0c4e615483158be614329dea9928c7635e779224e8aa9ccfc9dd9"
     },
     {
       "path": "render.yaml",

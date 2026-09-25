@@ -52,6 +52,10 @@ Open **[http://127.0.0.1:8765](http://127.0.0.1:8765)** in a browser. The interf
 
 Local completed requests and results are written under `results/local_runs/`, in a new directory for each server session. Set `RMO_RESULTS_DIR` to choose a different output parent. Existing session directories are not overwritten. The interface also offers portable JSON and, where available, PDF downloads.
 
+## Connected front interaction example
+
+Choose **Explore a front interaction** at the top of QuickLook to inspect a saved model before and after two shocks meet. The example includes connected plasma states, rarefactions, a contact, all seven regular families and portable input for independent solvers. These are prescribed model states, not measured solar states. See [reproduction instructions and physical checks](docs/FRONT_INTERACTION.md).
+
 ## What the results mean
 
 The current application tests local connections around a selected front within ideal magnetohydrodynamics (MHD). Results depend on the available measurements, stated assumptions, implemented models and search limits. Missing measurements remain unknown, and a front's image-pattern speed is kept distinct from the plasma velocity.

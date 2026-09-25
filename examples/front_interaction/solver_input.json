@@ -1,0 +1,254 @@
+{
+  "format": "RMO-connected-interaction-0.1",
+  "scientific_status": "DIMENSIONLESS_INTERACTION_BENCHMARK",
+  "event_reconstructed": false,
+  "gamma": 1.6666666666666667,
+  "mu0": 1.0,
+  "normal_axis": "x",
+  "common_Bn": 0.7871875397721321,
+  "normalization": {
+    "rho_scale": 1.0,
+    "velocity_scale": 1.0,
+    "length_scale": 1.0,
+    "solar_units_assigned": false
+  },
+  "assumptions": [
+    "One planar normal, ideal isotropic MHD, no conduction, gravity or continuing driver.",
+    "Prescribed dimensionless ambient density, pressure, velocity and magnetic field; no solar calibration.",
+    "Two incoming right-going shocks and pressure ratios 1.1 are prescribed hypotheses, not observed classifications.",
+    "Initially coplanar u and B; zero outgoing rotations are a result for these boundary states.",
+    "Finite jump separation is one arbitrary length unit; no observational collision fit has been made."
+  ],
+  "before_interaction_IVP": {
+    "time": 0.0,
+    "states_left_to_right": [
+      {
+        "rho": 1.1210424233923457,
+        "p": 0.726,
+        "u": [
+          0.10834399415355311,
+          0.04166613985278734,
+          0.0
+        ],
+        "B": [
+          0.7871875397721321,
+          0.6905012003059832,
+          0.0
+        ],
+        "id": "LEFT",
+        "role": "initial_left",
+        "frame": "RIEMANN_COMPUTATIONAL",
+        "units": "normalized_mu0_1"
+      },
+      {
+        "rho": 1.0587909832266047,
+        "p": 0.66,
+        "u": [
+          0.03451219390190163,
+          0.07371850639266117,
+          0.0
+        ],
+        "B": [
+          0.7871875397721321,
+          0.6331809304570025,
+          0.0
+        ],
+        "id": "MIDDLE",
+        "role": "initial_middle",
+        "frame": "RIEMANN_COMPUTATIONAL",
+        "units": "normalized_mu0_1"
+      },
+      {
+        "rho": 1.0,
+        "p": 0.6,
+        "u": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "B": [
+          0.7871875397721321,
+          0.6913872842586856,
+          0.0
+        ],
+        "id": "RIGHT",
+        "role": "initial_right",
+        "frame": "RIEMANN_COMPUTATIONAL",
+        "units": "normalized_mu0_1"
+      }
+    ],
+    "discontinuity_positions": [
+      -1.0,
+      0.0
+    ],
+    "incoming_waves": [
+      {
+        "family": "fast_plus",
+        "structure": "shock",
+        "speed": 1.3640971811273266,
+        "initial_position": -1.0,
+        "left_state": "LEFT",
+        "right_state": "MIDDLE",
+        "audit": {
+          "flux_minus_speed_q_left": [
+            -1.4077525959077406,
+            0.5020423034050733,
+            -0.6022095576177873,
+            0.0,
+            -0.8998981490159715,
+            0.0,
+            -2.017168467012132
+          ],
+          "flux_minus_speed_q_right": [
+            -1.4077525959077404,
+            0.5020423034050733,
+            -0.6022095576177874,
+            0.0,
+            -0.8998981490159715,
+            0.0,
+            -2.0171684670121324
+          ],
+          "rh_max_scaled": 2.2015474518489566e-16,
+          "entropy_right_minus_left_over_cv": -9.132595504815488e-05,
+          "entropy_flux_production_over_cv": 0.00012856435029279364,
+          "mass_flux": -1.4077525959077404,
+          "density_jump_right_minus_left": -0.06225144016574102,
+          "lax_margins": [
+            0.05120535519105229,
+            0.052968940230671446,
+            0.512276787248774
+          ],
+          "strict_lax_pass": true,
+          "entropy_down_minus_up_over_cv": 9.132595504819652e-05,
+          "compression": 1.0587948340625581
+        }
+      },
+      {
+        "family": "slow_plus",
+        "structure": "shock",
+        "speed": 0.6215442863722287,
+        "initial_position": 0.0,
+        "left_state": "MIDDLE",
+        "right_state": "RIGHT",
+        "audit": {
+          "flux_minus_speed_q_left": [
+            -0.6215442863722287,
+            0.5291760770310492,
+            -0.5442514553253305,
+            0.0,
+            -0.42972781620139794,
+            0.0,
+            -0.900518410208724
+          ],
+          "flux_minus_speed_q_right": [
+            -0.6215442863722287,
+            0.5291760770310492,
+            -0.5442514553253305,
+            0.0,
+            -0.42972781620139794,
+            0.0,
+            -0.900518410208724
+          ],
+          "rh_max_scaled": 0.0,
+          "entropy_right_minus_left_over_cv": -9.738763138759932e-05,
+          "entropy_flux_production_over_cv": 6.0530725852287074e-05,
+          "mass_flux": -0.6215442863722287,
+          "density_jump_right_minus_left": -0.0587909832266047,
+          "lax_margins": [
+            0.023774928386428362,
+            0.025113151965307612,
+            0.5870320924703271,
+            0.16564325339990338
+          ],
+          "strict_lax_pass": true,
+          "entropy_down_minus_up_over_cv": 9.738763138755768e-05,
+          "compression": 1.0587909832266047
+        }
+      }
+    ]
+  },
+  "collision": {
+    "time": 1.346705409221805,
+    "position": 0.837037052528387
+  },
+  "after_interaction_IVP": {
+    "local_time_origin": 1.346705409221805,
+    "local_position_origin": 0.837037052528387,
+    "LEFT": {
+      "rho": 1.1210424233923457,
+      "p": 0.726,
+      "u": [
+        0.10834399415355311,
+        0.04166613985278734,
+        0.0
+      ],
+      "B": [
+        0.7871875397721321,
+        0.6905012003059832,
+        0.0
+      ],
+      "id": "LEFT",
+      "role": "initial_left",
+      "frame": "RIEMANN_COMPUTATIONAL",
+      "units": "normalized_mu0_1"
+    },
+    "RIGHT": {
+      "rho": 1.0,
+      "p": 0.6,
+      "u": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "B": [
+        0.7871875397721321,
+        0.6913872842586856,
+        0.0
+      ],
+      "id": "RIGHT",
+      "role": "initial_right",
+      "frame": "RIEMANN_COMPUTATIONAL",
+      "units": "normalized_mu0_1"
+    },
+    "middle_state_is_consumed": true,
+    "exterior_states_are_unchanged": true
+  },
+  "expected_outgoing_wave_families": [
+    {
+      "family": "fast_minus",
+      "structure": "rarefaction",
+      "nonzero": true
+    },
+    {
+      "family": "alfven_minus",
+      "structure": "rotation",
+      "nonzero": false
+    },
+    {
+      "family": "slow_minus",
+      "structure": "rarefaction",
+      "nonzero": true
+    },
+    {
+      "family": "entropy",
+      "structure": "contact",
+      "nonzero": true
+    },
+    {
+      "family": "slow_plus",
+      "structure": "shock",
+      "nonzero": true
+    },
+    {
+      "family": "alfven_plus",
+      "structure": "rotation",
+      "nonzero": false
+    },
+    {
+      "family": "fast_plus",
+      "structure": "shock",
+      "nonzero": true
+    }
+  ],
+  "comparison": "Use the three-state IVP for a through-collision run, or LEFT/RIGHT at local t=0 for the outgoing Riemann problem. Compare normalized primitive states and characteristic/shock speeds."
+}
