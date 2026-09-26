@@ -1,6 +1,6 @@
 {
-  "title": "An MHD Riemann Fan for a Solar EUV Front",
-  "case": "SOL2017-09-10_LOCAL_ASSUMED_SHELL_AMBIENT_ROTATION10",
+  "title": "Solar-context local MHD fan: illustrative 750 km/s calibration",
+  "case": "SOLAR_CONTEXT_ASSUMED_LOCAL_FAN_750",
   "status": "ASSUMED_MODEL_NOT_OBSERVATIONALLY_RECONSTRUCTED",
   "equations": "1D ideal adiabatic MHD; isotropic pressure; constant Bn; no gravity, heat conduction, radiation, resistivity or ongoing driver forcing",
   "gamma": 1.6666666666666667,
@@ -52,74 +52,60 @@
     "LEFT": {
       "primitive_normalized": [
         2.0,
-        1.5999999999999999,
-        1.4767041782287864,
+        1.0184778732605724,
+        1.1781736663590998,
         0.0,
         0.0,
-        1.0736640816831906,
-        5.286763558861693,
-        0.9321990560536213
+        0.8566121544208019,
+        4.217991454990482,
+        0.7437456979125767
       ],
-      "conservative_normalized": [
-        2.0,
-        2.953408356457573,
-        0.0,
-        0.0,
-        5.286763558861693,
-        0.9321990560536213,
-        19.566464513854264
-      ],
-      "rho_kg_m3": 3.3452438473800004e-13,
-      "ne_cm3": 200000000.0,
-      "p_Pa": 0.011045192,
-      "T_MK": 2.0,
-      "u_m_s": [
-        300000.0,
-        0.0,
-        0.0
-      ],
-      "B_T": [
-        0.0001,
-        0.000492403876506104,
-        8.682408883346517e-05
-      ],
-      "provenance": "ASSUMED; thermal pressure MODEL_DERIVED from assumed ne,T and composition"
+      "physical": {
+        "id": "LEFT",
+        "rho_kg_m3": 3.3452438473800004e-13,
+        "ne_cm3": 200000000.0,
+        "p_Pa": 0.007030802286196681,
+        "T_MK": 1.2730973415757156,
+        "u_km_s": [
+          239.3520009753568,
+          0.0,
+          0.0
+        ],
+        "B_gauss": [
+          0.7978400032511893,
+          3.9285951043252823,
+          0.6927173131717339
+        ]
+      }
     },
     "RIGHT": {
       "primitive_normalized": [
         1.0,
-        0.6,
+        0.38192920247271467,
         0.0,
         0.0,
         0.0,
-        1.0736640816831906,
-        2.684160204207976,
+        0.8566121544208019,
+        2.1415303860520045,
         0.0
       ],
-      "conservative_normalized": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        2.684160204207976,
-        0.0,
-        5.078735281075206
-      ],
-      "rho_kg_m3": 1.6726219236900002e-13,
-      "ne_cm3": 100000000.0,
-      "p_Pa": 0.004141947,
-      "T_MK": 1.5,
-      "u_m_s": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "B_T": [
-        0.0001,
-        0.00025,
-        0.0
-      ],
-      "provenance": "ASSUMED; thermal pressure MODEL_DERIVED from assumed ne,T and composition"
+      "physical": {
+        "id": "RIGHT",
+        "rho_kg_m3": 1.6726219236900002e-13,
+        "ne_cm3": 100000000.0,
+        "p_Pa": 0.0026365508573237555,
+        "T_MK": 0.9548230061817867,
+        "u_km_s": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "B_gauss": [
+          0.7978400032511893,
+          1.9946000081279733,
+          0.0
+        ]
+      }
     }
   },
   "suggested_numerical_domain": {

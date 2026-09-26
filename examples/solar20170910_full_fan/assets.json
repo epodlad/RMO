@@ -1,16 +1,13 @@
 {
-  "initial_states": "/assets/bd165646bb0e3db6ba971fef2c783a47dc00344f3f66cc1a685f96d4c9ec0080.json",
-  "states": "/assets/821429c1fb2b8b67eba3a1c65178baea15dc52e1c2273b1e5c19615605f6ed70.csv",
-  "waves": "/assets/489baebc7dc591f94d878d54812fef13d552d636946ce4ce8446e6d6effccb63.csv",
-  "energy": "/assets/99987c2c77abc44939ba6ae2770ea4a0963e0a7ba58ceea5ef2086f7ce113fd7.csv",
-  "fan": "/assets/5a59f22d836a2bcc39fce38124b0733cddd61c4e4d02581c3bd61e0c31cf6069.png",
-  "fan_pdf": "/assets/a6841cde531207341c47ffd24aabc742aa4b23253b0e6375065d1453f0961778.pdf",
-  "solar": "/assets/51cae1825df9b8e5b60673e61eff754713b39bbe4efadec3374d14943747163a.png",
-  "profiles": "/assets/12782d55ff21fa8c9027edb5c8fcdd57cbbb5ec2b9738717c04333331bc9ac72.png",
-  "windows": "/assets/ae809d50b852577ddb8374fc2cd4a89fa16c5e721a59e50d603fb911209d6fe6.json",
-  "slow_alternative": "/assets/44baed56be0a5d010d188b9a7a25f41e57655e1c81eb112c8df546ea02969bd1.json",
-  "slow_comparison": "/assets/925a2f21d1feef2ee476a2736396632354ad59b49336aee9a0ca78254cda5757.png",
-  "solar_pdf": "/assets/27c11564687290b2bd973042e9d0cb2e655bfd734c0fea722ab83e785e67a64f.pdf",
-  "didactic": "/assets/cb9d949ffa98d007af4fc37d045ac1e7a14f15ef250655d4e67f7564d6faae2c.png",
-  "didactic_pdf": "/assets/930183d7495ccc03321936a14c171bf004824a8ecce62100a5a1788e15b3c30d.pdf"
+  "initial_states": "/assets/67093edcb9c584f6a91b3a2092de12451f6b2a77c255617fa592350fe1e251e4.json",
+  "states": "/assets/1488ce0770a8fd55b2fae43af499cf35c0804f05e721c88f95fb44b334c89f9c.csv",
+  "waves": "/assets/6539ef837379462de0ba51dce4e3c2d85d7c478678e9f3e72587421fe98e77a2.csv",
+  "energy": "/assets/00984e9ab65f1a6b1dc0b29eb89785cc936e313d60b694379fcf816dba4314ac.csv",
+  "verification": "/assets/1e0468d6ec4d4d5329d550ce0366d66c1bca3dc94630407f1bc2c9d96ae446ab.json",
+  "fan": "/assets/ae600b56605cf6718a77a7192094998f30665158b354ef28584f8d2d9deeaaba.png",
+  "fan_pdf": "/assets/2eab4a8b16426567671ea4bcd8ac5794947fa71384ad46a83894f9f621e4a2f8.pdf",
+  "normal": "/assets/b378da556d1ccf0e0e21a7c2c05aeb1499a52fc23855e7f72bdfb5c81cef4ca8.png",
+  "normal_pdf": "/assets/065987208fc1b773f8fad7a84798c6361ccf90209406ea90712f346ec2fb7cb7.pdf",
+  "profiles": "/assets/ba06f71ece94cea920fd82228ff0d7513f9809f4f4279f33d9ce2db5b2d8ee8b.png",
+  "solar": "/assets/45f10a6f99d215a5764a8c222afc6125e8bb620906b9bb9a87b80a56d74e43b4.png"
 }
