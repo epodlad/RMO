@@ -2282,7 +2282,7 @@
     {
       "path": "public/index.html",
       "bytes": 2942978,
-      "sha256": "42e2388050503b431b8bd174704f7f6fb6c5cd6a98efdf014cea720951a1bf12"
+      "sha256": "3edf9ebd52278ce28316cb02c183b1725b2421a8d6b402165d581262f31a4bb1"
     },
     {
       "path": "render.yaml",
