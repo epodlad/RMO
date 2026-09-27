@@ -2,7 +2,7 @@
 
 ## Current archived release
 
-The **27 September 2026** software archive, **1.0.0+local-fan.20260927**, is published under DOI [10.5281/zenodo.22970620](https://doi.org/10.5281/zenodo.22970620). The application version remains **1.0.0**.
+The **27 September 2026** software archive, **1.0.0+local-fan.20260927**, is published under DOI [10.5281/zenodo.22970620](https://zenodo.org/records/22970620). The application version remains **1.0.0**.
 
 The archive includes the **Solar front · full MHD fan** and **Explore a front interaction** examples, their portable states and physical checks, and the updated Sun-and-folding-fan logo. The examples use explicitly chosen model states; their checks do not establish seven observed solar waves or a unique observational interpretation.
 

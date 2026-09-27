@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8067,
-      "sha256": "fc18b1cb2209c3daee4d7d470e35baf4a0cf4efee710a1c1ca82ea2a7ae9d82d"
+      "bytes": 8063,
+      "sha256": "38de9e04b41aea910f4ac3de269764fb13a2cdad494f341c3651f54f2ba6b307"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -101,8 +101,8 @@
     },
     {
       "path": "docs/RELEASE_ZENODO.md",
-      "bytes": 2506,
-      "sha256": "02f06930ebea21bd5f853426fff7e99adae695afad7b6bcd4abddabf85291243"
+      "bytes": 2502,
+      "sha256": "c40f2195b74e49071c3de2efbad1fca1263420df8e688071dba108863495b9ed"
     },
     {
       "path": "docs/REPRODUCIBILITY.md",
