@@ -1,5 +1,7 @@
 # RMO — Riemann Map Operator
 
+<img src="public/assets/8cd752b6c114d8addaa2f62dc52a33da49d010eb1bf740dcd32a1c3c9c0e58bf.png" width="820" alt="RMO logo: a solar illustration and a folding fan">
+
 **A bright front moves across the Sun. What is the plasma doing?**
 
 A solar flare or a sudden expansion of a coronal mass ejection can set the surrounding plasma into motion. Shocks, expanding regions and moving boundaries may develop together as parts of one connected wave pattern.

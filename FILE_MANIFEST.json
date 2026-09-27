@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6636,
-      "sha256": "11aa9d90562423e3fd9825cbadbff057008d4a0cdf12a7f241716828a6ffc226"
+      "bytes": 6799,
+      "sha256": "33ec461343985c6636865a11b1d07758b6e3b6b4dd19db155ce8ea3d121339db"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -51,8 +51,8 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 5287,
-      "sha256": "ff1269b04f4e1041c24e51e8daeb32706c1930d205a03b9baa0f9c8b33c7cb8c"
+      "bytes": 5584,
+      "sha256": "05d5b321afef51e86a3ed5f7b419f954692a9163dc8cd1306dd32b82103ea04c"
     },
     {
       "path": "conservation_coupled/assess.py",
@@ -1490,6 +1490,11 @@
       "sha256": "8cbe7357a8db734b0361786bbfa0996c2db017802653d521440e057a5da6564b"
     },
     {
+      "path": "public/assets/8cd752b6c114d8addaa2f62dc52a33da49d010eb1bf740dcd32a1c3c9c0e58bf.png",
+      "bytes": 1156565,
+      "sha256": "8cd752b6c114d8addaa2f62dc52a33da49d010eb1bf740dcd32a1c3c9c0e58bf"
+    },
+    {
       "path": "public/assets/8d9ffd6dc7fa43270808016fd87cb4c4ae59c989a5ae84f858fbfbf8de675714.md",
       "bytes": 7445,
       "sha256": "8d9ffd6dc7fa43270808016fd87cb4c4ae59c989a5ae84f858fbfbf8de675714"
@@ -2281,8 +2286,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 2942978,
-      "sha256": "76ae7478fb25617e8d424b0b05eedd84b95b0dfbdaaa80bc068a4f513747861a"
+      "bytes": 2944824,
+      "sha256": "4fe05c83973bd78a474b6f340bc33cfbcc198ced626c4f112be9981bff73f112"
     },
     {
       "path": "render.yaml",

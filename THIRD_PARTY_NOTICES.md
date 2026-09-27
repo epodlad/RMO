@@ -17,7 +17,7 @@ Hinode/EIS observations retain Hinode, ISAS/JAXA, NAOJ, NASA, STFC, ESA and NSC 
 
 STEREO/SECCHI, IRIS and Solar Orbiter/SWA records retain their source/provider and instrument-team citations in the companion. Consult the [IRIS archive](https://jsoc.stanford.edu/IRIS/IRIS.html) and [Solar Orbiter publication acknowledgements](https://www.cosmos.esa.int/web/solar-orbiter/solar-orbiter-publication-acknowledgement). CHIANTI users should cite the database and relevant atomic-data publications as described by [CHIANTI](https://www.chiantidatabase.org/).
 
-RMO-generated plots are derived scientific visualizations, not new observations. The existing RMO logo is artwork, not an observational image. Standard content-credential signatures on retained historical figures remain intact.
+RMO-generated plots are derived scientific visualizations, not new observations. The RMO logo is artwork, not an observational image. Its folding-fan motif is inspired by Utagawa Kunisada’s 1838 print, [Woman with a Folding Fan and Hand Mirror](https://www.metmuseum.org/art/collection/search/73558), held by The Metropolitan Museum of Art and released through [Met Open Access / CC0](https://www.metmuseum.org/policies/image-resources). Standard content-credential signatures on retained historical figures remain intact.
 
 ## Restored GOES-16/SUVI preview
 
