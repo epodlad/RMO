@@ -16,13 +16,13 @@
     },
     {
       "path": ".zenodo.json",
-      "bytes": 3915,
-      "sha256": "9d53f1593f2d85aed50a41c579fce9c4c970956fb9d84040d69335a0dbfd6bee"
+      "bytes": 7353,
+      "sha256": "5bedd8fd6f35fa76c0f959f9d97386c54d1863cdab514194a93e963c45373f8e"
     },
     {
       "path": "CITATION.cff",
-      "bytes": 530,
-      "sha256": "7056d4dce8dba385cde6b4ec5df2a376edc5a9b7d02c68813f806ea334fd1cd6"
+      "bytes": 549,
+      "sha256": "c330cdc95dcdca6b8d52c2e5743d936753f3c14a97704b5d261eb80a9db096b0"
     },
     {
       "path": "LICENSE",
@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6799,
-      "sha256": "33ec461343985c6636865a11b1d07758b6e3b6b4dd19db155ce8ea3d121339db"
+      "bytes": 8067,
+      "sha256": "fc18b1cb2209c3daee4d7d470e35baf4a0cf4efee710a1c1ca82ea2a7ae9d82d"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -101,8 +101,8 @@
     },
     {
       "path": "docs/RELEASE_ZENODO.md",
-      "bytes": 1192,
-      "sha256": "b6f3f5acff4636504442c765bf43f715795c402cc07e1bb8034b30d82cc22eef"
+      "bytes": 2506,
+      "sha256": "02f06930ebea21bd5f853426fff7e99adae695afad7b6bcd4abddabf85291243"
     },
     {
       "path": "docs/REPRODUCIBILITY.md",

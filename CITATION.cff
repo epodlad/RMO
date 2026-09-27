@@ -2,9 +2,9 @@ cff-version: 1.2.0
 message: "Please cite this software and the original observational sources relevant to your analysis."
 type: software
 title: "RMO — Riemann Map Operator"
-version: 1.0.0
-doi: 10.5281/zenodo.22905556
-date-released: 2026-09-22
+version: 1.0.0+local-fan.20260927
+doi: 10.5281/zenodo.22970620
+date-released: 2026-09-27
 authors:
   - family-names: Podladchikova
     given-names: Olena
