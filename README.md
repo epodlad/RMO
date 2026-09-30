@@ -82,7 +82,7 @@ The separate **Scientific Archive R139**, [https://doi.org/10.5281/zenodo.227421
 
 ## Related paper
 
-*Riemann Map Operator for Solar Front Diagnostics*. Preprint submitted to **Solar Physics**.
+*Riemann Map Operator for Solar Front Diagnostics*. Preprint.
 
 [https://arxiv.org/abs/2609.15210](https://arxiv.org/abs/2609.15210)
 

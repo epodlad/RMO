@@ -16,8 +16,8 @@
     },
     {
       "path": ".zenodo.json",
-      "bytes": 7353,
-      "sha256": "5bedd8fd6f35fa76c0f959f9d97386c54d1863cdab514194a93e963c45373f8e"
+      "bytes": 7309,
+      "sha256": "2dfcb8140056267844997797bd4a6628ff0d758e6924309b2b663865471150e0"
     },
     {
       "path": "CITATION.cff",
@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8063,
-      "sha256": "38de9e04b41aea910f4ac3de269764fb13a2cdad494f341c3651f54f2ba6b307"
+      "bytes": 8032,
+      "sha256": "3db71150e46b6fac49b672d8f62f8640367757ea77f4794cb0a075dae5e1302a"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -2286,8 +2286,8 @@
     },
     {
       "path": "public/index.html",
-      "bytes": 2944824,
-      "sha256": "4fe05c83973bd78a474b6f340bc33cfbcc198ced626c4f112be9981bff73f112"
+      "bytes": 2944767,
+      "sha256": "83d6aa607ab42fec6f0f1a3349a16e643d7fa0ea4f23399364d988cb53226cf2"
     },
     {
       "path": "render.yaml",
