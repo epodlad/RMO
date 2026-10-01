@@ -8,8 +8,6 @@ The archive includes the **Solar front · full MHD fan** and **Explore a front i
 
 The complete `RMO-1.0.0-public-20260927.zip` contains 504 files from source commit `71d702dfc0c85cf63208feb17bb83950a22a85e5`. `SHA256SUMS.txt` gives the checksums of the ZIP and the separately supplied `RMO_logo.png`. No older archive or multipart assembly is required. After extraction, run `python verify_manifest.py` inside `RMO-1.0.0` to verify the distributed files.
 
-The related preprint, *[Riemann Map Operator for Solar Front Diagnostics](https://arxiv.org/abs/2609.15210)*, is available on arXiv.
-
 ## Earlier software archives
 
 The preceding [full-fan snapshot](https://doi.org/10.5281/zenodo.22966003) and [front-interaction snapshot](https://doi.org/10.5281/zenodo.22963649) remain available under their own DOIs.
